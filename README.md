@@ -23,6 +23,9 @@ ng generate component nombre_modulo/nombre_componente
 ##Crear un proyecto con rutas 
 ng new proyecto011 --routing
 
+##Crear un pipe
+ng generate pipe nombre_pipe
+
 ##Iniciar aplicacion
 ng serve -o
 

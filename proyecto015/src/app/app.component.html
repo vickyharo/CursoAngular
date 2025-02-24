@@ -1,0 +1,36 @@
+<h1>20 - Pipes: creación de pipes personalizadas</h1>
+
+<p>
+  Vimos en el concepto anterior que una pipe tiene por objetivo convertir un
+  dato en la vista de la componente (html) con la finalidad que el usuario tenga
+  una mejor experiencia.
+</p>
+
+<p>
+  El framework Angular provee un conjunto de pipes por defecto como pueden ser:
+  uppercase, lowercase, json, date etc
+</p>
+
+<p>
+  Pero lo más importante que tenemos es que Angular nos permite crear nuestras
+  propias pipes que se adapten a resolver problemas de nuestra aplicación.
+</p>
+
+<h1>Números en castellano</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | letras }}
+  </li>
+</ul>
+<h1>Números en inglés</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | letras : "ingles" }}
+  </li>
+</ul>
+<h1>Números en portugués</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | letras : "portugues" }}
+  </li>
+</ul>
