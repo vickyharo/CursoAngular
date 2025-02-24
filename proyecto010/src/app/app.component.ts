@@ -25,13 +25,11 @@ export class AppComponent {
     );
 
     //Ejemplo
-   /* this.http.get("https://ejerciciostutorialesya.com/vue/datos.php")
+    this.http.get("https://ejerciciostutorialesya.com/vue/datos.php")
       .subscribe(
         resultado => {
           this.articulos = resultado;
         }
-      );*/
-
-      console.log(this.naturalezas);
+      );
   }
 }
