@@ -20,6 +20,9 @@ ng generate module elementos
 ##Crear un componente almacenado en algun modulo
 ng generate component nombre_modulo/nombre_componente
 
+##Crear un proyecto con rutas 
+ng new proyecto011 --routing
+
 ##Iniciar aplicacion
 ng serve -o
 
