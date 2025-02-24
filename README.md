@@ -14,6 +14,12 @@ ng new proyecto001 --no-standalone --routing --ssr=false
 ##Creacion de componentes
 ng generate component nombre_componente
 
+##Creacion de modulos
+ng generate module elementos
+
+##Crear un componente almacenado en algun modulo
+ng generate component nombre_modulo/nombre_componente
+
 ##Iniciar aplicacion
 ng serve -o
 
