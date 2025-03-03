@@ -40,3 +40,24 @@ npm install -g npm
 npm cache clean
 npm update
 npm install
+
+#-----------
+##Compilacion y despliegue de una aplicacion angular en un servidor de internet
+ng build 
+#Luego de este proceso se genera una carpeta llamada 'dist'
+#----------
+#Subir una aplicación Angular a una subcarpeta de nuestro servidor.
+#Ejemplo: http://ejerciciosAngular.com/angular/proyecto01/
+C:\ejerciciosAngular\proyecto01>ng build --base-href=/ejerciciosAngular/proyecto01/
+
+#-----------
+## Angular Material
+#Instalar angular material
+ng add @angular/material
+
+#Crear la barra lateral
+ng generate @angular/material:material-nav --name barraLateral
+
+## T E M A S
+#Proyecto 016 --> TypeScript
+#Proyecto 018 --> Angular Material

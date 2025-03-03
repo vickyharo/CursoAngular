@@ -8,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'proyecto016';
 
+  //-> Parametros de metodos
+  mayor(valor1: number, valor2: number): number {
+    if (valor1 > valor2)
+      return valor1;
+    else
+      return valor2;
+  }
+
+  mostrarMensaje(mensaje: string): void {
+    alert(mensaje);
+  }
+
   ngOnInit() {
     //** Tipos de datos **//
 
@@ -40,21 +52,12 @@ export class AppComponent implements OnInit {
     }
 
     //--> Enum
-    enum Operacion {
-      Sumar,
-      Resta,
-      Multiplicacion,
-      Division,
-    }
+    enum Operacion { Suma, Resta, Multiplicacion, Division };
 
-    let actual: Operacion ;//= Operacion.Multiplicacion;
+    let actual: Operacion = Operacion.Multiplicacion;
 
-    switch (actual) {
-      case Operacion.Multiplicacion: {
-        console.log('Operación actual: Multiplicacion ');
-        break;
-      }
-      case Operacion.Sumar: {
+    switch (+actual) {
+      case Operacion.Suma: {
         console.log('Operación actual: Suma ');
         break;
       }
@@ -62,11 +65,37 @@ export class AppComponent implements OnInit {
         console.log('Operación actual: Resta ');
         break;
       }
-     
+      case Operacion.Multiplicacion: {
+        console.log('Operación actual: Multiplicacion ');
+        break;
+      }
       case Operacion.Division: {
         console.log('Operación actual: Division ');
         break;
       }
     }
-  }
-}
+
+    //--> Any
+    let dato: any;
+    dato = 10;
+    console.log(dato);
+    dato = 'Hola';
+    console.log(dato);
+    dato = true;
+    console.log(dato);
+    dato = [1, 2, 3];
+    console.log(dato);
+
+    //-> Parametros de metodos
+    this.mayor(8, 10);
+    this.mostrarMensaje('Hola mundo');
+
+    //->Variable de tipo unión
+    let edad2: number | string;
+    edad2=34;
+    console.log(edad2);
+    edad2='20 años';
+    console.log(edad2);
+
+  }//->Init
+}//->Export
