@@ -30,27 +30,49 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatRadioModule } from '@angular/material/radio';
-
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSliderModule } from '@angular/material/slider';
 
 //-> Mis componentes
 import { BotonesComponent } from './components/botones/botones.component';
 import { FormulariosInputComponent } from './components/formularios-input/formularios-input.component';
+import { MatRadioButtonYMatRadioGroupComponent } from './components/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
+import { MatCheckboxComponent } from './components/mat-checkbox/mat-checkbox.component';
+import { MatSelectComponent } from './components/mat-select/mat-select.component';
+import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
+
 //import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LayoutTabsComponent } from './components/layout-tabs/layout-tabs.component';
 import { FormulariosSelectoresComponent } from './components/formularios-selectores/formularios-selectores.component';
+import { MatTableComponent } from './components/mat-table/mat-table.component';
+import { MatTableYMatPaginatiorComponent } from './components/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
+import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
     BotonesComponent,
+    FormulariosInputComponent,
+    MatRadioButtonYMatRadioGroupComponent,
+    MatCheckboxComponent,
+    MatSelectComponent,
+    MatSliderComponent,
    // AutocompleteComponent,
     LogoComponent,
-   FormulariosInputComponent,
+   
    LayoutTabsComponent,
-   FormulariosSelectoresComponent
+   FormulariosSelectoresComponent,
+   MatTableComponent,
+   MatTableYMatPaginatiorComponent,
+   MatTableYMatSortComponent,
+   MatCheckboxComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -81,7 +103,10 @@ import { FormulariosSelectoresComponent } from './components/formularios-selecto
        FormsModule,
        BrowserAnimationsModule,
        MatTabsModule,
-       MatRadioModule
+       MatRadioModule,
+       MatMenuModule,
+       MatCheckboxModule,
+       MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

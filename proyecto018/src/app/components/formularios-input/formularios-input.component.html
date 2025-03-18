@@ -3,73 +3,16 @@
         <div class="contenedor">
 
             <mat-form-field>
-                <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
+              <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
             </mat-form-field>
-
+          
             <mat-form-field>
                 <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese segundo valor">
             </mat-form-field>
-
-            <mat-form-field>
-                Color:
-                <input matInput type="color">
-            </mat-form-field>
-
-            <mat-form-field>
-                Date:
-                <input matInput type="date">
-            </mat-form-field>
-
-            <mat-form-field>
-                Date time local:
-                <input matInput type="datetime-local">
-            </mat-form-field>
-
-            <mat-form-field>
-                Email:
-                <input matInput type="email">
-            </mat-form-field>
-
-            <mat-form-field>
-                Month:
-                <input matInput type="month">
-            </mat-form-field>
-
-            <mat-form-field>
-                Number:
-                <input matInput type="number">
-            </mat-form-field>
-
-            <mat-form-field>
-                Password:
-                <input matInput type="password">
-            </mat-form-field>
-
-            <mat-form-field>
-                search:
-                <input matInput type="search">
-            </mat-form-field>
-
-
-            <mat-form-field>
-                text:
-                <input matInput type="text">
-            </mat-form-field>
-
-
-
-
-
-tel
-
-time
-url
-week
-
+            
             <button mat-raised-button color="primary" (click)="sumar()">Sumar</button>
-            <br>
-            <p>La suma de los dos valores es: {{resultado}}</p>
-
-        </div>
+            <p>La suma de los dos valores es:{{resultado}}</p>
+            
+          </div>
     </div>
 </div>
