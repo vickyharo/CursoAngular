@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import {MatSort} from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-mat-table-y-mat-sort',
@@ -12,9 +12,9 @@ export class MatTableYMatSortComponent {
   columnas: string[] = ['codigo', 'descripcion', 'precio'];
 
   datos: Articulo[] = [];
-  dataSource:any;
+  dataSource: any;
 
-  @ViewChild(MatSort, {static: true}) sort!: MatSort;
+  @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   ngOnInit() {
     for (let x = 1; x <= 10; x++)

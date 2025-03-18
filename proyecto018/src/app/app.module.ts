@@ -57,19 +57,8 @@ import { DialogoarticuloComponent } from './components/mat-dialog/dialogoarticul
 import { MatMenuComponent } from './components/mat-menu/mat-menu.component';
 import { MatMenuAnidadosComponent } from './components/mat-menu-anidados/mat-menu-anidados.component';
 import { MatCardComponent } from './components/mat-card/mat-card.component';
-
-//import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import { LogoComponent } from './components/logo/logo.component';
-
-import { FormulariosSelectoresComponent } from './components/formularios-selectores/formularios-selectores.component';
 import { MatToolbarComponent } from './components/mat-toolbar/mat-toolbar.component';
-
-
-
-
-
-
-
+import { MatExpansionPanelComponent } from './components/mat-expansion-panel/mat-expansion-panel.component';
 
 @NgModule({
   declarations: [
@@ -92,15 +81,8 @@ import { MatToolbarComponent } from './components/mat-toolbar/mat-toolbar.compon
     MatMenuComponent,
     MatMenuAnidadosComponent,
     MatCardComponent,
-
-    // AutocompleteComponent,
-    LogoComponent,
-    FormulariosSelectoresComponent,
-    MatCheckboxComponent,
     MatToolbarComponent,
-
-
-
+    MatExpansionPanelComponent
   ],
   imports: [
     HttpClientModule,

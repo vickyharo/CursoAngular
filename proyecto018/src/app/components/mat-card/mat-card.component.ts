@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsuarioService} from '../../core/services/usuario.service';
+import { UsuarioService } from '../../core/services/usuario.service';
 
 @Component({
   selector: 'app-mat-card',
@@ -8,9 +8,9 @@ import { UsuarioService} from '../../core/services/usuario.service';
   styleUrl: './mat-card.component.css'
 })
 export class MatCardComponent {
-  usuario:any;
+  usuario: any;
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.recuperarPersona();
@@ -22,6 +22,6 @@ export class MatCardComponent {
 
   recuperarPersona() {
     this.usuarioService.retornar()
-      .subscribe( result =>  {this.usuario = result});
+      .subscribe(result => { this.usuario = result });
   }
 }

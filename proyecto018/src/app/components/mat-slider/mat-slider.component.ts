@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './mat-slider.component.css'
 })
 export class MatSliderComponent {
-  slider1=0;
-  slider2=0;
-  slider3=0;
-  suma=0;
-  
+  slider1 = 0;
+  slider2 = 0;
+  slider3 = 0;
+  suma = 0;
+
   cambiar() {
-    this.suma = this.slider1 + this.slider2 + this.slider3;    
+    this.suma = this.slider1 + this.slider2 + this.slider3;
   }
 
   gridsize: number = 30;

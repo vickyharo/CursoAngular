@@ -19,8 +19,6 @@ export class BarraLateralComponent {
       shareReplay()
     );
 
-  
-
   showSubmenu: boolean = false;
   isShowing = false;
   showSubSubMenu: boolean = false;

@@ -1,0 +1,32 @@
+<div class="card-container">
+  <div class="card">
+
+    <h1>Se despliegan varios al mismo tiempo</h1>
+
+    <div style="width: 70%;margin:0 auto" *ngIf="post!=null">
+      <mat-expansion-panel *ngFor="let p of post">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2>{{p.title}}</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        {{p.body}}
+      </mat-expansion-panel>
+    </div>
+
+    <h1>Se despliega solo 1</h1>
+
+    <div style="width: 70%;margin:0 auto" *ngIf="post!=null">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let p of post">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h2>{{p.title}}</h2>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          {{p.body}}
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>
