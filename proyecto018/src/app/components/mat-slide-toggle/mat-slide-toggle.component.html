@@ -1,0 +1,21 @@
+<div class="card-container">
+  <div class="card">
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese segundo valor">
+    </mat-form-field>
+    <br>
+    <mat-slide-toggle [(ngModel)]="opcion1">Sumar</mat-slide-toggle>&nbsp;
+    <mat-slide-toggle [(ngModel)]="opcion2">Restar</mat-slide-toggle>&nbsp;
+    <mat-slide-toggle [(ngModel)]="opcion3">Multiplicar</mat-slide-toggle>&nbsp;
+    <mat-slide-toggle [(ngModel)]="opcion4">Dividir</mat-slide-toggle>&nbsp;
+    <br>
+    <button mat-raised-button color="primary" (click)="operar()">Operar</button>
+    <p>{{resultado}}</p>
+
+  </div>
+</div>

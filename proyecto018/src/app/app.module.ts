@@ -33,6 +33,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 //-> Mis componentes
 import { BotonesComponent } from './components/botones/botones.component';
@@ -41,6 +42,7 @@ import { MatRadioButtonYMatRadioGroupComponent } from './components/mat-radio-bu
 import { MatCheckboxComponent } from './components/mat-checkbox/mat-checkbox.component';
 import { MatSelectComponent } from './components/mat-select/mat-select.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
+import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
 
 //import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { LogoComponent } from './components/logo/logo.component';
@@ -49,6 +51,7 @@ import { FormulariosSelectoresComponent } from './components/formularios-selecto
 import { MatTableComponent } from './components/mat-table/mat-table.component';
 import { MatTableYMatPaginatiorComponent } from './components/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
 import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+
 
 
 
@@ -62,15 +65,19 @@ import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat
     MatCheckboxComponent,
     MatSelectComponent,
     MatSliderComponent,
+    MatSlideToggleComponent,
+
+
    // AutocompleteComponent,
     LogoComponent,
-   
+
    LayoutTabsComponent,
    FormulariosSelectoresComponent,
    MatTableComponent,
    MatTableYMatPaginatiorComponent,
    MatTableYMatSortComponent,
    MatCheckboxComponent,
+
 
 
   ],
@@ -106,7 +113,8 @@ import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat
        MatRadioModule,
        MatMenuModule,
        MatCheckboxModule,
-       MatSliderModule
+       MatSliderModule,
+       MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

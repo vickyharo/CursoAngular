@@ -8,6 +8,9 @@ import { MatRadioButtonYMatRadioGroupComponent } from './components/mat-radio-bu
 import { MatCheckboxComponent } from './components/mat-checkbox/mat-checkbox.component';
 import { MatSelectComponent } from './components/mat-select/mat-select.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
+import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
+
+
 
 //----------------------------------------------
 
@@ -48,6 +51,10 @@ const routes: Routes = [
     path:'mat-slider',
     component:MatSliderComponent
   },
+  {
+    path:'mat-slide-toggle',
+    component:MatSlideToggleComponent
+  },
   /********************************************* */
   {
     path:'layout-tabs',
@@ -57,7 +64,7 @@ const routes: Routes = [
     path:'formularios-selectores',
     component:FormulariosSelectoresComponent
   },
-  
+
   {
     path:'logo',
     component:LogoComponent

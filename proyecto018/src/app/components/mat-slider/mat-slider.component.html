@@ -1,18 +1,27 @@
 <div class="card-container">
-    <div class="card">
-        <mat-slider (change)="cambiar()"  min="1" max="200"><input matSliderThumb valule="{{slider1}}"  ></mat-slider><br>
-        <mat-slider [(ngModel)]="slider2" thumbLabel (change)="cambiar()" min="1" max="200"></mat-slider><br>
-        <mat-slider [(ngModel)]="slider3" thumbLabel (change)="cambiar()" min="1" max="200"></mat-slider><br>
-        La suma de los tres slider:{{suma}}
+  <div class="card">
+
+    <div>
+      <span>Slider 1: </span><b class="gridSizeValue">{{slider1}}</b>
     </div>
+    <mat-slider min="1" max="200" step="1" (change)="cambiar()">
+      <input matSliderThumb [(ngModel)]="slider1">
+    </mat-slider>
+
+    <div>
+      <span>Slider 2: </span><b class="gridSizeValue">{{slider2}}</b>
+    </div>
+    <mat-slider min="1" max="200" step="1" (change)="cambiar()">
+      <input matSliderThumb [(ngModel)]="slider2">
+    </mat-slider>
+
+    <div>
+      <span>Slider 3: </span><b class="gridSizeValue">{{slider3}}</b>
+    </div>
+    <mat-slider min="1" max="200" step="1" (change)="cambiar()">
+      <input matSliderThumb [(ngModel)]="slider3">
+    </mat-slider>
+
+    La suma de los tres slider:{{suma}}
+  </div>
 </div>
-
-<mat-slider min="1" max="5" step="0.5">
-    <input matSliderThumb value="1.5">
-  </mat-slider>
-
-
-  <div>
-	<span>Grid Size (px): </span><b class="gridSizeValue">{{gridsize.value}}</b>
-</div>
-<mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="100" [value]="gridsize"></mat-slider>
