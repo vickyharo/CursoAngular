@@ -9,18 +9,23 @@ import { MatCheckboxComponent } from './components/mat-checkbox/mat-checkbox.com
 import { MatSelectComponent } from './components/mat-select/mat-select.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
 import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
-
-
+import { LayoutTabsComponent } from './components/layout-tabs/layout-tabs.component';
+import { MatTableComponent} from './components/mat-table/mat-table.component';
+import { MatTableYMatPaginatiorComponent } from './components/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
+import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+import { MatTableYFiltrarDatosComponent } from './components/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
+import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
+import { MatMenuComponent } from './components/mat-menu/mat-menu.component';
+import { MatMenuAnidadosComponent } from './components/mat-menu-anidados/mat-menu-anidados.component';
+import { MatCardComponent } from './components/mat-card/mat-card.component';
 
 //----------------------------------------------
 
 import { FormulariosSelectoresComponent } from './components/formularios-selectores/formularios-selectores.component';
 import { LogoComponent } from './components/logo/logo.component';
-import { LayoutTabsComponent } from './components/layout-tabs/layout-tabs.component';
+
 //import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import { MatTableComponent} from './components/mat-table/mat-table.component';
-import { MatTableYMatPaginatiorComponent } from './components/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
-import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+
 
 const routes: Routes = [
   {
@@ -55,19 +60,9 @@ const routes: Routes = [
     path:'mat-slide-toggle',
     component:MatSlideToggleComponent
   },
-  /********************************************* */
   {
     path:'layout-tabs',
     component:LayoutTabsComponent
-  },
-  {
-    path:'formularios-selectores',
-    component:FormulariosSelectoresComponent
-  },
-
-  {
-    path:'logo',
-    component:LogoComponent
   },
   {
     path:'mat-table',
@@ -81,6 +76,38 @@ const routes: Routes = [
     path:'mat-table-y-mat-sort',
     component:MatTableYMatSortComponent
   },
+  {
+    path:'mat-table-y-filtrar-datos',
+    component:MatTableYFiltrarDatosComponent
+  },
+  {
+    path:'mat-dialog',
+    component:MatDialogComponent
+  },
+  {
+    path:'mat-menu',
+    component:MatMenuComponent
+  },
+  {
+    path:'mat-menu-anidado',
+    component:MatMenuAnidadosComponent
+  },
+  {
+    path:'mat-card',
+    component:MatCardComponent
+  },
+  /********************************************* */
+
+  {
+    path:'formularios-selectores',
+    component:FormulariosSelectoresComponent
+  },
+
+  {
+    path:'logo',
+    component:LogoComponent
+  },
+
   /*{
     path:'autocomplete',
     component:AutocompleteComponent

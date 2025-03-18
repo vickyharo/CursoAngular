@@ -1,0 +1,14 @@
+<div class="card-container">
+  <div class="card">
+    <div style="text-align:left">
+      <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Opciones del sitio</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/botones">Botones</button>
+        <button mat-menu-item routerLink="/formularios-input">Formularios (input)</button>
+      </mat-menu>
+    </div>
+    <div style="text-align:center">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
