@@ -1,5 +1,8 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+//-> Angular material
+import { MaterialModule } from './../material/material.module'
 
 import { BotonesComponent } from './botones/botones.component';
 import { FormulariosInputComponent } from './formularios-input/formularios-input.component';
@@ -24,10 +27,11 @@ import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.co
 
 @NgModule({
   imports: [
-    CommonModule
+    BrowserModule,
+    MaterialModule, //-> libreria angular material
   ],
   /*exportar los componentes que acabamos de crear para que otros modulos puedan utilizarlos*/
-  exports: [
+  /*exports: [
     BotonesComponent,
     FormulariosInputComponent,
     MatRadioButtonYMatRadioGroupComponent,
@@ -48,7 +52,7 @@ import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.co
     MatToolbarComponent,
     MatExpansionPanelComponent,
     MatAutocompleteComponent
-  ],
+  ],*/
   declarations: [
     BotonesComponent,
     FormulariosInputComponent,
@@ -69,7 +73,8 @@ import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.co
     MatCardComponent,
     MatToolbarComponent,
     MatExpansionPanelComponent,
-    MatAutocompleteComponent
-  ]
+    MatAutocompleteComponent,
+  ],
+  providers: []
 })
 export class AngularMaterialModuleModule { }
