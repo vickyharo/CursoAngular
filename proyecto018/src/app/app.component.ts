@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BarraLateralComponent } from './components/barra-lateral/barra-lateral.component';
+import { BarraLateralComponent } from './shared/barra-lateral/barra-lateral.component';
 
 @Component({
   selector: 'app-root',

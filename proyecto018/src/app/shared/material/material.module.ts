@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+//->Todos los componentes usados por angular material
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -36,92 +37,90 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 
 @NgModule({
+  declarations: [],
   imports: [
-    CommonModule
-  ]
-  ,
-  
-  
-  exports: [
+    CommonModule,
+    FormsModule,
+    MatSliderModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatAccordion,
+    MatExpansionModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatAutocompleteModule,
     MatCardModule,
-    MatInputModule,
-    MatSelectModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
+    MatChipsModule,
+    MatDialogModule,
     MatListModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatBadgeModule,
+    MatProgressBarModule,
+    LayoutModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatSlideToggleModule
+  ],
+  exports: [
+    FormsModule,
+    MatSliderModule,
     MatTableModule,
     MatPaginatorModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatTooltipModule,
-    MatAutocompleteModule,
-    LayoutModule,
-    MatCheckboxModule,
-
-    ReactiveFormsModule,
-    FormsModule,
-
-    MatExpansionModule,
-
-
-    MatMenuModule,
-
-    MatSliderModule,
     MatSortModule,
     MatFormFieldModule,
-    MatDividerModule,
-    MatChipsModule,
-    MatBadgeModule,
-
-    //controles para la fecha
-    MatDatepickerModule,
-    MatNativeDateModule
-  ]/*,
-  declarations: [ MatCardModule,
     MatInputModule,
-    MatSelectModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
     MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatDialogModule,
-    MatSnackBarModule,
     MatTooltipModule,
-    MatAutocompleteModule,
-    LayoutModule,
-    MatCheckboxModule,
-
-    ReactiveFormsModule,
-    FormsModule,
-
+    MatButtonModule,
+    MatGridListModule,
+    MatAccordion,
     MatExpansionModule,
-
-
-    MatMenuModule,
-
-    MatSliderModule,
-    MatSortModule,
-    MatFormFieldModule,
     MatDividerModule,
-    MatChipsModule,
-    MatBadgeModule,
-
-    //controles para la fecha
     MatDatepickerModule,
-    MatNativeDateModule]*/
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatListModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatBadgeModule,
+    MatProgressBarModule,
+    LayoutModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatSlideToggleModule
+  ],
+  providers: [
+    provideNativeDateAdapter()
+  ],
 })
 export class MaterialModule { }

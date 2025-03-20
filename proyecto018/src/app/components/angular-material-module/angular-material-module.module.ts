@@ -1,9 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 //-> Angular material
-import { MaterialModule } from './../material/material.module'
+import { MaterialModule } from '../../shared/material/material.module'
 
+//->Routing del modulo
+import { AngularMaterialRoutingModule } from './angular-material-module-routing.module';
+
+//-> Mis componentes
 import { BotonesComponent } from './botones/botones.component';
 import { FormulariosInputComponent } from './formularios-input/formularios-input.component';
 import { MatRadioButtonYMatRadioGroupComponent } from './mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
@@ -26,33 +30,6 @@ import { MatExpansionPanelComponent } from './mat-expansion-panel/mat-expansion-
 import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    MaterialModule, //-> libreria angular material
-  ],
-  /*exportar los componentes que acabamos de crear para que otros modulos puedan utilizarlos*/
-  /*exports: [
-    BotonesComponent,
-    FormulariosInputComponent,
-    MatRadioButtonYMatRadioGroupComponent,
-    MatCheckboxComponent,
-    MatSelectComponent,
-    MatSliderComponent,
-    MatSlideToggleComponent,
-    LayoutTabsComponent,
-    MatTableComponent,
-    MatTableYMatPaginatiorComponent,
-    MatTableYMatSortComponent,
-    MatTableYFiltrarDatosComponent,
-    MatDialogComponent,
-    DialogoarticuloComponent,
-    MatMenuComponent,
-    MatMenuAnidadosComponent,
-    MatCardComponent,
-    MatToolbarComponent,
-    MatExpansionPanelComponent,
-    MatAutocompleteComponent
-  ],*/
   declarations: [
     BotonesComponent,
     FormulariosInputComponent,
@@ -75,6 +52,10 @@ import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.co
     MatExpansionPanelComponent,
     MatAutocompleteComponent,
   ],
-  providers: []
+  imports: [
+    CommonModule,
+    AngularMaterialRoutingModule, //->Routing del modulo
+    MaterialModule, //-> libreria angular material
+  ]
 })
 export class AngularMaterialModuleModule { }
