@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostblogService } from '../../core/services/postblog.service';
+import { PostblogService } from '../../../core/services/postblog.service';
 
 @Component({
   selector: 'app-mat-expansion-panel',

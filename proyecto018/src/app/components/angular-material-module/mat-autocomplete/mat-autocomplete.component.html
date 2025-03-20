@@ -1,0 +1,53 @@
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Assignee</mat-label>
+    <input
+      #inputAutoComplete
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+      #trigger="matAutocompleteTrigger"
+      matInput
+      type="text"
+    />
+
+    <div matSuffix style="display:flex">
+      <button
+        (click)="clearInput($event)"
+        *ngIf=" myControl?.value!==null && myControl?.value!==''"
+        aria-label="Clear"
+        mat-icon-button
+        type="button"
+      >
+        <mat-icon>clear</mat-icon>
+      </button>
+
+      <button
+        (click)="openOrClosePanel($event, trigger)"
+        aria-label="Clear"
+        mat-icon-button
+        type="button"
+      >
+        <mat-icon>{{arrowIconSubject.getValue()}}</mat-icon>
+      </button>
+    </div>
+
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (closed)="arrowIconSubject.next('arrow_drop_down')"
+      (opened)="arrowIconSubject.next('arrow_drop_up')"
+      (optionSelected)="arrowIconSubject.next('arrow_drop_down')"
+      [displayWith]="displayFn"
+    >
+      <mat-select
+        *ngFor="let option of filteredOptions | async "
+        [value]="option"
+      >
+        {{option.name}}
+      </mat-select>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  Selected Option:
+  <h2>{{myControl?.value?.name}}</h2>
+</form>
+-->

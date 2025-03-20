@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BarraLateralComponent } from './components/barra-lateral/barra-lateral.component';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
@@ -40,49 +40,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 
 //-> Mis componentes
-import { BotonesComponent } from './components/botones/botones.component';
-import { FormulariosInputComponent } from './components/formularios-input/formularios-input.component';
-import { MatRadioButtonYMatRadioGroupComponent } from './components/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
-import { MatCheckboxComponent } from './components/mat-checkbox/mat-checkbox.component';
-import { MatSelectComponent } from './components/mat-select/mat-select.component';
-import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
-import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
-import { LayoutTabsComponent } from './components/layout-tabs/layout-tabs.component';
-import { MatTableComponent } from './components/mat-table/mat-table.component';
-import { MatTableYMatPaginatiorComponent } from './components/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
-import { MatTableYMatSortComponent } from './components/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
-import { MatTableYFiltrarDatosComponent } from './components/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
-import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
-import { DialogoarticuloComponent } from './components/mat-dialog/dialogoarticulo/dialogoarticulo.component';
-import { MatMenuComponent } from './components/mat-menu/mat-menu.component';
-import { MatMenuAnidadosComponent } from './components/mat-menu-anidados/mat-menu-anidados.component';
-import { MatCardComponent } from './components/mat-card/mat-card.component';
-import { MatToolbarComponent } from './components/mat-toolbar/mat-toolbar.component';
-import { MatExpansionPanelComponent } from './components/mat-expansion-panel/mat-expansion-panel.component';
+import { BarraLateralComponent } from './components/barra-lateral/barra-lateral.component';
+
+import { AngularMaterialModuleModule } from './components/angular-material-module/angular-material-module.module'
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
-    BotonesComponent,
-    FormulariosInputComponent,
-    MatRadioButtonYMatRadioGroupComponent,
-    MatCheckboxComponent,
-    MatSelectComponent,
-    MatSliderComponent,
-    MatSlideToggleComponent,
-    LayoutTabsComponent,
-    MatTableComponent,
-    MatTableYMatPaginatiorComponent,
-    MatTableYMatSortComponent,
-    MatTableYFiltrarDatosComponent,
-    MatDialogComponent,
-    DialogoarticuloComponent,
-    MatMenuComponent,
-    MatMenuAnidadosComponent,
-    MatCardComponent,
-    MatToolbarComponent,
-    MatExpansionPanelComponent
   ],
   imports: [
     HttpClientModule,
@@ -120,7 +85,10 @@ import { MatExpansionPanelComponent } from './components/mat-expansion-panel/mat
     MatCheckboxModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatSortModule
+    MatSortModule,
+
+
+    AngularMaterialModuleModule //-> Modulo creado con los componentes de angular material
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { Articulo } from '../../core/models/articulo';
+import { Articulo } from '../../../core/models/articulo';
 import { DialogoarticuloComponent } from './dialogoarticulo/dialogoarticulo.component'
 import { MatTableDataSource } from '@angular/material/table';
 
