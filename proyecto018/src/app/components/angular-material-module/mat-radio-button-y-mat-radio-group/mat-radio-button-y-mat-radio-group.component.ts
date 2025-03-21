@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mat-radio-button-y-mat-radio-group',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-radio-button-y-mat-radio-group.component.html',
   styleUrl: './mat-radio-button-y-mat-radio-group.component.css'
 })

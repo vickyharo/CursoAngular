@@ -2,11 +2,16 @@ import { Component, inject,ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+
+
+//-> Angular material
+import { MaterialModule } from '../material/material.module'
 @Component({
   selector: 'app-barra-lateral',
-  standalone: false,
+  standalone: true,
   templateUrl: './barra-lateral.component.html',
   styleUrl: './barra-lateral.component.css',
+  imports:[MaterialModule]
 })
 export class BarraLateralComponent {
   opened = true;

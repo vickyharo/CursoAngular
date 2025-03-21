@@ -1,4 +1,4 @@
-import { observable } from './../../../../node_modules/rxjs/src/internal/symbol/observable';
+import { observable } from './../../../../../node_modules/rxjs/src/internal/symbol/observable';
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BehaviorSubject, Observable} from 'rxjs';
@@ -11,7 +11,7 @@ export interface User {
 
 @Component({
   selector: 'app-mat-autocomplete',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-autocomplete.component.html',
   styleUrl: './mat-autocomplete.component.css'
 })

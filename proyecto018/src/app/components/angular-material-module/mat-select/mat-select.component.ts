@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mat-select',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-select.component.html',
   styleUrl: './mat-select.component.css'
 })

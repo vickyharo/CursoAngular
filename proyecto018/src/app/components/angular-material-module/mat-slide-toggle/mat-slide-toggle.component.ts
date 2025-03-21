@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mat-slide-toggle',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-slide-toggle.component.html',
   styleUrl: './mat-slide-toggle.component.css'
 })

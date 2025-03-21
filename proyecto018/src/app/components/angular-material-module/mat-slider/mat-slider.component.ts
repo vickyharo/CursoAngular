@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mat-slider',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-slider.component.html',
   styleUrl: './mat-slider.component.css'
 })

@@ -7,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-mat-dialog',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-dialog.component.html',
   styleUrl: './mat-dialog.component.css'
 })

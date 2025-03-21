@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mat-checkbox',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-checkbox.component.html',
   styleUrl: './mat-checkbox.component.css'
 })

@@ -11,14 +11,13 @@
   <mat-sidenav opened="true" mode="side" class="example-sidenav" (mouseenter)="mouseenter()"
     (mouseleave)="mouseleave()">
     <mat-nav-list class="ul active">
-
       <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width" *ngIf="opened || isShowing">
         <mat-expansion-panel-header>
           <mat-icon mat-list-icon>trip_origin</mat-icon>
           <span>ANGULAR MATERIAL</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item routerLink="/angularMaterial/botones"><mat-icon>trip_origin</mat-icon><span>Botones</span></a>
+          <a mat-list-item routerLink="/botones"><mat-icon>trip_origin</mat-icon><span>Botones</span></a>
           <a mat-list-item routerLink="/formularios-input"><mat-icon>trip_origin</mat-icon><span>Formularios
               (input)</span></a>
           <a mat-list-item
@@ -50,6 +49,7 @@
           <a mat-list-item routerLink="/mat-toolbar"><mat-icon>trip_origin</mat-icon><span>Menu: mat-toolbar</span></a>
           <a mat-list-item routerLink="/mat-expansion-panel"><mat-icon>trip_origin</mat-icon><span>Panel: mat-expansion-panel</span></a>
         </mat-nav-list>
+        
       </mat-expansion-panel>
 
       <mat-list-item class="parent">
@@ -60,7 +60,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
- <router-outlet> </router-outlet>
+    <router-outlet> </router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

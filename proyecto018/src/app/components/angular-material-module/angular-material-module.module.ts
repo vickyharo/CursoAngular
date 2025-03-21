@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+//import { CommonModule } from '@angular/common';
 
 //-> Angular material
 import { MaterialModule } from '../../shared/material/material.module'
@@ -51,9 +51,10 @@ import { MatAutocompleteComponent } from './mat-autocomplete/mat-autocomplete.co
     MatToolbarComponent,
     MatExpansionPanelComponent,
     MatAutocompleteComponent,
+
   ],
   imports: [
-    CommonModule,
+    /*CommonModule,*/
     AngularMaterialRoutingModule, //->Routing del modulo
     MaterialModule, //-> libreria angular material
   ]

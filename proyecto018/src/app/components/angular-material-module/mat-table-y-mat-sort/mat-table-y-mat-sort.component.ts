@@ -4,7 +4,7 @@ import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-mat-table-y-mat-sort',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-table-y-mat-sort.component.html',
   styleUrl: './mat-table-y-mat-sort.component.css'
 })

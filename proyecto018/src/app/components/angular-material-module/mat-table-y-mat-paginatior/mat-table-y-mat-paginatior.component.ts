@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-mat-table-y-mat-paginatior',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-table-y-mat-paginatior.component.html',
   styleUrl: './mat-table-y-mat-paginatior.component.css'
 })

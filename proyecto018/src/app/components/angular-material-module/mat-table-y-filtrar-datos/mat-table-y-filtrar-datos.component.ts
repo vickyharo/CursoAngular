@@ -3,7 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-mat-table-y-filtrar-datos',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-table-y-filtrar-datos.component.html',
   styleUrl: './mat-table-y-filtrar-datos.component.css'
 })

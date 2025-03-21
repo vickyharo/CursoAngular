@@ -3,7 +3,7 @@ import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-mat-table',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-table.component.html',
   styleUrl: './mat-table.component.css'
 })

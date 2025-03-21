@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-formularios-input',
-  standalone: false,
+  standalone: true,
   templateUrl: './formularios-input.component.html',
   styleUrl: './formularios-input.component.css'
 })

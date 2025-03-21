@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+
 @Component({
   selector: 'app-mat-toolbar',
-  standalone: false,
+  standalone: true,
   templateUrl: './mat-toolbar.component.html',
-  styleUrl: './mat-toolbar.component.css'
+  styleUrl: './mat-toolbar.component.css',
+  imports:[]
 })
 export class MatToolbarComponent {
   direcciones: string[] = [

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layout-tabs',
-  standalone: false,
+  standalone: true,
   templateUrl: './layout-tabs.component.html',
   styleUrl: './layout-tabs.component.css'
 })
