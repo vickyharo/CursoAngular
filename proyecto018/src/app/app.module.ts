@@ -1,82 +1,145 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+
+//-> Uso de servicios
+import { HttpClientModule } from '@angular/common/http';
+
+//->Todos los componentes usados por angular material
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 //->Routing del modulo
 import { AppRoutingModule } from './app-routing.module';
 
 //->Barra de navegacion
-import { BarraLateralComponent } from './shared/barra-lateral/barra-lateral.component';
-
-
+import { BarraLateralComponent } from './components/home/barra-lateral/barra-lateral.component';
 
 //-> Mis componentes
-import { BotonesComponent } from './components/angular-material-module/botones/botones.component';
-import { FormulariosInputComponent } from './components/angular-material-module/formularios-input/formularios-input.component';
-import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-module/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
-import { MatCheckboxComponent } from './components/angular-material-module/mat-checkbox/mat-checkbox.component';
-import { MatSelectComponent } from './components/angular-material-module/mat-select/mat-select.component';
-import { MatSliderComponent } from './components/angular-material-module/mat-slider/mat-slider.component';
-import { MatSlideToggleComponent } from './components/angular-material-module/mat-slide-toggle/mat-slide-toggle.component';
-import { LayoutTabsComponent } from './components/angular-material-module/layout-tabs/layout-tabs.component';
-import { MatTableComponent } from './components/angular-material-module/mat-table/mat-table.component';
-import { MatTableYMatPaginatiorComponent } from './components/angular-material-module/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
-import { MatTableYMatSortComponent } from './components/angular-material-module/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
-import { MatTableYFiltrarDatosComponent } from './components/angular-material-module/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
-import { MatDialogComponent } from './components/angular-material-module/mat-dialog/mat-dialog.component';
-import { MatMenuComponent } from './components/angular-material-module/mat-menu/mat-menu.component';
-import { MatMenuAnidadosComponent } from './components/angular-material-module/mat-menu-anidados/mat-menu-anidados.component';
-import { MatCardComponent } from './components/angular-material-module/mat-card/mat-card.component';
-import { MatToolbarComponent } from './components/angular-material-module/mat-toolbar/mat-toolbar.component';
-import { MatExpansionPanelComponent } from './components/angular-material-module/mat-expansion-panel/mat-expansion-panel.component';
-import { MatAutocompleteComponent } from './components/angular-material-module/mat-autocomplete/mat-autocomplete.component';
-import { DialogoarticuloComponent } from './components/angular-material-module/mat-dialog/dialogoarticulo/dialogoarticulo.component';
-/*
-//-> Uso de servicios
-import { HttpClientModule } from '@angular/common/http';
-
-//-> Navbar
-import { BarraLateralComponent } from './shared/barra-lateral/barra-lateral.component';
-
-//-> Angular material
-import { MaterialModule } from './shared/material/material.module'
-/*
-//-> Componentes de ejemplo de angular material
-import { AngularMaterialModuleModule } from './components/angular-material-module/angular-material-module.module'*/
+import { BotonesComponent } from './components/angular-material-ejemplos/botones/botones.component';
+import { FormulariosInputComponent } from './components/angular-material-ejemplos/formularios-input/formularios-input.component';
+import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-ejemplos/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
+import { MatCheckboxComponent } from './components/angular-material-ejemplos/mat-checkbox/mat-checkbox.component';
+import { MatSelectComponent } from './components/angular-material-ejemplos/mat-select/mat-select.component';
+import { MatSliderComponent } from './components/angular-material-ejemplos/mat-slider/mat-slider.component';
+import { MatSlideToggleComponent } from './components/angular-material-ejemplos/mat-slide-toggle/mat-slide-toggle.component';
+import { LayoutTabsComponent } from './components/angular-material-ejemplos/layout-tabs/layout-tabs.component';
+import { MatTableComponent } from './components/angular-material-ejemplos/mat-table/mat-table.component';
+import { MatTableYMatPaginatiorComponent } from './components/angular-material-ejemplos/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
+import { MatTableYMatSortComponent } from './components/angular-material-ejemplos/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+import { MatTableYFiltrarDatosComponent } from './components/angular-material-ejemplos/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
+import { MatDialogComponent } from './components/angular-material-ejemplos/mat-dialog/mat-dialog.component';
+import { MatMenuComponent } from './components/angular-material-ejemplos/mat-menu/mat-menu.component';
+import { MatMenuAnidadosComponent } from './components/angular-material-ejemplos/mat-menu-anidados/mat-menu-anidados.component';
+import { MatCardComponent } from './components/angular-material-ejemplos/mat-card/mat-card.component';
+import { MatToolbarComponent } from './components/angular-material-ejemplos/mat-toolbar/mat-toolbar.component';
+import { MatExpansionPanelComponent } from './components/angular-material-ejemplos/mat-expansion-panel/mat-expansion-panel.component';
+import { MatAutocompleteComponent } from './components/angular-material-ejemplos/mat-autocomplete/mat-autocomplete.component';
+import { DialogoarticuloComponent } from './components/angular-material-ejemplos/mat-dialog/dialogoarticulo/dialogoarticulo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
-   /* BotonesComponent,
-        FormulariosInputComponent,
-        MatRadioButtonYMatRadioGroupComponent,
-        MatCheckboxComponent,
-        MatSelectComponent,
-        MatSliderComponent,
-        MatSlideToggleComponent,
-        LayoutTabsComponent,
-        MatTableComponent,
-        MatTableYMatPaginatiorComponent,
-        MatTableYMatSortComponent,
-        MatTableYFiltrarDatosComponent,
-        MatDialogComponent,
-        DialogoarticuloComponent,
-        MatMenuComponent,
-        MatMenuAnidadosComponent,
-        MatCardComponent,
-        MatToolbarComponent,*/
-       // MatExpansionPanelComponent,
-      //  MatAutocompleteComponent
+    BotonesComponent,
+    FormulariosInputComponent,
+    MatRadioButtonYMatRadioGroupComponent,
+    MatCheckboxComponent,
+    MatSelectComponent,
+    MatSliderComponent,
+    MatSlideToggleComponent,
+    LayoutTabsComponent,
+    MatTableComponent,
+    MatTableYMatPaginatiorComponent,
+    MatTableYMatSortComponent,
+    MatTableYFiltrarDatosComponent,
+    MatDialogComponent,
+    DialogoarticuloComponent,
+    MatMenuComponent,
+    MatMenuAnidadosComponent,
+    MatCardComponent,
+    MatToolbarComponent,
+    MatExpansionPanelComponent,
+    MatAutocompleteComponent,
+    DialogoarticuloComponent
   ],
   imports: [
-   /* HttpClientModule,*/
-    BrowserModule,  
     AppRoutingModule,
+    HttpClientModule,
+    BrowserModule,
 
-   // MatAutocompleteComponent
+    FormsModule,
+    MatSliderModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatAccordion,
+    MatExpansionModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatListModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatBadgeModule,
+    MatProgressBarModule,
+    LayoutModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatSlideToggleModule,
+
   ],
-    
+
   providers: [],
   bootstrap: [AppComponent]
 })

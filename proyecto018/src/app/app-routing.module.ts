@@ -2,98 +2,44 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //-> Mis componentes
-import { BotonesComponent } from './components/angular-material-module/botones/botones.component';
-import { FormulariosInputComponent } from './components/angular-material-module/formularios-input/formularios-input.component';
-import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-module/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
-import { MatCheckboxComponent } from './components/angular-material-module/mat-checkbox/mat-checkbox.component';
-import { MatSelectComponent } from './components/angular-material-module/mat-select/mat-select.component';
-import { MatSliderComponent } from './components/angular-material-module/mat-slider/mat-slider.component';
-import { MatSlideToggleComponent } from './components/angular-material-module/mat-slide-toggle/mat-slide-toggle.component';
-import { LayoutTabsComponent } from './components/angular-material-module/layout-tabs/layout-tabs.component';
-import { MatTableComponent } from './components/angular-material-module/mat-table/mat-table.component';
-import { MatTableYMatPaginatiorComponent } from './components/angular-material-module/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
-import { MatTableYMatSortComponent } from './components/angular-material-module/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
-import { MatTableYFiltrarDatosComponent } from './components/angular-material-module/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
-import { MatDialogComponent } from './components/angular-material-module/mat-dialog/mat-dialog.component';
-import { MatMenuComponent } from './components/angular-material-module/mat-menu/mat-menu.component';
-import { MatMenuAnidadosComponent } from './components/angular-material-module/mat-menu-anidados/mat-menu-anidados.component';
-import { MatCardComponent } from './components/angular-material-module/mat-card/mat-card.component';
-import { MatToolbarComponent } from './components/angular-material-module/mat-toolbar/mat-toolbar.component';
-import { MatExpansionPanelComponent } from './components/angular-material-module/mat-expansion-panel/mat-expansion-panel.component';
+import { BotonesComponent } from './components/angular-material-ejemplos/botones/botones.component';
+import { FormulariosInputComponent } from './components/angular-material-ejemplos/formularios-input/formularios-input.component';
+import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-ejemplos/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
+import { MatCheckboxComponent } from './components/angular-material-ejemplos/mat-checkbox/mat-checkbox.component';
+import { MatSelectComponent } from './components/angular-material-ejemplos/mat-select/mat-select.component';
+import { MatSliderComponent } from './components/angular-material-ejemplos/mat-slider/mat-slider.component';
+import { MatSlideToggleComponent } from './components/angular-material-ejemplos/mat-slide-toggle/mat-slide-toggle.component';
+import { LayoutTabsComponent } from './components/angular-material-ejemplos/layout-tabs/layout-tabs.component';
+import { MatTableComponent } from './components/angular-material-ejemplos/mat-table/mat-table.component';
+import { MatTableYMatPaginatiorComponent } from './components/angular-material-ejemplos/mat-table-y-mat-paginatior/mat-table-y-mat-paginatior.component';
+import { MatTableYMatSortComponent } from './components/angular-material-ejemplos/mat-table-y-mat-sort/mat-table-y-mat-sort.component';
+import { MatTableYFiltrarDatosComponent } from './components/angular-material-ejemplos/mat-table-y-filtrar-datos/mat-table-y-filtrar-datos.component';
+import { MatDialogComponent } from './components/angular-material-ejemplos/mat-dialog/mat-dialog.component';
+import { MatMenuComponent } from './components/angular-material-ejemplos/mat-menu/mat-menu.component';
+import { MatMenuAnidadosComponent } from './components/angular-material-ejemplos/mat-menu-anidados/mat-menu-anidados.component';
+import { MatCardComponent } from './components/angular-material-ejemplos/mat-card/mat-card.component';
+import { MatToolbarComponent } from './components/angular-material-ejemplos/mat-toolbar/mat-toolbar.component';
+import { MatExpansionPanelComponent } from './components/angular-material-ejemplos/mat-expansion-panel/mat-expansion-panel.component';
 
 const routes: Routes = [
-  {
-      path: 'botones',
-      component: BotonesComponent
-    },
-    {
-      path: 'formularios-input',
-      component: FormulariosInputComponent
-    },
-    {
-      path: 'mat-radio-button-y-mat-radio-group',
-      component: MatRadioButtonYMatRadioGroupComponent
-    },
-    {
-      path: 'mat-checkbox',
-      component: MatCheckboxComponent
-    },
-    {
-      path: 'mat-select',
-      component: MatSelectComponent
-    },
-    {
-      path: 'mat-slider',
-      component: MatSliderComponent
-    },
-    {
-      path: 'mat-slide-toggle',
-      component: MatSlideToggleComponent
-    },
-    {
-      path: 'layout-tabs',
-      component: LayoutTabsComponent
-    },
-    {
-      path: 'mat-table',
-      component: MatTableComponent
-    },
-    {
-      path: 'mat-table-y-mat-paginatior',
-      component: MatTableYMatPaginatiorComponent
-    },
-    {
-      path: 'mat-table-y-mat-sort',
-      component: MatTableYMatSortComponent
-    },
-    {
-      path: 'mat-table-y-filtrar-datos',
-      component: MatTableYFiltrarDatosComponent
-    },
-    {
-      path: 'mat-dialog',
-      component: MatDialogComponent
-    },
-    {
-      path: 'mat-menu',
-      component: MatMenuComponent
-    },
-    {
-      path: 'mat-menu-anidado',
-      component: MatMenuAnidadosComponent
-    },
-    {
-      path: 'mat-card',
-      component: MatCardComponent
-    },
-    {
-      path: 'mat-toolbar',
-      component: MatToolbarComponent
-    },
-    {
-      path: 'mat-expansion-panel',
-      component: MatExpansionPanelComponent
-    },
+  { path: 'botones', component: BotonesComponent },
+  { path: 'formularios-input', component: FormulariosInputComponent },
+  { path: 'mat-radio-button-y-mat-radio-group', component: MatRadioButtonYMatRadioGroupComponent },
+  { path: 'mat-checkbox', component: MatCheckboxComponent },
+  { path: 'mat-select', component: MatSelectComponent },
+  { path: 'mat-slider', component: MatSliderComponent },
+  { path: 'mat-slide-toggle', component: MatSlideToggleComponent },
+  { path: 'layout-tabs', component: LayoutTabsComponent },
+  { path: 'mat-table', component: MatTableComponent },
+  { path: 'mat-table-y-mat-paginatior', component: MatTableYMatPaginatiorComponent },
+  { path: 'mat-table-y-mat-sort', component: MatTableYMatSortComponent },
+  { path: 'mat-table-y-filtrar-datos', component: MatTableYFiltrarDatosComponent },
+  { path: 'mat-dialog', component: MatDialogComponent },
+  { path: 'mat-menu', component: MatMenuComponent },
+  { path: 'mat-menu-anidado', component: MatMenuAnidadosComponent },
+  { path: 'mat-card', component: MatCardComponent },
+  { path: 'mat-toolbar', component: MatToolbarComponent },
+  { path: 'mat-expansion-panel', component: MatExpansionPanelComponent },
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/botones' } // Ruta comodín para manejar errores 404
 ];
