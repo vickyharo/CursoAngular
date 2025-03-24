@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //-> Mis componentes
+//******** Ejemplos angular material
 import { BotonesComponent } from './components/angular-material-ejemplos/botones/botones.component';
 import { FormulariosInputComponent } from './components/angular-material-ejemplos/formularios-input/formularios-input.component';
 import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-ejemplos/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
@@ -21,7 +22,12 @@ import { MatCardComponent } from './components/angular-material-ejemplos/mat-car
 import { MatToolbarComponent } from './components/angular-material-ejemplos/mat-toolbar/mat-toolbar.component';
 import { MatExpansionPanelComponent } from './components/angular-material-ejemplos/mat-expansion-panel/mat-expansion-panel.component';
 
+//******** Formularios reactivos
+import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
+import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
+
 const routes: Routes = [
+  //******** Ejemplos angular material
   { path: 'botones', component: BotonesComponent },
   { path: 'formularios-input', component: FormulariosInputComponent },
   { path: 'mat-radio-button-y-mat-radio-group', component: MatRadioButtonYMatRadioGroupComponent },
@@ -40,6 +46,10 @@ const routes: Routes = [
   { path: 'mat-card', component: MatCardComponent },
   { path: 'mat-toolbar', component: MatToolbarComponent },
   { path: 'mat-expansion-panel', component: MatExpansionPanelComponent },
+  //******** Formularios reactivos
+  { path: 'reactive-forms-module-y-form-control', component: ReactiveFormsModuleYFormControlComponent },
+  { path: 'form-group', component: FormGroupComponent },
+  //******** Home
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/botones' } // Ruta comodín para manejar errores 404
 ];

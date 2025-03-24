@@ -49,6 +49,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BarraLateralComponent } from './components/home/barra-lateral/barra-lateral.component';
 
 //-> Mis componentes
+//******** Ejemplos angular material
 import { BotonesComponent } from './components/angular-material-ejemplos/botones/botones.component';
 import { FormulariosInputComponent } from './components/angular-material-ejemplos/formularios-input/formularios-input.component';
 import { MatRadioButtonYMatRadioGroupComponent } from './components/angular-material-ejemplos/mat-radio-button-y-mat-radio-group/mat-radio-button-y-mat-radio-group.component';
@@ -70,10 +71,17 @@ import { MatExpansionPanelComponent } from './components/angular-material-ejempl
 import { MatAutocompleteComponent } from './components/angular-material-ejemplos/mat-autocomplete/mat-autocomplete.component';
 import { DialogoarticuloComponent } from './components/angular-material-ejemplos/mat-dialog/dialogoarticulo/dialogoarticulo.component';
 
+//******** Formularios reactivos
+import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
+import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
+import { ControlesCheckboxRadioYSelectComponent } from './components/formularios-reactivos/controles-checkbox-radio-y-select/controles-checkbox-radio-y-select.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
+
+    /*Ejemplos angular material*/
     BotonesComponent,
     FormulariosInputComponent,
     MatRadioButtonYMatRadioGroupComponent,
@@ -94,7 +102,12 @@ import { DialogoarticuloComponent } from './components/angular-material-ejemplos
     MatToolbarComponent,
     MatExpansionPanelComponent,
     MatAutocompleteComponent,
-    DialogoarticuloComponent
+    DialogoarticuloComponent,
+
+    /*Formularios reactivos*/
+    ReactiveFormsModuleYFormControlComponent,
+    FormGroupComponent,
+    ControlesCheckboxRadioYSelectComponent
   ],
   imports: [
     AppRoutingModule,

@@ -14,6 +14,13 @@ mat-list-item {
   color: rgb(221, 14, 104);
 }
 
+.pink-icon-hide
+{
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
 .example-sidenav-content {
   display: flex;
   height: 100%;
