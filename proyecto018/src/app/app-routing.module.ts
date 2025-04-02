@@ -21,6 +21,7 @@ import { MatMenuAnidadosComponent } from './components/angular-material-ejemplos
 import { MatCardComponent } from './components/angular-material-ejemplos/mat-card/mat-card.component';
 import { MatToolbarComponent } from './components/angular-material-ejemplos/mat-toolbar/mat-toolbar.component';
 import { MatExpansionPanelComponent } from './components/angular-material-ejemplos/mat-expansion-panel/mat-expansion-panel.component';
+import { MatTableEncabezadosDivididosComponent } from './components/angular-material-ejemplos/mat-table-encabezados-divididos/mat-table-encabezados-divididos.component';
 
 //******** Formularios reactivos
 import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'mat-card', component: MatCardComponent },
   { path: 'mat-toolbar', component: MatToolbarComponent },
   { path: 'mat-expansion-panel', component: MatExpansionPanelComponent },
+  { path: 'mat-table-encabezados-divididos', component: MatTableEncabezadosDivididosComponent },
   //******** Formularios reactivos
   { path: 'reactive-forms-module-y-form-control', component: ReactiveFormsModuleYFormControlComponent },
   { path: 'form-group', component: FormGroupComponent },

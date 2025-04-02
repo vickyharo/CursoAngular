@@ -20,18 +20,18 @@ export class ControlesCheckboxRadioYSelectComponent {
   });
 
   submit() {
-    if (this.formularioConversion.value.base == "hexadecimal")
+   /* if (this.formularioConversion.value.base == "hexadecimal")
     {
       let valor:string = this.formularioConversion.value.numerodecimal;
       let valor2:number = parseInt(valor);
     }
-      /*this.conversion = parseInt*/(this.formularioConversion.value.numerodecimal).toString(16);
+      this.conversion = parseInt(this.formularioConversion.value.numerodecimal).toString(16);
 
 
     if (this.formularioConversion.value.base == "octal")
       this.conversion = parseInt(this.formularioConversion.value.numerodecimal).toString(8);
     this.potenciaNumero = Math.pow(parseInt(this.formularioConversion.value.numerodecimal), parseInt(this.formularioConversion.value.potencia));
     if (this.formularioConversion.value.largo)
-      this.cantidad = this.formularioConversion.value.numerodecimal.length;
+      this.cantidad = this.formularioConversion.value.numerodecimal.length;*/
   }
 }

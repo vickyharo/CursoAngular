@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 //->Todos los componentes usados por angular material
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { A11yModule } from '@angular/cdk/a11y';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -70,11 +76,13 @@ import { MatToolbarComponent } from './components/angular-material-ejemplos/mat-
 import { MatExpansionPanelComponent } from './components/angular-material-ejemplos/mat-expansion-panel/mat-expansion-panel.component';
 import { MatAutocompleteComponent } from './components/angular-material-ejemplos/mat-autocomplete/mat-autocomplete.component';
 import { DialogoarticuloComponent } from './components/angular-material-ejemplos/mat-dialog/dialogoarticulo/dialogoarticulo.component';
+import { MatTableEncabezadosDivididosComponent } from './components/angular-material-ejemplos/mat-table-encabezados-divididos/mat-table-encabezados-divididos.component';
 
 //******** Formularios reactivos
 import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
 import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
 import { ControlesCheckboxRadioYSelectComponent } from './components/formularios-reactivos/controles-checkbox-radio-y-select/controles-checkbox-radio-y-select.component';
+import { MatTableResizeColumnComponent } from './components/angular-material-ejemplos/mat-table-resize-column/mat-table-resize-column.component';
 
 @NgModule({
   declarations: [
@@ -103,17 +111,26 @@ import { ControlesCheckboxRadioYSelectComponent } from './components/formularios
     MatExpansionPanelComponent,
     MatAutocompleteComponent,
     DialogoarticuloComponent,
+    MatTableEncabezadosDivididosComponent,
 
     /*Formularios reactivos*/
     ReactiveFormsModuleYFormControlComponent,
     FormGroupComponent,
-    ControlesCheckboxRadioYSelectComponent
+    ControlesCheckboxRadioYSelectComponent,
+    MatTableResizeColumnComponent,
+
   ],
   imports: [
     AppRoutingModule,
     HttpClientModule,
     BrowserModule,
 
+    CdkStepperModule,
+    A11yModule,
+    ScrollingModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
     FormsModule,
     MatSliderModule,
     MatTableModule,
@@ -152,7 +169,6 @@ import { ControlesCheckboxRadioYSelectComponent } from './components/formularios
     MatSlideToggleModule,
 
   ],
-
   providers: [],
   bootstrap: [AppComponent]
 })

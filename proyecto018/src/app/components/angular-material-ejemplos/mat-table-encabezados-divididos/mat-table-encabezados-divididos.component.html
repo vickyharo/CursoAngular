@@ -1,0 +1,85 @@
+<div class="card-container">
+  <div class="card">
+
+<div class="example-container mat-elevation-z8">
+	<table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+
+		<ng-container matColumnDef="code">
+			<th [ngStyle]="{'display': 'none'}" mat-header-cell *matHeaderCellDef [attr.rowspan]="2"> Code </th>
+			<td mat-cell *matCellDef="let element"> {{element.code}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="cadTrade.total">
+			<th mat-header-cell *matHeaderCellDef> Total# </th>
+			<td mat-cell *matCellDef="let element"> {{element.cadTrade.total}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="cadTrade.amount">
+			<th mat-header-cell *matHeaderCellDef class="similar-cell-width"> total Settlement Amount </th>
+			<td mat-cell *matCellDef="let element" class="similar-cell-width"> {{element.cadTrade.amount}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data2.total">
+			<th mat-header-cell *matHeaderCellDef> Total# </th>
+			<td mat-cell *matCellDef="let element"> {{element.data2.total}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data2.amount">
+			<th mat-header-cell *matHeaderCellDef class="similar-cell-width"> total Settlement Amount </th>
+			<td mat-cell *matCellDef="let element" class="similar-cell-width"> {{element.data2.amount}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data3.total">
+			<th mat-header-cell *matHeaderCellDef> Total# </th>
+			<td mat-cell *matCellDef="let element"> {{element.data3.total}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data3.amount">
+			<th mat-header-cell *matHeaderCellDef class="similar-cell-width"> total Settlement Amount </th>
+			<td mat-cell *matCellDef="let element" class="similar-cell-width"> {{element.data3.amount}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data4.total">
+			<th mat-header-cell *matHeaderCellDef> Total# </th>
+			<td mat-cell *matCellDef="let element"> {{element.data4.total}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data4.amount">
+			<th mat-header-cell *matHeaderCellDef class="similar-cell-width"> total Settlement Amount </th>
+			<td mat-cell *matCellDef="let element" class="similar-cell-width"> {{element.data4.amount}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="header-row-first-group">
+			<th mat-header-cell *matHeaderCellDef style="text-align: center;" [attr.rowspan]="2">
+				No
+			</th>
+		</ng-container>
+		<ng-container matColumnDef="header-row-sec-group">
+			<th mat-header-cell *matHeaderCellDef style="text-align: center;" [attr.colspan]="2">
+				group 1
+			</th>
+		</ng-container>
+		<ng-container matColumnDef="header-row-third-group">
+			<th mat-header-cell *matHeaderCellDef style="text-align: center;" [attr.colspan]="2">
+				group 2
+			</th>
+		</ng-container>
+		<ng-container matColumnDef="header-row-forth-group">
+			<th mat-header-cell *matHeaderCellDef style="text-align: center;" [attr.colspan]="2">
+				group 3
+			</th>
+		</ng-container>
+		<ng-container matColumnDef="header-row-fifth-group">
+			<th mat-header-cell *matHeaderCellDef style="text-align: center;" [attr.colspan]="2">
+				group 4
+			</th>
+		</ng-container>
+
+		<tr mat-header-row
+			*matHeaderRowDef="['header-row-first-group','header-row-sec-group','header-row-third-group','header-row-forth-group','header-row-fifth-group']">
+		</tr>
+		<tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+	</table>
+
+</div></div></div>
