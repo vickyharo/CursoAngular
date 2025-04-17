@@ -26,6 +26,7 @@ import { MatTableEncabezadosDivididosComponent } from './components/angular-mate
 //******** Formularios reactivos
 import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
 import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
+import { ControlesCheckboxRadioYSelectComponent } from './components/formularios-reactivos/controles-checkbox-radio-y-select/controles-checkbox-radio-y-select.component';
 
 const routes: Routes = [
   //******** Ejemplos angular material
@@ -51,6 +52,7 @@ const routes: Routes = [
   //******** Formularios reactivos
   { path: 'reactive-forms-module-y-form-control', component: ReactiveFormsModuleYFormControlComponent },
   { path: 'form-group', component: FormGroupComponent },
+  { path: 'controles-checkbox-radio-y-select', component: ControlesCheckboxRadioYSelectComponent },
   //******** Home
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/botones' } // Ruta comodín para manejar errores 404
