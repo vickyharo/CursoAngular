@@ -27,6 +27,19 @@ import { MatTableEncabezadosDivididosComponent } from './components/angular-mate
 import { ReactiveFormsModuleYFormControlComponent } from './components/formularios-reactivos/reactive-forms-module-y-form-control/reactive-forms-module-y-form-control.component';
 import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
 import { ControlesCheckboxRadioYSelectComponent } from './components/formularios-reactivos/controles-checkbox-radio-y-select/controles-checkbox-radio-y-select.component';
+import { FormGroupAnidadosComponent } from './components/formularios-reactivos/form-group-anidados/form-group-anidados.component';
+import { ValidacionesEstandaresDeAngularComponent } from './components/formularios-reactivos/validaciones-estandares-de-angular/validaciones-estandares-de-angular.component';
+import { ValidacionesPersonalizadasComponent } from './components/formularios-reactivos/validaciones-personalizadas/validaciones-personalizadas.component';
+import { FormBuilderComponent } from './components/formularios-reactivos/form-builder/form-builder.component';
+
+//******** Componentes
+import { PasarDatosDeLaComponentePadreALaComponenteHijaComponent } from './components/componentes/pasar-datos-de-la-componente-padre-a-la-componente-hija/pasar-datos-de-la-componente-padre-a-la-componente-hija.component';
+import { DisparoDeEventosDeLaComponenteHijaALaComponentePadreComponent } from './components/componentes/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre.component';
+import { LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent } from './components/componentes/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre.component';
+import { EnlaceDePropiedadesPropertyBindingComponent } from './components/componentes/enlace-de-propiedades-property-binding/enlace-de-propiedades-property-binding.component';
+
+//******** Directivas estructurales
+import { NgForComponent } from './components/directivas/ng-for/ng-for.component';
 
 const routes: Routes = [
   //******** Ejemplos angular material
@@ -53,6 +66,18 @@ const routes: Routes = [
   { path: 'reactive-forms-module-y-form-control', component: ReactiveFormsModuleYFormControlComponent },
   { path: 'form-group', component: FormGroupComponent },
   { path: 'controles-checkbox-radio-y-select', component: ControlesCheckboxRadioYSelectComponent },
+  { path: 'form-group-anidados', component: FormGroupAnidadosComponent },
+  { path: 'validaciones-estandares-de-angular', component: ValidacionesEstandaresDeAngularComponent },
+  { path: 'validaciones-personalizadas', component: ValidacionesPersonalizadasComponent },
+  { path: 'form-builder', component: FormBuilderComponent },
+  //******** Componentes
+  { path: 'pasar-datos-de-la-componente-padre-a-la-componente-hija', component: PasarDatosDeLaComponentePadreALaComponenteHijaComponent },
+  { path: 'disparo-de-eventos-de-la-componente-hija-a-la-componente-padre', component: DisparoDeEventosDeLaComponenteHijaALaComponentePadreComponent },
+  { path: 'llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre', component: LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent },
+  { path: 'enlace-de-propiedades-property-binding', component: EnlaceDePropiedadesPropertyBindingComponent },
+  //******** Directivas estructurales
+  { path: 'ng-for', component: NgForComponent },
+
   //******** Home
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/botones' } // Ruta comodín para manejar errores 404

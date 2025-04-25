@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 //->Todos los componentes usados por angular material
-import {CdkStepperModule} from '@angular/cdk/stepper';
+import { CdkStepperModule} from '@angular/cdk/stepper';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -83,6 +83,26 @@ import { ReactiveFormsModuleYFormControlComponent } from './components/formulari
 import { FormGroupComponent } from './components/formularios-reactivos/form-group/form-group.component';
 import { ControlesCheckboxRadioYSelectComponent } from './components/formularios-reactivos/controles-checkbox-radio-y-select/controles-checkbox-radio-y-select.component';
 import { MatTableResizeColumnComponent } from './components/angular-material-ejemplos/mat-table-resize-column/mat-table-resize-column.component';
+import { FormGroupAnidadosComponent } from './components/formularios-reactivos/form-group-anidados/form-group-anidados.component';
+import { ValidacionesEstandaresDeAngularComponent } from './components/formularios-reactivos/validaciones-estandares-de-angular/validaciones-estandares-de-angular.component';
+import { ValidacionesPersonalizadasComponent } from './components/formularios-reactivos/validaciones-personalizadas/validaciones-personalizadas.component';
+import { FormBuilderComponent } from './components/formularios-reactivos/form-builder/form-builder.component';
+
+//******** Componentes
+import { PasarDatosDeLaComponentePadreALaComponenteHijaComponent } from './components/componentes/pasar-datos-de-la-componente-padre-a-la-componente-hija/pasar-datos-de-la-componente-padre-a-la-componente-hija.component';
+import { DadoComponent } from './components/componentes/pasar-datos-de-la-componente-padre-a-la-componente-hija/dado/dado.component';
+import { DisparoDeEventosDeLaComponenteHijaALaComponentePadreComponent } from './components/componentes/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre.component';
+import { CronometroComponent } from './components/componentes/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre/cronometro/cronometro.component';
+import { LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent } from './components/componentes/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre.component';
+import { SelectornumericoComponent } from './components/componentes/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre/selectornumerico/selectornumerico.component';
+import { LlamarAMetodosDeLaComponenteHijaDesdeLaClasePadreComponent } from './components/componentes/llamar-a-metodos-de-la-componente-hija-desde-la-clase-padre/llamar-a-metodos-de-la-componente-hija-desde-la-clase-padre.component';
+import { SelectorNumericoDosComponent } from './components/componentes/llamar-a-metodos-de-la-componente-hija-desde-la-clase-padre/selector-numerico-dos/selector-numerico-dos.component';
+import { EnlaceDePropiedadesPropertyBindingComponent } from './components/componentes/enlace-de-propiedades-property-binding/enlace-de-propiedades-property-binding.component';
+import { ListadoArticulosComponent } from './components/componentes/enlace-de-propiedades-property-binding/listado-articulos/listado-articulos.component';
+
+//******** Directivas estructurales
+import { NgForComponent } from './components/directivas/ng-for/ng-for.component';
+import { NgModelComponent } from './components/directivas/ng-for/ng-model/ng-model.component';
 
 @NgModule({
   declarations: [
@@ -118,6 +138,24 @@ import { MatTableResizeColumnComponent } from './components/angular-material-eje
     FormGroupComponent,
     ControlesCheckboxRadioYSelectComponent,
     MatTableResizeColumnComponent,
+    FormGroupAnidadosComponent,
+    ValidacionesEstandaresDeAngularComponent,
+    ValidacionesPersonalizadasComponent,
+    FormBuilderComponent,
+
+    /*Componentes*/
+    PasarDatosDeLaComponentePadreALaComponenteHijaComponent,
+    DadoComponent,
+    DisparoDeEventosDeLaComponenteHijaALaComponentePadreComponent,
+    CronometroComponent,
+    LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent,
+    SelectornumericoComponent,
+    LlamarAMetodosDeLaComponenteHijaDesdeLaClasePadreComponent,
+    SelectorNumericoDosComponent,
+    EnlaceDePropiedadesPropertyBindingComponent,
+    ListadoArticulosComponent,
+    NgForComponent,
+    NgModelComponent
 
   ],
   imports: [

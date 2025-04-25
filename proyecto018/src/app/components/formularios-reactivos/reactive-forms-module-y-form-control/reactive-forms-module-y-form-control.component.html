@@ -1,16 +1,14 @@
 <div class="card-container">
-    <div class="card">
-        <div class="contenedor">
-            <p> Actividad:
-                <input type="text" [formControl]="actividad">
-            </p>
-            <p><button (click)="agregar()">Agregar</button></p>
-            <ol>
-                <li *ngFor="let acti of lista;let i=index">
-                    {{acti}} <a (click)="borrar(i)" href="#">Borra?</a>
-                </li>
-            </ol>
-            <p><button (click)="borrarTodas()">Borrar todas las actividades</button></p>
-        </div>
-    </div>
+  <div class="card">
+    <p> Actividad:
+      <input type="text" [formControl]="actividad">
+    </p>
+    <p><button (click)="agregar()">Agregar</button></p>
+    <ol>
+      <li *ngFor="let acti of lista;let i=index">
+        {{acti}} <a (click)="borrar(i)" href="#">Borra?</a>
+      </li>
+    </ol>
+    <p><button (click)="borrarTodas()">Borrar todas las actividades</button></p>
+  </div>
 </div>

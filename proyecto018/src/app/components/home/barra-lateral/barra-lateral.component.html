@@ -13,6 +13,57 @@
     <mat-nav-list class="ul active">
 
       <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
+      *ngIf="opened || isShowing ; else ocultarMenu_5">
+      <mat-expansion-panel-header>
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+        <span>DIRECTIVAS ESTRUCTURALES</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/ng-for"><mat-icon>arrow_right_alt</mat-icon><span>*ngFor</span></a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <ng-template #ocultarMenu_5>
+      <diV class="pink-icon-hide">
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+      </diV>
+    </ng-template>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
+      *ngIf="opened || isShowing ; else ocultarMenu_4">
+      <mat-expansion-panel-header>
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+        <span>DIRECTIVAS DE ATRIBUTO</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/pasar-datos-de-la-componente-padre-a-la-componente-hija"><mat-icon>arrow_right_alt</mat-icon><span>Pasar datos de la componente padre a la componente hija</span></a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <ng-template #ocultarMenu_4>
+      <diV class="pink-icon-hide">
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+      </diV>
+    </ng-template>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
+      *ngIf="opened || isShowing ; else ocultarMenu_3">
+      <mat-expansion-panel-header>
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+        <span>COMPONENTES</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/pasar-datos-de-la-componente-padre-a-la-componente-hija"><mat-icon>arrow_right_alt</mat-icon><span>Pasar datos de la componente padre a la componente hija</span></a>
+        <a mat-list-item routerLink="/disparo-de-eventos-de-la-componente-hija-a-la-componente-padre"><mat-icon>arrow_right_alt</mat-icon><span>Disparo de eventos de la componente hija a la componente padre</span></a>
+        <a mat-list-item routerLink="/llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre"><mat-icon>arrow_right_alt</mat-icon><span>Llamar a métodos de la componente hija desde el template del padre</span></a>
+        <a mat-list-item routerLink="/enlace-de-propiedades-property-binding"><mat-icon>arrow_right_alt</mat-icon><span>Enlace de propiedades (Property Binding)</span></a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <ng-template #ocultarMenu_3>
+      <diV class="pink-icon-hide">
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+      </diV>
+    </ng-template>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
         *ngIf="opened || isShowing ; else ocultarMenu_1">
         <mat-expansion-panel-header>
           <mat-icon class="pink-icon" mat-list-icon>class</mat-icon>
@@ -73,11 +124,13 @@
           <span>FORMULARIOS REACTIVOS</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item
-            routerLink="/reactive-forms-module-y-form-control"><mat-icon>arrow_right_alt</mat-icon><span>ReactiveFormsModule,
-              FormControl</span></a>
+          <a mat-list-item routerLink="/reactive-forms-module-y-form-control"><mat-icon>arrow_right_alt</mat-icon><span>ReactiveFormsModule,FormControl</span></a>
           <a mat-list-item routerLink="/form-group"><mat-icon>arrow_right_alt</mat-icon><span>FormGroup</span></a>
           <a mat-list-item routerLink="/controles-checkbox-radio-y-select"><mat-icon>arrow_right_alt</mat-icon><span>Controles checkbox, radio y select</span></a>
+          <a mat-list-item routerLink="/form-group-anidados"><mat-icon>arrow_right_alt</mat-icon><span>FormGroup anidados</span></a>
+          <a mat-list-item routerLink="/validaciones-estandares-de-angular"><mat-icon>arrow_right_alt</mat-icon><span>Validaciones estándares de Angular</span></a>
+          <a mat-list-item routerLink="/validaciones-personalizadas"><mat-icon>arrow_right_alt</mat-icon><span>Validaciones personalizadas</span></a>
+          <a mat-list-item routerLink="/form-builder"><mat-icon>arrow_right_alt</mat-icon><span>FormBuilder</span></a>
         </mat-nav-list>
       </mat-expansion-panel>
       <ng-template #ocultarMenu_2>
@@ -86,6 +139,8 @@
         </diV>
       </ng-template>
 
+
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -93,5 +148,4 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<mat-toolbar color="primary" class="example-footer">Develop by AstridGigles - Current
-  build:1.0.0</mat-toolbar>
+<mat-toolbar color="primary" class="example-footer">Develop by AstridGigles - Current build:1.0.0</mat-toolbar>
