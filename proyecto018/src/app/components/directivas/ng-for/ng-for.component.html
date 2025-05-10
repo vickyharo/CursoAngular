@@ -1,7 +1,11 @@
-<ul>
-  <li
-    *ngFor="let elemento of arreglo1; let indice=index; let impar=odd; trackBy: rastrearPor;let primero=first; let ultimo=last">
-    El {{elemento}} está en la posición {{indice}} se encuentra en una posición {{impar?'impar':'par'}}
-    {{primero?'es el primero del arreglo':''}} {{ultimo?'es el último del arreglo':''}}
-  </li>
-</ul>
+<div class="card-container">
+  <div class="card">
+    <ul>
+      <li
+        *ngFor="let elemento of arreglo1; let indice=index; let impar=odd; trackBy: rastrearPor;let primero=first; let ultimo=last">
+        El {{elemento}} está en la posición {{indice}} se encuentra en una posición {{impar?'impar':'par'}}
+        {{primero?'es el primero del arreglo':''}} {{ultimo?'es el último del arreglo':''}}
+      </li>
+    </ul>
+  </div>
+</div>

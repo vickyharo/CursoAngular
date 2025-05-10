@@ -39,7 +39,20 @@ import { LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent } from
 import { EnlaceDePropiedadesPropertyBindingComponent } from './components/componentes/enlace-de-propiedades-property-binding/enlace-de-propiedades-property-binding.component';
 
 //******** Directivas estructurales
+import { NgModelComponent } from './components/directivas/ng-model/ng-model.component';
+import { NgifNgforComponent } from './components/directivas/ngif-ngfor/ngif-ngfor.component';
 import { NgForComponent } from './components/directivas/ng-for/ng-for.component';
+import { NgIfComponent } from './components/directivas/ng-if/ng-if.component';
+import { NgSwitchCaseComponent } from './components/directivas/ng-switch-case/ng-switch-case.component';
+import { NgStyleComponent } from './components/directivas/ng-style/ng-style.component';
+import { NgClassComponent } from './components/directivas/ng-class/ng-class.component';
+import { DirectivasAtributoCreacionComponent } from './components/directivas/directivas-atributo-creacion/directivas-atributo-creacion.component';
+import { DirectivasAtributoPropiedadesComponent } from './components/directivas/directivas-atributo-propiedades/directivas-atributo-propiedades.component';
+import { DirectivasAtributoEventosComponent } from './components/directivas/directivas-atributo-eventos/directivas-atributo-eventos.component';
+import { DirectivasEstructuralesCreacionComponent } from './components/directivas/directivas-estructurales-creacion/directivas-estructurales-creacion.component';
+
+//******** Pipes
+import { PipesDefinicionComponent } from './components/pipes/pipes-definicion/pipes-definicion.component';
 
 const routes: Routes = [
   //******** Ejemplos angular material
@@ -75,8 +88,20 @@ const routes: Routes = [
   { path: 'disparo-de-eventos-de-la-componente-hija-a-la-componente-padre', component: DisparoDeEventosDeLaComponenteHijaALaComponentePadreComponent },
   { path: 'llamar-a-metodos-de-la-componente-hija-desde-el-template-del-padre', component: LlamarAMetodosDeLaComponenteHijaDesdeElTemplateDelPadreComponent },
   { path: 'enlace-de-propiedades-property-binding', component: EnlaceDePropiedadesPropertyBindingComponent },
-  //******** Directivas estructurales
+  //******** Directivas
+  { path: 'ng-model', component: NgModelComponent },
+  { path: 'ngif-ngfor', component: NgifNgforComponent },
   { path: 'ng-for', component: NgForComponent },
+  { path: 'ng-if', component: NgIfComponent },
+  { path: 'ng-switch-case', component: NgSwitchCaseComponent },
+  { path: 'ng-style', component: NgStyleComponent },
+  { path: 'ng-class', component: NgClassComponent },
+  { path: 'directivas-atributo-creacion', component: DirectivasAtributoCreacionComponent },
+  { path: 'directivas-atributo-propiedades', component: DirectivasAtributoPropiedadesComponent },
+  { path: 'directivas-atributo-eventos', component: DirectivasAtributoEventosComponent },
+  { path: 'directivas-estructurales-creacion', component: DirectivasEstructuralesCreacionComponent },
+  //********* Pipes
+  { path: 'pipes-definicion', component: PipesDefinicionComponent },
 
   //******** Home
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto

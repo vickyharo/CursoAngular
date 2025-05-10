@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 //->Todos los componentes usados por angular material
-import { CdkStepperModule} from '@angular/cdk/stepper';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -101,9 +101,25 @@ import { EnlaceDePropiedadesPropertyBindingComponent } from './components/compon
 import { ListadoArticulosComponent } from './components/componentes/enlace-de-propiedades-property-binding/listado-articulos/listado-articulos.component';
 
 //******** Directivas estructurales
+import { NgModelComponent } from './components/directivas/ng-model/ng-model.component';
+import { NgifNgforComponent } from './components/directivas/ngif-ngfor/ngif-ngfor.component';
 import { NgForComponent } from './components/directivas/ng-for/ng-for.component';
-import { NgModelComponent } from './components/directivas/ng-for/ng-model/ng-model.component';
+import { NgIfComponent } from './components/directivas/ng-if/ng-if.component';
+import { NgSwitchCaseComponent } from './components/directivas/ng-switch-case/ng-switch-case.component';
+import { NgStyleComponent } from './components/directivas/ng-style/ng-style.component';
+import { NgClassComponent } from './components/directivas/ng-class/ng-class.component';
+import { DirectivasAtributoCreacionComponent } from './components/directivas/directivas-atributo-creacion/directivas-atributo-creacion.component';
+import { ResaltadoDirective } from './components/directivas/directivas-atributo-creacion/resaltado.directive';
+import { DirectivasAtributoPropiedadesComponent } from './components/directivas/directivas-atributo-propiedades/directivas-atributo-propiedades.component';
+import { Resaltado2Directive } from './components/directivas/directivas-atributo-propiedades/resaltado2.directive';
+import { DirectivasAtributoEventosComponent } from './components/directivas/directivas-atributo-eventos/directivas-atributo-eventos.component';
+import { TextovozDirective } from './components/directivas/directivas-atributo-eventos/textovoz.directive';
+import { DirectivasEstructuralesCreacionComponent } from './components/directivas/directivas-estructurales-creacion/directivas-estructurales-creacion.component';
+import { RepetirDirective } from './components/directivas/directivas-estructurales-creacion/repetir.directive';
+import { SiDirective } from './components/directivas/directivas-estructurales-creacion/si.directive';
 
+//********* Pipes
+import { PipesDefinicionComponent } from './components/pipes/pipes-definicion/pipes-definicion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -154,8 +170,27 @@ import { NgModelComponent } from './components/directivas/ng-for/ng-model/ng-mod
     SelectorNumericoDosComponent,
     EnlaceDePropiedadesPropertyBindingComponent,
     ListadoArticulosComponent,
+
+    /*Directivas*/
+    NgModelComponent,
+    NgifNgforComponent,
     NgForComponent,
-    NgModelComponent
+    NgIfComponent,
+    NgSwitchCaseComponent,
+    NgStyleComponent,
+    NgClassComponent,
+    DirectivasAtributoCreacionComponent,
+    ResaltadoDirective,
+    DirectivasAtributoPropiedadesComponent,
+    Resaltado2Directive,
+    DirectivasAtributoEventosComponent,
+    TextovozDirective,
+    DirectivasEstructuralesCreacionComponent,
+    RepetirDirective,
+    SiDirective,
+
+    /*Pipes*/
+    PipesDefinicionComponent
 
   ],
   imports: [

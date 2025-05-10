@@ -1,0 +1,59 @@
+<div class="card-container">
+  <div class="card">
+    <h1 *ngIf="alerta">Todos los precios se encuentran rebajados 50%</h1>
+
+    <table>
+      <tr>
+        <td>Nombre</td>
+        <td>Edad</td>
+      </tr>
+      <tr *ngFor="let persona of personas">
+        <td>{{persona.nombre}} <span *ngIf="persona.edad>=18">(Mayor)</span></td>
+        <td>{{persona.edad}}</td>
+      </tr>
+    </table>
+
+    <br>
+    <h2 style="color: blue;">Directiva *ngIf con else</h2>
+    <h1 *ngIf="estado; else fueradeservicio">Bienvenido al sitio</h1>
+    <ng-template #fueradeservicio>
+      <h1>Sitio fuera de servicio</h1>
+    </ng-template>
+
+    <br>
+    <h2 style="color: blue;">Uso de operadores lógicos</h2>
+    <h1 *ngIf="estado && dia>=10; else fueradeservicio">Bienvenido al sitio</h1>
+    <ng-template #fueradeservicio>
+      <h1>Sitio fuera de servicio</h1>
+    </ng-template>
+
+    <br>
+    <h2 style="color: blue;">Llamada a un método</h2>
+    <p *ngIf="mayorEdad()">Es mayor de edad</p>
+
+    <br>
+    <h2 style="color: blue;">Variante de sintaxis con then else</h2>
+    <ng-template *ngIf="estado;then serviciocorrecto else fueradeservicio"></ng-template>
+    <ng-template #serviciocorrecto>
+      <h1>Bienvenido al sitio</h1>
+    </ng-template>
+    <ng-template #fueradeservicio>
+      <h1>Sitio fuera de servicio</h1>
+    </ng-template>
+
+    <br>
+    <h2 style="color: blue;">Microsintaxis</h2>
+    <h1 *ngIf="alerta">Todos los precios se encuentran rebajados 50%</h1>
+
+    <ng-template [ngIf]="alerta">
+      <h1>Todos los precios se encuentran rebajados 50%</h1>
+    </ng-template>
+
+    <ng-template [ngIf]="estado" [ngIfElse]="fueradeservicio">
+      <h1>Bienvenido al sitio</h1>
+    </ng-template>
+    <ng-template #fueradeservicio>
+      <h1>Sitio fuera de servicio</h1>
+    </ng-template>
+  </div>
+</div>

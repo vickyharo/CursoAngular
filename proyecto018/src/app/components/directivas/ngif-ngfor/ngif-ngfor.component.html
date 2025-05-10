@@ -1,0 +1,18 @@
+<div class="card-container">
+  <div class="card">
+<div>
+  <p>Nombre del Empleado:{{nombre}}</p>
+  <p>Edad:{{edad}}</p>
+  <p *ngIf="edad>=18; else menor">Es mayor de edad.</p>
+  <ng-template #menor><p>Es un menor de edad.</p></ng-template>
+  <table border="1">
+    <tr>
+      <td>Sueldos</td>
+    </tr>
+    <tr *ngFor="let sueldo of sueldos">
+      <td>{{sueldo}}</td>
+    </tr>
+  </table>
+</div>
+</div>
+</div>
