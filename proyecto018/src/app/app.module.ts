@@ -120,6 +120,18 @@ import { SiDirective } from './components/directivas/directivas-estructurales-cr
 
 //********* Pipes
 import { PipesDefinicionComponent } from './components/pipes/pipes-definicion/pipes-definicion.component';
+import { PipesPersonalizadasComponent } from './components/pipes/pipes-personalizadas/pipes-personalizadas.component';
+import { LetrasPipe } from './components/pipes/pipes-personalizadas/letras.pipe';
+
+//********** Servicios
+import { PeticionJsonServidorComponent } from './components/Servicios/peticion-json-servidor/peticion-json-servidor.component';
+import { ConceptosPasosCreacionComponent } from './components/Servicios/conceptos-pasos-creacion/conceptos-pasos-creacion.component';
+import { RecuperarDatosServidorWebComponent } from './components/Servicios/recuperar-datos-servidor-web/recuperar-datos-servidor-web.component';
+
+//********** Otros
+import { InterpolacionComponent } from './components/Otros/interpolacion/interpolacion.component';
+import { EventosComponent } from './components/Otros/eventos/eventos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -190,7 +202,18 @@ import { PipesDefinicionComponent } from './components/pipes/pipes-definicion/pi
     SiDirective,
 
     /*Pipes*/
-    PipesDefinicionComponent
+    PipesDefinicionComponent,
+    PipesPersonalizadasComponent,
+    LetrasPipe,
+
+    /*Servicios*/
+    PeticionJsonServidorComponent,
+    ConceptosPasosCreacionComponent,
+    RecuperarDatosServidorWebComponent,
+
+    /*Otros*/
+    InterpolacionComponent,
+    EventosComponent
 
   ],
   imports: [

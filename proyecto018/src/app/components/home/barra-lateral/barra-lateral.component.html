@@ -13,15 +13,49 @@
     <mat-nav-list class="ul active">
 
       <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
+      *ngIf="opened || isShowing ; else ocultarMenu_5">
+      <mat-expansion-panel-header>
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+        <span>OTROS</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/interpolacion"><mat-icon>arrow_right_alt</mat-icon><span>Interpolación en los archivos HTML de Angular</span></a>
+        <a mat-list-item routerLink="/eventos"><mat-icon>arrow_right_alt</mat-icon><span>Captura de eventos</span></a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <ng-template #ocultarMenu_5>
+      <div class="pink-icon-hide">
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+      </div>
+    </ng-template>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
+      *ngIf="opened || isShowing ; else ocultarMenu_5">
+      <mat-expansion-panel-header>
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+        <span>SERVICIOS</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/peticion-json-servidor"><mat-icon>arrow_right_alt</mat-icon><span>Petición de un archivo JSON a un servidor</span></a>
+        <a mat-list-item routerLink="/conceptos-pasos-creacion"><mat-icon>arrow_right_alt</mat-icon><span>Servicios: concepto y pasos para crearlos</span></a>
+        <a mat-list-item routerLink="/recuperar-datos-servidor-web"><mat-icon>arrow_right_alt</mat-icon><span>Servicios: recuperación de datos de un servidor web</span></a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <ng-template #ocultarMenu_5>
+      <div class="pink-icon-hide">
+        <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
+      </div>
+    </ng-template>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" class="parent full-width"
         *ngIf="opened || isShowing ; else ocultarMenu_5">
         <mat-expansion-panel-header>
           <mat-icon class="pink-icon" mat-list-icon>description</mat-icon>
           <span>PIPES</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item routerLink="/ng-model"><mat-icon>arrow_right_alt</mat-icon><span>Directiva ngModel</span></a>
-          <a mat-list-item routerLink="/ngif-ngfor"><mat-icon>arrow_right_alt</mat-icon><span>Directivas *ngIf y
-              *ngFor</span></a>
+          <a mat-list-item routerLink="/pipes-definicion"><mat-icon>arrow_right_alt</mat-icon><span>Pipes: definición</span></a>
+          <a mat-list-item routerLink="/pipes-personalizadas"><mat-icon>arrow_right_alt</mat-icon><span>Pipes: creación de pipes personalizadas</span></a>
         </mat-nav-list>
       </mat-expansion-panel>
       <ng-template #ocultarMenu_5>

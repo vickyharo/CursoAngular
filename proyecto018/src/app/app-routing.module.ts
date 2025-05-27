@@ -53,6 +53,16 @@ import { DirectivasEstructuralesCreacionComponent } from './components/directiva
 
 //******** Pipes
 import { PipesDefinicionComponent } from './components/pipes/pipes-definicion/pipes-definicion.component';
+import { PipesPersonalizadasComponent } from './components/pipes/pipes-personalizadas/pipes-personalizadas.component';
+
+//******** Servicios
+import { PeticionJsonServidorComponent } from './components/Servicios/peticion-json-servidor/peticion-json-servidor.component';
+import { ConceptosPasosCreacionComponent } from './components/Servicios/conceptos-pasos-creacion/conceptos-pasos-creacion.component';
+import { RecuperarDatosServidorWebComponent } from './components/Servicios/recuperar-datos-servidor-web/recuperar-datos-servidor-web.component';
+
+//******** Otros
+import { InterpolacionComponent } from './components/Otros/interpolacion/interpolacion.component';
+import { EventosComponent } from './components/Otros/eventos/eventos.component';
 
 const routes: Routes = [
   //******** Ejemplos angular material
@@ -102,6 +112,14 @@ const routes: Routes = [
   { path: 'directivas-estructurales-creacion', component: DirectivasEstructuralesCreacionComponent },
   //********* Pipes
   { path: 'pipes-definicion', component: PipesDefinicionComponent },
+  { path: 'pipes-personalizadas', component: PipesPersonalizadasComponent },
+  //********* Servicios
+  { path: 'peticion-json-servidor', component: PeticionJsonServidorComponent },
+  { path: 'conceptos-pasos-creacion', component: ConceptosPasosCreacionComponent },
+  { path: 'recuperar-datos-servidor-web', component: RecuperarDatosServidorWebComponent },
+  //********* Otros
+  { path: 'interpolacion', component: InterpolacionComponent },
+  { path: 'eventos', component: EventosComponent },
 
   //******** Home
   { path: '', redirectTo: '/botones', pathMatch: 'full' }, // Ruta por defecto
