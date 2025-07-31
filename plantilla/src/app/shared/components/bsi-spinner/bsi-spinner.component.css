@@ -1,0 +1,27 @@
+.modal-content {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-body {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  p {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1rem;
+  }
+
+  /* Cambiar aquí al tamaño deseado del gif de loading*/
+  .loading-size {
+    width: 25%;
+    height: 25%;
+  }

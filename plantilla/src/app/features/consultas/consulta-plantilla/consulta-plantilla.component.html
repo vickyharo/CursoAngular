@@ -1,0 +1,27 @@
+<div class="flex flex-col h-[calc(100vh-4rem)] space-y-4 overflow-hidden">
+
+    <!-- Header -->
+    <div class="grid grid-cols-[auto_1fr_auto] items-center">
+        <div><button-back></button-back></div>
+        <h2 class="text-center font-bold">Consultas</h2>
+    </div>
+
+    <!-- Filtro y botones -->
+    <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+        <div class="flex-grow-1">
+            <search-box class="w-100" [alternativa]="false" (search)="searchText = $event"></search-box>
+        </div>
+        <div class="d-flex flex-shrink-0">
+            <action-buttons [showCrudButtons]="false" [showImport]="false"></action-buttons>
+        </div>
+    </div>
+
+    <!-- Tabla dinámica -->
+    <div class="flex-1 min-h-0 overflow-auto">
+        <dynamic-table [columns]="columns"
+            [data]="fideicomisos | filterByKey:searchText:['status','id','fideicomiso','tipo','calle','numero']"
+            [sortable]="true" [selectable]="true" [paginate]="true" (rowSelected)="onRowSelected($event)">
+        </dynamic-table>
+    </div>
+
+</div>

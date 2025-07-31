@@ -1,0 +1,26 @@
+<div class="custom-select-container" [class.disabled]="isDisabled" [class.invalid]="invalid">
+    <div class="custom-select-outline" tabindex="0" [class.focused]="focused" [class.hovered]="hovered" (mouseenter)="hovered = true"
+        (mouseleave)="hovered = false" (click)="onFocus()">
+
+        <label class="custom-select-label" [class.invalid]="invalid" [class.floating]="focused || value">
+            Selecciona
+        </label>
+
+        <input type="text" class="custom-select-input" [value]="selectedLabel" (input)="onInputChange($event)"
+            (blur)="blurInput()" [disabled]="isDisabled" autocomplete="off" />
+
+        <div class="custom-select-icon">
+            ▼
+        </div>
+    </div>
+
+    @if (showDropdown) {
+    <ul class="custom-select-dropdown">
+        @for (option of filteredOptions; track option.value) {
+        <li (click)="selectOption(option)" class="custom-select-option">
+            {{ option.label }}
+        </li>
+        }
+    </ul>
+    }
+</div>

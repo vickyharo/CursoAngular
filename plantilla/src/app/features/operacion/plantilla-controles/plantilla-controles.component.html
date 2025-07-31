@@ -1,0 +1,145 @@
+<div class="pb-4">
+    <!-- Fila 1: Título -->
+    <div class="row align-items-center mb-3">
+        <div class="col-auto">
+            <button-back></button-back>
+        </div>
+        <div class="col text-center">
+            <h2 class="h5 fw-bold text-bansi-azul">Plantilla Controles</h2>
+        </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="row">
+        <!-- Columna izquierda fija-->
+        <div class="col-md-2">
+            <div class="h-100 rounded-lg shadow-xl p-4 space-y-1">
+                <h2 class="font-semibold text-md">Indice</h2>
+                <!--Para la version Filtro dinamico y funcional cosultar @DynamicTable y @alta-plantilla-->
+                @for (idx of indices; track idx) {
+                <div class="index-item mb-1 text-black"
+                (click)="onIndexClick(idx)">
+                    Indice: {{ idx }}
+                </div>
+                }
+            </div>
+        </div>
+
+        <!-- Columna derecha: grilla de controles -->
+        <div class="col-md-10 p-4 rounded-2 border border-bansi-gris">
+            <div class="">
+                <div class="row mb-3">
+                    <!-- Fila 1: abarca todo -->
+                    <div class="col-12  p-3">
+                        <search-box></search-box>
+                    </div>
+                </div>
+                <!-- Filas 2 a 4: 5 columnas por fila -->
+                <form [formGroup]="form" class="p-4 mb-2 rounded bg-white text-bansi-azul">
+                    <div class="row mb-3">
+                        <div class="col-md-2 p-3">
+
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Valor Total</mat-label>
+                                <input matInput type="number" formControlName="valorTotal">
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-2 p-3">
+
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Texto</mat-label>
+                                <input matInput type="text" formControlName="colonia">
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-2 p-3">
+
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Estatus</mat-label>
+                                <mat-select formControlName="estatus">
+                                    <mat-option value="">Seleccione</mat-option>
+                                    <mat-option value="activo">Activo</mat-option>
+                                    <mat-option value="inactivo">Inactivo</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-2 p-3">
+
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Fecha de Registro</mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName="fechaRegistro" />
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-4 p-3">
+
+                            <div class="d-flex align-items-center">
+                                <mat-checkbox formControlName="inmuebleConcesion">Inmueble con Concesión</mat-checkbox>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <mat-checkbox formControlName="inmuebleEmbargo">Inmueble con Embargo</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row mb-3 gap-4">
+                    <div class="col-12 col-sm-1 col-md-1">
+                        <button class="btn-guardar">Guardar</button>
+                    </div>
+                    <div class="col-12 col-sm-1 col-md-1">
+                        <button class="btn-cancelar">Cancelar</button>
+                    </div>
+                    <div class="col-12 col-sm-1 col-md-1">
+                        <button class="btn-bansi">Generico</button>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <button type="button" class="btn btn-xl bg-bansi-azul">
+                            <img src="assets/icons/solid/plus-white.svg" alt="Icono">
+                            <span>Nuevo Inmueble</span>
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <button type="button" class="btn btn-xl bg-bansi-verde">
+                            <img src="assets/icons/solid/check-circle-white.svg" alt="Icono">
+                            <span>Aprobar Solicitud</span>
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <button type="button" class="btn btn-xl bg-bansi-naranja">
+                            <img src="assets/icons/solid/eye-white.svg" alt="Icono">
+                            <span>Ver Consultas</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Tabla dinámica-->
+                    <div class="flex-1 min-h-0 rounded-lg">
+                        <h2 class="text-left text-xl font-bold text-bansi-azul">Detalle</h2>
+                        <!-- Filtro y botones -->
+                        <div class="d-flex align-items-center my-2 gap-3">
+                            <div class="flex-grow-1">
+                                <search-box [alternativa]="false"></search-box>
+                            </div>
+                            <div class="d-flex flex-shrink-0">
+                                <action-buttons></action-buttons>
+                            </div>
+                        </div>
+                        <!--Componente DynamicTable-->
+                        <dynamic-table [columns]="columns" [data]="data" [sortable]="true" [selectable]="true"
+                            [paginate]="true" (rowSelected)="onRowSelected($event)" [haveFilter]="false">
+                        </dynamic-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

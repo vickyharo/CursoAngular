@@ -1,0 +1,101 @@
+@if (alternativa) {
+<div class="bloque-busqueda">
+
+    <!-- Filtro: Fideicomiso -->
+    <div class="row align-items-center g-2 w-100">
+        <div class="col-auto text-end">
+            <label class="form-label mb-0">{{ label }}</label>
+        </div>
+        <div class="col position-relative">
+            <input [formControl]="searchControl" (keydown.enter)="onSearch()" [placeholder]="placeholder"
+                class="form-control campo-busqueda" />
+
+            <!-- Ícono de limpiar -->
+            @if (searchControl.value) {
+            <img src="assets/icons/solid/x-mark.svg" alt="Limpiar" (click)="clearSearch()" width="20" height="20"
+                class="position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" />
+            }
+        </div>
+        <div class="col-auto">
+            <button (click)="onSearch()" class="btn-busqueda">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 me-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                </svg>
+                Buscar
+            </button>
+        </div>
+    </div>
+
+    <!-- Filtro uno -->
+    @if (showFilter1) {
+    <div class="row align-items-center g-2 w-100">
+        <div class="col-auto text-end">
+            <label class="form-label mb-0">Filtro uno</label>
+        </div>
+        <div class="col">
+            <input [formControl]="searchControl" (keydown.enter)="onSearch()" [placeholder]="placeholder"
+                class="form-control campo-busqueda" />
+        </div>
+        <div class="col-auto">
+            <button (click)="onSearch()" class="btn-busqueda">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 me-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                </svg>
+                Buscar
+            </button>
+        </div>
+    </div>
+    }
+
+    <!-- Filtro dos -->
+    @if (showFilter2) {
+    <div class="row align-items-center g-2 w-100">
+        <div class="col-auto text-end">
+            <label class="form-label mb-0">Filtro dos</label>
+        </div>
+        <div class="col">
+            <input [formControl]="searchControl" (keydown.enter)="onSearch()" [placeholder]="placeholder"
+                class="form-control campo-busqueda" />
+        </div>
+        <div class="col-auto">
+            <button (click)="onSearch()" class="btn-busqueda">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 me-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                </svg>
+                Buscar
+            </button>
+        </div>
+    </div>
+    }
+
+</div>
+} @else {
+<div class="bloque-busqueda">
+    <!-- Filtro simple -->
+    <div class="row align-items-center g-2 w-100">
+        <div class="col-auto text-end">
+            <label class="form-label mb-0">Filtro</label>
+        </div>
+        <div class="col">
+            <input [formControl]="searchControl" (keydown.enter)="onSearch()" [placeholder]="placeholder"
+                class="form-control campo-busqueda" />
+        </div>
+        <div class="col-auto">
+            <button (click)="onSearch()" class="btn-busqueda">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 me-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                </svg>
+                Buscar
+            </button>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,13 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog" *ngIf="isVisible" aria-labelledby="spinnerModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                <mat-spinner></mat-spinner> 
+                <!--]<img class="loading-size" src="../assets/loading_balance_2.gif" alt="" srcset="">
+                <p class="mt-3 text-center">{{ message }}</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade show" *ngIf="isVisible"></div>

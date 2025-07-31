@@ -1,0 +1,34 @@
+<!-- Backdrop + contenedor modal -->
+<div class="modal-backdrop-bansi">
+
+    <div class="modal-bansi">
+
+        <!-- Header -->
+        <div class="modal-bansi-header bg-bansi-sidebar-gradient">
+            <span></span>
+            <span class="fw-semibold text-truncate">{{ title }}</span>
+            <button (click)="cerrar()" class="btn btn-link p-0" title="Cerrar">
+                <img src="assets/icons/solid/x-mark-gris.svg" alt="Cerrar" width="25" height="25">
+            </button>
+
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="modal-bansi-body">
+            <ng-content></ng-content>
+            <!-- Botonera (opcional) -->
+            @if (buttons) {
+            <div class="d-flex justify-content-end gap-3 mt-3">
+                <button class="btn btn-guardar" (click)="cerrar()">
+                    {{ btnText1 }}
+                </button>
+
+                <button class="btn btn-cancelar" (click)="cerrar()">
+                    {{ btnText2 }}
+                </button>
+            </div>
+            }
+        </div>
+
+    </div>
+</div>

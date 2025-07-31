@@ -1,0 +1,354 @@
+<div class="py-4 h-75">
+    <!-- Fila 1: Título -->
+    <div class="row align-items-center mb-3">
+        <div class="col-auto">
+            <button-back></button-back>
+        </div>
+        <div class="col text-center">
+            <h2 class="h5 fw-bold text-bansi_azul">Carrusel Plantilla</h2>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-md-2 col-md-10 d-flex align-items-center justify-content-between gap-3">
+            <search-box class="w-100"></search-box>
+        </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="row h-100">
+        <!-- Columna izquierda fija-->
+        <div class="col-md-2">
+            <div class="h-100 rounded-lg shadow-xl p-4 space-y-1">
+                <h2 class="font-semibold text-md">Indice</h2>
+                <!--Para la version Filtro dinamico y funcional cosultar @DynamicTable y @alta-plantilla-->
+                @for (idx of indices; track idx) {
+                <div class="index-item mb-1 text-black" (click)="onIndexClick(idx)">
+                    Indice: {{ idx }}
+                </div>
+                }
+            </div>
+        </div>
+
+        <!-- Columna derecha: grilla de controles -->
+        <div class="col-12 col-md-10 py-4 rounded-2 border border-bansi-gris">
+            <carrusel-base titulo="Registro de fideicomiso">
+                <ng-template>
+                    <form [formGroup]="form" class="rounded bg-white text-bansi-azul">
+                        <!-- Encabezado -->
+                        <h2 class="h6 fw-bold border-bottom">Titulo Formulario</h2>
+                        <!-- Fila 1 -->
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Tipo de Inmueble</mat-label>
+                                    <mat-select formControlName="tipoInmueble">
+                                        <mat-option value="">Seleccione</mat-option>
+                                        <mat-option *ngFor="let tipo of tipoInmuebles" [value]="tipo.value">
+                                            {{ tipo.label }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-8 d-flex align-items-center">
+                                <label class="me-2 fw-medium small">Identificador:</label>
+                                <span class="fw-semibold">{{ form.get('identificador')?.value }}</span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Checkboxes -->
+                        <div class="row g-3">
+                            <div class="col-sm-4 d-flex align-items-center">
+                                <mat-checkbox formControlName="inmuebleConcesion">Inmueble con
+                                    Concesión</mat-checkbox>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-center">
+                                <mat-checkbox formControlName="inmuebleEmbargo">Inmueble con Embargo</mat-checkbox>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-center">
+                                <mat-checkbox formControlName="inmuebleCredito">Inmueble con Crédito
+                                    Asociado</mat-checkbox>
+                            </div>
+                        </div>
+
+                        <!-- Sección título -->
+                        <div class="bg-light text-dark px-3 rounded fw-bold small">
+                            <h2 class="font-bold">Información de Dirección</h2>
+                        </div>
+
+                        <!-- Fila calle y números -->
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Calle</mat-label>
+                                    <input matInput type="text" formControlName="calle">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>No. Ext.</mat-label>
+                                    <input matInput type="text" formControlName="noExt">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>No. Int.</mat-label>
+                                    <input matInput type="text" formControlName="noInt">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Colonia</mat-label>
+                                    <input matInput type="text" formControlName="colonia">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <!-- Fila ubicación -->
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>C.P.</mat-label>
+                                    <input matInput type="text" formControlName="cp">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>País</mat-label>
+                                    <mat-select formControlName="pais">
+                                        <mat-option value="">Seleccione</mat-option>
+                                        <mat-option *ngFor="let pais of paises" [value]="pais.value">{{ pais.label
+                                            }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Estado</mat-label>
+                                    <mat-select formControlName="estado">
+                                        <mat-option value="">Seleccione</mat-option>
+                                        <mat-option *ngFor="let estado of estados" [value]="estado.value">{{
+                                            estado.label
+                                            }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Ciudad</mat-label>
+                                    <mat-select formControlName="ciudad">
+                                        <mat-option value="">Seleccione</mat-option>
+                                        <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad.value">{{
+                                            ciudad.label
+                                            }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <!-- Fila final -->
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Superficie (m²)</mat-label>
+                                    <input matInput type="number" formControlName="superficie">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Valor Total</mat-label>
+                                    <input matInput type="number" formControlName="valorTotal">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Estatus</mat-label>
+                                    <mat-select formControlName="estatus">
+                                        <mat-option value="">Seleccione</mat-option>
+                                        <mat-option value="activo">Activo</mat-option>
+                                        <mat-option value="inactivo">Inactivo</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Fecha de Registro</mat-label>
+                                    <input matInput [matDatepicker]="picker" formControlName="fechaRegistro" />
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </form>
+                </ng-template>
+                <!-- Un @ngTemplate por cada pagina-->
+                <ng-template>
+                    <div class="container">
+                        <form [formGroup]="form2" class="rounded bg-white text-bansi-azul">
+                            <!-- DIP padre -->
+                            <div class="row">
+                                <!-- Columna izquierda -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Sucursal</mat-label>
+                                            <mat-select formControlName="sucursal">
+                                                <mat-option value="">Seleccione</mat-option>
+                                                <mat-option *ngFor="let sucursal of sucursales"
+                                                    [value]="sucursal.value">{{
+                                                    sucursal.label
+                                                    }}</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-3">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Ejecutivo</mat-label>
+                                            <mat-select formControlName="ejecutivo">
+                                                <mat-option value="">Seleccione</mat-option>
+                                                <mat-option *ngFor="let ejecutivo of ejecutivos"
+                                                    [value]="ejecutivo.value">{{
+                                                    ejecutivo.label
+                                                    }}</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-3">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Fecha de Registro</mat-label>
+                                            <input matInput [matDatepicker]="picker" formControlName="fecha" />
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <!-- Columna derecha -->
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Personalidad</mat-label>
+                                            <mat-select formControlName="personalidad">
+                                                <mat-option value="">Seleccione</mat-option>
+                                                <mat-option *ngFor="let personalidad of personalidades"
+                                                    [value]="personalidad.value">{{
+                                                    personalidad.label
+                                                    }}</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-2">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Nombre</mat-label>
+                                            <input matInput type="text" formControlName="nombre">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-2">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Segundo Nombre</mat-label>
+                                            <input matInput type="text" formControlName="segundoNombre">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-2">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Apellido Paterno</mat-label>
+                                            <input matInput type="text" formControlName="apellidoPaterno">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="mb-2">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <mat-label>Apellido Materno</mat-label>
+                                            <input matInput type="text" formControlName="apellidoMaterno">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- DIP adicional para meter el GRID debajo de las columnas -->
+                        <div class="mt-4">
+
+                        </div>
+                    </div>
+                </ng-template>
+            </carrusel-base>
+        </div>
+    </div>
+
+
+    <!-- Botones flotantes fijos -->
+    <div class="btn-fijos-box">
+        <button class="btn-guardar" (click)="canSave()">Guardar</button>
+        <button class="btn-cancelar">Cancelar</button>
+    </div>
+</div>
+
+<!-- Modal Guardar-->
+@if(showModal['btnSave']){
+<base-modal [title]="'Confirmar Contraseña'" (close)="cerrarModal('btnSave')" [buttons]="false">
+    <!-- Encabezado -->
+    <div class="text-center mt-2 mb-4">
+        <img src="assets/icons/outline/exclamation-triangle.svg" alt="Advertencia" style="width: 3rem; height: 3rem;">
+        <h3 class="fw-bold m-0 p-0">Acción Permanente</h3>
+        <p class="text-lg text-muted mb-0">Esta acción será permanente, ¿desea continuar?</p>
+    </div>
+
+
+    <!-- Formulario -->
+    <div class="justify-content-center">
+        <form [formGroup]="formLogin" class="d-flex flex-column align-items-center">
+
+            <!-- Contraseña -->
+            <mat-form-field appearance="outline" class="w-50 m-0 text-bansi-gris ">
+                <mat-label>Contraseña</mat-label>
+
+                <!-- Ícono de contraseña -->
+                <img matPrefix src="assets/icons/solid/lock-closed.svg" alt="Contraseña" width="20" height="20"
+                    class="mx-2" />
+
+                <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+                    (input)="validatePassword($event)" [maxlength]="MAX_CHAR_PASSWORD" />
+
+                <button *ngIf="formLogin.get('password')?.value?.length != 0" mat-icon-button matSuffix
+                    (click)="hidePassword = !hidePassword" type="button" class="border-0 bg-transparent">
+                    <img [src]="hidePassword ? 'assets/icons/solid/eye.svg' : 'assets/icons/solid/eye-slash.svg'"
+                        alt="Mostrar/Ocultar contraseña" width="20" height="20" />
+                </button>
+
+                <mat-error *ngIf="formLogin.get('password')?.hasError('required')">La contraseña es
+                    requerida.</mat-error>
+                <mat-error *ngIf="getErrorMessage('password', 'La contraseña')">
+                    {{ getErrorMessage('password', 'La contraseña') }}
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Comentarios -->
+            <mat-form-field appearance="outline" class="w-50 text-bansi-gris m-0">
+                <mat-label>Comentarios</mat-label>
+
+                <!-- Ícono de usuario -->
+                <img matPrefix src="assets/icons/solid/chat-bubble-bottom-center-text.svg" alt="Usuario" width="20" height="20" class="mx-2" />
+
+                <input #descripcionInput matInput type="text"/>
+
+                <button *ngIf="formLogin.get('detalle')?.value?.length != 0" mat-icon-button matSuffix
+                    type="button" class="border-0 bg-transparent">
+                </button>
+
+                <mat-error *ngIf="formLogin.get('detalle')?.hasError('required')">El usuario es requerido.</mat-error>
+                <mat-error *ngIf="getErrorMessage('detalle', 'El usuario')">
+                    {{ getErrorMessage('detalle', 'La descripcion') }}
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Error general -->
+            <div *ngIf="apiError" class="text-bansi-rojo text-sm my-2 text-center">{{ apiError }}</div>
+
+            <!-- Botón principal -->
+            <button class="btn btn-bansi w-50" [disabled]="formLogin.invalid" type="submit">
+                Confirmar
+            </button>
+        </form>
+    </div>
+</base-modal>
+}

@@ -1,0 +1,99 @@
+<div class="grid grid-cols-7 gap-4">
+
+    <!-- Filtros dinámicos -->
+    @if(haveFilter){
+    <div class="rounded-lg shadow-xl p-4 space-y-1 border border-bansi-gris">
+        <h3 class="font-semibold text-md">Filtros</h3>
+        <ng-container *ngFor="let col of columns">
+            <!-- Filtro por texto -->
+            <div *ngIf="isTextFilter(col.key)">
+                <label class="block text-sm text-black font-medium mb-1">{{ col.label }}</label>
+                <input type="text" [value]="filters[col.key]" (input)="updateFilter(col.key, $any($event.target).value)"
+                    placeholder="Buscar..." class="w-full p-2 border rounded text-sm" />
+            </div>
+
+            <!-- Filtro por selección múltiple con checkboxes -->
+            <div *ngIf="isCheckboxFilter(col.key)">
+                <label class="block text-sm text-bansi-gris-oscuro font-medium mb-1">{{ col.label }}</label>
+                <div class="space-y-1 max-h-32">
+                    <label *ngFor="let option of getUniqueColumnValues(col.key)" class="flex items-center text-sm">
+                        <input type="checkbox" [checked]="filters[col.key].includes(option)"
+                            (change)="toggleCheckboxFilter(col.key, option)" class="mr-2" />
+                        {{ option }}
+                    </label>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    }
+    <!-- Tabla -->
+    <div class="table-container" [ngClass]="haveFilter ? 'col-span-6' : 'col-span-7'">
+        <div class="table-scroll">
+            <table class="dynamic-table">
+                <thead>
+                    <tr>
+                        <ng-container *ngFor="let col of columns">
+                            <th>
+                                <div class="header-cell">
+                                    {{ col.label }}
+                                    <button *ngIf="sortable" (click)="sortData(col.key)" class="sort-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="sort-icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </th>
+                        </ng-container>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of paginatedData" (click)="selectRow(row.id)"
+                        (contextmenu)="onRightClick($event, row)"
+                        [ngClass]="{ 'row-selected': selectedRow === row.id }">
+                        <ng-container *ngFor="let col of columns">
+                            <td>
+                                <ng-container [ngSwitch]="col.key">
+                                    <ng-container *ngSwitchCase="'status'">
+                                        <span
+                                            [ngClass]="{'status-pill-green': row[col.key] === 'Vigente','status-pill-red': row[col.key] === 'Caducado'}"
+                                            class="status-pill">
+                                            {{ row[col.key] }}
+                                        </span>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'id'">
+                                        <div class="cell-id">
+                                            {{ row[col.key] }}
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngSwitchDefault>
+                                        <span class="cell-default">{{ row[col.key] }}</span>
+                                    </ng-container>
+                                </ng-container>
+                            </td>
+                        </ng-container>
+                    </tr>
+
+                    <!-- Menú contextual -->
+                    <ul *ngIf="contextMenu.visible" class="context-menu"
+                        [ngStyle]="{ top: contextMenu.y + 'px', left: contextMenu.x + 'px' }">
+                        <li (click)="handleContextAction('edit')">
+                            <img src="assets/icons/solid/pencil.svg" class="icon" alt="Editar" /> Editar
+                        </li>
+                        <li (click)="handleContextAction('delete')">
+                            <img src="assets/icons/solid/trash.svg" class="icon" alt="Eliminar" /> Eliminar
+                        </li>
+                        <li (click)="handleContextAction('export')">
+                            <img src="assets/icons/solid/arrow-down-tray.svg" class="icon" alt="Exportar" /> Exportar
+                        </li>
+                        <li (click)="handleContextAction('import')">
+                            <img src="assets/icons/solid/arrow-up-tray.svg" class="icon" alt="Importar" /> Importar
+                        </li>
+                    </ul>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

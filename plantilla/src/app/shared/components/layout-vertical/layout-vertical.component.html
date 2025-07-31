@@ -1,0 +1,115 @@
+<div class="flex h-screen overflow-hidden bg-background">
+    <!-- Sidebar -->
+    <div [ngClass]="{
+        'sidebar': true,
+        'collapsed': collapsed,
+        'expanded': !collapsed
+    }">
+        <!-- Logo -->
+        <div class="flex items-center justify-center mt-8">
+            <img src="assets/bansiTransp.png" cclass="" [ngClass]="{ 'w-10 h-16': !collapsed, 'w-10 h-10': collapsed }"
+                alt="Logo Bansi" />
+        </div>
+
+        <!-- Menú dinámico -->
+        <nav class="flex-1 mt-4 px-2 d-flex flex-column align-items-center gap-2">
+            <!-- Iteración del menú principal -->
+            <div *ngFor="let item of menuItems" class="w-100 d-flex flex-column align-items-center">
+                <!-- Botón principal -->
+                <button (click)="handleMenuClick(item, $event)"
+                    class="w-100 border-0 bg-transparent hover:bg-sidebar-gradient p-3 rounded-pill text-white d-flex align-items-center"
+                    [ngClass]="{'justify-center': collapsed,'justify-between gap-2': !collapsed && item.subMenu,'gap-2': !collapsed && !item.subMenu}">
+                    <!-- Ícono + texto -->
+                    <div class="d-flex align-items-center">
+                        <img [src]="'assets/icons/solid/' + item.icon + '-white.svg'" alt="Icon" class="h-5 w-5" />
+                        <span *ngIf="!collapsed" class="ms-2">{{ item.name }}</span>
+                    </div>
+                    <!-- Indicador de submenú (si no está colapsado y hay submenú) -->
+                    <span *ngIf="item.subMenu && !collapsed">
+                        {{ openMenu === item.id ? '-' : '+' }}
+                    </span>
+                </button>
+                <!-- Submenú -->
+                <div *ngIf="item.subMenu && openMenu === item.id" class="mx-auto w-75 d-flex flex-column ps-4 my-2">
+                    <button *ngFor="let sub of item.subMenu" (click)="routerlink(sub.route!)"
+                        class="text-start p-2 rounded text-white w-100 hover:bg-sidebar-gradient border-0 bg-transparent">
+                        {{ sub.name }}
+                    </button>
+                </div>
+            </div>
+            <!-- Botón de salir -->
+            <div class="w-100 d-flex" [ngClass]="{'justify-center': collapsed,'justify-start': !collapsed}">
+                <button (click)="logOut()"
+                    class="w-100 p-3 border-0 bg-transparent rounded-pill hover:bg-sidebar-gradient text-white d-flex align-items-center"
+                    [ngClass]="{'justify-center': collapsed}">
+                    <img src="assets/icons/solid/power.svg" alt="Salir" class="h-5 w-5" />
+                    <span *ngIf="!collapsed" class="ml-2">Salir</span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Botón colapsar -->
+        <div class="mb-5 flex flex-col items-center justify-center gap-2">
+            <button (click)="toggleCollapse()"
+                class="w-full border-0 bg-transparent text-left px-4 py-2 text-white text-sm transition mt-auto hover:bg-sidebar-gradient">
+                <span class="inline-flex items-center">
+                    <span class="mr-1">{{ collapsed ? '>' : '<' }}</span>
+                            {{ collapsed ? '' : ' Ocultar menú' }}
+                    </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="flex flex-col flex-1">
+        <!-- Header -->
+        <header
+            class="relative h-16 m-1 px-6 bg-white flex items-center text-black justify-between shadow-xl border-b-2 border-bansi-gris rounded-lg">
+            <div></div>
+            <!-- Título centrado absolutamente -->
+            <span class="position-absolute start-50 translate-middle-x text-lg">
+                {{ currentRouteName }}
+            </span>
+
+            <!-- Usuario a la derecha -->
+            <div class="flex items-center gap-2 ml-auto">
+                <img src="assets/icons/solid/user.svg" alt="Usuario" class="h-8 w-8 text-bansi-gris-oscuro" />
+                <span class="fw-medium">Usuario demo</span>
+            </div>
+        </header>
+
+        <!-- Router View -->
+        <main class="flex-1 router-view">
+            <router-outlet></router-outlet>
+        </main>
+
+        <div class="barra-fondo-botones">
+            <!-- Este div no lleva botones, pero le da altura y fondo -->
+        </div>
+
+        <!-- Footer -->
+        <div
+            class="h-10 bg-white flex items-center justify-center gap-3 px-4 fw-medium shadow-md border-t border-bansi-azul-oscuro text-bansi-azul-oscuro">
+            <span>{{ nameSystem }}</span>
+            <span>Versión {{ version }}</span>
+            <span>{{ fechaActual }}</span>
+        </div>
+    </div>
+
+    <!-- Popup contextual -->
+    <div *ngIf="collapsedSubMenuItem" [ngStyle]="{ top: popupPosition.top + 'px', left: popupPosition.left + 'px' }"
+        class="position-fixed z-50 bg-white border-2 border-bansi-gris shadow-lg w-64"
+        (mouseleave)="closeModalSubMenu()">
+        <div class="bg-bansi-sidebar-gradient-invert mb-2 p-2 text-white">
+            {{ collapsedSubMenuItem.name }}
+        </div>
+        <div *ngFor="let sub of collapsedSubMenuItem.subMenu"
+            class="m-1 p-2 hover:bg-bansi-sidebar-gradient cursor-pointer">
+            <button class="flex items-center gap-2 border-0 bg-transparent" (click)="routerlink(sub.route!)">
+                <img [src]="'assets/icons/solid/' + sub.icon + '.svg'" alt="Icon" class="h-5 w-5" />
+                {{ sub.name }}
+            </button>
+        </div>
+    </div>
+</div>

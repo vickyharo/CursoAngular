@@ -1,0 +1,114 @@
+<!-- Spinner de carga -->
+<div *ngIf="isLoading">
+    <app-bsi-spinner [isVisible]="isLoading" [message]="'Cargando...'"></app-bsi-spinner>
+</div>
+
+<!-- Login completo -->
+<div class="min-vh-100 d-flex flex-column">
+
+    <!-- Header -->
+    <div
+        class="h-24 bg-bansi-sidebar-gradient text-white d-flex align-items-center justify-content-center text-2xl fw-semibold shadow-md border border-black">
+        {{ nameSystem }}
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="flex-grow-1 position-relative d-flex align-items-center">
+
+        <!-- Separador centrado -->
+        <div class="vertical-line position-absolute top-50 start-50 translate-middle d-none d-lg-block"></div>
+
+        <!-- Contenedor de columnas -->
+        <div class="row mx-auto w-100 align-items-center">
+
+            <!-- Logo -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="logo-container mb-4 mb-lg-0">
+                    <img src="assets/logo.png" alt="Logo" class="login-logo" />
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <form [formGroup]="formLogin" (ngSubmit)="showTokenForm ? onTokenSubmit() : onLoginSubmit()">
+
+                    <!-- Título -->
+                    <h2 class="text-center text-2xl fw-semibold mb-4">Iniciar Sesión</h2>
+
+                    <!-- Usuario -->
+                    <mat-form-field appearance="outline" class="w-100 ">
+                        <mat-label>Usuario</mat-label>
+                        <input #userNameInput matInput [type]="hideUsername ? 'password' : 'text'"
+                            formControlName="username" [maxlength]="MAX_CHAR_USERNAME" />
+
+                        <button *ngIf="formLogin.get('username')?.value?.length != 0 && !showTokenForm" mat-icon-button
+                            matSuffix (click)="hideUsername = !hideUsername" type="button">
+                            <mat-icon>{{ hideUsername ? 'visibility' : 'visibility_off' }}</mat-icon>
+                        </button>
+
+                        <mat-error *ngIf="formLogin.get('username')?.hasError('required')">El usuario es
+                            requerido.</mat-error>
+                        <mat-error *ngIf="getErrorMessage('username', 'El usuario')">{{ getErrorMessage('username', 'El usuario') }}</mat-error>
+                    </mat-form-field>
+
+                    <!-- Contraseña -->
+                    <mat-form-field appearance="outline" class="w-100 mt-4">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+                            (input)="validatePassword($event)" [maxlength]="MAX_CHAR_PASSWORD" />
+
+                        <button *ngIf="formLogin.get('password')?.value?.length != 0 && !showTokenForm" mat-icon-button
+                            matSuffix (click)="hidePassword = !hidePassword" type="button">
+                            <mat-icon class="me-2">{{ hidePassword ? 'visibility' : 'visibility_off' }}</mat-icon>
+                        </button>
+
+                        <mat-error *ngIf="formLogin.get('password')?.hasError('required')">La contraseña es
+                            requerida.</mat-error>
+                        <mat-error *ngIf="getErrorMessage('password', 'La contraseña')">{{ getErrorMessage('password','La contraseña') }}</mat-error>
+                    </mat-form-field>
+
+                    <!-- Error general -->
+                    <div *ngIf="apiError" class="text-bansi-rojo text-sm my-2 text-center">{{ apiError }}</div>
+
+                    <!-- Campo Token -->
+                    <div *ngIf="showTokenForm">
+                        <mat-form-field appearance="outline" class="w-100 text-sm mt-4">
+                            <mat-icon matPrefix class="text-bansi-gris-oscuro">key</mat-icon>
+                            <mat-label class="text-bansi-gris-oscuro">Token</mat-label>
+                            <input #tokenInput matInput type="password" formControlName="token"
+                                [maxlength]="CHAR_TOKEN_LENGTH" inputmode="numeric"
+                                (keypress)="validateNumericInput($event)" />
+
+                            <mat-error *ngIf="formLogin.get('token')?.hasError('required')"
+                                class="text-bansi-rojo text-sm">El token es requerido.</mat-error>
+                            <mat-error class="text-bansi-rojo text-sm">{{ getErrorMessage('token', 'El token')
+                                }}</mat-error>
+                        </mat-form-field>
+
+                        <div *ngIf="tokenError" class="text-bansi-rojo text-sm my-2 text-center">{{ tokenError }}</div>
+                    </div>
+
+                    <!-- Botón principal -->
+                    <button class="mt-4 w-100 py-2 text-sm text-white fw-semibold rounded bg-bansi-azul"
+                        [disabled]="!areValidInput()" type="submit">
+                        {{ showTokenForm ? 'Iniciar Sesión' : 'Validar' }}
+                    </button>
+
+                    <!-- Botón cancelar token -->
+                    <button *ngIf="showTokenForm"
+                        class="mt-2 w-100 py-2 text-sm text-white fw-semibold rounded bg-bansi-gris" type="button"
+                        (click)="resetearFormulario()">
+                        Cancelar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div
+        class="h-12 bg-white d-flex align-items-center justify-content-center gap-3 px-4 fw-medium shadow-md border-top border-bansi-azul-oscuro text-bansi-azul-oscuro">
+        <span>Versión {{ version }}</span>
+        <span>{{ fechaActual }}</span>
+    </div>
+
+</div>

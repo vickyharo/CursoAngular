@@ -1,0 +1,131 @@
+<!-- Copiar Desde aqui -->
+<div [formGroup]="form"
+    class="p-4 rounded-md shadow-md bg-white text-[14px] space-y-6 border border-gray-300 text-bansi-azul">
+    <!-- Encabezado -->
+    <h2 class="text-lg font-bold border-b border-gray-300 pb-1">Datos Garantía Inmueble</h2>
+
+    <!-- Fila 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+            <label class="block text-sm font-medium">Tipo de Inmueble:</label>
+            <select formControlName="tipoInmueble"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul">
+                <option value="">Seleccione</option>
+                <option *ngFor="let tipo of tipoInmuebles" [value]="tipo.value">{{ tipo.label }}</option>
+            </select>
+        </div>
+        <div class="col-span-2 flex items-center gap-2">
+            <label class="text-sm font-medium">Identificador:</label>
+            <span class="font-semibold">{{ form.get('identificador')?.value }}</span>
+        </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+        <label class="flex items-center gap-2">
+            <input type="checkbox" formControlName="inmuebleConcesion" />
+            Inmueble con Concesión
+        </label>
+        <label class="flex items-center gap-2">
+            <input type="checkbox" formControlName="inmuebleEmbargo" />
+            Inmueble con Embargo
+        </label>
+        <label class="flex items-center gap-2">
+            <input type="checkbox" formControlName="inmuebleCredito" />
+            Inmueble con Crédito Asociado
+        </label>
+    </div>
+
+    <!-- Sección título -->
+    <div class="bg-bansi-gris px-3 py-2 rounded font-bold text-sm">Información de Dirección</div>
+
+    <!-- Fila calle y números -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div>
+            <label class="block text-sm font-medium">Calle</label>
+            <input type="text" formControlName="calle"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">No. Ext.</label>
+            <input type="text" formControlName="noExt"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">No. Int.</label>
+            <input type="text" formControlName="noInt"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Colonia</label>
+            <input type="text" formControlName="colonia"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+    </div>
+
+    <!-- Fila ubicación -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div>
+            <label class="block text-sm font-medium">C.P.</label>
+            <input type="text" formControlName="cp"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium">País</label>
+            <select formControlName="pais"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul">
+                <option value="">Seleccione</option>
+                <option *ngFor="let pais of paises" [value]="pais.value">{{ pais.label }}</option>
+            </select>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium">Estado</label>
+            <select formControlName="estado"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul">
+                <option value="">Seleccione</option>
+                <option *ngFor="let estado of estados" [value]="estado.value">{{ estado.label }}</option>
+            </select>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium">Ciudad</label>
+            <select formControlName="ciudad"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul">
+                <option value="">Seleccione</option>
+                <option *ngFor="let ciudad of ciudades" [value]="ciudad.value">{{ ciudad.label }}</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Fila final -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div>
+            <label class="block text-sm font-medium">Superficie (m2)</label>
+            <input type="number" formControlName="superficie"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Valor Total</label>
+            <input type="number" formControlName="valorTotal"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Estatus</label>
+            <select formControlName="estatus"
+                class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul">
+                <option value="">Seleccione</option>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+        </div>
+        <div>
+            <div class="w-full">
+                <label class="block text-sm font-medium">Fecha de Registro</label>
+                <input type="date" formControlName="fechaRegistro"
+                    class="w-full mt-1 p-2 bg-gray-100 border border-gray-300 rounded text-bansi-azul" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="grupo-acciones text-bansi_azul text-sm">
+    @if (showCrudButtons) {
+    <!-- Acciones principales -->
+    <button (click)="goToNew()" class="btn-accion" title="Nuevo">
+        <img src="assets/icons/solid/plus.svg" alt="Nuevo" class="icono-accion" />
+    </button>
+
+    <button (click)="goToEdit()" class="btn-accion" title="Editar">
+        <img src="assets/icons/solid/pencil.svg" alt="Editar" class="icono-accion" />
+    </button>
+
+    <button (click)="onDelete()" class="btn-accion" title="Eliminar">
+        <img src="assets/icons/solid/trash.svg" alt="Eliminar" class="icono-accion" />
+    </button>
+    }
+
+    <!-- Separador -->
+    <div class="separador-acciones"></div>
+
+    @if (showImport) {
+    <!-- Acciones secundarias -->
+    <button class="btn-accion" title="Importar">
+        <img src="assets/icons/solid/arrow-up-tray.svg" alt="Importar" class="icono-accion" />
+    </button>
+    }
+
+    <button class="btn-accion" title="Exportar">
+        <img src="assets/icons/solid/arrow-down-tray.svg" alt="Exportar" class="icono-accion" />
+    </button>
+</div>
