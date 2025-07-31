@@ -1,0 +1,115 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<section style="padding: 10px">
+
+  <div *ngIf="tieneSolicitudesPendientesAutorizar" class="container">
+    <app-boot-alerta mensaje="Existe 1 solicitud pendiente de aplicar" color="alert-warning"></app-boot-alerta>
+  </div>
+  <header class="header-encabezado">Registro de Solicitudes - Cambio de Monto Autorizado de Línea de Crédito
+  </header>
+  <br>
+  <mat-accordion multi>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-panel-title>Búsqueda de Línea de Crédito</mat-panel-title>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+
+      <div class="modal-footer">
+        <div class="text-end mt-2">
+          <input matInput #numberCredit class="form-control" maxlength="{{maxLengthNumeroLinea}}" autocomplete="off"
+            [(ngModel)]="txtBuscarNumeroLinea" (keypress)="ValidateNumericInput($event)"
+            (paste)="AllowPasteOnlyNumbers($event)" />
+        </div>
+        &nbsp;&nbsp;
+        <button mat-button class="action-btn-save" id="btnSearch" matTooltip="Relizar Búsqueda de Línea de Crédito"
+          (click)="BuscarInformacionLinea()">
+          <mat-icon>search</mat-icon>
+          Buscar
+        </button>
+
+        <div class="text-end mt-2"></div>
+      </div>
+
+      <br />
+      <label class="header-label">Información de la Línea de Crédito</label>
+
+      <div style="padding: 10px">
+        <div class="row mb-2">
+          <div class="col-sm-2">
+            <label class="form-label">Número</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtNumeroLinea" />
+          </div>
+          <div class="col-sm-5">
+            <label class="form-label">Cliente</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtCliente" />
+          </div>
+          <div class="col-sm-5">
+            <label class="form-label">Ejecutivo</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtEjecutivo" />
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-sm-4">
+            <label class="form-label">Estatus</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtEstatus" />
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label">Sucursal</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtSucursal" />
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label">Producto</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtProducto" />
+          </div>
+
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-sm-3">
+            <label class="form-label">Divisa</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtDivisa" />
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">Monto Autorizado</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtMontoAutorizado | currency" />
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">Monto Utilizado</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtMontoUtilizado  | currency " />
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">Plazo</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtPlazoDias" />
+          </div>
+
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-sm-4">
+            <label class="form-label">Fecha de Alta</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtFechaAlta | date:'dd-MM-YYY'" />
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label">Fecha de Vencimiento</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtFechaVencimiento  | date:'dd-MM-YYY'" />
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label">Fecha de Autorización</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtFechaAutorizacionLinea | date:'dd-MM-YYY'" />
+          </div>
+        </div>
+
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>

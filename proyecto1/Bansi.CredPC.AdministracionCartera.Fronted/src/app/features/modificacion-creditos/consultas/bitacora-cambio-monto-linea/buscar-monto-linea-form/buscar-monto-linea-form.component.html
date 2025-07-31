@@ -1,0 +1,74 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div class="row col-md-12">
+  <mat-accordion multi>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-panel-title>Filtros</mat-panel-title>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br>
+
+      <div class="row">
+        <div class="col-75">
+          <div class="container">
+
+              <div class="row">
+                <div class="col-50">
+                  <br>
+                  <label class="form-label">Fecha de Inicio</label>
+                    <input matInput class="form-control"[matDatepicker]="picker1" [(ngModel)]="txtFechaInicio" (ngModelChange)="CambioFechaInicio($event)" disabled >
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1 disabled="false">
+                      <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancelar</button>
+                        <button mat-raised-button matDatepickerApply>Aplicar</button>
+                      </mat-datepicker-actions>
+                    </mat-datepicker>
+                    <br><br>
+                    <label class="form-label">Número de Línea de Crédito</label>
+                    <input matInput class="form-control" [(ngModel)]="txtNumeroLinea" placeholder="Número de crédito" maxlength="{{maxLengthNumeroLinea}}" autocomplete="on"
+                      (keypress)="ValidateNumericInput($event)" (paste)="AllowPasteOnlyNumbers($event)">
+                </div>
+
+                <div class="col-50">
+                  <br>
+                  <label class="form-label">Fecha de Fin</label>
+                  <input matInput class="form-control" [matDatepicker]="picker2" [(ngModel)]="txtFechaFin" (ngModelChange)="CambioFechaFin($event)" disabled >
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2 disabled="false">
+                    <mat-datepicker-actions>
+                      <button mat-button matDatepickerCancel>Cancelar</button>
+                      <button mat-raised-button matDatepickerApply>Aplicar</button>
+                    </mat-datepicker-actions>
+                  </mat-datepicker>
+                  <br>
+                  <br>
+                  <label class="form-label">Estatus de la Solicitud</label>
+                  <div class="col-md-9">
+                  <mat-select class="form-control" [(ngModel)]="txtEstatusCombo">
+                    <mat-option></mat-option>
+                    @if (estatusComboLista.length>0) {
+                   <mat-option *ngFor="let op of estatusComboLista" [value]="op.idEstatusSolicitud">
+                      {{op.descripcionEstatus}}
+                    </mat-option>
+                  }
+                  </mat-select>
+                </div>
+                </div>
+              </div>
+              <br>
+          </div>
+        </div>
+      <div class="col-25">
+        <button mat-button class="action-btn-save" matTooltip="Relizar búqueda de solicitudes" (click)="EnvioFormulario()">
+          <mat-icon>search</mat-icon> Buscar
+      </button>
+      </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

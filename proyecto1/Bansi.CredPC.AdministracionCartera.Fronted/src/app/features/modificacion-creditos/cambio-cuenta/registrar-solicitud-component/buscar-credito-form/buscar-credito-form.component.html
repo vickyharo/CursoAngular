@@ -1,0 +1,104 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+      <!-- <div *ngIf="tieneSolicitudesPendientesAutorizar" class="container">-->
+        <div class="container" *ngIf="tieneSolicitudesPendientesAutorizar">
+          <app-boot-alerta mensaje="Existe 1 solicitud pendiente de aplicar" color="alert-warning"></app-boot-alerta>
+        </div>
+
+
+<!-- Filtro y botones -->
+<div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+  <div class="flex-grow-1">
+    <div class="bloque-busqueda">
+
+
+      <div class="row align-items-center g-2 w-100">
+        <div class="col-auto text-end">
+          <label class="form-label mb-0"> Número de Crédito </label>
+        </div>
+        <div class="col">
+          <input matInput #numberCredit class="form-control campo-busqueda" maxlength="{{maxLengthNumberCredit}}"
+            autocomplete="off" [(ngModel)]="txtBuscarNumeroCredito" (keypress)="ValidateNumericInput($event)"
+            (keydown.enter)="BuscarCredito()" (paste)="AllowPasteOnlyNumbers($event)" [placeholder]="'Buscar...'" />
+
+        </div>
+        <div class="col-auto">
+          <button (click)="BuscarCredito()" class="btn-busqueda" matTooltip="Realizar búsqueda de crédito">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-5 h-5 me-1">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+            </svg>
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Informacion del credito -->
+<div class="rounded-lg border border-bansi-gris-claro my-2 px-2">
+  <div class="mb-2 rounded bg-white text-bansi-azul">
+
+    <!-- Encabezado -->
+    <h2 class="h6 fw-bold border-bottom pb-2 mb-3">Información del Crédito</h2>
+
+    <!-- Fila 1 -->
+    <div class="row g-3">
+      <div class="col-md-4">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Número</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtNumeroCreditoForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Número de Cliente</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtNumeroClienteForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Nombre del Cliente</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtClienteForm" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="row g-3">
+      <div class="col-md-2">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Código del Producto</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtCodProductoForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-3">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Descripción del Producto</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtProductoForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Fecha de Apertura</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtFechaAperturaForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Fecha de Vencimiento</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtFechaVencimientoForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-3">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Estatus</mat-label>
+          <input matInput type="text" readonly [ngModel]="txtEstatusForm" />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>

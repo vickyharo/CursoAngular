@@ -1,0 +1,793 @@
+/*Contenedor principal*/
+.table-container {
+  display: flex !important;
+  flex-direction: column !important;
+  width: auto !important;
+  height: 90.2vh !important;
+  background-color: white !important;
+  border: 1px solid #b6b1b1 !important;
+  margin: 15px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: visible !important;
+
+  &.modal-selection {
+    height: 50vh !important;
+
+  }
+
+  &.pagina-elementos {
+    .mat-column-numcliente {
+      width: 30% !important;
+    }
+
+    .mat-column-nombre {
+      width: 70% !important;
+    }
+  }
+
+  &.highlighted {
+    height: auto !important;
+    border: none !important;
+    margin: 0 !important;
+
+    th:nth-child(-n+2) {
+      left: auto !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 11 !important;
+    }
+
+    td:nth-child(-n+2) {
+      position: static !important;
+      left: auto !important;
+      z-index: 1 !important;
+    }
+
+    .mat-mdc-header-row {
+      height: 30px !important;
+      min-height: 30px !important;
+    }
+
+    .compact-table.mat-mdc-table .mat-mdc-row {
+      height: 25px !important;
+      min-height: 25px !important;
+    }
+
+    .header-cell {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 10 !important;
+      background-color: #e2e2e2 !important;
+      font-size: 14px !important;
+
+      span {
+        margin-top: 5px !important;
+        font-weight: bold !important;
+      }
+    }
+
+    td {
+      font-size: 13px !important;
+      padding: 2px 4px !important;
+    }
+
+    .mat-column-expediente {
+      width: 27% !important;
+    }
+
+    .mat-column-fechaEmplazamiento {
+      width: 32% !important;
+    }
+
+    .mat-column-juzgadoDemanda {
+      width: 21% !important;
+    }
+
+    .mat-column-asunto {
+      width: 20% !important;
+    }
+  }
+
+  overflow: hidden !important;
+}
+
+th {
+  text-align-last: center !important;
+  span {
+    color: #002a85 !important;
+  }
+}
+
+/*Contenedor de la tabla*/
+.table-wrapper {
+  overflow: auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  min-height: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.table-container .mat-mdc-table.compact-table {
+  width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/*Titulos de las columnas*/
+.header-cell {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  background-color: #e2e2e2 !important;
+  font-weight: bold !important;
+  border-top: 2px solid #c8c8c8 !important;
+  overflow: visible !important;
+
+  span {
+    margin-top: 10px !important;
+    display: inline-block !important;
+  }
+
+  .header-title {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding-top: 8px !important;
+  }
+}
+
+th:nth-child(-n+2) {
+  z-index: 11 !important;
+}
+
+td:nth-child(-n+2) {
+  z-index: 2 !important;
+}
+
+.table-container.highlighted .dropdown-list {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+/*Hacer fijas las dos primeras columnas*/
+th:nth-child(-n+2),
+td:nth-child(-n+2) {
+  position: sticky !important;
+  z-index: 3 !important;
+}
+
+th:nth-child(1) {
+  left: 0 !important;
+}
+
+th:nth-child(2) {
+  left: 200px !important;
+}
+
+td:nth-child(1) {
+  left: 0 !important;
+}
+
+td:nth-child(2) {
+  left: 200px !important;
+}
+
+td:nth-child(-n+2) {
+  background-color: white !important;
+}
+
+th:nth-child(-n+2) {
+  top: 0 !important;
+  z-index: 11 !important;
+  background-color: #e2e2e2 !important;
+  font-weight: bold !important;
+  border-top: 2px solid #c8c8c8 !important;
+  overflow: visible !important;
+}
+
+/*Filas y columnas de la tabla*/
+th,
+td {
+  padding: 0 !important;
+  text-align: center !important;
+  width: auto !important;
+  min-width: auto !important;
+  word-wrap: break-word !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  justify-content: center !important;
+}
+
+.mat-mdc-header-row {
+  height: 40px !important;
+  min-height: 40px !important;
+}
+
+.compact-table.mat-mdc-table .mat-mdc-row {
+  height: 40px !important;
+  min-height: 40px !important;
+}
+
+tr:last-child td {
+  border-bottom: 2px solid #c8c8c8 !important;
+}
+
+td span {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+tr {
+  background-color: #ffffff !important;
+}
+
+/*Botones de exportar pdf, excel y quitar filtros*/
+.additional-actions {
+  display: flex !important;
+  gap: 10px !important;
+  margin-left: auto !important;
+}
+
+.icon-btn {
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.action-icon {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+}
+
+.action-buttons {
+  margin: 15px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+.filter-button {
+  color: black !important;
+}
+
+/*Boton crear*/
+.action-btn {
+  border: 0.3px solid #b6b1b1 !important;
+  border-radius: 0 !important;
+  padding: 6px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  mat-icon {
+    margin-right: 5px !important;
+  }
+
+  span {
+    color: black !important;
+  }
+}
+
+.action-btn:hover {
+  span {
+    color: white !important;
+  }
+}
+
+.add-button {
+  color: #003386 !important;
+}
+
+/*Paginador*/
+.custom-paginator {
+  position: relative !important;
+  border-top: 1px solid #b6b1b1 !important;
+  flex-shrink: 0 !important;
+}
+
+.elements-page {
+  position: absolute !important;
+  top: 75% !important;
+  left: calc(200px) !important;
+  transform: translate(-50%, -100%) !important;
+  display: flex !important;
+  gap: 5px !important;
+  background-color: #faf9fd !important;
+  border-bottom: none !important;
+  z-index: 2 !important;
+  font-size: .9rem !important;
+}
+
+.page-numbers {
+  position: absolute !important;
+  top: 75% !important;
+  left: calc(100% - 118px) !important;
+  transform: translate(-50%, -100%) !important;
+  display: flex !important;
+  gap: 5px !important;
+  background-color: #faf9fd !important;
+  border-bottom: none !important;
+  z-index: 2 !important;
+}
+
+.page-number-btn {
+  border: none !important;
+  background: none !important;
+  cursor: pointer !important;
+  color: #666 !important;
+  font-size: .9rem !important;
+}
+
+.page-number-btn.active {
+  background-color: #eba729 !important;
+  border-radius: 3px !important;
+  color: #faf9fd !important;
+}
+
+::ng-deep .accent-paginator {
+  margin-top: 0 !important;
+}
+
+::ng-deep .accent-paginator .mat-mdc-paginator-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+::ng-deep .accent-paginator .mat-mdc-paginator-page-size {
+  margin-right: auto !important;
+}
+
+/*Combo*/
+::ng-deep .cdk-overlay-pane {
+  z-index: 10000 !important;
+}
+
+::ng-deep .mdc-menu-surface.mat-mdc-select-panel {
+  z-index: 10000 !important;
+}
+
+::ng-deep .cdk-overlay-container {
+  z-index: 10000 !important;
+}
+
+::ng-deep .mat-mdc-select-panel-above,
+::ng-deep .mat-mdc-select-panel-below {
+  z-index: 10000 !important;
+}
+
+::ng-deep .accent-paginator .mat-mdc-paginator-range-label {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  white-space: nowrap !important;
+  font-size: .9rem !important;
+}
+
+::ng-deep .accent-paginator .mat-mdc-paginator-range-actions {
+  margin-left: auto !important;
+}
+
+::ng-deep .accent-paginator .mat-mdc-paginator-range-actions button:nth-child(3) {
+  margin-right: 60px !important;
+}
+
+/*Filtros*/
+.filter-container {
+  position: relative !important;
+  z-index: 1000 !important;
+  max-width: 200px !important;
+  box-sizing: border-box !important;
+}
+
+.filter-icon {
+  position: relative !important;
+  font-size: 14px !important;
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+  padding: 0 !important;
+  transform: translateY(-17px) !important;
+}
+
+.filter-input-wrapper {
+  position: relative !important;
+  display: flex !important;
+  align-items: left !important;
+  padding: 0 !important;
+}
+
+.column-filter {
+  width: 100% !important;
+  padding: 4px 30px 4px 6px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+}
+
+.clear-filter-btn,
+.dropdown-toggle-btn {
+  position: absolute !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.clear-filter-btn {
+  right: 30px !important;
+}
+
+.dropdown-toggle-btn {
+  right: 0 !important;
+  z-index: 1001 !important;
+}
+
+.clear-filter-btn,
+.dropdown-toggle-btn {
+  padding: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.clear-filter-btn mat-icon,
+.dropdown-toggle-btn mat-icon {
+  font-size: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  line-height: 16px !important;
+}
+
+.dropdown-item {
+  padding: 0 !important;
+  margin: 1px 0 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dropdown-list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  margin-top: 4px;
+  width: 200px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.dropdown-scroll {
+  position: relative;
+  z-index: 1001;
+  background: white;
+  overflow: auto;
+  max-height: calc(300px - 80px);
+  min-height: 50px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item.selected {
+  background-color: #e3f2fd;
+}
+
+.dropdown-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.select-all-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/*Filtro fechas e importe*/
+.range-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  max-height: calc(300px - 40px);
+  overflow: auto;
+  width: 100%;
+}
+
+.date-filter-row,
+.number-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 32px;
+}
+
+.date-filter-row label,
+.number-filter-row label {
+  margin-right: 4px;
+  min-width: 40px;
+  font-size: 11px;
+}
+
+::ng-deep .mat-checkbox {
+  transform: scale(0.9);
+}
+
+.number-filter-row .column-filter {
+  flex-grow: 1;
+  min-width: 80px;
+  max-width: 120px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.date-filter-row .column-filter,
+.number-filter-row .column-filter {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.clear-filter-btn {
+  margin-left: auto;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
+::ng-deep .mat-menu-panel {
+  max-width: none !important;
+}
+
+::ng-deep .mat-menu-content {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+
+  th,
+  td {
+    width: auto !important;
+    min-width: auto !important;
+  }
+
+  .table-container {
+    height: 84.5vh !important;
+  }
+
+  .mat-column-activo {
+    width: 110px !important;
+    min-width: 110px !important;
+    max-width: 110px !important;
+    flex: 0 0 110px !important;
+  }
+}
+
+tr:hover td {
+  background-color: #e3f2fd !important;
+  cursor: default;
+}
+
+.selected-row td {
+  background-color: #e3f2fd !important;
+}
+
+td:hover {
+  background-color: #eef2f5 !important;
+  cursor: pointer !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: initial !important;
+}
+
+.no-matches {
+  padding: 12px !important;
+  text-align: center !important;
+  color: #666 !important;
+}
+
+::ng-deep .mat-mdc-tooltip {
+  transform: translateY(-10px) !important;
+}
+
+/*--------------------------------------------  TAMAÑO DE LAS COLUMNAS MOSTRADAS EN LA TABLA ------------------------------------------------*/
+/*--------------------------------------------  SELECCION DE CREDITOS ------------------------------------------------*/
+.mat-column-numeroCredito {
+  width: 210px !important;
+}
+
+.mat-column-numeroCliente {
+  width: 210px !important;
+}
+
+.mat-column-nombreCliente {
+  width: 210px !important;
+}
+
+.mat-column-estatusCredito {
+  width: 210px !important;
+}
+
+.mat-column-numeroProducto {
+  width: 210px !important;
+}
+
+.mat-column-nombreProducto {
+  width: 210px !important;
+}
+
+.mat-column-periodoPlazo {
+  width: 210px !important;
+}
+
+.mat-column-plazo {
+  width: 210px !important;
+}
+
+.mat-column-ejecutivo {
+  width: 210px !important;
+}
+
+.mat-column-nombreEjecutivo {
+  width: 210px !important;
+}
+
+.mat-column-fechaApertura {
+  width: 210px !important;
+}
+
+.mat-column-fechaVencimiento {
+  width: 210px !important;
+}
+
+.mat-column-fechaMinistracion {
+  width: 210px !important;
+}
+
+.mat-column-montoOtorgado {
+  width: 210px !important;
+}
+
+.mat-column-montoMinistrado {
+  width: 210px !important;
+}
+
+.mat-column-sucursal {
+  width: 210px !important;
+}
+
+.mat-column-nombreSucursal {
+  width: 210px !important;
+}
+
+.mat-column-cuenta {
+  width: 210px !important;
+}
+
+.mat-column-factoraje {
+  width: 210px !important;
+}
+
+.mat-column-existenSolicitudesPendientesAutorizar {
+  width: 210px !important;
+}
+
+/*--------------------------------------------  SELECCION DE LINEA ------------------------------------------------*/
+.mat-column-numeroLinea {
+  width: 210px !important;
+}
+
+.mat-column-numeroCliente {
+  width: 210px !important;
+}
+
+.mat-column-nombreCliente {
+  width: 210px !important;
+}
+
+.mat-column-codEjecutivo {
+  width: 210px !important;
+}
+
+.mat-column-nombreEjecutivo {
+  width: 210px !important;
+}
+
+.mat-column-codSucursal {
+  width: 210px !important;
+}
+
+.mat-column-nombreSucursal {
+  width: 210px !important;
+}
+
+.mat-column-codProducto {
+  width: 210px !important;
+}
+
+.mat-column-descProducto {
+  width: 210px !important;
+}
+
+.mat-column-codDivisa {
+  width: 210px !important;
+}
+
+.mat-column-descDivisa {
+  width: 210px !important;
+}
+
+.mat-column-montoAutorizado {
+  width: 210px !important;
+}
+
+.mat-column-montoUtilizado {
+  width: 210px !important;
+}
+
+.mat-column-plazoDias {
+  width: 210px !important;
+}
+
+.mat-column-estatus {
+  width: 210px !important;
+}
+
+.mat-column-descEstatusLinea {
+  width: 210px !important;
+}
+
+.mat-column-fechaAlta {
+  width: 210px !important;
+}
+
+.mat-column-fechaVencimiento {
+  width: 210px !important;
+}
+
+.mat-column-fechaAutorizacionLinea {
+  width: 210px !important;
+}
+
+/*--------------------------------------------   ------------------------------------------------*/

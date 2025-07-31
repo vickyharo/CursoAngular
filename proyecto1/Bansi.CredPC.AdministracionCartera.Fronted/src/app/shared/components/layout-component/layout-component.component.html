@@ -1,0 +1,33 @@
+<div class="flex h-screen overflow-hidden bg-background">
+  <!--<mat-sidenav opened mode="side" [style.width]="sidenavWidth()">-->
+  <app-sidenav-component [collapsed]="collapsed()" (toggleSidenav)="toggleSidenav()"></app-sidenav-component>
+  <!--</mat-sidenav>-->
+
+  <div class="flex flex-col flex-1">
+    <app-toolbar-component (toggleSidenav)="toggleSidenav()"></app-toolbar-component>
+    <!-- Router View -->
+    <main class="flex-1 router-view">
+      <router-outlet></router-outlet>
+    </main>
+    <div class="barra-fondo-botones">
+      <!-- Este div no lleva botones, pero le da altura y fondo -->
+    </div>
+    <app-footer-component></app-footer-component>
+  </div>
+</div>
+
+
+<!--
+<mat-sidenav-container class="flex h-screen overflow-hidden bg-background">
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+    <app-sidenav-component [collapsed]="collapsed()" (toggleSidenav)="toggleSidenav()"></app-sidenav-component>
+  </mat-sidenav>
+  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+    <app-toolbar-component (toggleSidenav)="toggleSidenav()"></app-toolbar-component>
+    <div class="router-container">
+      <router-outlet></router-outlet>
+      <app-footer-component></app-footer-component>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+-->

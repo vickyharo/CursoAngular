@@ -1,0 +1,1348 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bansi.System.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Bansi.DatabaseHelper">
+            <summary>
+            Database Helper
+            </summary>
+        </member>
+        <member name="P:Bansi.DatabaseHelper.Bdicent">
+            <summary>
+            Gets the bdicent.
+            </summary>
+            <value>
+            The bdicent.
+            </value>
+        </member>
+        <member name="P:Bansi.DatabaseHelper.Instance">
+            <summary>
+            Aplicación principal
+            </summary>
+        </member>
+        <member name="T:Bansi.Common.Configuration.Install.Installer">
+            <summary>
+            Proporciona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.Common.Configuration.Install.Installer.#ctor">
+            <summary>
+            Costructor de la clase EventLogSourceInstaller
+            </summary>
+        </member>
+        <member name="T:Bansi.ReturnCodeFactory">
+            <summary>
+            Crea objetos tipo Return Code
+            </summary>
+            <remarks>
+            27/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.ReturnCodeFactory.CreateReturnCodeInformation(System.Object,System.Object)">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeFactory.CreateReturnCodeInformation``1(System.String,System.String,``0)">
+            <summary>
+            Crea un objeto return code generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeFactory.CreateReturnCodeInformation``1(System.String,System.String,``0,System.String[])">
+            <summary>
+            Crea un objeto return code generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeFactory.CreateReturnCodeInformation(System.String,System.String)">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeFactory.CreateReturnCodeInformation(System.String,System.String,System.String[])">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="T:Bansi.SystemReturnCodeExceptionFactory">
+            <summary>
+            Crea objetos tipo Return Code Exception
+            </summary>
+            <remarks>
+            27/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.SystemReturnCodeExceptionFactory.SystemNumber">
+            <summary>
+            Numero de sistema del cual se obtendrán los códigos de retorno.
+            </summary>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(System.Object)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,``0)">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,``0,System.String[])">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,``0,System.Exception,System.String[])">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="innerException">Excepcion interna</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.String[])">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.ReturnCodeInformation,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>
+            Devuelve un ReturnCodeException
+            </returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.Exception,System.String[])">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <param name="innerException">Mensaje de excepción interna</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.ReturnCodeInformation)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <returns>Devuelve un ReturnCodeExcpexion</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(System.String)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.IReturnCodeInformationBase)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <returns>Devuelve un ReturnCodeExcpexion</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.IReturnCodeInformationBase,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>
+            Devuelve un ReturnCodeException
+            </returns>
+        </member>
+        <member name="T:Bansi.ReturnCodeExceptionFactory">
+            <summary>
+            Crea objetos tipo Return Code Exception
+            </summary>
+            <remarks>
+            27/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(System.Object,System.Object)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,System.String,``0)">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,System.String,``0,System.String[])">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException``1(System.String,System.String,``0,System.Exception,System.String[])">
+            <summary>
+            Crea un objeto return code exception generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="innerException">Excepcion interna</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.String,System.String[])">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.ReturnCodeInformation,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>
+            Devuelve un ReturnCodeException
+            </returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.String,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.String,System.Exception,System.String[])">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <param name="innerException">Mensaje de excepción interna</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCodeException</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.ReturnCodeInformation)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <returns>Devuelve un ReturnCodeExcpexion</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(System.String,System.String)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.IReturnCodeInformationBase)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <returns>Devuelve un ReturnCodeExcpexion</returns>
+        </member>
+        <member name="M:Bansi.ReturnCodeExceptionFactory.CreateReturnCodeException(Bansi.IReturnCodeInformationBase,System.Exception)">
+            <summary>
+            Crea un objeto return code exception en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="returnCode">Return code information.</param>
+            <param name="innerException">Mensaje de excepción interna.</param>
+            <returns>
+            Devuelve un ReturnCodeException
+            </returns>
+        </member>
+        <member name="T:Bansi.Globalization.LocaleHelper">
+            <summary>
+            Ayuda a validar configuraciones sobre la moneda y la fecha
+            </summary>
+        </member>
+        <member name="M:Bansi.Globalization.LocaleHelper.ValidateDefaultConfiguration(System.String@)">
+            <summary>
+            Verificar que la configuración regional especificada en central sea la actual de windows
+            </summary>
+            <param name="messageError">Mensaje de error por el cual no es correcta la configuración</param>
+            <returns>Devuelve true si la configuración es correcta</returns>
+        </member>
+        <member name="T:Bansi.SystemReturnCodeFactory">
+            <summary>
+            Crea objetos tipo Return Code, en base a un sistema
+            </summary>
+            <remarks>
+            27/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.SystemReturnCodeFactory.SystemNumber">
+            <summary>
+            Numero de sistema del cual se obtendrán los códigos de retorno.
+            </summary>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="systemNumber">Numero de sistema</param>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.CreateReturnCodeInformation(System.Object)">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.CreateReturnCodeInformation``1(System.String,``0)">
+            <summary>
+            Crea un objeto return code generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.CreateReturnCodeInformation``1(System.String,``0,System.String[])">
+            <summary>
+            Crea un objeto return code generico en base a un numero de sistema y un codigo de error
+            </summary>
+            <typeparam name="T">Elemento generico</typeparam>
+            <param name="code">Codigo de error</param>
+            <param name="item">Elemento generico</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.CreateReturnCodeInformation(System.String)">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="M:Bansi.SystemReturnCodeFactory.CreateReturnCodeInformation(System.String,System.String[])">
+            <summary>
+            Crea un objeto return code en base a un numero de sistema y un codigo de error
+            </summary>
+            <param name="code">Codigo de error</param>
+            <param name="parameters">Parametros variables para meter en una cadena de texto con String.Format</param>
+            <returns>Devuelve un ReturnCode con información de error, incluyendo el mensaje</returns>
+        </member>
+        <member name="T:Bansi.Text.CharacterRuleMapping">
+            <summary>
+            Define la reglas de traducción de una letra en otra en otro
+            </summary>
+            <remarks>
+            22/01/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Text.CharacterRuleMapping.Source">
+            <summary>
+            Letra origen de la traducción
+            </summary>
+        </member>
+        <member name="P:Bansi.Text.CharacterRuleMapping.Target">
+            <summary>
+            Letra destino de la traducción
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterRuleMapping.#ctor">
+            <summary>
+            Constructor con parámetros
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterRuleMapping.#ctor(System.Char)">
+            <summary>
+            Constructor con parámetros
+            </summary>
+            <param name="source">Letra origen</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterRuleMapping.#ctor(System.Char,System.Char)">
+            <summary>
+            Constructor con parámetros
+            </summary>
+            <param name="source">Letra origen</param>
+            <param name="target">Letra destino</param>
+        </member>
+        <member name="T:Bansi.Text.CharacterTranslator">
+            <summary>
+            Clase con métodos para traducir caracteres
+            </summary>
+            <remarks>
+            20/12/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Text.CharacterTranslator.CharacterRuleMappingTable">
+            <summary>
+            Conjunto de reglas de traducción de letras
+            </summary>
+        </member>
+        <member name="P:Bansi.Text.CharacterTranslator.CharactersToPreserve">
+            <summary>
+            Letras que se van a preservar en la traducción
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.#ctor(Bansi.Text.CharacterRuleMapping[])">
+            <summary>
+            Constructor con configuración
+            </summary>
+            <param name="characterRuleMappingTable">Conjunto de reglas de letras a traducir</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.#ctor(System.Int32)">
+            <summary>
+             Constructor con configuración
+            </summary>
+            <param name="characterRuleMappingCode"> Código de la tabla de traducción de letras</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.#ctor(Bansi.Text.CharacterRuleMapping[],System.Char[])">
+            <summary>
+            Constructor con configuración
+            </summary>
+            <param name="characterRuleMappingTable">Conjunto de reglas de letras a traducir</param>
+            <param name="charactersToPreserve">Conjunto de reglas de letras a quitar</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.#ctor(System.Int32,System.Int32)">
+            <summary>
+             Constructor con configuración
+            </summary>
+            <param name="characterRuleMappingCode"> Código de la tabla de traducción de letras</param>
+            <param name="charactersToPreserveCode">Código de la tabla de letras para quitar</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.GetCharacterRuleMapping(System.Int32)">
+            <summary>
+            Carga una tabla de traducción de caracteres
+            </summary>
+            <param name="characterRuleMappingCode"> Código de la tabla de traducción de letras</param>
+            <returns>Tabla de traduccion de caracteres</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.GetCharactersToPreserve(System.Int32)">
+            <summary>
+            Carga una tabla de traducción de caracteres, que va a a ser preservados
+            </summary>
+            <param name="charactersToPreserveCode">Código de la tabla de letras para quitar</param>
+            <returns>Tabla de traducción de caracteres</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.ConfigureCharacterRuleMapping(System.Int32)">
+            <summary>
+            Configura la tabla de mapeos de letras
+            </summary>
+            <param name="characterRuleMappingCode">Código de la tabla de letras</param>
+            <returns>Tabla de mapeos de letras</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.ConfigureCharactersToPreserve(System.Int32)">
+            <summary>
+            Configura la tabla de letras a conservar
+            </summary>
+            <param name="charactersToPreserveCode">Código de la tabla de letras para quitar</param>
+            <returns>Tabla de letras a preservar en la traducción</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(System.Int32,System.Int32,System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="characterRuleMappingCode"> Código de la tabla de traducción de letras</param>
+            <param name="charactersToPreserveCode">Código de la tabla de letras para conservar</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(System.Int32,System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="characterRuleMappingCode"> Código de la tabla de traducción de letras</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(Bansi.Text.CharacterRuleMapping[],System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="characterRuleMappingTable">Conjunto de reglas de letras a traducir</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(Bansi.Text.CharacterRuleMapping[],System.Char[],System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="characterRuleMappingTable">Conjunto de reglas de letras a traducir,  es nulo emerge un error</param>
+            <param name="charactersToPreserve">Conjunto de reglas de letras a quitar, si es nulo o un array vacio emerge un error</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.TranslateInternal(Bansi.Text.CharacterRuleMapping[],System.Char[],System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="characterRuleMappingTable">Conjunto de reglas de letras a traducir,  es nulo o array vacio no lo tiene en cuenta</param>
+            <param name="charactersToPreserve">Conjunto de reglas de letras a quitar, si es nulo no lo tiene en cuenta, si es vacio elimina todo</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Translate(System.String,System.Boolean)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <param name="removeCharacters">indica si se deben eliminar los caracteres</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Remove(System.Int32,System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="charactersToPreserveCode">Código de la tabla de letras para quitar</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Remove(System.Char[],System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="charactersToPreserve">Conjunto de reglas de letras a quitar</param>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterTranslator.Remove(System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="stringToTranslate">Cadena a traducir</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="T:Bansi.Text.CharacterRuleMappingComparer">
+            <summary>
+            Clase para comparar caracteres
+            </summary>
+            <remarks>
+            20/12/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="T:Bansi.Text.CharacterValidator">
+            <summary>
+            Clase con métodos para validar caracteres
+            </summary>
+            <remarks>
+            20/12/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Text.CharacterValidator.ValidCharacters">
+            <summary>
+            Letras validas
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.#ctor(System.Int32)">
+            <summary>
+             Constructor con configuración
+            </summary>
+            <param name="validCharactersCode"> Código de la tabla de validación de letras</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.#ctor(System.Char[])">
+            <summary>
+            Constructor con configuración
+            </summary>
+            <param name="validCharacters">Conjunto de reglas de letras a validar</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetValidCharacters(System.Int32)">
+            <summary>
+            Carga una tabla de validación de caracteres, que va a a ser validos
+            </summary>
+            <param name="validCharatersCode">Código de la tabla de letras para quitar</param>
+            <returns>Tabla de validación de caracteres</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.ConfigureValidCharacters(System.Int32)">
+            <summary>
+            Configura la tabla de letras a conservar
+            </summary>
+            <param name="validCharatersCode">Código de la tabla de letras para quitar</param>
+            <returns>Tabla de letras a preservar en la validación</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.Validate(System.Int32,System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="validCharatersCode">Código de la tabla de letras para quitar</param>
+            <param name="stringToValidate">Cadena a validar</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.Validate(System.Char[],System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="validCharaters">Conjunto de reglas de letras a quitar</param>
+            <param name="stringToValidate">Cadena a validar</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.Validate(System.String)">
+            <summary>
+            Traduce una cadena
+            </summary>
+            <param name="stringToValidate">Cadena a validar</param>
+            <returns>Cadena traducida</returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern(System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="validCharatersCode">Código de los caracteres válidos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="validCharatersCode">Código de los caracteres válidos</param>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern(System.Char[])">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="characters">Arreglo de caracteres válidos</param>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="characters">Arreglo de caracteres válidos</param>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex(System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="validCharatersCode">Código de los caracteres válidos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="validCharatersCode">Código de los caracteres válidos</param>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex(System.Char[])">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="characters">Arreglo de caracteres válidos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="characters">Arreglo de caracteres válidos</param>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegex(System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.CharacterValidator.GetRegexPattern(System.Int32,System.Int32)">
+            <summary>
+            Regresa una expresión regular con los caracteres válidos
+            </summary>
+            <param name="minLength">Longitud mínima</param>
+            <param name="maxLength">Longitud máxima</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.Text.NumberWordConverter">
+            <summary>
+            Convierte un monto a su equivalente expresado con palabras
+            </summary>
+            <remarks>
+            20/12/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Text.NumberWordConverter.Language">
+            <summary>
+            Idioma destino de la transformación
+            </summary>
+        </member>
+        <member name="P:Bansi.Text.NumberWordConverter.Currency">
+            <summary>
+            Moneda destino de la transformación
+            </summary>
+        </member>
+        <member name="P:Bansi.Text.NumberWordConverter.CurrencyId">
+            <summary>
+            Moneda destino de la transformación
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.#ctor">
+            <summary>
+            Constructor del objeto, por defecto crea un traductor para 'Español' y para pesos
+            </summary>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.#ctor(Bansi.Globalization.LanguageEnum,Bansi.Globalization.CurrencyEnum)">
+            <summary>
+            Constructor del objeto
+            </summary>
+            <param name="language">Idioma a convertir</param>
+            <param name="currency">Monto a convertir</param>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.#ctor(Bansi.Globalization.LanguageEnum,System.String)">
+            <summary>
+            Constructor del objeto
+            </summary>
+            <param name="language">Idioma a convertir</param>
+            <param name="currencyId">Identificador (numérico) de la divisas</param>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.Convert(Bansi.Globalization.LanguageEnum,Bansi.Globalization.CurrencyEnum,System.Decimal)">
+            <summary>
+            Convierte un monto a su equivalente expresado en palabras
+            </summary>
+            <param name="language">Idioma a convertir</param>
+            <param name="currency">Moneda a convertir</param>
+            <param name="mount">Monto a convertir</param>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.Convert(Bansi.Globalization.LanguageEnum,System.String,System.Decimal)">
+            <summary>
+            Convierte un monto a su equivalente expresado en palabras
+            </summary>
+            <param name="language">Idioma a convertir</param>
+            <param name="currencyId">Identificador (numérico) de la divisas</param>
+            <param name="mount">Monto a convertir</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Text.NumberWordConverter.Convert(System.Decimal)">
+            <summary>
+            Convierte un monto a su equivalente expresado en palabras
+            </summary>
+            <param name="mount">Monto a convertir</param>
+        </member>
+        <member name="T:Bansi.VB6.eDateOrder">
+            <summary>
+            formato de la fecha
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eDateOrder.MDY">
+            <summary>
+            Mes-Dia-Año
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eDateOrder.DMY">
+            <summary>
+            Dia-Mes-Año
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eDateOrder.YMD">
+            <summary>
+            Año-Mes-Dia
+            </summary>
+        </member>
+        <member name="T:Bansi.VB6.eLocaleInfo">
+            <summary>
+            enumerable para obtencion de configuracion regional
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ILANGUAGE">
+            <summary>
+            Id de Lenguage
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SLANGUAGE">
+            <summary>
+            nombre del lenguaje localizado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SENGLANGUAGE">
+            <summary>
+            nombre del idioma ingles
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVLANGNAME">
+            <summary>
+            abreviacion del lenguaje
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SNATIVELANGNAME">
+            <summary>
+            nombre del lenguaje nativo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ICOUNTRY">
+            <summary>
+            codigo de Ciudad
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SCOUNTRY">
+            <summary>
+            nombre del pais localizado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SENGCOUNTRY">
+            <summary>
+            nombre del Pais es en ingles
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVCTRYNAME">
+            <summary>
+            abreviacion de nombre de la ciudad
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SNATIVECTRYNAME">
+            <summary>
+            nombre de la ciudad nativa
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDEFAULTLANGUAGE">
+            <summary>
+            id del lenguaje por default
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDEFAULTCOUNTRY">
+            <summary>
+            id del pais por default
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDEFAULTCODEPAGE">
+            <summary>
+            pagida de codigo predeterminado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SLIST">
+            <summary>
+             separador de elementos en una lista
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IMEASURE">
+            <summary>
+            unidades de medida
+             0 = metros, 1 = US
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDECIMAL">
+            <summary>
+            Separador Decimal
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_STHOUSAND">
+            <summary>
+            Separador de Millares
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SGROUPING">
+            <summary>
+            Agrupador de Digitos
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDIGITS">
+            <summary>
+             Cantidad de dígitos fraccionados
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ILZERO">
+            <summary>
+            numeros a la izquierda de un decimal
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SNATIVEDIGITS">
+            <summary>
+            ASCII Nativo 0-9
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SCURRENCY">
+            <summary>
+             Simbolo de Moneda local
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SINTLSYMBOL">
+            <summary>
+            simbolo monetario internacional
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONDECIMALSEP">
+            <summary>
+            Separador decimal en monedas
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHOUSANDSEP">
+            <summary>
+            separador de millares en monedas
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONGROUPING">
+            <summary>
+            Agrupador de Monedas
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ICURRDIGITS">
+            <summary>
+            numero de Digitos en Moneda Local
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IINTLCURRDIGITS">
+            <summary>
+            Numero de digitos moneda  internacional
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ICURRENCY">
+            <summary>
+            modalidad de moneda en positivos
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_INEGCURR">
+            <summary>
+            Modalidad de moneda en negativos
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDATE">
+            <summary>
+            Separador de Fechas
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_STIME">
+            <summary>
+            Sepárador de Tiempo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SSHORTDATE">
+            <summary>
+            Formato corto de fecha
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SLONGDATE">
+            <summary>
+            Formato largo de Fecha
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_STIMEFORMAT">
+            <summary>
+            Formato de Tiempo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDATE">
+            <summary>
+            Formato de Fecha
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ILDATE">
+            <summary>
+            Formato de Fecha Largo Ordenado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ITIME">
+            <summary>
+            Formato de tiempo Especifico
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ICENTURY">
+            <summary>
+            Formato de Siglo Especifico
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_ITLZERO">
+            <summary>
+            numero de ceros a la izquierda en Tiempo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IDAYLZERO">
+            <summary>
+            numero de ceros a la izquiera en campo dias
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IMONLZERO">
+            <summary>
+             numero de ceros a la izquiera en campo mes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_S1159">
+            <summary>
+             asignacion de AM
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_S2359">
+            <summary>
+            Asignacion de PM
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME1">
+            <summary>
+            nombre largo Lunes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME2">
+            <summary>
+            Nombre Largo Martes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME3">
+            <summary>
+            nombre largo miercoles
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME4">
+            <summary>
+            nombre largo jueves
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME5">
+            <summary>
+            nombre largo viernes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME6">
+            <summary>
+            Nombre largo Sabado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SDAYNAME7">
+            <summary>
+            nombre largo Domingo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME1">
+            <summary>
+            abreviacion para Lunes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME2">
+            <summary>
+            abreviacion para martes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME3">
+            <summary>
+            abreviacion para miercoles
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME4">
+            <summary>
+            abreviacion para jueves
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME5">
+            <summary>
+            abreviacion para viernes
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME6">
+            <summary>
+            abreviacion para sabado
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVDAYNAME7">
+            <summary>
+            abreviacion para domingo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME1">
+            <summary>
+            Nombre Largo Enero
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME2">
+            <summary>
+            Nombre Largo febrero
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME3">
+            <summary>
+            Nombre Largo marzo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME4">
+            <summary>
+            Nombre Largo abril
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME5">
+            <summary>
+            Nombre Largo may
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME6">
+            <summary>
+            Nombre Largo junio
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME7">
+            <summary>
+            Nombre Largo julio
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME8">
+            <summary>
+            Nombre Largo agosto
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME9">
+            <summary>
+            Nombre Largo septiembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME10">
+            <summary>
+            Nombre Largo octubre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME11">
+            <summary>
+            Nombre Largo noviembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SMONTHNAME12">
+            <summary>
+            Nombre Largo diciembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME1">
+            <summary>
+            Abreviatura para Enero
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME2">
+            <summary>
+            Abreviatura para febrero
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME3">
+            <summary>
+            Abreviatura para marzo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME4">
+            <summary>
+            Abreviatura para abril
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME5">
+            <summary>
+            Abreviatura para mayo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME6">
+            <summary>
+            Abreviatura para junio
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME7">
+            <summary>
+            Abreviatura para julio
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME8">
+            <summary>
+            Abreviatura para agosto
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME9">
+            <summary>
+            Abreviatura para septiembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME10">
+            <summary>
+            Abreviatura para octubre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME11">
+            <summary>
+            Abreviatura para noviembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME12">
+            <summary>
+            Abreviatura para diciembre
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SABBREVMONTHNAME13">
+            <summary>
+            Abreviatura para mes trece
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SPOSITIVESIGN">
+            <summary>
+            signo positivo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_SNEGATIVESIGN">
+            <summary>
+            signo negativo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IPOSSIGNPOSN">
+            <summary>
+            posicion del signo positivo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_INEGSIGNPOSN">
+            <summary>
+            posicion del signo negativo
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IPOSSYMPRECEDES">
+            <summary>
+            mon sym precedes pos amt
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_IPOSSEPBYSPACE">
+            <summary>
+            mon sym sep by space from pos amt
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_INEGSYMPRECEDES">
+            <summary>
+            mon sym precedes neg amt
+            </summary>
+        </member>
+        <member name="F:Bansi.VB6.eLocaleInfo.LOCALE_INEGSEPBYSPACE">
+            <summary>
+            mon sym sep by space from neg amt
+            </summary>
+        </member>
+        <member name="T:Bansi.VB6.clsConversorNumeroLetras">
+            <summary>
+            Clase encargada de convertir números a letras
+            </summary>
+        </member>
+        <member name="M:Bansi.VB6.clsConversorNumeroLetras.ConvertirLetrasCastellano(System.Decimal,System.String)">
+            <summary>
+             Traduce una monto dado , al lenguaje castellano
+            </summary>
+            <param name="monto"></param>
+            <param name="claveDivisa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.VB6.clsConversorNumeroLetras.ConvertirLetrasIngles(System.Decimal,System.String)">
+            <summary>
+            Traduce una monto dado , al lenguaje ingles
+            </summary>
+            <param name="monto"></param>
+            <param name="claveDivisa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.VB6.clsConversorNumeroLetras.ProcesaTriadaESN(System.Decimal)">
+            <summary>
+            Procesa una triada de números, dado el patron de nombramiento de cantidades
+            </summary>
+            <param name="monto"> cantidad</param>
+            <returns> </returns>
+        </member>
+        <member name="T:Bansi.VB6.clsLocaleInfo">
+            <summary>
+            Clase para obtener configuración regional del equipo
+            </summary>
+        </member>
+        <member name="M:Bansi.VB6.clsLocaleInfo.fnConsultaRegional(Bansi.VB6.eLocaleInfo)">
+            <summary>
+            Consulta la Configuracion regional del sistema
+            </summary>
+            <param name="nInfoData"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

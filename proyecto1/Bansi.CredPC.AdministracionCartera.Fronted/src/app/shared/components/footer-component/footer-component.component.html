@@ -1,0 +1,13 @@
+@if(visible){
+<!--<footer class="footer-container text-center bsi-gray-text position-absolute bottom-0 start-50 translate-middle-x d-none d-md-block">
+      <p>Administración de Cartera - {{version}} - {{fechaHoy | date:"mediumDate"}}</p>
+  </footer>-->
+
+<footer>
+  <div class="h-10 bg-white flex items-center justify-center gap-3 px-4 fw-medium shadow-md border-t border-bansi-azul-oscuro text-bansi-azul-oscuro">
+    <span>{{ nombreSistema }}</span>
+    <span>Versión {{ version }}</span>
+    <span>{{fechaHoy | date:"mediumDate"}}</span>
+  </div>
+</footer>
+}

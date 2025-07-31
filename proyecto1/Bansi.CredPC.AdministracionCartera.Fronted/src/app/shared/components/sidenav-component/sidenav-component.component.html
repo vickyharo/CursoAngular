@@ -1,0 +1,133 @@
+<!-- Sidebar -->
+<div class="flex h-screen overflow-hidden bg-background">
+  <div [ngClass]="{'sidebar': true,'collapsed': sideNavCollapsed(),'expanded': !sideNavCollapsed()}">
+
+    <!-- Logo -->
+    <div class="flex items-center justify-center mt-8" (click)="navigateToHome()">
+      <img [src]="profilePic()" [ngClass]="{ 'w-10 h-16': !sideNavCollapsed(), 'w-10 h-10': sideNavCollapsed() }"
+        alt="Logo Bansi" />
+    </div>
+
+    <!-- Menú dinámico -->
+    <nav class="flex-1 mt-4 px-2 d-flex flex-column align-items-center gap-2" [class.collapsed]="sideNavCollapsed()">
+      <!-- Iteración del menú principal -->
+      <div *ngFor="let level1Item of menuItems" class="w-100 d-flex flex-column align-items-center">
+        <!-- Nivel 1 -->
+        <button (click)="onMenuPrincipalClick(level1Item, $event)"
+          class="w-100 border-0 bg-transparent hover:bg-sidebar-gradient p-3 rounded-pill text-white d-flex align-items-center"
+          [ngClass]="{'justify-center': sideNavCollapsed(),'justify-between gap-2': !sideNavCollapsed() && level1Item.subMenu,'gap-2': !sideNavCollapsed() && !level1Item.subMenu}"
+          mat-list-item [routerLink]="level1Item.route" routerLinkActive #rla="routerLinkActive"
+          [activated]="rla.isActive" [class.active-item]="selectedIndexMenu === level1Item.id">
+
+          <!-- Ícono + texto -->
+            <div class ="d-flex align-items-center">
+              <img [src]="'assets/icons/solid/' + level1Item.icon+ '-white.svg'" s alt="Icon" class="h-5 w-5" />
+              <span *ngIf="!sideNavCollapsed()" class="ms-2">{{ level1Item.name }}</span>
+
+            <!-- Indicador de submenú (si no está colapsado y hay submenú) -->
+
+              <span *ngIf="!sideNavCollapsed() && level1Item.subMenu">
+                {{activeMenuIndex === level1Item.id && level1Item.expanded? "-": "+"}}
+              </span>
+          </div>0
+          <div>hellooooo</div>
+        </button>
+
+        <!-- Contenedor para niveles 2 y 3 -->
+        <nav *ngIf="level1Item.expanded && activeMenuIndex === level1Item.id"
+          class="flex-1 mt-4 px-4 d-flex flex-column align-items-center gap-2">
+
+          <!-- Nivel 2 -->
+          <div *ngFor="let level2Item of level1Item.subMenu" class="w-100 d-flex flex-column align-items-center">
+
+            <!-- Botón principal -->
+            <button (click)="onSubMenuClick(level2Item, $event)"
+              class="w-100 border-0 bg-transparent hover:bg-sidebar-gradient p-3 rounded-pill text-white d-flex align-items-center"
+              [ngClass]="{'justify-center': sideNavCollapsed(),'justify-between gap-2': !sideNavCollapsed() && level2Item.subMenu,'gap-2': !sideNavCollapsed() && !level2Item.subMenu}"
+              mat-list-item [routerLink]="level2Item.route" routerLinkActive #rla="routerLinkActive"
+              [activated]="rla.isActive" [class.active-item]="selectedIndexSubMenu === level2Item.id">
+              <!-- Ícono + texto -->
+              <div class="d-flex align-items-center">
+                <img [src]="'assets/icons/solid/' + level2Item.icon + '-white.svg'" alt="Icon" class="h-5 w-5" />
+                <span *ngIf="!sideNavCollapsed()" class="ms-2">{{ level2Item.name }}</span>
+              </div>
+              <!-- Indicador de submenú (si no está colapsado y hay submenú) -->
+              <span *ngIf="level2Item.subMenu && !sideNavCollapsed()">
+                {{ activeSubmenuIndex === level2Item.id && level2Item.expanded ? "-" : "+" }}
+              </span>
+            </button>
+
+            <!-- Nivel 3 -->
+            <div *ngIf="level2Item.expanded && !sideNavCollapsed() && activeSubmenuIndex === level2Item.id"
+              class="mx-auto w-75 d-flex flex-column ps-4 my-2">
+              <button *ngFor="let level3Item of level2Item.subMenu" (click)="routerlink(level3Item.route!)"
+                class="text-start p-2 rounded text-white w-100 hover:bg-sidebar-gradient border-0 bg-transparent">
+                {{ level3Item.name }}
+              </button>
+            </div>
+
+            <!-- PINTAMOS EL SUBMENU CUANDO ESTA COLAPSADO -->
+            <div *ngIf="activeSubmenuIndex === level2Item.id && sideNavCollapsed() && level2Item.subMenu"
+              [ngStyle]="{ top: 174 + 'px', left: 75.5 + 'px' }"
+              class="position-fixed z-50 bg-white border-2 border-bansi-gris shadow-lg w-64"
+              (mouseleave)="closeModalSubMenu()">
+              <div class="bg-bansi-sidebar-gradient-invert mb-2 p-2 text-white">
+                {{ level2Item.name }}
+              </div>
+              <div *ngFor="let subItem of level2Item.subMenu"
+                class="m-1 p-2 hover:bg-bansi-sidebar-gradient cursor-pointer">
+
+                <button class="flex items-center gap-2 border-0 bg-transparent" [routerLink]="subItem.route">
+                  <img [src]="'assets/icons/solid/' + subItem.icon + '.svg'" alt="Icon" class="h-5 w-5" />
+                  {{ subItem.name }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Popup contextual -->
+            <!--  <div *ngIf="collapsedSubMenuItem"
+            [ngStyle]="{ top: popupPosition.top + 'px', left: popupPosition.left + 'px' }"
+            class="position-fixed z-50 bg-white border-2 border-bansi-gris shadow-lg w-64"
+            (mouseleave)="closeModalSubMenu()">
+            <div class="bg-bansi-sidebar-gradient-invert mb-2 p-2 text-white">
+              {{ collapsedSubMenuItem.name }}
+            </div>
+            <div *ngFor="let sub of collapsedSubMenuItem.subMenu"
+              class="m-1 p-2 hover:bg-bansi-sidebar-gradient cursor-pointer">
+              <button class="flex items-center gap-2 border-0 bg-transparent" (click)="routerlink(sub.route!)">
+                <img [src]="'assets/icons/solid/' + sub.icon + '.svg'" alt="Icon" class="h-5 w-5" />
+                {{ sub.name }}
+              </button>
+            </div>
+          </div>-->
+
+
+          </div>
+        </nav>
+
+        <!-- Salir de la aplicación -->
+        <div class="w-100 d-flex"
+          [ngClass]="{'justify-center': sideNavCollapsed(),'justify-start': !sideNavCollapsed()}">
+          <button (click)="logOut()"
+            class="w-100 p-3 border-0 bg-transparent rounded-pill hover:bg-sidebar-gradient text-white d-flex align-items-center"
+            [ngClass]="{'justify-center': sideNavCollapsed()}">
+            <img src="assets/icons/solid/power.svg" alt="Salir" class="h-5 w-5" />
+            <span *ngIf="!sideNavCollapsed()" class="ml-2">Salir</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Boton colapsar menú -->
+    <div class="mb-5 flex flex-col items-center justify-center gap-2">
+      <button (click)="onMenuClick()"
+        class="w-full border-0 bg-transparent text-left px-4 py-2 text-white text-sm transition mt-auto hover:bg-sidebar-gradient">
+        <span class="inline-flex items-center">
+          <span class="mr-1">{{
+            sideNavCollapsed() ? ">" : "<" }}</span>
+              {{ sideNavCollapsed() ? "" : " Ocultar menú" }}
+          </span>
+      </button>
+    </div>
+  </div>
+</div>

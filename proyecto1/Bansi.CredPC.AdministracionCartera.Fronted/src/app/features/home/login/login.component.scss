@@ -1,0 +1,108 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.error-message {
+  color: #c41313;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.error-text {
+  color: #c41313;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.login-form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 380px;
+  /* margin: 50px; */
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #c2c2c2;
+  height: 400px;
+}
+
+.custom-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-button {
+  background-color: #003386; /* Color de fondo */
+  color: #ffffff;
+}
+
+.blue-button:hover {
+  background-color: #033590; /* Color al pasar el cursor */
+}
+
+/* Boton deshabilitado */
+button:disabled {
+  background-color: #ccc; /* Gris claro */
+  color: #666; /* Texto gris */
+  cursor: not-allowed; /* Indica que no es clickeable */
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; /*Opcional: redondear esquinas*/
+  height: 50px;
+  width: 100%;
+}
+
+@media (max-width: 765px) {
+  .vertical-line {
+    display: none; /* Ocultar línea divisoria en pantallas pequeñas */
+  }
+
+  .logo-container {
+    margin: 3px 0 0 0; /* Reducir margenes del logo en pantallas pequeñas */
+  }
+
+  .logo {
+    width: 7em; /* Reducir tamaño del logo en pantallas pequeñas */
+    margin-top: 1rem;
+  }
+}
+
+mat-form-field {
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}

@@ -1,0 +1,42 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+<div class="modal-header">
+  <div class="position-relative w-100">
+    <p class="text-center">Registro de Solicitudes - Cambio de Cuenta de Cheques</p>
+    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0" aria-label="Close"
+      (click)="CancelarEdicion()"></button>
+  </div>
+</div>
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh">
+  <section>
+    <carousel [noWrap]="true" [showIndicators]="false" [itemsPerSlide]="1" [interval]="0" [isAnimated]="true"
+      [noPause]="false">
+      <slide *ngFor="let row of eventoCuentasCambiar; let index=index">
+        <app-detalle-cuenta-component #selectorDetalle [cuentaOrigenEntrada]="row"
+          [productoCreditoRecibido]="productoCreditoRecibido" style="width: 90%;">
+        </app-detalle-cuenta-component>
+        <br>
+        <br>
+        <br>
+        <div class="carousel-caption">
+          <h6 style="color: black;"> Mostrando {{index + 1}} de {{eventoCuentasCambiar.length}}</h6>
+        </div>
+      </slide>
+    </carousel>
+
+    <div class="modal-footer" style="padding-right:10px;">
+      <div class="col-md-2">
+        <!-- Botón Seleccionar cliente -->
+        <button mat-button class="btn btn-xl bg-bansi-azul" (click)="GuardarCuentas()">
+          <span>Guardar Solicitud</span>
+        </button>
+      </div>
+      <div class="col-md-2">
+        <!-- Botón Cerrar -->
+        <button mat-button class="btn btn-xl bg-bansi-rojo" (click)="CancelarEdicion()">
+          <span>Cancelar</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bansi.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Bansi.Web.Configuration.Install.Installer">
+            <summary>
+            Proporciona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.Web.Configuration.Install.Installer.#ctor">
+            <summary>
+            Costructor de la clase EventLogSourceInstaller
+            </summary>
+        </member>
+        <member name="T:Bansi.Web.HttpContextHelper">
+            <summary>
+            Clase HttpContextHelper
+            </summary>
+        </member>
+        <member name="F:Bansi.Web.HttpContextHelper.f4UrlStringFunction">
+            <summary>
+            Funcion para sistemas en F4
+            </summary>
+        </member>
+        <member name="M:Bansi.Web.HttpContextHelper.GetEntryAssembly">
+            <summary>
+            Regresa el Entry Assembly para un contextoWeb
+            </summary>
+            <returns>Assembly</returns>
+        </member>
+        <member name="M:Bansi.Web.HttpContextHelper.GetUserHostInformation">
+            <summary>
+            Obtiene el puerto de la URL, nombre e IP de la máquina
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.Web.PreloadPageHelper">
+            <summary>
+            Ayuda a precagar los elementos basicos para trabajar con Bansí
+            </summary>
+        </member>
+        <member name="M:Bansi.Web.PreloadPageHelper.PreloadPage">
+            <summary>
+            Precarga los elementos basicos de Bansí
+            </summary>
+        </member>
+        <member name="T:Bansi.Web.UI.PreloadPage">
+            <summary>
+            Define una pagina ASPX, que carga la información basica de BAnsí
+            </summary>
+        </member>
+        <member name="M:Bansi.Web.UI.PreloadPage.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Carga la pagina, cagando la información basica de Bansí
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+    </members>
+</doc>
