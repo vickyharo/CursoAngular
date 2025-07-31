@@ -1,0 +1,54 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div class="content-container">
+  <div class="flex-panel">
+    <mat-dialog-content>
+      <section>
+
+        <app-buscar-linea-form (montoOriginalEnviado)="ActualizarMontoOriginalRecibido($event)"
+          (numeroLineaEnviada)="ActualizarNumeroDeLineaRecibida($event)"
+          (tieneSolicitudesPendientes)="ActualizarSolicitudesPendientes($event)"> </app-buscar-linea-form>
+        <app-cambiar-monto-form [montoOriginalRecibido]="montoOriginalRecibido"
+          [tieneSolicitudesPendientesRecibido]="tieneSolicitudesPendientesRecibido"
+          (montoNuevoEnviado)="ActualizarMontoNuevoRecibido($event)"></app-cambiar-monto-form>
+
+        <div class="modal-footer" style="padding-right: 10px">
+
+          <div *ngIf="permisoBotonCancelar">
+            <!-- Botón cancelar cambio de monto -->
+            <button *ngIf="desactivarBoton" mat-button class="action-btn-cancel" disabled="{{!activarDisabled}}"
+              (click)="BuscarNumeroSolicitud()">
+              <mat-icon color="warn">cancel</mat-icon>
+              <span>Cancelar solicitud</span>
+            </button>
+            &nbsp;&nbsp;
+          </div>
+
+          <div *ngIf="permisoBotonGuardar; else permisoAplicar">
+            <!-- Botón cambio de monto -->
+            <button *ngIf="!desactivarBoton" mat-button class="action-btn-save" disabled="{{!activarDisabled}}"
+              (click)="SolicitarCambioMonto()">
+              <mat-icon color="#003386">save</mat-icon>
+              <span>Guardar solicitud</span>
+            </button>
+            &nbsp;&nbsp;
+          </div>
+
+          <ng-template #permisoAplicar>
+            <div *ngIf="permisoBotonGuardarAutorizar">
+              <!-- Botón autorización de cambio de monto -->
+              <button *ngIf="!desactivarBoton" mat-button disabled="{{!activarDisabled}}" class="action-btn-aplicar"
+                (click)="ValidarGuardarAutorizar()">
+                <mat-icon>check_circle</mat-icon>
+                <span>Guardar/Autorizar solicitud</span>
+              </button>
+            </div>
+          </ng-template>
+
+          <div class="text-end mt-2"></div>
+        </div>
+      </section>
+    </mat-dialog-content>
+  </div>
+</div>

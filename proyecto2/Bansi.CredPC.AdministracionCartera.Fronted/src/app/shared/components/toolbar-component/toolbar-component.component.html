@@ -1,0 +1,22 @@
+<mat-toolbar class="mat-elevation-z3 toolbar">
+  <div class="button-inicio">
+    <!--<div class="home" (click)="navigateToHome()">
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </div>-->
+    <div class="route-segments">
+      <ng-container *ngFor="let segment of routeSegments; let last = last">
+        <span class="route-segment" [class.clickable]="segment.route" (click)="navigateToRoute(segment.route)">
+          <mat-icon *ngIf="segment.icon">{{segment.icon}}</mat-icon>
+          <span>{{segment.text}}</span>
+        </span>
+        <span *ngIf="!last" class="separator">/</span>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="profile-info">
+    <span>{{fullName}}</span>
+    <mat-icon>person</mat-icon>
+  </div>
+</mat-toolbar>

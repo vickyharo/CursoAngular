@@ -1,0 +1,110 @@
+<div class="modal-header">
+  <div class="position-relative w-100">
+    <p class="text-center header-label-detalle-title">Detalle de la solicitud</p>
+    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0" aria-label="Close"
+      (click)="onClose()"></button>
+  </div>
+</div>
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh;">
+  <br>
+  <br>
+  <div class="mx-auto" style="width: 90%;">
+    <carousel [noWrap]="true" [showIndicators]="true" [itemsPerSlide]="1" [interval]="0" [isAnimated]="true" [noPause]="false">
+      <slide *ngFor="let element of lista; let index=index" class="border bordered">
+
+        <div class="row" style="padding-left: 35px; padding-right: 35px;">
+          <label class="header-label-detalle">Naturaleza: {{element.naturaleza}} &nbsp;&nbsp; Tipo Cuenta:
+            {{element.tipocuenta}}</label>
+        </div>
+        <br>
+        <div class="row mx-auto">
+          <div class="column col-md-6" style="padding-left: 40px;">
+            <label class="header-label-detalle">Cuenta Nueva</label>
+          </div>
+
+          <div class="column col-md-6" style="padding-right: 40px;">
+            <label class="header-label-detalle">Cuenta Origen</label>
+          </div>
+
+        </div>
+        <div class="row" style="padding: 40px;">
+          <!-- Columna izquierda -->
+          <div class="column col-md-6">
+
+            <!--Cuenta nueva-->
+            <div class="mb-2 row">
+              <label for="cuentaOrigen" class="col-md-4 col-form-label form-label">Cuenta:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input" disabled readonly value={{element.cuentanueva}} />
+              </div>
+            </div>
+
+            <!--Divisa-->
+            <div class="mb-2 row">
+              <label for="cuentaOrigen" class="col-md-4 col-form-label form-label">Divisa:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input" disabled readonly value={{element.descdivctanueva}} />
+              </div>
+            </div>
+
+            <!--Producto-->
+            <div class="mb-2 row">
+              <label for="divisa" class="col-md-4 col-form-label form-label">Producto:</label>
+              <div class="col-md-8">
+                <textarea matInput class="form-control form-input" disabled readonly
+                [value]="concatenateValues(element.codpdctoctanueva, element.descpdctoctanueva)"> </textarea>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="column col-md-6">
+
+            <!--Cuenta origen-->
+            <div class="mb-2 row">
+              <label for="infoTipoCuenta" class="col-md-4 col-form-label form-label">Cuenta:</label>
+              <div class="col-md-8">
+                <input matInput id="tipoCuenta" class="form-control form-input input-information-detail" disabled
+                  readonly value={{element.cuentaoriginal}} />
+              </div>
+            </div>
+
+            <!-- Divisa -->
+            <div class="mb-2 row">
+              <label for="infoDivisa" class="col-md-4 col-form-label form-label">Divisa:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input input-information-detail" disabled readonly
+                  value={{element.descdivctaoriginal}} />
+              </div>
+            </div>
+
+            <!-- Producto -->
+            <div class="mb-2 row">
+              <label for="infoCliente" class="col-md-4 col-form-label form-label">Producto:</label>
+              <div class="col-md-8">
+                <textarea matInput class="form-control form-input input-information-detail" disabled readonly
+                [value]="concatenateValues(element.codpdctoctaoriginal, element.descpdctoctaoriginal)"></textarea>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="carousel-caption">
+          <h6 style="color: black;"> Mostrando {{index + 1}} de {{lista.length}}</h6>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
+<div class="modal-footer">
+  <!-- Botón Regresar -->
+  <button mat-button class="action-btn-save" (click)="onClose()">
+    <mat-icon color="#003386">keyboard_return</mat-icon>
+    <span>Volver</span>
+  </button>
+  <div class="text-end mt-2"></div>
+</div>

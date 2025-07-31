@@ -1,0 +1,32 @@
+<section style="padding: 10px">
+
+  <mat-accordion multi>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-panel-title>Cambio de Monto Autorizado de la Línea de Crédito</mat-panel-title>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+
+      <div style="padding: 10px">
+        <div class="row mb-2">
+          <div class="col-sm-5">
+            <label class="form-label">Monto Autorizado Original:</label>
+            <input matInput class="form-control form-input" disabled readonly
+              [ngModel]="txtMontoOriginal | currency " />
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-5">
+            <label class="form-label">Nuevo Monto Autorizado:</label>
+            <input matInput type="text" class="form-control form-input" disabled="{{tieneSolicitudesPendientes}}"
+              (blur)="TransformarMonto($event)" (ngModelChange)="CambioDeMonto($event)"
+              (keypress)="ValidateNumericInput($event)" (paste)="AllowPasteOnlyNumbers($event)"
+              [(ngModel)]="txtNuevoMonto" />
+          </div>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>

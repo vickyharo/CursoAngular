@@ -1,0 +1,56 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div class="content-container">
+  <div class="flex-panel">
+    <mat-dialog-content>
+      <section>
+        <app-buscar-credito-form (numeroCreditoEnviado)="ActualizarNumeroCreditoRecibido($event)"
+          (estaVigenteEnviado)="ActualizarEstavigenteRecibido($event)"
+          (tieneSolicitudesPendientesAutorizarEnviado)="ActualizarTieneSolicitudesPendientesAutorizarRecibido($event)"
+          (productoCreditoEnviado)="ActualizarProductoCreditoRecibido($event)"></app-buscar-credito-form>
+
+        <app-cuentas-credito-form [numeroCreditoRecibido]="numeroCreditoRecibido"
+          [estaVigenteRecibido]="estaVigenteRecibido"
+          [tieneSolicitudesPendientesAutorizarRecibido]="tieneSolicitudesPendientesAutorizarRecibido"
+          #selectorCuentas></app-cuentas-credito-form>
+
+        <div class="modal-footer" style="padding-right: 10px">
+
+          <div *ngIf="permisoBotonCancelar">
+            <!-- Botón cancelar cambio de cuenta -->
+            <button *ngIf="!desactivarBoton" mat-button disabled="{{activarDisabled}}" class="action-btn-cancel"
+              (click)="BuscarNumeroSolicitud()">
+              <mat-icon color="warn">cancel</mat-icon>
+              <span>Cancelar solicitud</span>
+            </button>
+            &nbsp;&nbsp;
+          </div>
+
+          <div *ngIf="permisoBotonGuardar; else permisoAplicar">
+            <!-- Botón cambio de cuenta -->
+            <button *ngIf="desactivarBoton" mat-button disabled="{{activarDisabled}}" class="action-btn-save"
+              (click)="GuardarSolicitud()">
+              <mat-icon color="#003386">save</mat-icon>
+              <span>Guardar solicitud</span>
+            </button>
+            &nbsp;&nbsp;
+          </div>
+
+          <ng-template #permisoAplicar>
+            <div *ngIf="permisoBotonGuardarAutorizar">
+              <!-- Botón autorización de cambio de cuenta -->
+              <button *ngIf="desactivarBoton" mat-button disabled="{{activarDisabled}}" class="action-btn-aplicar"
+                (click)="ValidarGuardarAutorizar()">
+                <mat-icon>check_circle</mat-icon>
+                <span>Guardar/Autorizar solicitud</span>
+              </button>
+            </div>
+          </ng-template>
+
+        </div>
+        <div class="text-end mt-3"></div>
+      </section>
+    </mat-dialog-content>
+  </div>
+</div>

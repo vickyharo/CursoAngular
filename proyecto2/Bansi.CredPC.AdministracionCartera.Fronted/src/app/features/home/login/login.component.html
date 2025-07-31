@@ -1,0 +1,115 @@
+<div *ngIf="isLoading">
+  <app-bsi-spinner [isVisible]="isLoading"
+    [message]="'Cargando...'"></app-bsi-spinner>
+</div>
+<!-- Línea vertical -->
+<div
+  class="vertical-line position-absolute top-50 start-50 translate-middle"></div>
+<!-- Contenedor principal -->
+<div class="row mx-auto h-100 align-items-center">
+  <div class="col-md-6 custom-col">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <div class="logo-container">
+    </div>
+  </div>
+  <div class="col-md-6 custom-col">
+    <!-- contenido del formulario login -->
+    <div class="login-form-container">
+      <form class [formGroup]="formLogin"
+        (ngSubmit)="showTokenForm ? onTokenSubmit() : onLoginSubmit()">
+        <h2 class="bsi-gray-text text-center"
+          style="margin-bottom: 40px;">Administración de Cartera</h2>
+
+        <!-- Campo Usuario -->
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-icon matPrefix [ngClass]="'bsi-gray-text'">person</mat-icon>
+          <mat-label>Usuario</mat-label>
+          <input #userNameInput matInput class="my-custom-input"
+            [type]="hideUsername ? 'password' : 'text'"
+            formControlName="username" [maxlength]="MAX_CHAR_USERNAME" />
+          <button
+            *ngIf="formLogin.get('username')?.value?.length != 0 && !showTokenForm"
+            mat-icon-button matSuffix (click)="hideUsername = !hideUsername"
+            type="button">
+            <mat-icon [ngClass]="'bsi-black-text'">{{ hideUsername ?
+              'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+          <mat-error class="error-text"
+            *ngIf="formLogin.get('username')?.hasError('required')">
+            El usuario es requerido.
+          </mat-error>
+          <mat-error class="error-text"
+            *ngIf="getErrorMessage('username', 'El usuario')">
+            {{ getErrorMessage('username', 'El usuario') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Campo Contraseña -->
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Contraseña</mat-label>
+          <mat-icon matPrefix [ngClass]="'bsi-gray-text'">lock_person</mat-icon>
+          <input matInput [type]="hidePassword ? 'password' : 'text'"
+            formControlName="password" (input)="validatePassword($event)"
+            [maxLength]="MAX_CHAR_PASSWORD" />
+          <button
+            *ngIf="formLogin.get('password')?.value?.length != 0 && !showTokenForm"
+            mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+            type="button">
+            <mat-icon [ngClass]="'bsi-black-text'">{{ hidePassword ?
+              'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+          <mat-error class="error-text"
+            *ngIf="formLogin.get('password')?.hasError('required')">
+            La contraseña es requerida.
+          </mat-error>
+          <mat-error class="error-text"
+            *ngIf="getErrorMessage('password', 'La contraseña')">
+            {{ getErrorMessage('password', 'La contraseña') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Mensaje de Error del API en validacion de Usuario/Contraseña-->
+        <div *ngIf="apiError" class="error-message">
+          {{ apiError }}
+        </div>
+
+        <!-- Campo Token -->
+        <div *ngIf="showTokenForm">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-icon matPrefix [ngClass]="'bsi-gray-text'">key</mat-icon>
+            <mat-label>Token</mat-label>
+            <input #tokenInput matInput type="password" formControlName="token"
+              [maxlength]="CHAR_TOKEN_LENGTH" [minlength]="CHAR_TOKEN_LENGTH"
+              formControlName="token"
+              inputmode="numeric"
+              (keypress)="validateNumericInput($event)" />
+            <mat-error class="error-text"
+              *ngIf="formLogin.get('token')?.hasError('required')">
+              El token es requerido.
+            </mat-error>
+            <mat-error class="error-text"
+              *ngIf="getErrorMessage('token', 'El token')">
+              {{ getErrorMessage('token', 'El token') }}
+            </mat-error>
+          </mat-form-field>
+          <!-- Mensaje de Error del API en validacion de Token -->
+          <div *ngIf="tokenError" class="error-message">
+            {{ tokenError }}
+          </div>
+        </div>
+
+        <!-- Botón Validar Usuario/Contraseña/Token personalizado -->
+        <button class="mt-3" style="font-size: 1.4rem;" [ngClass]="{'blue-button': areValidInput()}"
+          type="submit" [disabled]="!areValidInput()" id="submitBtn">
+          {{ showTokenForm ? 'Iniciar Sesión' : 'Iniciar Sesión' }}
+        </button>
+        <!-- Botón Validar Usuario/Contraseña/Token personalizado -->
+        <button *ngIf="showTokenForm" class="mt-2 blue-button" type="button"
+          (click)="resetearFormulario()">
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+  <app-footer-component></app-footer-component>
+</div>

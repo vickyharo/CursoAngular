@@ -1,0 +1,81 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div style="padding: 10px">
+
+  <div *ngIf="tieneSolicitudesPendientesAutorizar" class="container">
+    <app-boot-alerta mensaje="Existe 1 solicitud pendiente de aplicar" color="alert-warning"></app-boot-alerta>
+  </div>
+  <header class="header-encabezado">Registro de Solicitudes - Cambio de Cuenta de Cheques
+  </header>
+  <br>
+  <mat-accordion multi>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-panel-title>Búsqueda de crédito</mat-panel-title>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+
+      <div class="modal-footer">
+        <div class="text-end mt-2">
+          <input matInput #numberCredit class="form-control" maxlength="{{maxLengthNumberCredit}}" autocomplete="off"
+            [(ngModel)]="txtBuscarNumeroCredito" (keypress)="ValidateNumericInput($event)"
+            (paste)="AllowPasteOnlyNumbers($event)" />
+        </div>
+        &nbsp;&nbsp;
+        <button mat-button class="action-btn-save" id="btnSearch" matTooltip="Realizar búsqueda de crédito"
+          (click)="BuscarCredito()">
+          <mat-icon>search</mat-icon>
+          Buscar
+        </button>
+
+        <div class="text-end mt-2"></div>
+      </div>
+
+      <br />
+      <label class="header-label">Información del Crédito</label>
+
+      <div style="padding: 10px">
+        <div class="row mb-2">
+          <div class="col-sm-2">
+            <label class="form-label">Número</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtNumeroCreditoForm" />
+          </div>
+          <div class="col-sm-2">
+            <label class="form-label">Número de Cliente</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtNumeroClienteForm" />
+          </div>
+          <div class="col-sm-8">
+            <label class="form-label">Nombre del Cliente</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtClienteForm" />
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-sm-2">
+            <label class="form-label">Código del Producto</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtCodProductoForm" />
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">Descripción del Producto</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtProductoForm" />
+          </div>
+          <div class="col-sm-2">
+            <label class="form-label">Fecha de Apertura</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtFechaAperturaForm" />
+          </div>
+          <div class="col-sm-2">
+            <label class="form-label">Fecha de Vencimiento</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtFechaVencimientoForm" />
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">Estatus</label>
+            <input matInput class="form-control form-input" disabled readonly [ngModel]="txtEstatusForm" />
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

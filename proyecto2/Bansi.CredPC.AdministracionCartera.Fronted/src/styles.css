@@ -1,0 +1,536 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css';
+
+
+body {
+  margin: 0;
+  font-family: Calibri, "Trebuchet MS", sans-serif !important;
+}
+
+body,
+html {
+  height: 100% !important;
+  font-family: Calibri, "Trebuchet MS", sans-serif !important;
+  font-style: normal !important;
+  font-size: 0.8em !important;
+}
+
+.h6,
+h6 {
+  font-size: 1.2rem !important;
+}
+
+/** Flex container with scrollbar (para los componentes padres) **/
+.content-container {
+  display: flex !important;
+  height: calc(100vh - 100px) !important;
+}
+
+.flex-panel {
+  flex: 1 !important;
+  padding: 15px !important;
+  overflow-y: auto !important;
+  background-color: white !important;
+}
+
+/*Boton guardar*/
+.action-btn-save {
+  border: 1px solid #003386 !important;
+  border-radius: 0 !important;
+  padding: 4px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  justify-content: center !important;
+
+  mat-icon {
+    margin-right: 5px !important;
+  }
+
+  span {
+    color: #003386 !important;
+  }
+}
+
+.action-btn-save:hover {
+  background-color: #E3F2FD !important;
+
+  span {
+    color: #003386 !important;
+  }
+}
+
+.action-btn-save[disabled] {
+  span {
+    color: #9e9e9e !important;
+  }
+
+  mat-icon {
+    color: #9e9e9e !important;
+  }
+}
+
+/*Boton aplicar*/
+.action-btn-aplicar {
+  border: 1px solid #2E7D32 !important;
+  border-radius: 0 !important;
+  padding: 4px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  justify-content: center !important;
+
+  mat-icon {
+    color: #2E7D32 !important;
+    margin-right: 5px !important;
+  }
+
+  span {
+    color: #2E7D32 !important;
+  }
+}
+
+.action-btn-aplicar:hover {
+  background-color: #E3F2FD !important;
+
+  span {
+    color: #2E7D32 !important;
+  }
+}
+
+.action-btn-aplicar[disabled] {
+  span {
+    color: #9e9e9e !important;
+  }
+
+  mat-icon {
+    color: #9e9e9e !important;
+  }
+}
+
+/*Boton cancelar*/
+.action-btn-cancel {
+  border: 1px solid #a30318 !important;
+  border-radius: 0 !important;
+  padding: 4px 12px !important;
+  display: flex !important;
+  font-size: 12px !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  mat-icon {
+    margin-right: 5px !important;
+  }
+
+  span {
+    color: #a30318 !important;
+  }
+}
+
+.action-btn-cancel:hover {
+  background-color: #FFEBEE !important;
+
+  span {
+    color: #a30318 !important;
+  }
+}
+
+.action-btn-cancel[disabled] {
+  span {
+    color: #9e9e9e !important;
+  }
+
+  mat-icon {
+    color: #9e9e9e !important;
+  }
+}
+
+/* Bot�n Exportar Excel */
+.report-container{
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.container-btn-export-excel {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #304f77;
+  color: #fff;
+  border-style: none;
+  padding: 0.5em 0.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 4px 8px 10px -3px rgba(0, 0, 0, 0.356);
+  transition: all 250ms;
+  font-weight: bold;
+}
+
+.container-btn-export-excel::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-radius: 0.5em;
+  background-color: #465d9b;
+  z-index: -1;
+  transition: all 350ms;
+}
+.container-btn-export-excel:hover::before {
+  width: 100%;
+}
+
+/*Expansion panel*/
+mat-expansion-panel {
+  background-color: #f5f5f5 !important;
+}
+
+mat-expansion-panel mat-expansion-panel-header {
+  background-color: #c2c2c2 !important;
+}
+
+mat-expansion-panel mat-panel-title {
+  font-size: 16px !important;
+  color: #002a85 !important;
+}
+
+mat-expansion-panel-header {
+  height: 35px !important;
+}
+
+/*Footer*/
+.footer-container{
+  margin-top: 15px;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+/*Formulario*/
+.form-input {
+  color: #000000 !important;
+  font-size: 12px !important;
+}
+
+.form-label {
+  /*label para la etiqueta de inputs*/
+  color: #002a85 !important;
+  font-size: 12px !important;
+}
+
+.header-encabezado {
+  text-align: center !important;
+  width: 100% !important;
+  background-color: #e0e0e0 !important;
+  color: #002a85 !important;
+  font-size: 1.9em !important;
+  font-weight: bold !important;
+  padding: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.header-label {
+  text-align: center !important;
+  width: 100% !important;
+  background-color: #e0e0e0 !important;
+  color: #002a85 !important;
+  font-size: 1.4em !important;
+  font-weight: bold !important;
+  padding: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.header-label-detalle {
+  text-align: center !important;
+  width: 100% !important;
+  background-color: #e0e0e0 !important;
+  color: #002a85 !important;
+  font-size: 1.7em !important;
+  font-weight: bold !important;
+  padding: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.header-label-detalle-title {
+  text-align: center !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  justify-content: center !important;
+}
+
+.header-tabla {
+  text-align: center !important;
+  width: 100% !important;
+  background-color: #e0e0e0 !important;
+  color: #002a85 !important;
+  font-size: 1.9em !important;
+  font-weight: bold !important;
+  padding: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.modal-header {
+  background: linear-gradient(205deg, rgba(34,42,61,1) 0%, rgba(33,103,178,1) 100%);
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 1.6em !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/*Contenedor de la tabla*/
+.table-container {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  border: 1px solid #ddd !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 1rem auto !important;
+  box-shadow: -1px 3px 66px 0px rgba(0, 0, 0, 0.75) !important;
+  padding: 1rem !important;
+}
+
+/*Tabla*/
+table {
+  margin: 1rem auto !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+th {
+  height: 1px !important;
+}
+
+.compact-table {
+
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr {
+    border-width: 0.1px !important;
+    border-color: rgb(201, 199, 199) !important;
+  }
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent !important;
+  border-top: 1px solid transparent !important;
+  cursor: pointer !important;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-bottom-color: #002a85 !important;
+  border-top-color: #002a85 !important;
+  background-color: rgb(206, 221, 241) !important;
+}
+
+.mat-mdc-header-cell {
+  text-align: left !important;
+
+}
+
+.table-filter-row-is-clicked {
+  font-weight: bold !important;
+}
+
+
+/*Titulos de las columnas*/
+.header-column {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  background-color: #e2e2e2 !important;
+  color: #002a85 !important;
+  font-size: 1em !important;
+  font-weight: bold !important;
+  border-top: 1px solid #c8c8c8 !important;
+  overflow: visible !important;
+
+  span {
+    margin-top: 2px !important;
+    display: inline-block !important;
+  }
+}
+
+/*Paginador*/
+.custom-paginator {
+  position: relative !important;
+  border-top: 1px solid #b6b1b1 !important;
+  flex-shrink: 0 !important;
+}
+
+.elements-page {
+  position: absolute !important;
+  top: 75% !important;
+  left: calc(200px) !important;
+  transform: translate(-50%, -100%) !important;
+  display: flex !important;
+  gap: 5px !important;
+  background-color: #faf9fd !important;
+  border-bottom: none !important;
+  z-index: 2 !important;
+  font-size: .9rem !important;
+  text-align: left !important;
+}
+
+.page-numbers {
+  position: absolute !important;
+  top: 75% !important;
+  left: calc(100% - 118px) !important;
+  transform: translate(-50%, -100%) !important;
+  display: flex !important;
+  gap: 5px !important;
+  background-color: #faf9fd !important;
+  border-bottom: none !important;
+  z-index: 2 !important;
+}
+
+.page-number-btn {
+  border: none !important;
+  background: none !important;
+  cursor: pointer !important;
+  color: #666 !important;
+  font-size: .9rem !important;
+}
+
+.page-number-btn.active {
+  background-color: #eba729 !important;
+  border-radius: 3px !important;
+  color: #faf9fd !important;
+}
+
+.accent-paginator {
+  margin-top: 0 !important;
+}
+
+.accent-paginator .mat-mdc-paginator-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.accent-paginator .mat-mdc-paginator-page-size {
+  margin-right: auto !important;
+}
+
+/*Combo*/
+.cdk-overlay-pane {
+  z-index: 10000 !important;
+}
+
+.mdc-menu-surface.mat-mdc-select-panel {
+  z-index: 10000 !important;
+}
+
+.cdk-overlay-container {
+  z-index: 10000 !important;
+}
+
+.mat-mdc-select-panel-above,
+.mat-mdc-select-panel-below {
+  z-index: 10000 !important;
+}
+
+.accent-paginator .mat-mdc-paginator-range-label {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  white-space: nowrap !important;
+  font-size: .9rem !important;
+}
+
+.accent-paginator .mat-mdc-paginator-range-actions {
+  margin-left: auto !important;
+}
+
+.accent-paginator .mat-mdc-paginator-range-actions button:nth-child(3) {
+  margin-right: 60px !important;
+}
+
+/* Colores texto login */
+.bsi-black-text {
+  color: #000000;
+}
+
+.bsi-gray-text {
+  color: #757575;
+}
+
+.error-text {
+  color: #C41313;
+}
+
+/* Colores botones swal fire */
+.bsi-button-modal-confirm {
+  background-color: #298431;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+  margin: 7px;
+}
+
+.bsi-button-modal-cancel {
+  background-color: #D93232;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+  margin: 7px;
+}
+
+.bsi-button-modal-acept {
+  background-color: #003386;
+  color: white;
+}
+
+.bsi-title-modal {
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+
+/* Cambiar estilo del scroll*/
+
+/* Estilos para navegadores basados en WebKit */
+::-webkit-scrollbar {
+  width: 6px;
+  /* Ancho de la barra de scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color de fondo de la barra de scroll */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color del pulgar de la barra de scroll */
+  border-radius: 3px;
+  /* Bordes redondeados del pulgar */
+}
+
+/* Estilos para el pulgar al pasar el cursor por encima */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilos para Firefox */
+* {
+  scrollbar-width: thin;
+  /* Ancho de la barra de scroll */
+  scrollbar-color: auto transparent;
+  /* Color del pulgar y fondo de la barra de scroll */
+}

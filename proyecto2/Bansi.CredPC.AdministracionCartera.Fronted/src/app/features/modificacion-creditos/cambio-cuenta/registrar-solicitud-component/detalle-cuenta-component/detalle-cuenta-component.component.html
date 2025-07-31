@@ -1,0 +1,110 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<section style="padding-left:60px; padding-right:60px;" class="border bordered">
+  <header class="header-label-detalle">{{txtNumeroCredito}}
+    <mat-icon>arrow_right_alt</mat-icon> {{txtNaturaleza}}
+    <mat-icon>arrow_right_alt</mat-icon>
+    {{txtTipoCuenta}}
+  </header>
+
+  <br>
+  <div class="row" style="padding-left:40px; padding-right:20px;">
+
+    <div class="row mb-3 px-2 py-5 border border">
+      <!-- Columna izquierda -->
+      <div class="column">
+        <!-- Formulario reactivo -->
+        <div class="col-md-11">
+
+          <!--Cuenta origen-->
+          <div class="mb-2 row ">
+            <label for="cuentaOrigen" class="col-md-4 col-form-label form-label">Cuenta origen:</label>
+            <div class="col-md-8">
+              <input matInput class="form-control form-input" disabled readonly value={{txtCuentaOrigen}} />
+            </div>
+          </div>
+
+          <!--Divisa-->
+          <div class="mb-2 row ">
+            <label for="divisa" class="col-md-4 col-form-label form-label">Divisa:</label>
+            <div class="col-md-8">
+              <input matInput class="form-control form-input" disabled readonly value={{txtDivisa}} />
+            </div>
+          </div>
+
+          <!--Cliente-->
+          <div class="mb-2 row ">
+            <label for="numeroCredito" class="col-md-4 col-form-label form-label">Cliente:</label>
+            <div class="col-md-8">
+              <textarea matInput class="form-control form-input" disabled readonly value={{txtCliente}}> </textarea>
+            </div>
+          </div>
+
+          <!--Producto-->
+          <div class="mb-2 row ">
+            <label for="tipoCuenta" class="col-md-4 col-form-label form-label">Producto:</label>
+            <div class="col-md-8">
+              <input matInput class="form-control form-input" disabled readonly value={{txtProducto}} />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="column">
+        <div class="col-md-11">
+
+          <div class="row mb-12">
+            <label for="nuevaCuenta" class="col-md-4 col-form-label form-label">Nueva cuenta:</label>
+            <div class="col-md-6">
+              <input matInput #nuevaCuenta class="form-control" maxlength="{{maxLengthNumeroCuenta}}" autocomplete="on"
+                [(ngModel)]="txtBuscarCuenta" (keypress)="ValidateNumericInput($event)"
+                (paste)="AllowPasteOnlyNumbers($event)" />
+            </div>
+            <div class="col-md-2">
+              <button mat-button class="action-btn-save" (click)="BuscarCuenta()">
+                <mat-icon color="#003386">search</mat-icon>Buscar
+              </button>
+            </div>
+          </div>
+          <br>
+          <div class="row mb-12 py-4 border border">
+            <div class="row">
+              <label class="form-label">Información:</label>
+            </div>
+
+            <!-- Divisa -->
+            <div class="row py-2">
+              <label for="infoDivisa" class="col-md-4 col-form-label form-label">Divisa:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input input-information-detail" disabled readonly
+                  value={{txtInfoDivisa}} />
+              </div>
+            </div>
+
+            <!-- Cliente -->
+            <div class="row py-2">
+              <label for="infoCliente" class="col-md-4 col-form-label form-label">Cliente:</label>
+              <div class="col-md-8">
+                <textarea matInput class="form-control form-input input-information-detail" disabled readonly
+                  value={{txtInfoCliente}}></textarea>
+              </div>
+            </div>
+
+            <!-- Producto -->
+            <div class="row py-2">
+              <label for="infoProducto" class="col-md-4 col-form-label form-label">Producto:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input input-information-detail" disabled readonly
+                  value={{txtInfoProducto}} />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

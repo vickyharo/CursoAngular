@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <div class="position-relative w-100">
+    <p class="text-center header-label-detalle-title">Detalle de la solicitud</p>
+    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0" aria-label="Close"
+      (click)="onClose()"></button>
+  </div>
+</div>
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh;">
+  <br>
+  <br>
+  <div class="mx-auto" style="width: 90%;">
+
+       <br>
+        <div class="row">
+          <!-- Columna izquierda -->
+          <div class="column col-md-11">
+
+            <!--montoNuevo-->
+            <div class="mb-2 row">
+              <label for="montoNuevo" class="col-md-4 col-form-label form-label">Monto Nuevo:</label>
+              <div class="col-md-8">
+                <input matInput class="form-control form-input" disabled readonly value={{txtMontoNuevo}} />
+              </div>
+            </div>
+
+            <!--montoOriginal-->
+            <div class="mb-2 row">
+              <label for="montoOriginal" class="col-md-4 col-form-label form-label">Monto Original:</label>
+              <div class="col-md-8">
+                <input matInput  class="form-control form-input" disabled readonly value={{txtMontoOriginal}} />
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <!-- Botón Regresar -->
+  <button mat-button class="action-btn-save" (click)="onClose()">
+    <mat-icon color="#003386">keyboard_return</mat-icon>
+    <span>Volver</span>
+  </button>
+  <div class="text-end mt-2"></div>
+</div>
