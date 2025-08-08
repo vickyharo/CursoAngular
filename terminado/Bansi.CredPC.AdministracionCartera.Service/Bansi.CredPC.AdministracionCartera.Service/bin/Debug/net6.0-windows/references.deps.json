@@ -1,0 +1,27 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Bansi.Reflection.AssemblyBindings/6.0.0": {
+        "dependencies": {},
+        "runtime": {
+          "bansi.assembly/Bansi.Reflection.AssemblyBindings.dll": {
+            "assemblyVersion": "6.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bansi.Reflection.AssemblyBindings/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "",
+      "path": "/"
+    }
+  }
+}

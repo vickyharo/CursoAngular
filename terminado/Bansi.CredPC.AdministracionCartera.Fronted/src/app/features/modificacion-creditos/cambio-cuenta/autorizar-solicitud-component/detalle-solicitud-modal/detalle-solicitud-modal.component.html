@@ -1,0 +1,122 @@
+<!-- Header -->
+<div class="modal-bansi-header bg-bansi-sidebar-gradient">
+  <span></span>
+  <span class="fw-semibold text-truncate"> Detalle de la solicitud </span>
+  <button (click)="onClose()" class="btn btn-link p-0" title="Cerrar">
+    <img src="assets/icons/solid/x-mark-gris.svg" alt="Cerrar" width="25" height="25">
+  </button>
+</div>
+
+<!-- Body -->
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh;">
+  <br>
+  <div class="mx-auto">
+    <carousel [noWrap]="true" [showIndicators]="false" [itemsPerSlide]="1" [interval]="0" [isAnimated]="true"
+      [noPause]="false">
+      <slide *ngFor="let element of lista; let index=index" class="border bordered">
+
+        <!-- Encabezado -->
+        <h2 class="h6 fw-bold border-bottom pb-2 mb-3 text-bansi-azul text-center">Naturaleza: {{element.naturaleza}}
+          &nbsp;&nbsp; Tipo Cuenta:
+          {{element.tipocuenta}}</h2>
+
+        <!-- Titulos columnas -->
+        <div class="row mx-auto">
+          <div class="bg-light text-dark px-3 rounded fw-bold small column col-md-6 text-center">
+            <h2 class="font-bold">Cuenta Nueva</h2>
+          </div>
+          <div class="bg-light text-dark px-3 rounded fw-bold small column col-md-6 text-center">
+            <h2 class="font-bold">Cuenta Origen</h2>
+          </div>
+        </div>
+
+        <div class="row" style="padding: 50px;">
+          <!-- Columna izquierda -->
+          <div class="column col-md-6">
+
+            <!--Cuenta nueva-->
+            <div class="row">
+              <label for="cuentaOrigen" class="col-md-2 col-form-label form-label">Cuenta:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput type="text" readonly value={{element.cuentanueva}}>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!--Divisa-->
+            <div class="row">
+              <label for="divisa" class="col-md-2 col-form-label form-label">Divisa:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput type="text" readonly value={{element.descdivctanueva}}>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!--Producto-->
+            <div class="row">
+              <label for="producto" class="col-md-2 col-form-label form-label">Producto:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <textarea matInput type="text" readonly value={{element.descpdctoctanueva}}></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="column col-md-6">
+
+            <!--Cuenta origen-->
+            <div class="row">
+              <label for="infoTipoCuenta" class="col-md-2 col-form-label form-label">Cuenta:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput type="text" readonly value={{element.cuentaoriginal}}>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- Divisa -->
+            <div class="row">
+              <label for="infoDivisa" class="col-md-2 col-form-label form-label">Divisa:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput type="text" readonly value={{element.descdivctaoriginal}}>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- Producto -->
+            <div class="mb-2 row">
+              <label for="infoCliente" class="col-md-2 col-form-label form-label">Producto:</label>
+              <div class="col-md-8">
+                <mat-form-field appearance="outline" class="w-100">
+                  <textarea matInput type="text" readonly [value]="concatenateValues(element.codpdctoctaoriginal, element.descpdctoctaoriginal)"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="carousel-caption text-center mt-3">
+          <h5 style="color: black;"> Mostrando {{index + 1}} de {{lista.length}}</h5>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <!-- Botón Regresar -->
+   <div class="col-md-1">
+    <button mat-button class="btn btn-xl bg-bansi-azul col-md-2" (click)="onClose()">
+      <span>Volver</span>
+    </button>
+   </div>
+</div>

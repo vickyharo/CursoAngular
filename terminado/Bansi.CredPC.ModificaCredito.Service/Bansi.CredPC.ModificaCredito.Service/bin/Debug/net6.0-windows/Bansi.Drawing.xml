@@ -1,0 +1,1157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bansi.Drawing</name>
+    </assembly>
+    <members>
+        <member name="T:Bansi.ActionDelegate">
+            <summary>
+            Representa una acción sin para metros de entrada o de salida.
+            </summary>
+        </member>
+        <member name="T:Bansi.Internal.ArrayHelper">
+            <summary>
+            Clase ayudante para objetos Array
+            </summary>
+            <remarks>
+            20/07/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.ArrayHelper.IsNullOrEmpty(System.Array)">
+            <summary>
+            Valida que el arreglo no venga vacío o nulo
+            </summary>
+            <param name="array">arreglo a validar</param>
+            <returns>True si no está vacío o nulo, false si no es así</returns>
+            <remarks>
+            20/07/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.ArrayHelper.IsNotNullOrEmpty(System.Array)">
+            <summary>
+            Valida que el arreglo venga vacío o nulo
+            </summary>
+            <param name="array">arreglo a validar</param>
+            <returns>True si está vacío o nulo, false si no es así</returns>
+            <remarks>
+            20/07/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.ArrayHelper.Clear(System.Array)">
+            <summary>
+            Borra un array, sobreescribiendolo con ceros
+            </summary>
+            <param name="array">Array a borrar</param>
+        </member>
+        <member name="T:Bansi.Internal.StringHelper">
+            <summary>
+            Clase ayudante para objetos de tipo string
+            </summary>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.IsNullOrEmpty(System.String)">
+            <summary>
+            Valida si la cadena es vacía o nula
+            </summary>
+            <param name="value">valor de la cadena</param>
+            <returns>true si es con información, false si no es así</returns>
+            <remarks>
+            20/07/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.IsNotNullOrEmpty(System.String)">
+            <summary>
+            Valida si la cadena no es vacía
+            </summary>
+            <param name="value">valor de la cadena</param>
+            <returns>True si es vacía o nula, false si no es así</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.ValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve el valor de la cadena o cadena vacia si esta es nula
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.ValueOrNullString(System.String)">
+            <summary>
+            Devuelve el valor de la cadena o Null si la cadena vale null o esta vacia
+            </summary>
+            <param name="value">Cadena</param>
+            <returns>Valor de la cadena o Null si la cadena vale null o esta vacia</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimValue(System.String)">
+            <summary>
+            Devuelve una cadena sin espacios o nulo o cadena vacia (segun entrada)
+            </summary>
+            <param name="value">String o nulo</param>
+            <returns>Cadena sin espacios o nulo</returns>
+            <remarks>
+            19/03/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimValueOrNullString(System.String)">
+            <summary>
+            Devuelve una cadena sin espacios o un nulo (si la entrada es nula o cadena vacia)
+            </summary>
+            <param name="value">String o nulo</param>
+            <returns>Cadena sin espacios o nulo</returns>
+            <remarks>
+            19/03/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve una cadena sin espacios o una cadena vacia (si es nulo o cadena vacia)
+            </summary>
+            <param name="value">String o nulo</param>
+            <returns>Cadena sin espacios o nulo</returns>
+            <remarks>
+            19/03/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimValueOrEmptyString(System.Object)">
+            <summary>
+            Devuelve una cadena sin espacios, si el objeto es una cadena, o una cadena vacia (si es nulo o cadena vacia)
+            </summary>
+            <param name="value">String o nulo</param>
+            <returns>Cadena sin espacios o nulo</returns>
+            <remarks>
+            19/03/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimValueOrNull(System.Object)">
+            <summary>
+            Devuelve un objeto, una cadena sin espacios o un nulo, segun entrada
+            </summary>
+            <param name="value">objecto, string o nulo</param>
+            <returns>objecto, string in espacios o nulo</returns>
+            <remarks>
+            19/03/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.UpperValue(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas o Nulo, o Cadena vacia (segun entrada)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Cadena en mayusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.UpperValueOrNullString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas o Nulo (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Cadena en mayusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.UpperValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas o cadena vacia (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Cadena en mayusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.UpperValueOrEmptyString(System.Object)">
+            <summary>
+            Devuelve una cadena en mayusculas, si el objeto es una cadena,  o cadena vacia (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Cadena en mayusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.LowerValue(System.String)">
+            <summary>
+            Devuelve una cadena en minusculas o null o cadena vacia  (segun entrada)
+            </summary>
+            <param name="value">Cadena a poner en minusculas</param>
+            <returns>Cadena en minusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.LowerValueOrNullString(System.String)">
+            <summary>
+            Devuelve una cadena en minusculas o null (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en minusculas</param>
+            <returns>Cadena en minusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.LowerValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve una cadena en minusculas o cadena vacia (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en minusculas</param>
+            <returns>Cadena en minusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.LowerValueOrEmptyString(System.Object)">
+            <summary>
+            Devuelve una cadena en minusculas, si el objeto es una cadena, o cadena vacia (si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en minusculas</param>
+            <returns>Cadena en minusculas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndUpperValue(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas, con un trim o un nulo o cadena vacia (segun entrada)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndUpperValueOrNullString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas, con un trim o un nulo(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndUpperValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas, con un trim o un cadena vacia(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndUpperValueOrEmptyString(System.Object)">
+            <summary>
+            Devuelve una cadena en mayusculas,, si el objeto es una cadena, con un trim o un cadena vacia(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndLowerValue(System.String)">
+            <summary>
+            Devuelve una cadena en minusculas, con un trim o un nulo o cadena vacia (Segun entrada)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndLowerValueOrNullString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas, con un trim o un nulo(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndLowerValueOrEmptyString(System.String)">
+            <summary>
+            Devuelve una cadena en mayusculas, con un trim o un cadena vacia(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.TrimAndLowerValueOrEmptyString(System.Object)">
+            <summary>
+            Devuelve una cadena en mayusculas, si el objeto es una cadena, con un trim o un cadena vacia(si la cadena esta vacía o nula)
+            </summary>
+            <param name="value">Cadena a poner en mayusculas</param>
+            <returns>Devuelve una cadena en mayusculas, con un trim</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.Truncate(System.String,System.Int32)">
+            <summary>
+            Trunca un String, si es mayor a una numero proporcionado
+            </summary>
+            <param name="value">Cadena a truncar</param>
+            <param name="maxLength">longitud maxima.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.GetLines(System.String)">
+            <summary>
+            Devuelve un string separado por lineas
+            </summary>
+            <param name="value">String a separa</param>
+            <returns>lineas</returns>
+        </member>
+        <member name="M:Bansi.Internal.StringHelper.GetLines(System.String,System.Boolean)">
+            <summary>
+            Devuelve un string separado por lineas
+            </summary>
+            <param name="value">string a seperar</param>
+            <param name="removeEmptyLines">elimina lineas vacias</param>
+            <returns>lineas</returns>
+        </member>
+        <member name="T:Bansi.Internal.TryHelper">
+            <summary>
+            Ayudante en la ejecución de acciones
+            </summary>
+        </member>
+        <member name="M:Bansi.Internal.TryHelper.Try(Bansi.ActionDelegate)">
+            <summary>
+            Ejecuta la accion pasada por parametro
+            </summary>
+            <param name="action">Acción a ejecutar</param>
+            <remarks>
+            19/08/2014, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="T:Bansi.Drawing.ComponentModel.DefaultImageValueAttribute">
+            <summary>
+            Define un valor por defecto que es una imagen..
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.ComponentModel.DefaultImageValueAttribute.Value">
+            <summary>
+            Valor de la imagen
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.ComponentModel.DefaultImageValueAttribute.GetImageByName(System.String)">
+            <summary>
+            Obtiene la image a traves de un llave
+            </summary>
+            <param name="imageKey">Llave de la imagen</param>
+            <returns>Imagen</returns>
+        </member>
+        <member name="M:Bansi.Drawing.ComponentModel.DefaultImageValueAttribute.#ctor(System.String)">
+            <summary>
+            Imagen por defecto
+            </summary>
+            <param name="image">Imagen por defecto</param>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.IconDir">
+            <summary>
+            Presents an Icon Directory.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconDir.ToGroupIconDir">
+            <summary>
+            Converts the current IconDir into GroupIconDir.
+            </summary>
+            <returns>GroupIconDir</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.IconDirEntry">
+            <summary>
+            Presents an Icon Directory Entry.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconDirEntry.ToGroupIconDirEntry(System.Int32)">
+            <summary>
+            Converts the current IconDirEntry into GroupIconDirEntry.
+            </summary>
+            <param name="id">The resource identifier.</param>
+            <returns>GroupIconDirEntry</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.GroupIconDir">
+            <summary>
+            Presents a Group Icon Directory.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.GroupIconDir.ToIconDir">
+            <summary>
+            Converts the current GroupIconDir into IconDir.
+            </summary>
+            <returns>IconDir</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.GroupIconDirEntry">
+            <summary>
+            Presents a Group Icon Directory Entry.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.GroupIconDirEntry.ToIconDirEntry(System.Int32)">
+            <summary>
+            Converts the current GroupIconDirEntry into IconDirEntry.
+            </summary>
+            <param name="imageOffiset">The resource identifier.</param>
+            <returns>IconDirEntry</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.IconExtractor">
+            <summary>
+            Get icon resources (RT_GROUP_ICON and RT_ICON) from an executable module (either a .dll or an .exe file).
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconExtractor.FileName">
+            <summary>
+            A fully quallified name of the executable module.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconExtractor.ModuleHandle">
+            <summary>
+            Gets the module handle.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconExtractor.IconNamesList">
+            <summary>
+            Gets a list of icons resource names RT_GROUP_ICON;
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconExtractor.IconCount">
+            <summary>
+            Gets number of RT_GROUP_ICON found in the executable module.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconExtractor.IconCache">
+            <summary>
+            Gets or sets the RT_GROUP_ICON cache.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.#ctor(System.String)">
+            <summary>
+            Initializes a new IconExtractor and loads the executable module into the address space of the calling process.
+            The executable module can be a .dll or an .exe file.
+            The specified module can cause other modules to be mapped into the address space.
+            </summary>
+            <param name="fileName">The name of the executable module (either a .dll or an .exe file). The file name can contain environment variables (like %SystemRoot%).</param>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.Finalize">
+            <summary>
+            Destructs the IconExtractor object.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.GetIconAt(System.Int32)">
+            <summary>
+            Gets a System.Drawing.Icon that represents RT_GROUP_ICON at the givin index.
+            </summary>
+            <param name="index">The index of the RT_GROUP_ICON in the executable module.</param>
+            <returns>Returns System.Drawing.Icon.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.LoadLibrary(System.String)">
+            <summary>
+            This function maps a specified executable module into the address space of the calling process.FileName
+            The executable module can be a .dll or an .exe file.
+            The specified module can cause other modules to be mapped into the address space.
+            </summary>
+            <param name="fileName">The name of the executable module (either a .dll or an .exe file). The file name can contain environment variables (like %SystemRoot%).</param>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.EnumResourcesCallBack(System.IntPtr,Bansi.Drawing.ResourceTypes,System.IntPtr,System.IntPtr)">
+            <summary>
+            The callback function that is being called for each resource (RT_GROUP_ICON, RT_ICON) in the executable module.
+            The function stores the resource name of type RT_GROUP_ICON into the GroupIconsList and
+            stores the resource name of type RT_ICON into the IconsList.
+            </summary>
+            <param name="hModule">The module handle.</param>
+            <param name="lpszType">Specifies the type of the resource being enumurated (RT_GROUP_ICON, RT_ICON).</param>
+            <param name="lpszName">Specifies the name of the resource being enumurated. For more ifnormation, see the Remarks section.</param>
+            <param name="lParam">Specifies the application defined parameter passed to the EnumResourceNames function.</param>
+            <returns>This callback function return true to continue enumuration.</returns>
+            <remarks>
+            If the high bit of lpszName is not set (=0), lpszName specifies the integer identifier of the givin resource.
+            Otherwise, it is a pointer to a null terminated string.
+            If the first character of the string is a pound sign (#), the remaining characters represent a decimal number that specifies the integer identifier of the resource. For example, the string "#258" represents the identifier 258.
+            #define IS_INTRESOURCE(_r) ((((ULONG_PTR)(_r)) >> 16) == 0)
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.GetIconFromLib(System.Int32)">
+            <summary>
+            Gets a System.Drawing.Icon that represents RT_GROUP_ICON at the givin index from the executable module.
+            </summary>
+            <param name="index">The index of the RT_GROUP_ICON in the executable module.</param>
+            <returns>Returns System.Drawing.Icon.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.GetResourceData(System.IntPtr,Bansi.Drawing.IconExtractor.ResourceName,Bansi.Drawing.ResourceTypes)">
+            <summary>
+            Extracts the raw data of the resource from the module.
+            </summary>
+            <param name="hModule">The module handle.</param>
+            <param name="resourceName">The name of the resource.</param>
+            <param name="resourceType">The type of the resource.</param>
+            <returns>The resource raw data.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.GetResourceData(System.IntPtr,System.Int32,Bansi.Drawing.ResourceTypes)">
+            <summary>
+            Extracts the raw data of the resource from the module.
+            </summary>
+            <param name="hModule">The module handle.</param>
+            <param name="resourceId">The identifier of the resource.</param>
+            <param name="resourceType">The type of the resource.</param>
+            <returns>The resource raw data.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconExtractor.Dispose">
+            <summary>
+            Releases the resources of that object.
+            </summary>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.IconHelper">
+            <summary>
+            Contains helper function to help dealing with System.Drawing.Icon.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconHelper.ExtractAllIcons(System.String)">
+            <summary>
+            Extracts all the icons from a givin icon file or an executable module (.dll or an .exe file).
+            </summary>
+            <param name="fileName">The path of the icon file or the executable module.</param>
+            <returns>
+            A list of System.Drawing.Icon found in the file.
+            If the file was an icon file, it will return a list containing a single icon.
+            </returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconHelper.SplitGroupIcon(System.Drawing.Icon)">
+            <summary>
+            Splits the group icon into a list of icons (the single icon file can contain a set of icons).
+            </summary>
+            <param name="icon">The System.Drawing.Icon need to be splitted.</param>
+            <returns>List of System.Drawing.Icon.</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.IconInfo">
+            <summary>
+            Provides information about a givin icon.
+            This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.SourceIcon">
+            <summary>
+            Gets the source System.Drawing.Icon.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.Images">
+            <summary>
+            Gets a list System.Drawing.Icon that presents the icon contained images.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.GroupIconDir">
+            <summary>
+            Gets the GroupIconDir of the icon.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.IconDirEntries">
+            <summary>
+            Gets a list of IconDirEntry of the icon.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.GroupIconDirEntries">
+            <summary>
+            Gets a list of GroupIconDirEntry of the icon.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.RawData">
+            <summary>
+            Gets a list of raw data for each icon image.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.IconInfo.ResourceRawData">
+            <summary>
+            Gets the icon raw data as a resource data.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconInfo.#ctor(System.Drawing.Icon)">
+            <summary>
+            Intializes a new instance of IconInfo which contains the information about the givin icon.
+            </summary>
+            <param name="icon">A System.Drawing.Icon object to retrieve the information about.</param>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconInfo.GetBestFitIconIndex(System.Drawing.Size)">
+            <summary>
+            Gets the index of the icon that best fits the current display device.
+            </summary>
+            <param name="desiredSize">Specifies the desired size of the icon.</param>
+            <returns>The icon index.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconInfo.GetBestFitIconIndex(System.Drawing.Size,System.Boolean)">
+            <summary>
+            Gets the index of the icon that best fits the current display device.
+            </summary>
+            <param name="desiredSize">Specifies the desired size of the icon.</param>
+            <param name="isMonochrome">Specifies whether to get the monochrome icon or the colored one.</param>
+            <returns>The icon index.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconInfo.LoadIconInfo(System.Drawing.Icon)">
+            <summary>
+            Loads the icon information from the givin icon into class members.
+            </summary>
+            <param name="icon">A System.Drawing.Icon object to retrieve the information about.</param>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.IconInfo.GetIconResourceData">
+            <summary>
+            Returns the icon's raw data as a resource data.
+            </summary>
+            <returns>The icon's raw as a resource data.</returns>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.ResourceName">
+            <summary>
+            Represents a resource name (either integer resource or string resource).
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.ResourceName.Id">
+            <summary>
+            Gets the resource identifier, returns null if the resource is not an integer resource.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.ResourceName.Name">
+            <summary>
+            Gets the resource name, returns null if the resource is not a string resource.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.ResourceName.Value">
+            <summary>
+            Gets a pointer to resource name that can be used in FindResource function.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.IconExtractor.ResourceName.IsIntResource">
+            <summary>
+            Gets whether the resource is an integer resource.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.ResourceName.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new ResourceName object.
+            </summary>
+            <param name="lpName">Specifies the resource name. For more ifnormation, see the Remarks section.</param>
+            <remarks>
+            If the high bit of lpszName is not set (=0), lpszName specifies the integer identifier of the givin resource.
+            Otherwise, it is a pointer to a null terminated string.
+            If the first character of the string is a pound sign (#), the remaining characters represent a decimal number that specifies the integer identifier of the resource. For example, the string "#258" represents the identifier 258.
+            #define IS_INTRESOURCE(_r) ((((ULONG_PTR)(_r)) >> 16) == 0).
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.ResourceName.Finalize">
+            <summary>
+            Destructs the ResourceName object.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.ResourceName.Free">
+            <summary>
+            Releases the pointer to the resource name.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.ResourceName.Dispose">
+            <summary>
+            Release the pointer to the resource name.
+            </summary>
+        </member>
+        <member name="T:Bansi.Drawing.IconExtractor.Utility">
+            <summary>
+            Holds a set of utilities.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.Utility.ReadStructure``1(System.IO.Stream)">
+            <summary>
+            Reads a structure of type T from the input stream.
+            </summary>
+            <typeparam name="T">The structure type to be read.</typeparam>
+            <param name="inputStream">The input stream to read from.</param>
+            <returns>A structure of type T that was read from the stream.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconExtractor.Utility.WriteStructure``1(System.IO.Stream,``0)">
+            <summary>
+            Writes as structure of type T to the output stream.
+            </summary>
+            <typeparam name="T">The structure type to be written.</typeparam>
+            <param name="outputStream">The output stream to write to.</param>
+            <param name="structure">The structure to be written.</param>
+        </member>
+        <member name="T:Bansi.Drawing.IconSize">
+            <summary>
+            Tamaño de los iconos disponibles.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.Default">
+            <summary>
+            Más pequeño disponible
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.SmallestAvailable">
+            <summary>
+            Más pequeño disponible
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.Size16x16">
+            <summary>
+            De 16x16
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.Size32x32">
+            <summary>
+            De 32x32
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.Size48x48">
+            <summary>
+            De 48x48
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.Size256x256">
+            <summary>
+            De 256x256
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.IconSize.BiggestAvailable">
+            <summary>
+            Más grande disponible
+            </summary>
+        </member>
+        <member name="T:Bansi.Drawing.ImageFactory">
+            <summary>
+            Clase encargada de crear iconos
+            </summary>
+            <remarks>
+             17/Junio/2010, Omontes: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.ImageFactory.Create(System.Drawing.Icon)">
+            <summary>
+             CrearIcono
+             </summary>
+             <param name="icon">Imagen a convertir a icono</param>
+            <remarks>
+             17/Junio/2010, Omontes: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.ImageFactory.CreateFromBase64String(System.String)">
+            <summary>
+             Crea una imagen a través de un string en base 64
+             </summary>
+             <param name="base64Image">Imagen en base 64</param>
+        </member>
+        <member name="T:Bansi.Drawing.ImageHelper">
+            <summary>
+             Clase ayudante para imagenes
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.ImageHelper.Resize(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            Redimensiona la imagen al tamaño incado, puede deformar la imangen
+            </summary>
+            <param name="sourceImage">Imagen Original</param>
+            <param name="width">Nuevo ancho</param>
+            <param name="height">Nuevo alto</param>
+            <returns>Imagen editada</returns>
+        </member>
+        <member name="T:Bansi.Drawing.ColorHelper">
+            <summary>
+             Clase ayudante de Color en Formato RGB
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.ColorHelper.Invert(System.Drawing.Color)">
+            <summary>
+            Metodo que invierte el Color Establecido como parametro
+            </summary>
+            <param name="color">Color</param>
+            <returns>Color invertido</returns>
+        </member>
+        <member name="M:Bansi.Drawing.ColorHelper.HexToColor(System.String)">
+            <summary>
+            Hexadecimals to color.
+            </summary>
+            <param name="hex">The hexadecimal.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.Drawing.Diagnostics.Install.Installer">
+            <summary>
+            Proporciona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Diagnostics.Install.Installer.#ctor">
+            <summary>
+            Costructor de la clase EventLogSourceInstaller
+            </summary>
+        </member>
+        <member name="T:Bansi.Drawing.IconFactory">
+            <summary>
+            Clase encargada de crear iconos
+            </summary>
+            <remarks>
+             17/Junio/2010, Omontes: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.IconFactory.Create(System.Drawing.Image)">
+            <summary>
+             CrearIcono
+             </summary>
+             <param name="image">Imagen a convertir a icono</param>
+            <remarks>
+             17/Junio/2010, Omontes: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.IconFactory.Create(System.Drawing.Image,System.Boolean)">
+            <summary>
+             CrearIcono
+             </summary>
+             <param name="image">Imagen a convertir</param>
+             <param name="scaleManteinAspect">Indica si se debe mantener el aspecto</param>
+            <remarks>
+             17/Junio/2010, Omontes: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.IconFactory.CreateFromFile(System.String)">
+            <summary>
+            Obtiene un objeto Icon a partir del icono asociado a un ejecutable
+            </summary>
+            <param name="fullPath">Nombre de archivo con la ubicación completa del ejecutable del que se obtendrá el icono</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Drawing.IconFactory.CreateFromFile(System.String,Bansi.Drawing.IconSize)">
+            <summary>
+            Obtiene un objeto Icon a partir del icono asociado a un ejecutable
+            </summary>
+            <param name="fullPath">Nombre de archivo con la ubicación completa del ejecutable del que se obtendrá el icono</param>
+            <param name="iconSize">Tamaño de icono solicitado</param>5
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.Drawing.Printing.IPrinter">
+            <summary>
+            Representa una interfaz para la gestión de impresoras.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.IPrinter.PrinterName">
+            <summary>
+            Obtiene el nombre de la impresora y el servidor.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.IPrinter.Server">
+            <summary>
+            Obtiene o establece el nombre del servidor.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.IPrinter.Name">
+            <summary>
+            Obtiene o establece el nombre de la impresora.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.IPrinter.Exists">
+            <summary>
+            Valida si existe la entrada del registro de la
+            impresora.
+            </summary>
+            <returns>Verdadero si existe el registro, falso de lo contrario.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.IPrinter.NotExists">
+             <summary>
+             Valida si no existe la impresora indicada en el sistema.
+             </summary>
+             <returns>
+             Verdadero si no existe el registro, falso de lo contrario.
+             </returns>
+             <exception cref="T:System.InvalidOperationException">No se a especificado la propiedad Name.</exception>
+             <remarks>
+             Este método permite validar si la impresora no se encuentra instalada en el sistema, lo cual
+             devuelve falso si encuentra la impresora, verdadero de lo contrario.
+             </remarks>
+             <example>
+             Este ejemplo muestra el uso del método <see cref="M:Bansi.Drawing.Printing.IPrinter.Exists" />.
+             <code>
+             using System;
+             using Bansi.Drawing.Printing.Common;
+             namespace Example
+             {
+                 public class Program
+                 {
+                     public void Main()
+                     {
+            
+                        if (Printer.Exists("NombreImpresora"))
+                        {
+                           Console.WriteLine("Existe");
+                        }
+                        else
+                        {
+                           Console.WriteLine("No Existe");
+                        }
+                     }
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.IPrinter.GetPrinterSettings">
+            <summary>
+            Obtiene las configuraciones de impresion de la impresora indicada.
+            </summary>
+            <returns>Devuelve una instancia de <see cref="T:System.Drawing.Printing.PrinterSettings"/> si existe la impresora o nulo de lo contrario.</returns>
+        </member>
+        <member name="T:Bansi.Drawing.Printing.Common.Printer">
+            <summary>
+            Contien la información para el manejo de las impresoras en red.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.Common.Printer.PrinterName">
+            <summary>
+            Obtiene el nombre de la impresora y el servidor.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.Common.Printer.Server">
+            <summary>
+            Obtiene o establece el nombre del servidor.
+            </summary>
+        </member>
+        <member name="P:Bansi.Drawing.Printing.Common.Printer.Name">
+            <summary>
+            Obtiene o establece el nombre de la impresora.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.#ctor">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Bansi.Drawing.Printing.Common.Printer" />.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Bansi.Drawing.Printing.Common.Printer"/>.
+            </summary>
+            <param name="server">Nombre der servidor.</param>
+            <param name="name">Nombre de la impresora.</param>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.Exists">
+             <summary>
+             Valida si existe la impresora indicada en el sistema.
+             </summary>
+             <returns>Verdadero si existe el registro, falso de lo contrario.</returns>
+             <remarks>
+             Este método permite validar si la impresora indicada se encuentra instalada
+             en el sistema.
+             </remarks>
+             <example>
+             Este ejemplo muestra el uso del método <see cref="M:Bansi.Drawing.Printing.Common.Printer.Exists"/>.
+             <code>
+             using System;
+             using Bansi.Drawing.Printing.Common;
+            
+             namespace Example
+             {
+                 public class Program
+                 {
+                     public void Main()
+                     {
+            
+                        if (Printer.Exists("NombreImpresora"))
+                        {
+                           Console.WriteLine("Existe");
+                        }
+                        else
+                        {
+                           Console.WriteLine("No Existe");
+                        }
+                     }
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.NotExists">
+             <summary>
+             Valida si no existe la impresora indicada en el sistema.
+             </summary>
+             <returns>
+             Verdadero si no existe el registro, falso de lo contrario.
+             </returns>
+             <exception cref="T:System.InvalidOperationException">No se a especificado la propiedad Name.</exception>
+             <remarks>
+             Este método permite validar si la impresora no se encuentra instalada en el sistema, lo cual
+             devuelve falso si encuentra la impresora, verdadero de lo contrario.
+             </remarks>
+             <example>
+             Este ejemplo muestra el uso del método <see cref="M:Bansi.Drawing.Printing.Common.Printer.Exists" />.
+             <code>
+             using System;
+             using Bansi.Drawing.Printing.Common;
+             namespace Example
+             {
+                 public class Program
+                 {
+                     public void Main()
+                     {
+            
+                        if (Printer.Exists("NombreImpresora"))
+                        {
+                           Console.WriteLine("Existe");
+                        }
+                        else
+                        {
+                           Console.WriteLine("No Existe");
+                        }
+                     }
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.GetPrinterSettings">
+            <summary>
+            Obtiene las configuraciones de impresión de la impresora indicada.
+            </summary>
+            <returns>Devuelve una instancia de <see cref="T:System.Drawing.Printing.PrinterSettings"/> si existe la impresora o nulo de lo contrario.</returns>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.Printer.ToString">
+            <summary>
+            Obtiene el nombre de la clase.
+            </summary>
+            <returns>Devuelve el valor de la propiedad PrinterName</returns>
+        </member>
+        <member name="T:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration">
+             <summary>
+             Gestiona la información de los registros para las impresoras.
+            
+             <seealso cref="T:Bansi.Drawing.Printing.IPrinter"/>
+             <seealso cref="T:Bansi.Drawing.Printing.Common.Printer"/>
+             <seealso cref="T:Bansi.Drawing.Printing.PrinterFactory"/>
+             </summary>
+             <remarks>
+             Permite la gestión de la información de los registros para las impresoras.
+            
+             30/12/2014 JNUNEZ Creación.
+             </remarks>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.REG_KEY_PRINTERS">
+            <summary>
+            Contiene la ruta de los registros en la ubicación de printers.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.REG_UTILGLOB_PRINTER">
+            <summary>
+            Contiene la ruta de la clave de registro de los valores globales.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.SERVER_KEY">
+            <summary>
+            Obtiene el nombre del valor de cadena para el servidor de la impresora.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.NAME_KEY">
+            <summary>
+            Obtiene el nombre del valor de cadena para el nombre de la impresora.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.valuesNames">
+            <summary>
+            Contiene los nombres de los valores de cadena.
+            </summary>
+        </member>
+        <member name="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.globalValuesNames">
+            <summary>
+            Contiene el nombre de los valores globales de las cadenas del registro.
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.#ctor">
+             <summary>
+             Inicializa una instancia de la calse <see cref="T:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration"/>.
+             </summary>
+             <remarks>
+             Inicializa una instancia por defecto de la clase <see cref="T:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration"/>.
+            
+             30/12/2014 JNUNEZ Creación.
+             </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.GetRegistryValuesDictonary(System.String)">
+            <summary>
+            Obtiene los valores del registro de la rama indicada.
+            </summary>
+            <param name="printerNameKey">Nombre de la rama donde se obtendran los valores.</param>
+            <returns>Valores de los registros o vaio si no encontro información.</returns>
+            <remarks>
+            30/12/2014 JNUNEZ Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.GetRegistryValue(System.String,System.String)">
+             <summary>
+             Obtiene un valor del registro de la rama indicada.
+             </summary>
+             <param name="printerNameKey">Nombre de la rama del registro.</param>
+             <param name="valueName">Nombre del valor de cadena de la rama.</param>
+             <returns>Valor de la cadena o nulo si no encontro el valor.</returns>
+             <remarks>
+             Busca en la rama indicada el valor de la cadena, si no lo encuentra y lo intenta buscar
+             en la rama de global.
+            
+             30/12/2014 JNUNEZ Creación.
+             </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.GetRegistryRootKey(System.String)">
+            <summary>
+            Obtiene la rama del registro donde se encuentra la configuración de la impresora.
+            </summary>
+            <param name="printerNameKey">Nombre de la clave del registro.</param>
+            <returns>Una instancia del objeto <see cref="T:Microsoft.Win32.RegistryKey"/>.</returns>
+            <remarks>
+            30/12/2014 JNUNEZ Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.GetRegistryGlobalRootKey(System.String)">
+            <summary>
+            Obtiene la rama del registro donde se encuentra la configuración de la impresora.
+            </summary>
+            <param name="printerNameKey">Nombre de la clave del registro.</param>
+            <returns>Una instancia del objeto <see cref="T:Microsoft.Win32.RegistryKey"/>.</returns>
+            <remarks>
+            30/12/2014 JNUNEZ Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.IsGlobalValueName(System.String)">
+             <summary>
+             Verifica si el el nombre del valor se encuentra
+             definido como un registro global.
+             </summary>
+             <param name="valueName">Clave del valor.</param>
+             <returns>Verdadero si se encuentra definido como un registro global, falso de lo contrario.</returns>
+             <remarks>
+             Verifica si el nombre del valor se encuentra definido como un registro global, los registros globales
+             estan definidos en <see cref="F:Bansi.Drawing.Printing.Common.RegistryPrinterConfiguration.globalValuesNames"/>.
+            
+             30/12/2014 JNUNEZ Creación.
+             </remarks>
+        </member>
+        <member name="T:Bansi.Drawing.Printing.PrinterFactory">
+             <summary>
+             Contiene metodos para la creación de objetos <see cref="T:Bansi.Drawing.Printing.IPrinter"/>.
+             </summary>
+             <remarks>
+             Usted puede obtener la configuración de las impresoras mediante el factory.
+            
+             <para>30/12/2014 JNUNEZ Creación.</para>
+             </remarks>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.PrinterFactory.Create(System.String)">
+             <summary>
+             Crea un objeto <see cref="T:Bansi.Drawing.Printing.IPrinter"/> con la información de la impresora
+             indicada.
+             </summary>
+             <param name="printerNameKey">Nombre registro de la impresora.</param>
+             <returns>Objeto <see cref="T:Bansi.Drawing.Printing.IPrinter"/> configurado.</returns>
+             <example>
+             En este ejemplo vemos el uso de la clase <see cref="T:Bansi.Drawing.Printing.PrinterFactory"/>, usando el
+             método <see cref="M:Bansi.Drawing.Printing.PrinterFactory.Create(System.String)"/>.
+            
+             <code>
+             using System;
+             using Bansi.Drawing.Printing;
+            
+             namespace Example
+             {
+                 public class Program
+                 {
+                     public void Main()
+                     {
+                         IPrinter printer;
+            
+                         //Este método devuelve una interfaz IPrinter configurada.
+                         printer = PrinterFactory.Create("NombreDeRamaDeMiImpresora");
+                         Console.Write(printer.PrinterName);
+                     }
+                 }
+             }
+             </code>
+             </example>
+             <exception cref="T:System.ArgumentNullException">printerNameKey</exception>
+             <exception cref="T:System.InvalidOperationException">name</exception>
+        </member>
+        <member name="T:Bansi.Drawing.Printing.PrinterHelper">
+            <summary>
+            Proporciona utilidades para control de impresoras
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.PrinterHelper.ExistsPrinter(System.String)">
+            <summary>
+            Valida si existe una impresora el sistema
+            </summary>
+            <param name="printerName">Nombre de la impresora</param>
+            <returns>Devuelve si existe la impresora</returns>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.PrinterHelper.NotExistsPrinter(System.String)">
+            <summary>
+            Valida si una impresora NO existe
+            </summary>
+            <param name="printerName">Nombre de la impresora</param>
+            <returns>Devuelve si NO existe la impresora</returns>
+        </member>
+        <member name="M:Bansi.Drawing.Printing.PrinterHelper.GetPrinterSettings(System.String)">
+            <summary>
+            Obtiene las configuraciones de impresion de la impresora indicada.
+            </summary>
+            <param name="printerName">Nombre de la impresora</param>
+            <returns>Devuelve una instancia de <see cref="T:System.Drawing.Printing.PrinterSettings"/> si existe la impresora o nulo de lo contrario.</returns>
+        </member>
+        <member name="T:Bansi.Drawing.SizeHelper">
+            <summary>
+            Ayudante para objetos de la clase Size
+            </summary>
+        </member>
+        <member name="M:Bansi.Drawing.SizeHelper.StringToSize(System.String)">
+            <summary>
+            Strings to size.
+            </summary>
+            <param name="size">The size.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

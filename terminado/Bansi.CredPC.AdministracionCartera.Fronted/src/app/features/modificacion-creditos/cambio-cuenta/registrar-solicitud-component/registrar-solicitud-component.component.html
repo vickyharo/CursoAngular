@@ -1,0 +1,69 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div class="container-fluid pb-4">
+  <!-- Header -->
+  <div class="row align-items-center mb-3">
+    <div class="col-auto">
+      <button-back></button-back>
+    </div>
+    <div class="col text-center">
+      <h2 class="h5 fw-bold text-bansi-azul">Registro de Solicitudes - Cambio de Cuenta de Cheques</h2>
+    </div>
+  </div>
+
+  <!-- Filtro -->
+  <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+    <div class="flex-grow-1">
+      <app-buscar-credito-form (numeroCreditoEnviado)="ActualizarNumeroCreditoRecibido($event)"
+        (estaVigenteEnviado)="ActualizarEstavigenteRecibido($event)"
+        (tieneSolicitudesPendientesAutorizarEnviado)="ActualizarTieneSolicitudesPendientesAutorizarRecibido($event)"
+        (productoCreditoEnviado)="ActualizarProductoCreditoRecibido($event)">
+      </app-buscar-credito-form>
+    </div>
+  </div>
+
+  <!-- Cuentas de credito -->
+  <div class="content-container">
+    <div class="flex-panel">
+      <mat-dialog-content>
+        <section>
+          <app-cuentas-credito-form [numeroCreditoRecibido]="numeroCreditoRecibido"
+            [estaVigenteRecibido]="estaVigenteRecibido"
+            [tieneSolicitudesPendientesAutorizarRecibido]="tieneSolicitudesPendientesAutorizarRecibido"
+            #selectorCuentas></app-cuentas-credito-form>
+        </section>
+      </mat-dialog-content>
+    </div>
+  </div>
+
+  <!-- Botones flotantes fijos -->
+  <div class="btn-fijos-box">
+
+    <div *ngIf="permisoBotonCancelar">
+      <!-- Botón cancelar cambio de cuenta -->
+      <button mat-button class="btn btn-xl bg-bansi-rojo" *ngIf="!desactivarBoton" disabled="{{activarDisabled}}"
+        (click)="BuscarNumeroSolicitud()">
+        <span>Cancelar solicitud</span>
+      </button>
+    </div>
+
+    <div *ngIf="permisoBotonGuardar; else permisoAplicar">
+      <!-- Botón cambio de cuenta -->
+      <button mat-button class="btn btn-xl bg-bansi-azul" *ngIf="desactivarBoton" disabled="{{activarDisabled}}"
+        (click)="GuardarSolicitud()">
+        <span>Guardar solicitud</span>
+      </button>
+    </div>
+
+    <ng-template #permisoAplicar>
+      <div *ngIf="permisoBotonGuardarAutorizar">
+        <!-- Botón autorización de cambio de cuenta -->
+        <button mat-button class="btn btn-xl bg-bansi-verde" *ngIf="desactivarBoton" disabled="{{activarDisabled}}"
+          (click)="ValidarGuardarAutorizar()">
+          <span>Guardar/Autorizar solicitud</span>
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</div>

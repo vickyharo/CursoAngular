@@ -1,0 +1,63 @@
+<!-- Header -->
+<div class="modal-bansi-header bg-bansi-sidebar-gradient">
+  <span></span>
+  <span class="fw-semibold text-truncate"> Detalle de la solicitud </span>
+  <button (click)="onClose()" class="btn btn-link p-0" title="Cerrar">
+    <img src="assets/icons/solid/x-mark-gris.svg" alt="Cerrar" width="25" height="25">
+  </button>
+</div>
+
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh;">
+  <br>
+  <div class="mx-auto">
+
+    <!-- Titulos columnas -->
+    <div class="row mx-auto">
+      <div class="bg-light text-dark px-3 rounded fw-bold small column col-md-6 text-center">
+        <h2 class="font-bold">Monto Nuevo</h2>
+      </div>
+      <div class="bg-light text-dark px-3 rounded fw-bold small column col-md-6 text-center">
+        <h2 class="font-bold">Monto Original</h2>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row col-md-12 mx-auto">
+      <!-- Columna izquierda -->
+      <div class="column col-md-5 mx-auto">
+        <!--Cuenta nueva-->
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput type="text" readonly value={{txtMontoNuevo}}>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="column col-md-5 mx-auto">
+        <!--Cuenta origen-->
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput type="text" readonly value={{txtMontoOriginal}}>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-footer">
+  <!-- Botón Regresar -->
+  <div class="col-md-1">
+    <button mat-button class="btn btn-xl bg-bansi-azul col-md-2" (click)="onClose()">
+      <span>Volver</span>
+    </button>
+  </div>
+</div>

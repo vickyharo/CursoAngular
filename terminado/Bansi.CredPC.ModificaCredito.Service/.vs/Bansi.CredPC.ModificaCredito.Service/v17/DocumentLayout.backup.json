@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\EDM\\grpmodificacredito\\fuentes\\Bansi.CredPC.ModificaCredito.Service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5C50E-7DFD-433A-A43E-51F75FFFEB23}|Bansi.CredPC.ModificaCredito.Service\\Bansi.CredPC.ModificaCredito.Service.csproj|c:\\edm\\grpmodificacredito\\fuentes\\bansi.credpc.modificacredito.service\\bansi.credpc.modificacredito.service\\controllers\\modificacioncuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5C50E-7DFD-433A-A43E-51F75FFFEB23}|Bansi.CredPC.ModificaCredito.Service\\Bansi.CredPC.ModificaCredito.Service.csproj|solutionrelative:bansi.credpc.modificacredito.service\\controllers\\modificacioncuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModificacionCuentaController.cs",
+              "DocumentMoniker": "C:\\EDM\\grpmodificacredito\\fuentes\\Bansi.CredPC.ModificaCredito.Service\\Bansi.CredPC.ModificaCredito.Service\\Controllers\\ModificacionCuentaController.cs",
+              "RelativeDocumentMoniker": "Bansi.CredPC.ModificaCredito.Service\\Controllers\\ModificacionCuentaController.cs",
+              "ToolTip": "C:\\EDM\\grpmodificacredito\\fuentes\\Bansi.CredPC.ModificaCredito.Service\\Bansi.CredPC.ModificaCredito.Service\\Controllers\\ModificacionCuentaController.cs",
+              "RelativeToolTip": "Bansi.CredPC.ModificaCredito.Service\\Controllers\\ModificacionCuentaController.cs",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAYwEgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T19:56:37.655Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

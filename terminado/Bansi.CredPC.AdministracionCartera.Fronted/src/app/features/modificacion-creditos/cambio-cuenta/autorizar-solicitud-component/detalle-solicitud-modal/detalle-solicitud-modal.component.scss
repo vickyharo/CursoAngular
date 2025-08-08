@@ -1,0 +1,37 @@
+/***************** Carrusel *******************/
+::ng-deep .carousel-control-next-icon {
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 5rem !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% !important;
+  background-size: 150% 150% !important;
+  background-color: #0d6efd !important;
+}
+
+::ng-deep .carousel-control-prev-icon {
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 5rem !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% !important;
+  background-size: 150% 150% !important;
+  background-color: #0d6efd !important;
+}
+
+::ng-deep .carousel-control-next {
+  width: 4% !important;
+}
+
+::ng-deep .carousel-control-prev {
+  width: 4% !important;
+}
+
+::ng-deep .carousel-caption {
+  padding-bottom: 0rem !important;
+}
+
+/***** control modal ******/
+textarea {
+  resize: none;
+}

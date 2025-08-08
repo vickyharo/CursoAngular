@@ -1,0 +1,32 @@
+<!-- Header -->
+<div class="modal-bansi-header bg-bansi-sidebar-gradient">
+  <span></span>
+  <span class="fw-semibold text-truncate">Modificación Cuenta Cheques - Selección de Créditos</span>
+  <button (click)="onClose()" class="btn btn-link p-0" title="Cerrar">
+    <img src="assets/icons/solid/x-mark-gris.svg" alt="Cerrar" width="25" height="25">
+  </button>
+</div>
+
+<div class="modal-body" style="min-height: 60vh; max-height: 60vh">
+  <div>
+    <app-tabla-component [data]="creditosMostrados" [pageSize]="25" [showActionButtons]="false"
+      [columnConfig]="columnConfig" [customClass]="'table table-hover'" (rowSelected)="onRowSelected($event)"
+      [elementosPagina]="true">
+    </app-tabla-component>
+  </div>
+</div>
+<div class="modal-footer" style="padding-right:10px;">
+  <div class="col-md-1">
+    <!-- Botón Cerrar -->
+    <button mat-button class="btn btn-xl bg-bansi-rojo" (click)="onClose()">
+      <span>Cancelar</span>
+    </button>
+  </div>
+  <div class="col-md-1">
+    <!-- Botón Seleccionar cliente -->
+    <button mat-button class="btn btn-xl bg-bansi-azul" (click)="cerrarSeleccionCliente()"
+      [disabled]="!selectedRow || selectedRow === undefined">
+      <span>Seleccionar</span>
+    </button>
+  </div>
+</div>

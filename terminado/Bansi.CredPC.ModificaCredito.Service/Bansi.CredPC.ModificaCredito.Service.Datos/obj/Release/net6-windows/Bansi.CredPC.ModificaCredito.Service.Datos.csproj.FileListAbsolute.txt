@@ -1,0 +1,15 @@
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\bin\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.deps.json
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\bin\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\bin\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.pdb
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\bin\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\bin\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.pdb
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.csproj.AssemblyReference.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.AssemblyInfoInputs.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.AssemblyInfo.cs
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.csproj.CoreCompileInputs.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.Cr.BB638AEF.Up2Date
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\refint\Bansi.CredPC.ModificaCredito.Service.Datos.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\Bansi.CredPC.ModificaCredito.Service.Datos.pdb
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Datos\obj\Release\net6-windows\ref\Bansi.CredPC.ModificaCredito.Service.Datos.dll

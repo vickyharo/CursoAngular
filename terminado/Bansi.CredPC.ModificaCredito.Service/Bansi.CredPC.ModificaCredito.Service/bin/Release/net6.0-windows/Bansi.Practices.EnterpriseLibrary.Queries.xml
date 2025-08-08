@@ -1,0 +1,1782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bansi.Practices.EnterpriseLibrary.Queries</name>
+    </assembly>
+    <members>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryEventArgs">
+            <summary>
+            Class QueryEventArg. This class cannot be inherited.
+            Implements the <see cref="T:System.EventArgs" />
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryEventArgs.Query">
+            <summary>
+            Consulta a realizar.
+            </summary>
+            <value>Consulta a realizar.</value>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryEventArgs.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryEventArgs"/> class.
+            </summary>
+            <param name="query">The query.</param>
+            <exception cref="T:System.ArgumentNullException">query</exception>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.Configuration.Install.Installer">
+            <summary>
+            Propociona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Configuration.Install.Installer.#ctor">
+            <summary>
+            Costructor de la clase EventLogSourceInstaller
+            </summary>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.OperatorHelper">
+            <summary>
+            Clase ayudant para el Enum Operator
+            </summary>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.OperatorHelper.IsWhereOperator(Bansi.Practices.EnterpriseLibrary.Queries.Operator)">
+            <summary>
+            Indica que un operador debe devolver un booleano, como resultado de su aplicación
+            </summary>
+            <param name="whereOperator">Operador</param>
+            <returns>True si el operador devuelve un boolean</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.OperatorHelper.FromString(System.String)">
+            <summary>
+            Crea un operador a partir de un string.
+            </summary>
+            <param name="operatorString">Operador en String.</param>
+            <returns>Operador</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.OperatorHelper.IsNotWhereOperator(Bansi.Practices.EnterpriseLibrary.Queries.Operator)">
+            <summary>
+            Indica que un operador NO debe devolver un booleano, como resultado de su aplicación
+            </summary>
+            <param name="whereOperator">Operador</param>
+            <returns>True si el operador NO devuelve un boolean</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.OperatorHelper.Evaluate(System.Object,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+            Evelua si un operador se cumple entre dos objetos
+            </summary>
+            <param name="value1">Valor 1</param>
+            <param name="evaluatorOperator">Operador.</param>
+            <param name="value2">Valor 2</param>
+            <returns>True si se cumple Value1 Operador Value2</returns>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QuerySelector`1">
+            <summary>
+            Selecciona una colección de objetos, si se cumple otra condifición.
+            </summary>
+            <typeparam name="T">Tipo de objetos a devolver y analizar.</typeparam>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QuerySelector`1.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QuerySelector`1.Select(System.Collections.Generic.IEnumerable{`0},Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Selecciona de una lista los elementos que cumpla el query
+            </summary>
+            <param name="objectsToEvaluate">Lista de elementos a evaluar</param>
+            <param name="query">Query para filtrar</param>
+            <returns>Lista los elementos que cumpla el query</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QuerySelector`1.Select(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Selecciona de una lista los elementos que cumpla el query
+            </summary>
+            <param name="objectsToEvaluate">Lista de elementos a evaluar</param>
+            <returns>Lista los elementos que cumpla el query</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QuerySelector`1.Select(System.Collections.IEnumerable)">
+            <param name="objectsToEvaluate">Lista de elementos a evaluar</param>
+            <returns>Lista los elementos que cumpla el query</returns>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.Operator">
+             <sistema>
+                 Bansi.Practices.EnterpriseLibrary.Queries
+             </sistema>
+             <summary>
+                 Describe las posibles operaciones que se pueden hacer con un una
+                 determida propiedad de un objeto y un valor
+             </summary>
+            <remarks>31/10/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.None">
+            <summary>
+             No aplica ninguna operación.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Select">
+            <summary>
+             Indica que se requiere recuperar una propiedad en particular.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Equals">
+            <summary>
+             Indica el valor que debe tener una propiedad de un objeto.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Different">
+            <summary>
+             Operador contrario al de igualdad (es diferente a..).
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Greater">
+            <summary>
+             Mayor.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.GreaterOrEquals">
+            <summary>
+             Mayor o menor.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Less">
+            <summary>
+             menor que.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.LessOrEquals">
+            <summary>
+             Menor o Igual que.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Contains">
+            <summary>
+             Contiene.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Match">
+            <summary>
+             Coincide con una expresión  con metacaracteres.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.MatchRegularExpresion">
+            <summary>
+             Coincide con una expresión regular.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.In">
+            <summary>
+             Esta en una lista.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.Between">
+            <summary>
+             El  valor debe tener estar comprendido en un rango.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.SortAsc">
+            <summary>
+             Indica que ordene el resultado Ascendentemente.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.SortDesc">
+            <summary>
+             Indica que ordene el resultado descendentemente.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.Operator.GroupBy">
+            <summary>
+             Debe agruparse los resultados por una propiedad.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.Query">
+            <sistema>
+                Bansi.Practices.EnterpriseLibrary.Queries
+            </sistema>
+            <summary>
+                Clase en la que se relacionan las entidades "Field", "Operator", y "Value"
+                Permite expresar busquedas en base de datos o cualquier otra forma de persistencia
+                en forma orientada a objetos
+            </summary>
+            <remarks>
+                31/10/2008: Juan Antonio Rocha Valdés. Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.QueryrablePropertyInfo">
+            <summary>
+            Propiedad que referencia el Query
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.ReferencedField">
+            <summary>
+            Indica el nombre de un campo referenciado por otro campo
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.FieldIsReferenced">
+            <summary>
+            Indica si un campo esta referenciado o no
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.EmptyQuery">
+            <summary>
+             Define una Query Vacia
+            </summary>
+            <remarks>
+            17/05/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Name">
+            <summary>
+             Nombre de la query sirve para identificarla en un Array de queries (Donde debe ser unico).
+            </summary>
+             <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.UnionOperator">
+            <summary>
+                 Dentro de una colección de Queries (como un array o en general una instancia IEnumerable Query)
+                 indica la relación que tiene con la Query anterior.
+            </summary>
+             <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Positive">
+            <summary>
+             Indica que el filtro indicado debe ser verdadero, si vale false, debe ser falso,
+             es decir en el primer ejemplo si “Positive” fuera falso
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Field">
+             <summary>
+             indica un campo sobre el cual se va indicar un filtro
+             </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Operator">
+            <summary>
+             indica el tipo del filtro que se a va aplicar a el campo
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Value">
+            <summary>
+             indica el valor por el se va a filtrar
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.ContainsQueries">
+            <summary>
+             Indica si el query es su vez una composición de queries (Es de solo lectura).
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Queries">
+            <summary>
+             Indica el conjunto de Queries que componen esta query.
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.CaseSensitive">
+            <summary>
+             Indica si al realizar la busqueda en string, dicha busqueda debe ser sensible a mayusculas y minusculas o no
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Item(System.Int32)">
+            <summary>
+            Devuelve el subquery en la posición index.
+            </summary>
+            <param name="index">Posición.</param>
+            <returns>Subquery en la posición index.</returns>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Item(System.String)">
+            <summary>
+            Devuelve el subquery en la posición name.
+            </summary>
+            <param name="name">Nombre.</param>
+            <returns>Subquery en la posición name.</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String)">
+            <summary>
+            Crea un query con un nombre determinado
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+            dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.Boolean,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+            Constructor de la clase Query
+            </summary>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero o falso</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Constructor de la clase query
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero o falso</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="positive">Valores por los cuales se filtrara</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <remarks>
+                31/10/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31/10/2008: JROCHA:  CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="unionOperator">Operador de union . Operador de relacion con la query que antecede</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <remarks>07/11/2008: jrocha: creacion.</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+            dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+                 dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+                 dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+                 dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+                 dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query},System.Boolean)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <param name="caseSensitive">Indica si al realizar la busqueda en string,
+                 dicha busqueda debe ser sensible a mayusculas y minusculas o no</param>
+            <remarks>
+                31-10-2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Constructor de la clase query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.Boolean,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Constructor de la clase query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="field">Campo o propiedad sobre la que se desea filtrar</param>
+            <param name="queryOperator">Operador por el cual se va a filtrar</param>
+            <param name="value">Valores por los cuales se filtrara</param>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.Boolean,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="positive">Indica que el filtro indicado debe ser verdadero.</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <remarks>
+                05/11/2008: jrocha: creacion.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.#ctor(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query},Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator)">
+            <summary>
+                Constructor de la clase Query
+            </summary>
+            <param name="name">Nombre de la query, sirve para identificarla en un array de queries (debe ser unico)</param>
+            <param name="queries">Indica el conjunto de queries que componen esta query</param>
+            <param name="unionOperator">Dentro de una colección de Queries, indica la relacion que existe con la query anterior</param>
+            <remarks>
+                05/11/2008: jrocha: creacion.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.IsEmpty(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+             Comprueba que un query no este vacio
+             </summary>
+             <param name="query">Query a comprobar</param>
+             <returns>true si esta vacio, o false si esta configurado</returns>
+             <remarks>
+             17/05/2010, JBAUTISTA: Creación.
+             </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.IsEmpty">
+            <summary>
+            Comprueba que un query no este vacio
+            </summary>
+            <returns>true si esta vacio, o false si esta configurado</returns>
+            <remarks>
+            17/05/2010, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.IsEmptyCompose(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Comprueba que un query no este vacio
+            </summary>
+            <returns>true si esta vacio, o false si esta configurado</returns>
+            <remarks>
+            17/05/2010, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.IsNullOrEmpty(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Comprueba que un query no este vacio o sea nulo
+            </summary>
+            <param name="query">Query a comprobar</param>
+            <returns>true si esta vacio o es nulo, o false en caso contrario</returns>
+            <remarks>
+            17/05/2010, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.IsNotNullOrEmpty(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Comprueba que un query no este vacio o sea nulo
+            </summary>
+            <param name="query">Query a comprobar</param>
+            <returns>true si esta vacio o es nulo, o false en caso contrario</returns>
+            <remarks>
+            17/05/2010, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.Equals(System.Object)">
+            <summary>
+                 Comprueba si un Query es igual a otro.
+            </summary>
+            <remarks>
+                 31/10/2008: JROCHA CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.GetHashCode">
+            <summary>
+            Codigo Hash
+            </summary>
+            <returns>Codigo Hash</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.ToString">
+            <summary>
+                 Devuelve una representación en formato String del contenido de la Query
+            </summary>
+            <remarks>
+                 03/11/2008: JROCHA: CREACION.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.GetQueryCollection">
+            <summary>
+            Obtiene un subquery Builder asociado al query actual
+            </summary>
+            <returns>QueryBuilder asociado al query actual</returns>
+            <remarks>
+            26-ENE-2008, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.setQueryCollection(Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection)">
+            <summary>
+            Establece un subquery Builder asociado al query actual
+            </summary>
+            <returns>QueryBuilder asociado al query actual</returns>
+            <remarks>
+            26-ENE-2008, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.ObjectToString(System.Object)">
+            <summary>
+            Convierte un objeto en una lista de objetos
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.ConfigureReferencedField">
+            <summary>
+            Configura la información para posibles campos referenciados.
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.Evaluate(System.Object)">
+            <summary>
+            Evelua si un objeto cumple el Query
+            </summary>
+            <param name="objectToEvaluate">Objeto para evaluar</param>
+            <returns>True si cumple el query</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.Select``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Selecciona de una lista los elementos que cumpla el query
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectsToEvaluate">Lista de elementos a evaluar</param>
+            <returns>Lista los elementos que cumpla el query</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.Query.Clone">
+            <summary>
+                 Clona el objeto, creando una copia en profundidad.
+            </summary>
+            <remarks>
+                 03/11/2008: JROCHA: CREACION.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.Query.Count">
+            <summary>
+            Numero de subquery actual
+            </summary>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection">
+            <sistema>
+                Bansi.Enterprise.Practices.Queries
+            </sistema>
+            <summary>
+                Es una clase que facilita la edición y la creación de objetos del tipo Query,
+                ofreciendo de forma sencilla toda las opciones y combinaciones posibles.
+                La clase es una de tipo IList y almacena una coleccion de queries
+                relacionadas entres si (por el operador AND o OR)
+                Ademas facilita la creación  y administración de subqueries.
+                Su funcionamiento con respecto a la clase Query es semenjante al funcionamiento de la clase
+                StringBuilder con respecto a la clase String.
+            </summary>
+            <remarks>
+                31/10/2008: Juan Antonio Rocha Valdés: creación
+            </remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.QUERIESNAME">
+            <summary>
+                Indica el nombre por defecto que tendra los queries que se agregen a la
+                colección de queries sin un nombre, los nombres se forma con el valor de la
+                constantes QUERIESNAME mas un consecutivo por ejemplo si QUERIESNAME=”query”
+                el valor del primer query sera “query_1”
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Seed">
+            <summary>
+                Consecutivo del numero del ultimo numero de query insertado
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.QueriesList">
+            <summary>
+                Es de tipo List Query  guarda la colección de queries del objeto
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.QueryrableObjectType">
+            <summary>
+            Tipo del objeto con el que el query tiene una relacion
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA:Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Item(System.Int32)">
+            <summary>
+            Devuelve el subquery en la posición index.
+            </summary>
+            <param name="index">Posición.</param>
+            <returns>Subquery en la posición index.</returns>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Item(System.String)">
+            <summary>
+            Devuelve el subquery en la posición name.
+            </summary>
+            <param name="name">Nombre.</param>
+            <returns>Subquery en la posición name.</returns>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OwnerQuery">
+            <summary>
+            Query propietaria de esta colección.
+            </summary>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.#ctor">
+            <summary>
+                Inicia el objeto con una coleccion vacia
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.#ctor(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Inicia el objeto con la colección que se pasa como parametro
+            </summary>
+            <param name="queries">Colección de queries que se pasa como parametro</param>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Inicia el objeto creando una colección con el query que se pasa como parametro.
+            </summary>
+            <param name="query">Query que se pasa como parametro</param>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ToString">
+            <summary>
+                Devuelve una representación en formato String del contenido de las Queries
+            </summary>
+            <remarks>04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.SortQueries">
+            <summary>
+            Ordena el Query por preferencia de los operadores
+            Primero los operadores que implican comparaciones
+            Despues los operadores SELECT
+            Para finalizar los operadores SORT y GROUP BY
+            </summary>
+            <remarks>16/01/2009: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.SortQueriesSetFirst(Bansi.Practices.EnterpriseLibrary.Queries.Operator[])">
+            <summary>
+            Coloca los queries por preferencia al principio de la lista
+            </summary>
+            <remarks>16/01/2009, JBAUTISTA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.SortQueriesSetLast(Bansi.Practices.EnterpriseLibrary.Queries.Operator[])">
+            <summary>
+            Coloca los queries por preferencia al finalde la lista
+            </summary>
+            <remarks>16/01/2009, JBAUTISTA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.SortQueries(System.Boolean,Bansi.Practices.EnterpriseLibrary.Queries.Operator[])">
+            <summary>
+            ordena los queries internos
+            </summary>
+            <param name="asc">Indica si se ordena ascendentemene o descendentemente</param>
+            <param name="operators">Orden de los operadores</param>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el opertador sera None,
+                si ya existen mas query a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <returns>
+                QueryBuilder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el opertador sera None,
+                si ya existen mas query a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                QueryBuilder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query
+                el operador de union sera None, si ya existen mas query a la colección el operador sera And.
+            </summary>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query
+                el operador de union sera None, si ya existen mas query a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query
+                el operador de union sera None, si ya existen mas query a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union And
+            </summary>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union And
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union And
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="name"></param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="query"> Conjunto de query que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el operador es None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="field">field por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el operador es None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el value</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el operador es None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el value</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el operador es None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el value</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query el operador de union sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query el operador de union sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query el operador de union sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query el operador de union sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador de union And
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador de union And
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador de union And
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador de union And
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,System.String,Bansi.Practices.EnterpriseLibrary.Queries.Operator,System.Object,System.Boolean)">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="name">Nombre de la query</param>
+            <param name="field">Campo por el cual se va a filtrar</param>
+            <param name="operatorQuery">Operacion a realizar entre el campo y el valor</param>
+            <param name="value">Indica el valor por el que se va a filtrar</param>
+            <param name="caseSensitive">Sensible a mayusculas y minusculas</param>
+            <returns> Añade un query a la colección, que no contiene a su vez colecciones de queries</returns>
+            <remarks> 04/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añade un nuevo query a la colección,
+                que contiene a su vez la colección de queries que se pasa como parámetro.
+                Añade un nuevo query  si es el primer Query el opertador sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="queries"> Conjunto de Queries </param>
+            <returns>
+                QueryBuilder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query  si es el primer Query el opertador sera None,
+                si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                QueryBuilder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query
+                el operador de union sera None, si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddNot(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección,  si es el primer Query
+                el operador de union sera None, si ya existen mas queries a la colección el operador sera And.
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union And
+            </summary>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.And(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union And
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AndNot(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union And
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Or(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.OrNot(System.String,System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Añaden un nuevo query negado a la colección con el operador  de union Or
+            </summary>
+            <param name="name"> Nombre de la Query </param>
+            <param name="queries"> Conjunto de Queries que contiene la Query </param>
+            <returns>
+                Query Builder
+            </returns>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Add(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Agrega un elemento a la lista de querys, regresa un Query
+            </summary>
+            <param name="item">Query que se pasa como parametro</param>
+            <remarks>
+                05/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.AddRange(System.Collections.Generic.IEnumerable{Bansi.Practices.EnterpriseLibrary.Queries.Query})">
+            <summary>
+                Agrega los elementos de la colección especificada al final de la lista de queries
+            </summary>
+            <param name="queries">Queries que se pasan como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Clear">
+            <summary>
+                Quita todos los elementos de la lista de queries
+            </summary>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Contains(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Determina si el queryBuilder contiene un query específico.
+            </summary>
+            <param name="item">Query que se pasa como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ContainsEqual(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Determina si el queryBuilder contiene un queryespecifico o con valores semejantes.
+            </summary>
+            <param name="item">Query que se pasa como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Contains(System.String)">
+            <summary>
+                Determina si el queryBuilder contiene un query específico.
+            </summary>
+            <param name="name">Query que se pasa como parametro</param>
+            <remarks>
+               26/ENE/2009, JBAUTISTA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.CopyTo(Bansi.Practices.EnterpriseLibrary.Queries.Query[],System.Int32)">
+            <summary>
+                Copia los elementos de la interfaz en un objeto Array, a partir de un índice determinado de la clase Array.
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.GetEnumerator">
+            <summary>
+                Devuelve un enumerador que recorre en iteración una colección.
+            </summary>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.IndexOf(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Determina el índice de un elemento específico de la lista de Queries
+            </summary>
+            <param name="item">Query que se pasa como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Remove(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Quita la primera aparición de un objeto específico de la lista de queries.
+            </summary>
+            <param name="item">Query que se pasa como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.RemoveAt(System.Int32)">
+            <summary>
+                Quita el elemento de la lista de queries en el índice especificado
+            </summary>
+            <param name="index">Indice</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ToArray">
+            <summary>
+                Devuelve la coleccion en un arreglo de Query
+            </summary>
+            <returns>Arreglo de Query</returns>
+            <remarks>11/11/2008: jrocha: creación.</remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Insert(System.Int32,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+                Inserta un elemento en la lista de queries, en el índice especificado
+            </summary>
+            <param name="index">Indice</param>
+            <param name="item">query que se pasa como parametro</param>
+            <remarks>
+                06/11/2008: JROCHA: CREACION
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Find(System.String)">
+            <summary>
+            Busca un Query
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            <remarks>
+            26-Ene-2008, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ReplaceQuery(System.String,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Reemplaza un query
+            </summary>
+            <param name="name"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <remarks>
+            26-Ene-2008, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.GetOwnerQuery">
+            <summary>
+            Obtiene una query actual, con el QueryBuilder Incrustador
+            </summary>
+            <returns>Query que contiene todo el query Builder</returns>
+            <remarks>
+            26-Ene-2008, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ConfigureQueryrableObjectType">
+            <summary>
+            Configura la asociación de una propiedad de un objeto con un query
+            </summary>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.ConfigureQueryrableObjectType(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Configura la asociación de una propiedad de un objeto con un query
+            </summary>
+            <param name="query">Query del valor.</param>
+            <remarks>
+            12/08/2011, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Count">
+            <summary>
+            Número de queries
+            </summary>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.IsReadOnly">
+            <summary>
+            Indica que la colección es de solo lectura
+            </summary>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollection.Clone">
+            <summary>
+            Clona un QueryCollection
+            </summary>
+            <returns>QueryCollection Clonado</returns>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollectionEditor">
+            <summary>
+            Proporciona un editor visual de colecciones de Queries.
+            </summary>
+            <remarks>
+            20-ENE-2009, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollectionEditor.Seed">
+            <summary>
+                Consecutivo del numero del ultimo numero de query insertado
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryEvaluator">
+            <summary>
+            Clase que evalua si un query se cumple para un determinado objecto
+            </summary>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryEvaluator.#ctor(Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="query">Query que sirve como filtro</param>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryEvaluator.Evaluate(System.Object,Bansi.Practices.EnterpriseLibrary.Queries.Query)">
+            <summary>
+            Evelua si un objeto cumple el Query
+            </summary>
+            <param name="objectToEvaluate">Objeto para evaluar</param>
+            <param name="query">Query para evaluar</param>
+            <returns>True si cumple el query</returns>
+        </member>
+        <member name="M:Bansi.Practices.EnterpriseLibrary.Queries.QueryEvaluator.Evaluate(System.Object)">
+            <summary>
+            Evelua si un objeto cumple el Query
+            </summary>
+            <param name="objectToEvaluate">Objeto para evaluar</param>
+            <returns>True si cumple el query</returns>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.QueryCollectionTypeConverter">
+            <summary>
+            Proporciona un conversor de tipos para converter una coleccion de Queries a un string.
+            </summary>
+            <remarks>
+            20-ENE-2009, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="T:Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator">
+            <sistema>
+                Bansi.Practices.EnterpriseLibrary.Queries
+            </sistema>
+            <summary>
+                Describe los posibles métodos de concatenacion de los las Queries:
+            </summary>
+            <remarks>
+                31/10/2008: Juan Antonio Rocha Valdés: Creación.
+            </remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator.None">
+            <summary>
+                No aplica ningun tipo de concatenación
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator.And">
+            <summary>
+                Aplica un And Lógico con el Query que le precede
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+        <member name="F:Bansi.Practices.EnterpriseLibrary.Queries.UnionOperator.Or">
+            <summary>
+                Aplica un Or Lógico con el Query que le precede
+            </summary>
+            <remarks>05/11/2008: JROCHA: CREACION</remarks>
+        </member>
+    </members>
+</doc>

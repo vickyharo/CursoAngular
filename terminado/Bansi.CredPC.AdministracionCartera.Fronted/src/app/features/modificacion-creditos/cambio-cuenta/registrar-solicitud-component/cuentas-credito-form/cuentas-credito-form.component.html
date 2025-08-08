@@ -1,0 +1,77 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<!-- Tabla dinámica -->
+<div class="flex-1 min-h-0 p-4 rounded-lg border border-bansi-gris-claro">
+  <h2 class="text-left text-xl font-bold text-bansi-azul">Cuentas de Cheques Asociadas al Crédito</h2>
+
+  <!-- Tabla -->
+  <div class="table-container">
+    <div class="table-scroll">
+      <table mat-table [dataSource]="dataSource" matSort class="compact-table">
+
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef class="header-column">
+            <mat-checkbox disabled="{{desactivarCheck}}" (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue() && isAllSelected()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+
+          <div *ngIf="desactivarCheck; else activarCheck">
+            <td mat-cell *matCellDef="let row">
+              <mat-checkbox disabled="{{desactivarCheck}}">
+              </mat-checkbox>
+            </td>
+          </div>
+          <ng-template #activarCheck>
+            <td mat-cell *matCellDef="let row">
+              <mat-checkbox disabled="{{desactivarCheck}}" (click)="$event.stopPropagation()"
+                (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+              </mat-checkbox>
+            </td>
+
+          </ng-template>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoCuenta">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Tipo</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow">{{ element.tipoCuenta }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="naturaleza">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Naturaleza</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow"> {{ element.naturaleza }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cuentaCheques">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Cuenta de Cheques</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow">{{ element.cuentaCheques }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="producto">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Producto</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow">{{ element.producto}} {{element.aplicacionCuenta}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="divisa">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Divisa</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow">{{ element.codDivisa }} {{ element.divisa }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cliente">
+          <th mat-header-cell *matHeaderCellDef class="header-column">Cliente de la Cuenta de Cheques</th>
+          <td mat-cell *matCellDef="let element" class="selectedRow">{{ element.numeroCliente }} {{
+            element.nombreCliente
+            }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

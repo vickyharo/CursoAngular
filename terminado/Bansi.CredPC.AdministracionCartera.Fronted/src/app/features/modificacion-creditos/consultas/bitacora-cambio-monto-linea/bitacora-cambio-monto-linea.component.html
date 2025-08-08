@@ -1,0 +1,169 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<div class="container-fluid pb-4">
+
+  <!-- Header -->
+  <div class="row align-items-center mb-3">
+    <div class="col-auto">
+      <button-back></button-back>
+    </div>
+    <div class="col text-center">
+      <h2 class="h5 fw-bold text-bansi-azul">Consulta de Solicitudes - Cambio de Monto Autorizado de Línea de Crédito
+      </h2>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <app-buscar-monto-linea-form (consultaSolicitudesEnvio)="MostrarSolicitudes($event)"
+    (recalcularPaginado)="RecalcularPaginado()"></app-buscar-monto-linea-form>
+
+  <!-- Detalle -->
+  <section style="padding: 10px">
+    <div class="rounded-lg border border-bansi-gris-claro my-2 px-2">
+      <div class="mb-2 rounded bg-white text-bansi-azul">
+        <br>
+        <div class="row align-items-right g-2 w-100">
+          <div class="col-auto">
+            @if(dataSource.filteredData.length > 0){
+            <button title="Exportar Excel" matTooltip="Exportar excel" class="btn-busqueda"><img style="color: red;"
+                src="assets/icons/outline/arrow-down-tray.svg" alt="Exportar Excel" class="icono-accion"
+                (click)="exportarExcel()">&nbsp;Exportar excel</button>
+            }
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-scroll">
+            <table mat-table [dataSource]="dataSource" matSort class="compact-table">
+
+              <!-- Detalle Column -->
+              <ng-container matColumnDef="detalle">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column"> Detalle</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-icon-button color="primary" (click)="DetalleSolicitud(element)">
+                    <mat-icon class="mat-18">reorder</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <!-- numeroSolicitud Column -->
+              <ng-container matColumnDef="numeroSolicitud">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column"> Número de Solicitud </th>
+                <td mat-cell *matCellDef="let element"> {{element.idSolicitud}} </td>
+              </ng-container>
+
+              <!-- fechaSolicitud Column -->
+              <ng-container matColumnDef="fechaSolicitud">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Fecha de Solicitud </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaSolicitud | date:'dd-MM-YYY'}} </td>
+              </ng-container>
+
+              <!-- estatusSolicitud Column -->
+              <ng-container matColumnDef="estatusSolicitud">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Estatus de la Solicitud</th>
+                <td mat-cell *matCellDef="let element"> {{element.descripcionStatus}} </td>
+              </ng-container>
+
+              <!-- numeroLinea Column -->
+              <ng-container matColumnDef="numeroLinea">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Número de Línea de Crédito
+                </th>
+                <td mat-cell *matCellDef="let element">{{element.numeroLinea}} </td>
+              </ng-container>
+
+              <!-- producto Column -->
+              <ng-container matColumnDef="producto">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Producto de la Línea de
+                  Crédito
+                </th>
+                <td mat-cell *matCellDef="let element"> {{element.codProducto}} {{element.descProducto}} </td>
+              </ng-container>
+
+              <!-- cliente Column -->
+              <ng-container matColumnDef="cliente">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Cliente </th>
+                <td mat-cell *matCellDef="let element">{{element.numeroCliente}} {{element.nombreCliente}}</td>
+              </ng-container>
+
+              <!-- estatusLineaCredito Column -->
+              <ng-container matColumnDef="estatusLineaCredito">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Estatus de la Línea de
+                  Crédito
+                </th>
+                <td mat-cell *matCellDef="let element">{{element.descEstatusLinea}} </td>
+              </ng-container>
+
+              <!-- montoAutorizado Column -->
+              <ng-container matColumnDef="montoAutorizado">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Monto Autorizado de la Línea
+                  de
+                  Crédito</th>
+                <td mat-cell *matCellDef="let element">{{element.montoAutorizado | currency }}</td>
+              </ng-container>
+
+              <!-- ejecutivo Column -->
+              <ng-container matColumnDef="ejecutivo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Ejecutivo </th>
+                <td mat-cell *matCellDef="let element">{{element.codEjecutivo}} {{element.nombreEjecutivo}} </td>
+              </ng-container>
+
+              <!-- sucursal Column -->
+              <ng-container matColumnDef="sucursal">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Sucursal</th>
+                <td mat-cell *matCellDef="let element">{{element.codSucursal}} {{element.nombreSucursal}}</td>
+              </ng-container>
+
+              <!-- usuarioSolicitante Column -->
+              <ng-container matColumnDef="usuarioSolicitante">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Usuario Solicitante </th>
+                <td mat-cell *matCellDef="let element">{{element.usuarioSolicita}} </td>
+              </ng-container>
+
+              <!-- usuarioAutoriza Column -->
+              <ng-container matColumnDef="usuarioAutoriza">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Usuario Autorizador </th>
+                <td mat-cell *matCellDef="let element">{{element.usuarioAutoriza}} </td>
+              </ng-container>
+
+              <!-- fechaAutorizacion Column -->
+              <ng-container matColumnDef="fechaAutorizacion">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Fecha Autorización </th>
+                <td mat-cell *matCellDef="let element">{{element.fechaAutorizacion | date:'dd-MM-YYY' }} </td>
+              </ng-container>
+
+              <!-- comentario Column -->
+              <ng-container matColumnDef="comentario">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-column">Comentario </th>
+                <td mat-cell *matCellDef="let element">{{element.comentarios}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+              </tr>
+            </table>
+
+            <div class="custom-paginator">
+              <mat-paginator [length]="totalElements" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+                [pageIndex]="currentPage" showFirstLastButtons aria-label="Select page" (page)="OnPageChange($event)"
+                class="accent-paginator">
+              </mat-paginator>
+
+              <div class="page-numbers">
+                <button *ngFor="let page of pages" [class.active]="page === currentPage" (click)="GoToPage(page)"
+                  class="page-number-btn">
+                  {{ page + 1 }}
+                </button>
+              </div>
+              <div class="elements-page" *ngIf="!elementosPagina">
+                <span>Elementos por página</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

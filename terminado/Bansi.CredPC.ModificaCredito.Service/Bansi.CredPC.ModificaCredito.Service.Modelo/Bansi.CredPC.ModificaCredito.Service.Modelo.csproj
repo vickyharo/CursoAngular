@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>    
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\StrongName\bansi.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bansi.Application.Extensions.Configuration" Version="6.0.0" />
+    <PackageReference Include="Bansi.Application.Security" Version="6.5.0" />
+    <PackageReference Include="Bansi.Application.Security.Common" Version="6.0.0" />
+    <PackageReference Include="Bansi.Application.UtilGlobSeg.Security" Version="6.0.0" />
+    <PackageReference Include="Bansi.System" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

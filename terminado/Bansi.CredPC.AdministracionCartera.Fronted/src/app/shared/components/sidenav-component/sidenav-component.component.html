@@ -1,0 +1,114 @@
+<!-- Sidebar -->
+<div class="flex h-screen overflow-hidden bg-background">
+  <div [ngClass]="{'sidebar': true,'collapsed': sideNavCollapsed(),'expanded': !sideNavCollapsed()}">
+
+    <!-- Logo -->
+    <div class="flex items-center justify-center mt-8" (click)="navigateToHome()">
+      <img [src]="profilePic()" [ngClass]="{ 'w-12 h-16': !sideNavCollapsed(), 'w-10 h-10': sideNavCollapsed() }"
+        alt="Logo Bansi" />
+    </div>
+
+    <!-- Menú dinámico -->
+    <div class="sidenav-container" [class.collapsed]="sideNavCollapsed()">
+      <!-- Iteración del menú principal -->
+      <div class="menu-content">
+        <mat-nav-list>
+          <div *ngFor="let level1Item of menuItems">
+
+            <!-- Nivel 1 -->
+            <a class="menu-item" mat-list-item (click)="onMenuPrincipalClick(level1Item, $event)"
+              matTooltip="{{ level1Item.name }}" [matTooltipDisabled]="!sideNavCollapsed() " matTooltipPosition="right"
+              matTooltipClass="custom-tooltip" [routerLink]="level1Item.route" routerLinkActive #rla="routerLinkActive"
+              [activated]="rla.isActive" [class.active-item]="selectedIndexMenu === level1Item.id">
+              <mat-icon class="iconos-item" matListItemIcon>{{ level1Item.icon}}</mat-icon>
+              <span matListItemTitle *ngIf="!sideNavCollapsed()" class="label-item">{{ level1Item.name }}</span>
+              <span matListItemMeta *ngIf="level1Item.subMenu">
+                <mat-icon class="flecha-item" *ngIf="!sideNavCollapsed()">
+                  {{ activeMenuIndex === level1Item.id && level1Item.expanded ? 'expand_less' : 'expand_more' }}
+                </mat-icon>
+              </span>
+            </a>
+
+            <!-- Contenedor para niveles 2 y 3 -->
+            <div *ngIf="level1Item.expanded &&  activeMenuIndex === level1Item.id" class="submenu-container">
+              <!-- Nivel 2 -->
+              <mat-nav-list *ngFor="let level2Item of level1Item.subMenu">
+                <a class="menu-item" mat-list-item matTooltip="{{ level2Item.name }}"
+                  [matTooltipDisabled]="!sideNavCollapsed()" matTooltipPosition="right" matTooltipClass="custom-tooltip"
+                  (click)="onSubMenuClick(level2Item, $event)" class="level2" [routerLink]="level2Item.route"
+                  routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive"
+                  [class.active-item]=" selectedIndexSubMenu === level2Item.id">
+                  <mat-icon class="iconos-item" matListItemIcon>{{ level2Item.icon}}</mat-icon>
+                  <span matListItemTitle *ngIf="!sideNavCollapsed()" class="label-item">{{ level2Item.name }}</span>
+                  <span matListItemMeta *ngIf="level2Item.subMenu">
+                    <mat-icon class="flecha-item" *ngIf="!sideNavCollapsed()">
+                      {{ activeSubmenuIndex === level2Item.id && level2Item.expanded ? 'expand_less' : 'expand_more' }}
+                    </mat-icon>
+                  </span>
+                </a>
+
+                <!-- Nivel 3 -->
+                <mat-nav-list class="etiqueta-submenu"
+                  *ngIf="level2Item.expanded && !sideNavCollapsed() && activeSubmenuIndex === level2Item.id"
+                  class="level3-container">
+                  <div *ngFor="let level3Item of level2Item.subMenu">
+                    <a mat-list-item [routerLink]="level3Item.route" routerLinkActive="selected-subitem-active"
+                      #rla="routerLinkActive" [activated]="rla.isActive" class="level3">
+                      <mat-icon matListItemIcon>{{ level3Item.icon }}</mat-icon>
+                      <span matListItemTitle>{{ level3Item.name }}</span>
+                    </a>
+                  </div>
+                </mat-nav-list>
+
+                <!-- PINTAMOS EL SUBMENU CUANDO ESTA COLAPSADO -->
+                <div *ngIf="activeSubmenuIndex === level2Item.id && sideNavCollapsed() && level2Item.subMenu"
+                  [ngStyle]="{ top: 174 + 'px', left: 95 + 'px' }"
+                  class="position-fixed z-50 bg-white border-2 border-bansi-gris shadow-lg w-64"
+                  (mouseleave)="closeModalSubMenu()">
+                  <div class="bg-bansi-sidebar-gradient-invert mb-2 p-2 text-white">
+                    {{ level2Item.name }}
+                  </div>
+                  <div *ngFor="let subItem of level2Item.subMenu"
+                    class="m-1 p-2 hover:bg-bansi-sidebar-gradient cursor-pointer">
+                    <button class="flex items-center gap-2 border-0 bg-transparent" [routerLink]="subItem.route">
+                      <mat-icon matListItemIcon class="h-5 w-5">{{ level2Item.icon }}</mat-icon>
+                      {{ subItem.name }}
+                    </button>
+                  </div>
+                </div>
+
+              </mat-nav-list>
+            </div>
+
+          </div>
+
+          <!-- Salir de la aplicación -->
+          <div class="exit-menu-container" (click)="logOut()">
+            <a class="menu-item" mat-list-item matTooltip="Salir"
+              [matTooltipDisabled]="!sideNavCollapsed() || activeSubmenuIndex !== null" matTooltipPosition="right"
+              matTooltipClass="custom-tooltip">
+              <mat-icon matListItemIcon>power_settings_new</mat-icon>
+              @if(!sideNavCollapsed()){
+              <span matListItemTitle>Salir</span>
+              }
+            </a>
+          </div>
+
+          <!-- ****************************************************************** -->
+        </mat-nav-list>
+      </div>
+
+      <!-- *****  Colapsar Menú -->
+      <div class="toggle-button">
+        <mat-icon (click)="onMenuClick()" matTooltip="Mostrar menú"
+          [matTooltipDisabled]="!sideNavCollapsed() || activeSubmenuIndex !== null" matTooltipPosition="right"
+          matTooltipClass="menu-tooltip">
+          {{ sideNavCollapsed() ? 'keyboard_arrow_right' : 'keyboard_arrow_left' }}
+        </mat-icon>
+        <span class="menu-text" (click)="onMenuClick()">{{ sideNavCollapsed() ? '' :
+          'Ocultar menú' }}</span>
+      </div>
+      <!-- ****************************************************************** -->
+    </div>
+  </div>
+</div>

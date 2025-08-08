@@ -1,0 +1,550 @@
+[
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.BitacoraController",
+    "Method": "ObtenerColumnasReportes",
+    "RelativePath": "api/Bitacora/ObtenerColumnasReportes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ObtenerColumnasReportesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ObtenerColumnasReportesResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "AplicarSolicitudCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/AplicarSolicitudCambioCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "AutorizarSolicitudCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/AutorizarSolicitudCambioCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "CancelarSolicitudCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/CancelarSolicitudCambioCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ConsultarCuentasAsociadasCredito",
+    "RelativePath": "api/ModificacionCuenta/ConsultarCuentasAsociadasCredito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarCuentasAsociadasCreditoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarCuentasAsociadasCreditoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ConsultarInformacionCliente",
+    "RelativePath": "api/ModificacionCuenta/ConsultarInformacionCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarInformacionClienteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarInformacionClienteResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ConsultarInformacionCredito",
+    "RelativePath": "api/ModificacionCuenta/ConsultarInformacionCredito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarInformacionCreditoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarInformacionCreditoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ConsultarInformacionCuenta",
+    "RelativePath": "api/ModificacionCuenta/ConsultarInformacionCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarInformacionCuentaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarInformacionCuentaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ConsultarSolicitudesCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/ConsultarSolicitudesCambioCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarSolicitudesCambioCuentaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarSolicitudesCambioCuentaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ObtenerEstatusSolicitudCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/ObtenerEstatusSolicitudCambioCuenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ObtenerEstatusSolicitudCambioCuentaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ObtenerNaturalezas",
+    "RelativePath": "api/ModificacionCuenta/ObtenerNaturalezas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ObtenerNaturalezasResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ObtenerTiposCuentas",
+    "RelativePath": "api/ModificacionCuenta/ObtenerTiposCuentas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ObtenerTiposCuentasResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "RegistrarSolicitudCambioCuenta",
+    "RelativePath": "api/ModificacionCuenta/RegistrarSolicitudCambioCuenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.RegistrarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.RegistrarSolicitudResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ValidarCuentaPermiteAbono",
+    "RelativePath": "api/ModificacionCuenta/ValidarCuentaPermiteAbono",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ValidarCuentaPermiteAbonoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionCuentaController",
+    "Method": "ValidarCuentaPermiteCargo",
+    "RelativePath": "api/ModificacionCuenta/ValidarCuentaPermiteCargo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ValidarCuentaPermiteCargoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "AplicarSolicitudCambioLinea",
+    "RelativePath": "api/ModificacionLinea/AplicarSolicitudCambioLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "AutorizarSolicitudCambioLinea",
+    "RelativePath": "api/ModificacionLinea/AutorizarSolicitudCambioLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "CancelarSolicitudCambioLinea",
+    "RelativePath": "api/ModificacionLinea/CancelarSolicitudCambioLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ProcesarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.GenericServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "ConsultarInformacionLinea",
+    "RelativePath": "api/ModificacionLinea/ConsultarInformacionLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarInformacionLineaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarInformacionLineaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "ConsultarSolicitudesCambioLinea",
+    "RelativePath": "api/ModificacionLinea/ConsultarSolicitudesCambioLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.ConsultarSolicitudesCambioLineaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ConsultarSolicitudesCambioLineaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.ModificacionLineaController",
+    "Method": "RegistrarSolicitudCambioLinea",
+    "RelativePath": "api/ModificacionLinea/RegistrarSolicitudCambioLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceRequests.RegistrarSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.RegistrarSolicitudResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bansi.CredPC.ModificaCredito.Service.Controllers.SecurityController",
+    "Method": "GetVersionDate",
+    "RelativePath": "api/Security/GetVersionDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Bansi.CredPC.ModificaCredito.Service.Modelo.Service.ServiceResponses.ObtenerFechaVersionResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

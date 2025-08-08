@@ -1,0 +1,2517 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Bansi.CredPC.ModificaCredito.Service",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Bitacora/ObtenerColumnasReportes": {
+      "post": {
+        "tags": [
+          "Bitacora"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerColumnasReportesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerColumnasReportesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerColumnasReportesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerColumnasReportesResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerColumnasReportesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerColumnasReportesResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ConsultarSolicitudesCambioCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioCuentaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/RegistrarSolicitudCambioCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/CancelarSolicitudCambioCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/AutorizarSolicitudCambioCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/AplicarSolicitudCambioCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ObtenerEstatusSolicitudCambioCuenta": {
+      "get": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerEstatusSolicitudCambioCuentaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerEstatusSolicitudCambioCuentaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerEstatusSolicitudCambioCuentaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ObtenerNaturalezas": {
+      "get": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerNaturalezasResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerNaturalezasResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerNaturalezasResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ObtenerTiposCuentas": {
+      "get": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerTiposCuentasResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerTiposCuentasResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerTiposCuentasResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ConsultarInformacionCredito": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCreditoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCreditoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCreditoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCreditoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCreditoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCreditoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ConsultarCuentasAsociadasCredito": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarCuentasAsociadasCreditoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ConsultarInformacionCliente": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionClienteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionClienteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionClienteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionClienteResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionClienteResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionClienteResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ConsultarInformacionCuenta": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCuentaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCuentaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionCuentaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCuentaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCuentaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionCuentaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ValidarCuentaPermiteAbono": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteAbonoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteAbonoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteAbonoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionCuenta/ValidarCuentaPermiteCargo": {
+      "post": {
+        "tags": [
+          "ModificacionCuenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteCargoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteCargoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarCuentaPermiteCargoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/ConsultarInformacionLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionLineaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionLineaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarInformacionLineaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionLineaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionLineaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarInformacionLineaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/ConsultarSolicitudesCambioLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultarSolicitudesCambioLineaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/RegistrarSolicitudCambioLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarSolicitudResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/CancelarSolicitudCambioLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/AutorizarSolicitudCambioLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ModificacionLinea/AplicarSolicitudCambioLinea": {
+      "post": {
+        "tags": [
+          "ModificacionLinea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcesarSolicitudRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGenericServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Security/GetVersionDate": {
+      "get": {
+        "tags": [
+          "Security"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerFechaVersionResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerFechaVersionResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObtenerFechaVersionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BooleanGenericServiceResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Cliente": {
+        "type": "object",
+        "properties": {
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatusCte": {
+            "type": "string",
+            "nullable": true
+          },
+          "rfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPersona": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCliente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarCuentasAsociadasCreditoRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarCuentasAsociadasCreditoResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CuentaAsociadaCredito"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionClienteRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionClienteResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "$ref": "#/components/schemas/Cliente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionCreditoRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionCreditoResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreditoMinistrado"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionCuentaRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCuenta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionCuentaResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "$ref": "#/components/schemas/Cuenta"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionLineaRequest": {
+        "type": "object",
+        "properties": {
+          "numeroLinea": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarInformacionLineaResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Linea"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarSolicitudesCambioCuentaRequest": {
+        "type": "object",
+        "properties": {
+          "idStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarSolicitudesCambioCuentaResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SolicitudCambioCuenta"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarSolicitudesCambioLineaRequest": {
+        "type": "object",
+        "properties": {
+          "idEstatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistroInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaRegistroFin": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultarSolicitudesCambioLineaResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SolicitudCambioLinea"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreditoMinistrado": {
+        "type": "object",
+        "properties": {
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatusCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "periodoPlazo": {
+            "type": "string",
+            "nullable": true
+          },
+          "plazo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ejecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaApertura": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaMinistracion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "montoOtorgado": {
+            "type": "number",
+            "format": "double"
+          },
+          "montoMinistrado": {
+            "type": "number",
+            "format": "double"
+          },
+          "sucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "factoraje": {
+            "type": "string",
+            "nullable": true
+          },
+          "existenSolicitudesPendientesAutorizar": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Cuenta": {
+        "type": "object",
+        "properties": {
+          "cuentaCheques": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPersonaCte": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatusCte": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CuentaAsociadaCredito": {
+        "type": "object",
+        "properties": {
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "codTipoCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "codNaturaleza": {
+            "type": "string",
+            "nullable": true
+          },
+          "naturaleza": {
+            "type": "string",
+            "nullable": true
+          },
+          "aplicacionCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "esProductoChequesCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuentaCheques": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleSolicitudCambioCuenta": {
+        "type": "object",
+        "properties": {
+          "clavenaturaleza": {
+            "type": "string",
+            "nullable": true
+          },
+          "clavetipocuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "coddivctanueva": {
+            "type": "string",
+            "nullable": true
+          },
+          "coddivctaoriginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "codpdctoctanueva": {
+            "type": "string",
+            "nullable": true
+          },
+          "codpdctoctaoriginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuentanueva": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuentaoriginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "descdivctanueva": {
+            "type": "string",
+            "nullable": true
+          },
+          "descdivctaoriginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "descpdctoctanueva": {
+            "type": "string",
+            "nullable": true
+          },
+          "descpdctoctaoriginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "iddetalle": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idsolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "naturaleza": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipocuenta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleSolicitudCambioLinea": {
+        "type": "object",
+        "properties": {
+          "idDetalle": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "montoOriginal": {
+            "type": "number",
+            "format": "double"
+          },
+          "montoNuevo": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstatusSolicitudCambioCuenta": {
+        "type": "object",
+        "properties": {
+          "idEstatusSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionEstatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fechas": {
+        "type": "object",
+        "properties": {
+          "fechaHoy": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaAnt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "proxFecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "priDiaNaturalMes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "priDiaHabilMes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ultDiaNaturalMes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ultDiaHabilMes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Linea": {
+        "type": "object",
+        "properties": {
+          "numeroLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "codProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "montoAutorizado": {
+            "type": "number",
+            "format": "double"
+          },
+          "montoUtilizado": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaAlta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaAutorizacionLinea": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "plazoDias": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "descProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "descDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "descEstatusLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "existenSolicitudesPendientesAutorizar": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Naturaleza": {
+        "type": "object",
+        "properties": {
+          "claveNaturaleza": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcionNaturaleza": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerColumnasReportesRequest": {
+        "type": "object",
+        "properties": {
+          "idTipoReporte": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerColumnasReportesResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReporteDetalleColumnas"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerEstatusSolicitudCambioCuentaResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EstatusSolicitudCambioCuenta"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerFechaVersionResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "$ref": "#/components/schemas/Fechas"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerNaturalezasResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Naturaleza"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerTiposCuentasResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TipoCuenta"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcesarSolicitudRequest": {
+        "type": "object",
+        "properties": {
+          "idSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrarSolicitudRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioSolicita": {
+            "type": "string",
+            "nullable": true
+          },
+          "idStatusSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detalleSolicitud": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetalleSolicitudCambioCuenta"
+            },
+            "nullable": true
+          },
+          "detalleSolicitudCambioLinea": {
+            "$ref": "#/components/schemas/DetalleSolicitudCambioLinea"
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrarSolicitudResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": "000",
+            "nullable": true
+          },
+          "failure": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "default": true
+          },
+          "displayableError": {
+            "type": "boolean",
+            "default": true
+          },
+          "userMessage": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "systemNumber": {
+            "type": "string",
+            "default": null,
+            "nullable": true
+          },
+          "operationResultItem": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReporteDetalleColumnas": {
+        "type": "object",
+        "properties": {
+          "idDetalle": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTipoReporte": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "columnaVisible": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportHeader": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SolicitudCambioCuenta": {
+        "type": "object",
+        "properties": {
+          "idSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTipoSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionTipoSolicitud": {
+            "type": "string",
+            "nullable": true
+          },
+          "idEstatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "productoCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcionProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ejecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioSolicita": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaSolicitud": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioAutoriza": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaAutorizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "comentarios": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalleSolicitud": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetalleSolicitudCambioCuenta"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SolicitudCambioLinea": {
+        "type": "object",
+        "properties": {
+          "idSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTipoSolicitud": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionTipoSolicitud": {
+            "type": "string",
+            "nullable": true
+          },
+          "idEstatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "codProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "descProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "descDivisa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEjecutivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreSucursal": {
+            "type": "string",
+            "nullable": true
+          },
+          "montoAutorizado": {
+            "type": "number",
+            "format": "double"
+          },
+          "montoUtilizado": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaAlta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaAutorizacionLinea": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "plazoDias": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estatusLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "descEstatusLinea": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioSolicita": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaSolicitud": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioAutoriza": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaAutorizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "comentarios": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalleSolicitudCambioLinea": {
+            "$ref": "#/components/schemas/DetalleSolicitudCambioLinea"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoCuenta": {
+        "type": "object",
+        "properties": {
+          "claveTipoCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcionTipoCuenta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidarCuentaPermiteAbonoRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCuenta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidarCuentaPermiteCargoRequest": {
+        "type": "object",
+        "properties": {
+          "numeroCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCredito": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

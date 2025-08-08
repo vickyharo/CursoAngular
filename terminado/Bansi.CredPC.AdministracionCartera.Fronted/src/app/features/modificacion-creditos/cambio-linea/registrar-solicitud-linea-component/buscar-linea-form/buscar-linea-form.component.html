@@ -1,0 +1,144 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<section style="padding: 10px">
+
+  <div *ngIf="tieneSolicitudesPendientesAutorizar" class="container">
+    <app-boot-alerta mensaje="Existe 1 solicitud pendiente de aplicar" color="alert-warning"></app-boot-alerta>
+  </div>
+
+  <!-- Filtro y botones -->
+  <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+    <div class="flex-grow-1">
+      <div class="bloque-busqueda">
+
+        <div class="row align-items-center g-2 w-100">
+          <div class="col-auto text-end">
+            <label class="form-label mb-0"> Número de Línea de Crédito </label>
+          </div>
+          <div class="col">
+            <input matInput #numberCredit class="form-control campo-busqueda" maxlength="{{maxLengthNumeroLinea}}"
+              autocomplete="off" [(ngModel)]="txtBuscarNumeroLinea" (keypress)="ValidateNumericInput($event)"
+              (keydown.enter)="BuscarInformacionLinea()" (paste)="AllowPasteOnlyNumbers($event)"
+              [placeholder]="'Buscar...'" />
+          </div>
+          <div class="col-auto">
+            <button (click)="BuscarInformacionLinea()" class="btn-busqueda"
+              matTooltip="Relizar Búsqueda de Línea de Crédito">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 me-1">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+              </svg>
+              Buscar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Informacion de la línea de credito -->
+  <div class="rounded-lg border border-bansi-gris-claro my-2 px-2">
+    <div class="mb-2 rounded bg-white text-bansi-azul">
+
+      <!-- Encabezado -->
+      <h2 class="h6 fw-bold border-bottom pb-2 mb-3">Información de la Línea de Crédito</h2>
+
+      <!-- Fila 1 -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Número</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtNumeroLinea" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Número de Cliente</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtCliente" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Ejecutivo</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtEjecutivo" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Estatus</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtEstatus" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Sucursal</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtSucursal" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Producto</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtProducto" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="row g-3">
+        <div class="col-md-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Divisa</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtDivisa" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Monto Autorizado</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtMontoAutorizado | currency" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Monto Utilizado</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtMontoUtilizado | currency" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Plazo</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtPlazoDias" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Fila 4 -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Fecha de Alta</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtFechaAlta | date:'dd-MM-YYY'" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Fecha de Vencimiento</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtFechaVencimiento  | date:'dd-MM-YYY'" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Fecha de Autorización</mat-label>
+            <input matInput type="text" readonly [ngModel]="txtFechaAutorizacionLinea | date:'dd-MM-YYY'" />
+          </mat-form-field>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

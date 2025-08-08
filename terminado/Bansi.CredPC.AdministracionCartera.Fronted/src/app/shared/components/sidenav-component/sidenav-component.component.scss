@@ -1,0 +1,239 @@
+::ng-deep .mat-sidenav {
+  background: rgb(34, 42, 61);
+  background: linear-gradient(280deg, rgba(34, 42, 61, 1) 0%, rgba(33, 103, 178, 1) 100%);
+}
+
+.profile-image {
+  border-radius: 5% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+mat-list a {
+  padding-left: 33px !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  height: 45px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: 1.3rem !important;
+}
+
+mat-list a span {
+  font-size: 0.9rem !important;
+}
+
+mat-icon {
+  font-size: 1.3rem;
+  color: #c2c2c2 !important;
+}
+
+mat-nav-list a span {
+  color: #f2f2f2 !important;
+  font-size: 0.8rem;
+}
+
+.etiqueta-submenu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  mat-icon {
+    padding-top: 5px !important;
+    font-size: 1.3rem !important;
+  }
+
+  span {
+    font-size: 0.8rem !important;
+  }
+
+  a .mat-list-item {
+    height: 32px !important;
+  }
+}
+
+.iconos-item {
+  padding-top: 4px !important;
+  margin-right: 0 !important;
+}
+
+.label-item {
+  margin-left: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.flecha-item {
+  padding-top: 2px !important;
+  position: absolute !important;
+  right: 2px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.toggle-button {
+  position: fixed !important;
+  bottom: 10px !important;
+  left: 0 !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding: 10px 16px !important;
+  font-size: 1rem !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+
+  mat-icon {
+    padding-top: 3px !important;
+  }
+}
+
+.menu-text {
+  margin-left: 16px !important;
+  font-size: 0.9rem !important;
+  color: #f2f2f2 !important;
+}
+
+.sidenav-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 75vh !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.menu-content {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding-bottom: 60px !important;
+}
+
+.sidenav-container.collapsed mat-icon {
+  font-size: 1.4rem !important;
+}
+
+.sidenav-container.collapsed {
+  margin-top: 2.5rem !important;
+  margin-left: 0.7rem !important;
+  color: #ED811B !important;
+}
+
+.active-item {
+  color: #ED811B !important;
+}
+
+.active-item .iconos-item {
+  color: #ED811B !important;
+}
+
+.active-item .flecha-item {
+  color: #ED811B !important;
+}
+
+.active-item [matListItemTitle] {
+  color: #ED811B !important;
+}
+
+.selected-subitem-active {
+  background-color: transparent !important;
+}
+
+::ng-deep .mat-mdc-list-item {
+  height: 36px !important;
+}
+
+::ng-deep .custom-tooltip {
+  --mdc-plain-tooltip-container-color: #f2f2f2 !important;
+  --mdc-plain-tooltip-supporting-text-color: #000000 !important;
+}
+
+::ng-deep .menu-tooltip {
+  --mdc-plain-tooltip-container-color: #f2f2f2 !important;
+  --mdc-plain-tooltip-supporting-text-color: #000000 !important;
+  transform: translateX(20px) !important;
+}
+
+.dropdown-menu {
+  position: fixed !important;
+  left: 4.3rem !important;
+  height: auto !important;
+  background-color: #f2f2f2 !important;
+  border-radius: 4px !important;
+  display: block !important;
+  z-index: 1000 !important;
+  font-size: 0.9rem !important;
+  color: rgb(5, 6, 6) !important;
+  transform: translateY(-35px) !important;
+}
+
+.dropdown-menu a {
+  border-radius: 0 !important;
+}
+
+.dropdown {
+  color: #000000 !important;
+  font-size: 0.8rem !important;
+}
+
+.sidenav-header {
+  padding-top: 30px !important;
+  padding-bottom: 10px !important;
+}
+
+mat-nav-list a span {
+  font-size: 1rem !important;
+  font-weight: normal !important;
+}
+
+mat-list a mat-icon,
+mat-nav-list a mat-icon,
+.dropdown-menu mat-icon {
+  margin-left: 8px;
+}
+
+mat-list a span,
+mat-nav-list a span,
+.dropdown-menu span,
+.dropdown-menu p {
+  margin-left: 0 !important;
+}
+
+.home:hover {
+  cursor: pointer !important;
+}
+
+mat-nav-list a:hover {
+  background-color: rgb(11, 88, 172) !important;
+}
+
+.menu-item {
+  margin-top: 10px !important;
+}
+
+.submenu-container {
+  margin-left: 16px !important;
+  border-left: 1px solid #e0e0e0 !important;
+  padding-left: 8px !important;
+}
+
+.level2 {
+  padding-left: 16px !important;
+}
+
+.level3-container {
+  margin-left: 16px !important;
+  padding-left: 8px !important;
+}
+
+.level3 {
+  padding-left: 16px !important;
+}
+
+mat-list-item {
+  cursor: pointer !important;
+  transition: background-color 0.2s !important;
+}

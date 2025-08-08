@@ -1,0 +1,89 @@
+<!-- Mostrar spinner mientras carga informacion -->
+<app-bsi-spinner *ngIf="spinnerService.isLoading$ | async" [isVisible]="true"></app-bsi-spinner>
+
+<section style="padding: 10px">
+
+  <!-- Filtros -->
+  <div class="rounded-lg border border-bansi-gris-claro my-2 px-2">
+    <div class="mb-2 rounded bg-white text-bansi-azul">
+
+      <!-- Encabezado -->
+      <h2 class="h6 fw-bold border-bottom pb-2 mb-3">Filtros</h2>
+
+      <!-- Fila 1 -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Fecha de Inicio</mat-label>
+            <input matInput class="form-control" [matDatepicker]="picker1" [(ngModel)]="txtFechaInicio"
+              (ngModelChange)="CambioFechaInicio($event)" readonly="true">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 disabled="false">
+            </mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Fecha de Fin</mat-label>
+            <input matInput class="form-control" [matDatepicker]="picker2" [(ngModel)]="txtFechaFin"
+              (ngModelChange)="CambioFechaFin($event)" readonly="true">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 disabled="false">
+            </mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Número de Crédito</mat-label>
+            <input matInput type="text" [(ngModel)]="txtNumeroCredito" placeholder="Número de crédito"
+              maxlength="{{maxLengthNumeroCredito}}" autocomplete="on" (keypress)="ValidateNumericInput($event)"
+              (paste)="AllowPasteOnlyNumbers($event)" />
+          </mat-form-field>
+
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Estatus de la Solicitud</mat-label>
+            <mat-select readonly [(ngModel)]="txtEstatusCombo">
+              @if (estatusComboLista.length>0) {
+              <mat-option></mat-option>
+              <mat-option *ngFor="let op of estatusComboLista" [value]="op.idEstatusSolicitud">
+                {{op.descripcionEstatus}}
+              </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Boton buscar -->
+      <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+        <div class="flex-grow-1">
+          <div class="bloque-busqueda">
+
+            <div class="row align-items-right g-2 w-100">
+              <div class="col-auto">
+                <button (click)="EnvioFormulario()" class="btn-busqueda" matTooltip="Realizar búsqueda de solicitudes">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 me-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                  </svg>
+                  Buscar
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,12 @@
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\bin\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.deps.json
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\bin\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\bin\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.pdb
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.csproj.AssemblyReference.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.GeneratedMSBuildEditorConfig.editorconfig
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.AssemblyInfoInputs.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.AssemblyInfo.cs
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.csproj.CoreCompileInputs.cache
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\refint\Bansi.CredPC.ModificaCredito.Service.Modelo.dll
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\Bansi.CredPC.ModificaCredito.Service.Modelo.pdb
+C:\EDM\grpmodificacredito\fuentes\Bansi.CredPC.ModificaCredito.Service\Bansi.CredPC.ModificaCredito.Service.Modelo\obj\Debug\net6-windows\ref\Bansi.CredPC.ModificaCredito.Service.Modelo.dll

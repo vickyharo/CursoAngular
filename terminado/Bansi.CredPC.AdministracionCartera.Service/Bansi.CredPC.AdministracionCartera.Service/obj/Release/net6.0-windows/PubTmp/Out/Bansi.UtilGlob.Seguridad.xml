@@ -1,0 +1,3919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bansi.UtilGlob.Seguridad</name>
+    </assembly>
+    <members>
+        <member name="F:Bansi.UtilGlob.Seguridad.Helper.MnemotecnicosHardcodedHelper.listaProgramFilesBsiUtilGlobHardcoded">
+            <summary>
+            Ruta de instalación de utilerias globales
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Helper.ModuleIntegrityHelper">
+            <summary>
+            Clase ayudante para la validacion de la integridad de los modulos.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Helper.ModuleIntegrityHelper.Validate(System.String)">
+            <summary>
+            Valida la integridad de todos los modulos referenciados.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Helper.ModuleIntegrityHelper.ValidateCurrentModule">
+            <summary>
+            Valida la integridad de todos los modulos referenciados.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Helper.ModuleIntegrityHelper.Validate(Bansi.UtilGlob.Seguridad.SecurityServiceReference.ValidacionClaveHashModulosPeticion)">
+            <summary>
+            Valida la integridad de todos los modulos referenciados.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Helper.ServiceHelper">
+            <summary>
+            Helper para conectarnos al servicio web TokenValidation.svc
+            EDM: P-0372
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.Helper.MnemotecnicosHelper.listaProgramFiles">
+            <summary>
+            Ruta de instalación de aplicaciones Bansí
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.Helper.MnemotecnicosHelper.listaProgramFilesBsiUtilGlob">
+            <summary>
+            Ruta de instalación de utilerias globales
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Helper.MnemotecnicosHelper.ReemplazarMnemotecnicos(System.String,System.Boolean)">
+            <summary>
+            Reemplaza todos los mnemotecnicos de rutas de ejecutables
+            </summary>
+            <param name="filename">Ruta del ejecutable</param>
+            <param name="ignorarSiNoExiste">Verdadero retorna la ruta si el directorio existe aún cuando no contenga el ejecutable</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.InformacionSesion">
+            <summary>
+            Proporciona información de las sesiones de usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSesion.NombreExe">
+            <summary>
+            Nombre del ejecutable dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSesion.UsuarioId">
+            <summary>
+            Identificador del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSesion.ExisteLigaRepresentacion">
+            <summary>
+            Existe liga de representación
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSesion.UsuarioRepresentado">
+            <summary>
+            Usuarior Rpresentado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSesion.Estacion">
+            <summary>
+            Estación desde la que se logeo un usuario
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Properties.Resources.Aceptar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Properties.Resources.Cancelar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Properties.Resources.llave">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Constantes.CacheConsts">
+            <summary>
+            Constantes relativas a la cache de la aplicación.
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.Constantes.CacheConsts.GUID">
+            <summary>
+            Constante para la cache.
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.Constants.ParameterConsts.APP_TITLE_REPSRV">
+            Parametro que contiene el App.Title de McRepSrv
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.AccesoActiveDirectory">
+            <summary>
+            Da facilidades de acceso al active directory
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoActiveDirectory.ObtenerGruposActiveDirectory(System.String)">
+            <summary>
+            Obtiene todos los usuarios de un grupo.
+            </summary>
+            <param name="username">Usuario del dominio</param>
+            <returns>Grupos del active directory</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.AccesoSecurity">
+            <summary>
+            Proporciona servicios de seguridad,para acceder a aplicaciones Bansi
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.AccesoSecurity.ThreadDbConnection">
+            <summary>
+            Conexión persistente en lo que dure el objeto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.#ctor(System.Boolean)">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.#ctor(Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones)">
+            <summary>
+            Contructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.#ctor">
+            <summary>
+            Contructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.#ctor(Bansi.Data.ThreadDbConnectionScopeOption)">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.Finalize">
+            <summary>
+            Use C# destructor syntax for finalization code.
+            This destructor will run only if the Dispose method
+            does not get called.
+            It gives your base class the opportunity to finalize.
+            Do not provide destructors in types derived from this class.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.Dispose">
+            <summary>
+            Metodo Dispose del elemento
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.Dispose(System.Boolean)">
+            <summary>
+            Dispose(bool disposing) executes in two distinct scenarios.
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the
+            runtime from inside the finalizer and you should not reference
+            other objects. Only unmanaged resources can be disposed.
+            </summary>
+            <param name="disposing">Indica si la llama a disposing fue explicita</param>
+            <remarks>
+            09/11/2011, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.DisposeThreadDbConnection">
+            <summary>
+            Libera el objeto ThreadDbConnection
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ConfigurarOpcion(Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Obtiene el ID de una opcion
+            </summary>
+            <returns>Opcion</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ConfigurarModulo(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene el ID de un modulo
+            </summary>
+            <returns>Id del modulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ConfigurarModulo(Bansi.UtilGlob.Seguridad.Modulo,System.Boolean)">
+            <summary>
+            Obtiene el ID de un modulo
+            </summary>
+            <returns>Id del modulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerModuloIdPorOpcionId(System.Int32)">
+            <summary>
+            Obtiene el módulo al que pertenece una opción
+            </summary>
+            <param name="opcionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.EliminaCarpetasVacias(Bansi.UtilGlob.Seguridad.MenuGrafico)">
+            <summary>
+            Elimina las carpetas vacías
+            </summary>
+            <param name="menuGrafico"></param>
+            <returns></returns>
+            <remarks>
+            Creación: wcervantes 02/09/2013
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.CreaMenu(System.Collections.Generic.List{Bansi.UtilGlob.Seguridad.MenuGrafico},Bansi.UtilGlob.Seguridad.MenuGrafico,Bansi.UtilGlob.Seguridad.MenuGrafico)">
+            <summary>
+            Crea el arbol de menús
+            </summary>
+            <param name="listaMenus"></param>
+            <param name="papa"></param>
+            <param name="raiz"></param>
+            <remarks>
+            Creación: wcervantes 30/08/2013
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.IniciarSesionUsuario(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            Permite iniciar la sesión de un usuario para un módulo determinado
+            </summary>
+            <param name="usuario">Usuario que desea ingresar a la aplicación</param>
+            <param name="modulo">Nombre del módulo al se desea ingresar</param>
+            <param name="password">Contraseña de la red para el usuario</param>
+            <param name="version">Versión del ejecutable desde el cual intenta entrar</param>
+            <param name="descripcionError">Indica el error ocurrido al tratar de ingresar</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarOpcionUsuario(System.String,System.String,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Valida si la opción de un módulo se encuentra disponible para un determinado usuario
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="modulo">Nombre del ejecutable al cual pertenece la opción</param>
+            <param name="opcion">Nombre del control que se desea validar</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.AgregarToken(Bansi.UtilGlob.Seguridad.AgregarTokenOpciones)">
+            <summary>
+            Inserta en un token en tblControlAcceso
+            </summary>
+            <param name="agregarObtenerToken">Opciones para validar</param>
+            <returns>Devuelve true o false caso de que haya insertado de forma correcta le token</returns>
+            <remarks>
+            11/09/2013, OMONTES: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPermiso(Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones[])">
+            <summary>
+            Valida el permiso de un usuario a una opción de security
+            </summary>
+            <param name="validarPermisoOpciones">Opciones para validar</param>
+            <returns>Devuelve true o false en caso de que tenga permisos o no, en caso de error genera una excepción</returns>
+            <remarks>
+            10/12/2014, OMONTES: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPermiso(System.Collections.Generic.IEnumerable{Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones})">
+            <summary>
+            Valida el permiso de un usuario a una opción de security
+            </summary>
+            <param name="validarPermisoOpciones">Opciones para validar</param>
+            <returns>Devuelve true o false en caso de que tenga permisos o no, en caso de error genera una excepción</returns>
+            <remarks>
+            10/12/2014, OMONTES: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPermisosTodos(Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones[])">
+            <summary>
+            Valida el permiso de un usuario a una opción de security
+            </summary>
+            <param name="validarPermisoOpciones">Opciones para validar</param>
+            <returns>Devuelve true o false en caso de que tenga permisos o no, en caso de error genera una excepción</returns>
+            <remarks>
+            10/12/2014, OMONTES: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPermisosTodos(System.Collections.Generic.IEnumerable{Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones})">
+            <summary>
+            Valida el permiso de un usuario a una opción de security
+            </summary>
+            <param name="validarPermisoOpciones">Opciones para validar</param>
+            <returns>Devuelve true o false en caso de que tenga permisos o no, en caso de error genera una excepción</returns>
+            <remarks>
+            10/12/2014, OMONTES: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfilesModulo(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="modulo">Nombre de ejecutable del cual se obtiene las opciones</param>
+            <returns>Arreglo con la información de las opciones disponibles</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfilesModulo(System.String)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="modulo">Nombre de ejecutable del cual se obtiene las opciones</param>
+            <returns>Arreglo con la información de las opciones disponibles</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPerteneceUsuarioPerfil(System.String,System.Int32,System.String)">
+            <summary>
+            Sirve para comprobar si un usuario pertenece o no a un perfil y modulo en concreto
+            </summary>
+            <param name="usuario">Nombre del usuario a validar</param>
+            <param name="perfil">Nombre del perfil a validar si coincide con el usuario</param>
+            <param name="modulo">Nombre del modulo de donde se encuentra el perfil a revizar</param>
+            <returns>Respuesta booleana si el usuario tiene ese perfil en ese modulo</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPerteneceUsuarioPerfil(Bansi.UtilGlob.Seguridad.InformacionUsuario,Bansi.UtilGlob.Seguridad.Perfil,Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Sirve para comprobar si un usuario pertenece o no a un perfil y modulo en concreto
+            </summary>
+            <param name="usuario">Nombre del usuario a validar</param>
+            <param name="perfil">Nombre del perfil a validar si coincide con el usuario</param>
+            <param name="modulo">Nombre del modulo de donde se encuentra el perfil a revizar</param>
+            <returns>Respuesta booleana si el usuario tiene ese perfil en ese modulo</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPerteneceUsuarioPerfil(Bansi.UtilGlob.Seguridad.InicioSesionOpciones,Bansi.UtilGlob.Seguridad.Perfil)">
+            <summary>
+            Sirve para comprobar si un usuario pertenece o no a un perfil y modulo en concreto
+            </summary>
+            <param name="inicioSesionOpciones">Objeto con el nombre del usuario y el modulo a validar</param>
+            <param name="perfil">Nombre del perfil a validar si coincide con el usuario</param>
+            <returns>Respuesta booleana si el usuario tiene ese perfil en ese modulo</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfilesUsuario(Bansi.UtilGlob.Seguridad.InformacionUsuario,Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Recuperar los perfiles a los que pertenece un usuario especifico.
+            </summary>
+            <param name="usuario">Nombre del Usuario identiicado</param>
+            <param name="modulo">objeto modulo donde se desea obtener los perfiles</param>
+            <returns>arreglo de perfiles que le pertenecen al usuario</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfilesUsuario(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Recuperar los perfiles a los que pertenece un usuario especifico.
+            </summary>
+            <param name="inicioSesionOpciones">objeto que contiene el nombre de usuario y el modulo donde se obtendran los perfiles</param>
+            <returns>arreglo de perfiles que le pertenecen al usuario</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuariosDepartamento(System.Int32)">
+            <summary>
+            Devuelve los usuarios de un departamento.
+            </summary>
+            <param name="departamentoId">id del departamento</param>
+            <returns>Objetos de tipo InformacionUsuario</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuariosModulo(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene una lista de usuarios que tienen acceso al módulo
+            </summary>
+            <param name="modulo">Módulo del que se obtendrá la lista de usuarios</param>
+            <returns>Devuelve una lista de InformacionUsuario de todos los usuarios que tienen acceso al módulo</returns>
+            <remarks>
+            16/08/2016, OHIDALGO: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuariosTodos(System.Boolean)">
+            <summary>
+            Obtiene una lista de todos los usuarios de bsisecurity
+            </summary>
+            <returns>Devuelve una lista de todos los usuarios de bsiSecurity</returns>
+            <param name="incluirUsuariosSistema"></param>
+            <remarks>
+            26/jun/2024, RCURIEL: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfilesUsuario(System.String,System.String)">
+            <summary>
+            Recuperar los perfiles a los que pertenece un usuario especifico.
+            </summary>
+            <param name="usuario">Nombre del Usuario identiicado</param>
+            <param name="modulo">modulo donde se desea obtener los perfiles</param>
+            <returns>arreglo de perfiles que le pertenecen al usuario</returns>
+            <remarks>
+            27/10/2011, OMAGANA: Creación, M-6935.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerMenuGrafico(Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones)">
+            <summary>
+            Obtiene un menu grafico, basado principalmente en un usuario.
+            </summary>
+            <param name="obtenerMenuGraficoOpciones">Opciones para cargar el menu</param>
+            <returns></returns>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerMenuGraficoRecientes(Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones)">
+            <summary>
+            Obtiene un menu grafico, basado principalmente en un usuario.
+            </summary>
+            <param name="obtenerMenuGraficoOpciones">Opciones para cargar el menu</param>
+            <returns></returns>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerMenuGraficoFrecuentes(Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones)">
+            <summary>
+            Obtiene un menu grafico, basado principalmente en un usuario.
+            </summary>
+            <param name="obtenerMenuGraficoOpciones">Opciones para cargar el menu</param>
+            <returns></returns>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerMenuGraficoFavoritos(Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones)">
+            <summary>
+            Obtiene un menu grafico, basado principalmente en un usuario.
+            </summary>
+            <param name="obtenerMenuGraficoOpciones">Opciones para cargar el menu</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuariosClientes(Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones)">
+            <summary>
+            Dado un Módulo u Opción con Permisos Especiales,
+            obtener la lista de InformacionUsuario de los Ejecutivos de los cuales el Usuario puede ver sus clientes
+            </summary>
+            <param name="obtenerUsuariosClienteOpciones">obtener Usuarios Cliente Opciones</param>
+            <returns>devuelve los Ejecutivos asignados a ese usuario</returns>
+            <remarks>
+            02/10/2013, GMENDEZ: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPkPerfiles(System.String)">
+            <summary>
+            Obtienes todos los Perfiles de acuerdo al Usuario de Security
+            </summary>
+            <param name="pUsuario">Usuario Security</param>
+            <returns>
+            int[] todos los perfiles relacionados al usuario de security
+            </returns>
+            /// <remarks>
+            25/10/2013, GMENDEZ: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidaPermisosUsuario(System.String[],Bansi.UtilGlob.Seguridad.Modulo[],Bansi.UtilGlob.Seguridad.Opcion[])">
+            <summary>
+            Valida si los usuarios tiene permiso al módulo o opción
+            </summary>
+            <param name="usuarios"></param>
+            <param name="modulos"></param>
+            <param name="opciones"></param>
+            <returns>
+            Creación: wcervantes 12/09/2013
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerSesionesAbiertas(System.String)">
+            <summary>
+            Obtiene todas las sesiones abiertas de un determinado módulo
+            </summary>
+            <param name="nombreModulo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerSesionAbierta(System.String,System.String)">
+            <summary>
+            Obtiene todas las sesiones abiertas de un determinado módulo y Usuario
+            </summary>
+            <param name="nombreModulo"></param>
+            <param name="usuarioId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.GuardarMenuFavoritos(System.String,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Guarda un elemento del menú favoritos de un usuario
+            </summary>
+            <param name="nombreModulo">Nombre del módulo</param>
+            <param name="usuarioId">Código de usuario</param>
+            <param name="alias">Alias</param>
+            <param name="moduloNuevaPosicionId">Identifica la nueva posición del módulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.EliminarMenuFavoritos(System.String,System.String)">
+            <summary>
+            Elimina un elemento del menú favoritos
+            </summary>
+            <param name="nombreModulo">Nombre del módulo</param>
+            <param name="usuarioId">Código de usuario</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerModulo(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            LLenar un objeto Modulo a partir de su ModuloId o NombreExe
+            </summary>
+            <param name="modulo">modulo</param>
+            <returns>Objeto de tipo Modulo</returns>
+            <remarks>
+            30 Agosto 2013, OMONT£S: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerModulo(Bansi.UtilGlob.Seguridad.Modulo,System.Boolean)">
+            <summary>
+            LLenar un objeto Modulo a partir de su ModuloId o NombreExe
+            </summary>
+            <param name="modulo">modulo</param>
+            <param name="usarCache">Si es true usa cache</param>
+            <returns>
+            Objeto de tipo Modulo
+            </returns>
+            <exception cref="T:System.ArgumentNullException">modulo</exception>
+            <exception cref="T:Bansi.ReturnCodeException">
+            </exception>
+            <remarks>
+            30 Agosto 2013, OMONT£S: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerModuloID(System.String)">
+            <summary>
+            Obtiene el ID de un modulo
+            </summary>
+            <returns>Id del modulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerOpcion(Bansi.UtilGlob.Seguridad.Opcion,System.Boolean)">
+            <summary>
+            LLenar un objeto Opcion a partir del nombre o id o descripcion de una opcion
+            </summary>
+            <param name="opcion">Objeto de tipo Opcion</param>
+            <param name="emergerError">Determina si emerge error en caso de no encontrar la opción</param>
+            <returns>Objeto de tipo Opcion</returns>
+            <remarks>
+            30 Agosto 2013, OMONT£S: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.RegistrarEnEventoBitacora(Bansi.UtilGlob.Seguridad.EventoBitacora)">
+            <summary>
+            Registra en la bitácora del Security la información de un determinado evento
+            </summary>
+            <param name="eventoBitacora">Objeto que almacena información de la máquina</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.RegistrarEventoEnBitacora(System.String,System.String,System.String,System.String)">
+            <summary>
+            Registra en la bitácora del Security la información de un determinado evento
+            </summary>
+            <param name="usuario">Nombre del usuario que registra el evento</param>
+            <param name="modulo">Nombre del ejecutable desde el cual se genera el evento</param>
+            <param name="operacion">Operación que se realiza</param>
+            <param name="detalle">Detalle del evento a registrar</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.RegistrarEventoEnBitacora(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Registra en la bitácora del Security la información de un determinado evento
+            </summary>
+            <param name="usuario">Nombre del usuario que registra el evento</param>
+            <param name="modulo">Nombre del ejecutable desde el cual se genera el evento</param>
+            <param name="operacion">Operación que se realiza</param>
+            <param name="detalle">Detalle del evento a registrar</param>
+            <param name="numeroCliente">Número de cliente</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.InsertarOpcion(System.String,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Inserta en el Security una opción para un determinado módulo
+            </summary>
+            <param name="modulo">Nombre del ejecutable al cual corresponde la opción</param>
+            <param name="opcion">Objeto que contiene la información de la opción a registrar</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.InsertarOpcion(System.String,Bansi.UtilGlob.Seguridad.Opcion[])">
+            <summary>
+            Registra en el security un arreglo de opciones para un determinado módulo
+            </summary>
+            <param name="modulo">Nombre del ejecutable al cual corresponden las opciones enviadas</param>
+            <param name="opciones">Arreglo de objetos que contienen la información de las opciones a registrar </param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.RegistrarOpcionSecurity(System.Int32,System.String,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Extrae la información de la objeto Opcion generar la llamada para registrar una opción en el security
+            </summary>
+            <param name="idModulo">ID del módulo para el cual se registra la opción</param>
+            <param name="modulo">Modulo</param>
+            <param name="opcion">Objeto Opcion que contiene la información de la opción a registrar</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.EliminarOpcionEspecial(System.String,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Elimina la opción para un determinado módulo
+            </summary>
+            <param name="modulo">Nombre del ejecutable al cual corresponden las opciones enviadas</param>
+            <param name="opcion">Arreglo de objetos que contienen la información de las opciones a registrar </param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarIntegridadModuloEntrada">
+            <summary>
+            Valida la integridad del modulo que se encuentra en ejecución
+            </summary>
+            <returns>IReturnCodeInformation.</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarIntegridadModulo(System.String)">
+            <summary>
+            Valida la inegracidad del modulo que se propocione como parametro.
+            </summary>
+            <returns>IReturnCodeInformation.</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerOpcionesUsuario(System.String,System.String,System.Int32)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="usuarioRepresentante">Usuario representante (si este existiera)</param>
+            <param name="moduloId">Id del modulo del cual se obtiene las opciones</param>
+            <returns>
+            Arreglo con la información de las opciones disponibles
+            </returns>
+            <exception cref="T:System.ArgumentNullException">usuario</exception>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerOpcionesUsuario(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="inicioSesionOpciones">Opciones de inicio de sesión de la cual se extraerán las opciones del usuario (pueden incluir vinculo de representación)</param>
+            <returns>Arreglo con la información de las opciones disponibles</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPermiso(Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones)">
+            <summary>
+            Valida el permiso de un usuario a una opción de security
+            </summary>
+            <param name="validarPermisoOpciones">Opciones para validar</param>
+            <returns>Devuelve true o false en caso de que tenga permisos o no, en caso de error genera una excepción</returns>
+            <remarks>
+            10/12/2014, OMONTES: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.EsPerfil(System.String,System.Int32)">
+            <summary>
+            Indica si un usuario es un tipo de perfil determinado.
+            </summary>
+            <param name="usuario"></param>
+            <param name="perfilId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerAuxiliados(System.String)">
+            <summary>
+            Obtiene una lista de usuarios a los que ayuda el auxiliar
+            </summary>
+            <param name="auxiliarId">Auxiliar</param>
+            <returns>Usuario auxiliados</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerAuxiliados(Bansi.UtilGlob.Seguridad.InformacionUsuario)">
+            <summary>
+            Obtiene una lista de usuarios a los que ayuda el auxiliar
+            </summary>
+            <param name="auxiliar">Auxiliar</param>
+            <returns>Usuario auxiliados</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerAuxiliares(System.String)">
+            <summary>
+            Obtener de una lista de los usuarios que auxilian al que se pase como parametro
+            </summary>
+            <param name="usuarioId">usuarios</param>
+            <returns>Auxiliares del usuario</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerAuxiliares(Bansi.UtilGlob.Seguridad.InformacionUsuario)">
+            <summary>
+            Obtener de una lista de los usuarios que auxilian al que se pase como parametro
+            </summary>
+            <param name="usuario">usuarios</param>
+            <returns>Auxiliares del usuario</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(Bansi.UtilGlob.Seguridad.EquivalenciaUsuario)">
+            <summary>
+            Obtiene la informacion sobre una posible equivalencia de usuario
+            </summary>
+            <param name="equivalenciaUsuario">Equivalencia del usuario (sin resolver)</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(System.Collections.Generic.IEnumerable{Bansi.UtilGlob.Seguridad.EquivalenciaUsuario})">
+            <summary>
+            Devuelve las equivalencias de una coleccion de usuario a usuarios de otros sistemas
+            </summary>
+            <param name="equivalenciaUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(System.Collections.Generic.IEnumerable{Bansi.UtilGlob.Seguridad.InformacionUsuario},System.String)">
+            <summary>
+            Devuelve las equivalencias de una colección de usuario a usuarios de otros sistemas
+            </summary>
+            <param name="informacionUsuario">Colección de elementos informacionUsuario</param>
+            <param name="sistemaDestino">El sistema destino.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(System.Collections.Generic.IEnumerable{Bansi.UtilGlob.Seguridad.InformacionUsuario},System.String,System.String)">
+            <summary>
+            Devuelve las equivalencias de una colección de usuario a usuarios de otros sistemas
+            </summary>
+            <param name="informacionUsuario">Colección de elementos informacionUsuario</param>
+            <param name="sistemaOrigen">El sistema origen</param>
+            <param name="sistemaDestino">El sistema destino.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(Bansi.UtilGlob.Seguridad.InformacionUsuario,System.String)">
+            <summary>
+            Devuelve las equivalencias de una colección de usuario a usuarios de otros sistemas
+            </summary>
+            <param name="informacionUsuario">Colección de elementos informacionUsuario</param>
+            <param name="sistemaDestino">El sistema destino.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerEquivalenciaUsuario(Bansi.UtilGlob.Seguridad.InformacionUsuario,System.String,System.String)">
+            <summary>
+            Devuelve las equivalencias de una colección de usuario a usuarios de otros sistemas
+            </summary>
+            <param name="informacionUsuario">Colección de elementos informacionUsuario</param>
+            <param name="sistemaOrigen">El sistema origen</param>
+            <param name="sistemaDestino">El sistema destino.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerPerfiles(System.String)">
+            <summary>
+            Obtienes todos los Perfiles de acuerdo al Usuario de Security
+            </summary>
+            <param name="usuario">Usuario Security</param>
+            <returns>
+            int[] todos los perfiles relacionados al usuario de security
+            </returns>
+            /// <remarks>
+            25/10/2013, GMENDEZ: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuario(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Obtiene la información para una lista de usuarios
+            </summary>
+            <param name="usuarioId">Usuarios de los que se obtendrá la información</param>
+            <returns>Devuelve in diccionario de InformacionUsuario los id de usuario. Si un usuario no existe no se agrega la llave al diccionario.</returns>
+            <remarks>
+            08/08/2016, OHIDALGO: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuario(System.String)">
+            <summary>
+            LLenar un objeto InformacionUsuario a partir de su UsuarioId
+            </summary>
+            <param name="usuarioId">usuario</param>
+            <returns>Objeto de tipo InformacionUsuario</returns>
+            <remarks>
+            08 Agosto 2016, OHIDALGO: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarUsuario(System.String,System.String)">
+            <summary>
+            Valida contra el dominio el usuario y contraseña
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="password">Contraseña del usuario</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarUsuario(System.String,System.String,System.String@)">
+            <summary>
+            Valida contra el dominio el usuario y contraseña
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="password">Contraseña del usuario</param>
+            <param name="descripcionError">retorna una cadena con la descripcion del error si es que hubo</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerDominio">
+            <summary>
+            Obtiene el dominio de Bansi
+            </summary>
+            <returns></returns>
+            <remarks>
+            12/11/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ConfiguraInformacionUsuario(Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.vwusuarioactivedirectoryRow)">
+             <summary>
+            ConfiguraInformacionUsuario
+             </summary>
+             <param name="tblusuarioactivedirectoryRow"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerDependientesBaseDatos(System.String)">
+            <summary>
+            Obtiene una lista de dependientes de usuario
+            </summary>
+            <param name="usuario">Usuario del que se pretenden Obtener los dependientes</param>
+            <returns>Devuelve una lista de InformacionUsuario de todos los usuarios que tienen como jefe
+            inmediato al usuario</returns>
+            <remarks>
+            08/09/2016, VJIMENEZ: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuarioInterno(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Obtiene la información para una lista de usuarios
+            </summary>
+            <param name="usuarioId">Usuarios de los que se obtendrá la información</param>
+            <param name="obtenerJefe">Bandera que valida si se obtendra jefe o no</param>
+            <returns>Devuelve in diccionario de InformacionUsuario los id de usuario. Si un usuario no existe no se agrega la llave al diccionario.</returns>
+            <remarks>
+            08/08/2016, OHIDALGO: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuarioOrganigrama(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Obtener de una lista de usuarios su organigrama
+            </summary>
+            <param name="usuarioId">Listado de usuarios para obtener su organigrama</param>
+            <returns>Diccionario de datos con usuario y su organigrama</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerUsuarioOrganigrama(System.String)">
+            <summary>
+            Obtiene un usuario con sus dependientes directos (de forma recursiva) cargados.
+            </summary>
+            <param name="usuarioId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.CerrarSesionUsuario(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Cierra en el Security la sesión de un usuario para un determinado módulo
+            </summary>
+            <param name="inicioSesionOpcionesValor">Opciones para iniciar sesión</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.CerrarSesionUsuario(System.String,System.String)">
+            <summary>
+            Cierra en el Security la sesión de un usuario para un determinado módulo
+            </summary>
+            <param name="usuario">Nombre del usuario firmado</param>
+            <param name="modulo">Nombre del ejecutable del módulo</param>
+            <returns>Operación Exitosa</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.IniciarSesionUsuario(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Inicia sesión con los parametros indicados
+            </summary>
+            <param name="inicioSesionOpcionesValor">Las opciones de inicio.</param>
+            <returns>Bansi.System.ReturnCodeInformation. Clase que encapsula la estructura de lo que retorna la función
+            si fue exitosa o no, o si hubo un error, cuál fue.</returns>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerInicioSesionOpcionesToken(System.String,Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene el inicio de sesión de usuario
+            </summary>
+            <returns></returns>
+            <remarks>
+            01/10/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerInicioSesionOpcionesToken(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene el inicio de sesión de usuario
+            </summary>
+            <returns></returns>
+            <remarks>
+            01/10/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.RecuperarToken">
+            <summary>
+            Recupera el token, si es que este se envio por parametros
+            </summary>
+            <returns>Devuelve el token</returns>
+            <remarks>
+            04/10/013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.BloquearUsuario(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Bloquea un usuario en un módulo
+            </summary>
+            <param name="inicioSesionOpciones">Opciones de inicio de sesión</param>
+            <remarks>
+            14/03/2011, BALCALA, Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.CambiaEstatusUsuario(System.String,System.String)">
+            <summary>
+            Cambia el estatus de un usuario
+            </summary>
+            <param name="strUsuario">Identificador del usuario</param>
+            <param name="strEstatusNuevo">Estatus al que será cambiado</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ValidarPuedeSerRepresentante(System.String)">
+            <summary>
+            Valida si un usuario puede representar a otro
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <returns>Si el usuario representante puede representar a otros</returns>
+            <remarks>
+            13/01/2011, BALCALA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.VerificaEstatusUsuario(System.String)">
+            <summary>
+            Verifica el estatus de un usuario
+            </summary>
+            <param name="strUsuario">Identificador del usuario</param>
+            <returns>Estatus del usuario</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerOpcionesUsuario(System.String,System.String)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="modulo">Nombre de ejecutable del cual se obtiene las opciones</param>
+            <returns>Arreglo con la información de las opciones disponibles</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSecurity.ObtenerOpcionesUsuario(System.String,System.String,System.String)">
+            <summary>
+            Obtiene las opciones disponibles en un módulo para un determinado usuario
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="usuarioRepresentante">Usuario representante (si este existiera)</param>
+            <param name="modulo">Nombre de ejecutable del cual se obtiene las opciones</param>
+            <returns>
+            Arreglo con la información de las opciones disponibles
+            </returns>
+            <exception cref="T:System.ArgumentNullException">modulo</exception>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones">
+            <summary>
+            Opciones del acceso de seguridad para un nuevo contexto
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones.AbrirBaseDatos">
+            <summary>
+            Abre la base de datos y la cierra en el dispose del objeto
+            </summary>
+            <value>
+              <c>true</c> if [abrir base datos]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones.VaciarCacheAlFinalizar">
+            <summary>
+            Vacia la cache al finalizar
+            </summary>
+            <value>
+            <c>true</c> if [vaciar cache al finalizar]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones.GuardarErroresSeguridad">
+            <summary>
+            Guarda los errores (o problemas de seguridad) de seguridad
+            </summary>
+            <value>
+            <c>true</c> if [guardar errores seguridad]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones.GuardarErroresGenericos">
+            <summary>
+            Guarda los errores generios
+            </summary>
+            <value>
+            <c>true</c> if [guardar errores genericos]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones.#ctor">
+             <summary>
+             Inicializa una nueva instancia de <see cref="T:Bansi.UtilGlob.Seguridad.AccesoSeguridadContextoOpciones"/>.
+             Los valores por defecto son:
+            
+                 this.AbrirBaseDatos = true;
+                 this.VaciarCacheAlFinalizar = true;
+                 this.GuardarErroresSeguridad = true;
+                 this.GuardarErroresGenericos = true;
+             </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Actualizador">
+            <summary>
+            Actualiza software Bansi en la maquina del usuario
+            </summary>
+            <remarks>
+            10-12-2013, GMENDEZ, Creación
+            </remarks>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.Actualizador.RUTA_VERIFICADOR_VERSION">
+            <summary>
+            Ubicación del verificador de versión.
+            </summary>
+            <remarks>
+            Se pone en duro para evitar errores con el repositorio cuando no coincide
+            el Hash del ejecutable actual porque es necesario actualizarlo.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="E:Bansi.UtilGlob.Seguridad.Actualizador.EstadoCambiado">
+            <summary>
+            Define que se producto un cambio en el estado del actualizado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Actualizador.DescripcionEstado">
+            <summary>
+            Define a descripcion del estado actual del actualizador
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Actualizador.ValidarVersionInstalada(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Valida que la versión del ejecutable del cliente, la versión del repositorio
+            y la registrada en la base de datos coincidan
+            </summary>
+            <param name="modulo">Módulo que se le validará su versión</param>
+            <returns>Información sobre el estadod el modulo, hay que revisar el objeto ActualizadorCodigosRetorno</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Actualizador.ActualizarVersionInstalada(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Actualiza ejecutables y dlls
+            </summary>
+            <param name="modulo">Módulo a actualizar</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Actualizador.ObtenerRutaExeActualizador">
+            <summary>
+            Obtiene la ruta del ejecutable para actualizar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Actualizador.Actualizar">
+            <summary>
+            Verifica la versión del ejecutable y llama al actualizador de ser necesario.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones">
+            <summary>
+            AgregarTokenOpciones
+            </summary>
+            <remarks>
+            --.--.2013, BAUTISTA: Creación.
+            </remarks>
+            <remarks>agregar token por diferentes opciones</remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones.Token">
+            <remarks>Token generado sin encriptar</remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones.TokenEncriptado">
+            <remarks>Token  Encriptado</remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones.Usuario">
+            <summary>
+            Usuario logeado en la aplicación (puede ser un usuario representante)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones.ModuloSecurity">
+            <summary>
+            Modulo de security
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.AgregarTokenOpciones.#ctor">
+            <summary>
+            AgregarTokenOpciones
+            </summary>
+            <remarks>
+            --.--.2013, Autor: ??? Creación.
+            </remarks>
+            <summary>Constructor
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ActualizadorProxy">
+            <summary>
+            Actualiza software Bansi en la maquina del usuario
+            </summary>
+            <remarks>
+            10-12-2013, GMENDEZ, Creación
+            </remarks>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.normalizarVersiones">
+            <summary>
+            Normaliza las versiones a tres digitos, si el tercero es un cero
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.dotnetRuntimeVersion">
+            <summary>
+            Version del runtime de dotnet
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.moduloInstalado">
+            <summary>
+            Representa el modulo que esta instalado en la maquina del usuario
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.moduloRepositorio">
+            <summary>
+            Representa el modulo del repositorio
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.moduloBaseDeDatos">
+            <summary>
+            Representa el modulo en base de datos
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.ActualizadorProxy.rutaRepositorio">
+            <summary>
+            La ruta donde estan los ejecutables a instalar
+            </summary>
+        </member>
+        <member name="E:Bansi.UtilGlob.Seguridad.ActualizadorProxy.EstadoCambiado">
+            <summary>
+            Define que se producto un cambio en el estado del actualizado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ActualizadorProxy.DescripcionEstado">
+            <summary>
+            Define a descripcion del estado actual del actualizador
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ActualizadorProxy.ValidarVersionInstalada(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Valida que la versión del ejecutable del cliente, la versión del repositorio
+            y la registrada en la base de datos coincidan
+            </summary>
+            <param name="modulo">Módulo que se le validará su versión</param>
+            <returns>Información sobre el estadod el modulo, hay que revisar el objeto ActualizadorCodigosRetorno</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ActualizadorProxy.ValidarVersionEnRepositorio">
+            <summary>
+            Valida la versión del modulo con respecto al repositorio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ActualizadorProxy.ActualizarVersionInstalada(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Actualiza ejecutables y dlls
+            </summary>
+            <param name="modulo">Módulo a actualizar</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ActualizadorProxy.ActualizarDependencias(System.Reflection.Assembly,System.Collections.Generic.List{System.String})">
+            <summary>
+            Actualiza las dependecias de un ejecutable de .NET
+            </summary>
+            <param name="assemblyExe">Ejecutable al cual actualizar sus referencias</param>
+            <param name="assembliesCargados">Assembies que ya han sido previamente cargados</param>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Departamento">
+            <summary>
+            Departamento de un empleado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Departamento.Nombre">
+            <summary>
+            Nombre del departamento.
+            </summary>
+            <value>
+            Nombre del departamento.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Departamento.DepartamentoId">
+            <summary>
+            Identificador del perfil.
+            </summary>
+            <value>
+            Identificador del perfil.
+            </value>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Departamento.#ctor">
+            <summary>
+            Constructor de la clase Departamento
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Departamento.#ctor(System.Int32,System.String)">
+            <summary>
+            Crea un nuevo perfil
+            </summary>
+            <param name="departamentoId">Identificador del perfil</param>
+            <param name="nombre">Nombre del perfil</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Departamento.ToString">
+            <summary>
+            Regresa una representación en cadena del objeto
+            </summary>
+            <returns>Regresa una representación en cadena del objeto</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.EventoBitacora">
+            <summary>
+            Representa un evento a guardar en la bitácora de seguridad.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.Usuario">
+            <summary>
+            Usuario que realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.Modulo">
+            <summary>
+            Módulo donde se realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.Operacion">
+            <summary>
+            Operación realizada.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.Detalle">
+            <summary>
+            Detalle de la operación realizada.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.IpEstacion">
+            <summary>
+            Ip de la estación donde se realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.Estacion">
+            <summary>
+            Estación donde se realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.IpEstacionCliente">
+            <summary>
+            Ip de la estación desde la cual el cliente esta realizando sus operaciones (la operación se realiza desde un servidor).
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.EstacionCliente">
+            <summary>
+            Estación desde la cual el cliente esta realizando sus operaciones (la operación se realiza desde un servidor).
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.UsuarioEstacionCliente">
+            <summary>
+            Nombre de usuario que esta haciendo la operación desde la estación cliente.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EventoBitacora.NumeroCliente">
+            <summary>
+            Número de cliente al cual le afecta la operación.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.EventoBitacora.CompletarEventoBitacora(Bansi.UtilGlob.Seguridad.EventoBitacora)">
+            <summary>
+            Asignamos los valores falantes.
+            </summary>
+            <param name="eventoBitacora">Objeto eventobitacora.</param>
+            <returns>Regresa un objeto de tipo eventobitacora.</returns>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.FrmCambiarPassword.Cryptographer">
+            <summary>
+            Criptografo según los nuevos estandares
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.FrmCambiarPassword.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.FrmCambiarPassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.FrmCambiarPassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.IpEstacion">
+            <summary>
+            Ip de la estación donde se realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.Estacion">
+            <summary>
+            Estación donde se realiza la operación.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.IpEstacionCliente">
+            <summary>
+            Ip de la estación desde la cual el cliente esta realizando sus operaciones (la operación se realiza desde un servidor).
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.EstacionCliente">
+            <summary>
+            Estación desde la cual el cliente esta realizando sus operaciones (la operación se realiza desde un servidor).
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.UsuarioEstacion">
+            <summary>
+            Nombre de usuario que esta haciendo la operación desde la estación host.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionHost.UsuarioEstacionCliente">
+            <summary>
+            Nombre de usuario que esta haciendo la operación desde la estación cliente.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorRepSrv.Lanzar(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Lanzador de Report Server
+            </summary>
+            <param name="inicioSesionOpciones">Inicio con opciones</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorInteg.Lanzar(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Lanzador de Integral
+            </summary>
+            <param name="inicioSesionOpciones">Inicio con opciones</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorBase">
+            <summary>
+            Clase base para crear los lanzadores
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorBase.ConfigurarTokenSesion(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Obtener Token asociado a la sesion actual, usado por el lanzador de aplicaciones, para pasárselo a sus módulos y opciones
+            </summary>
+            <returns>Token de la sesión</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorOFI.Lanzar(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Lanza un modulo
+            </summary>
+            <param name="inicioSesionOpciones">Opciones del modulo a lanzar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorOFI.ValidarFechasOFiCentral(Bansi.UtilGlob.Seguridad.Persistence.DataSets.OFIDataSet.susuariosRow,System.DateTime,System.String)">
+            <summary>
+            Valida que las fechas de OFI y central sean correctas
+            </summary>
+            <param name="usuario">Usuario que se queda logear</param>
+            <param name="fechaOFI">Fecha actual de OFI</param>
+            <param name="moduloExe">Modulo actual</param>
+            <returns>True si todo esta correcto con las fechas de OFI y Central, aunque no coincidan.</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorOFI.ExentoValidarFechasEjecutable(System.String)">
+            <summary>
+            Revisa si el modulo que se intenta ejecutar esta exento de validación por fechas
+            </summary>
+            <param name="moduloExe">Modulo a ejecutar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzadores.LanzadorSec.Lanzar(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Lanzador de bsisecurity
+            </summary>
+            <param name="inicioSesionOpciones">Opciones para lanzar el modulo</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.LanzarOpciones">
+            <summary>
+            lanza el menú con diversas opciones
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LanzarOpciones.InicioSesionOpciones">
+            <summary>
+            Opciones de lanzamiento
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LanzarOpciones.Actualizar">
+            <summary>
+            Lanza el actualizador si corresponde (debe tener contexto gráfico)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LanzarOpciones.ActualizarPassword">
+            <summary>
+            Si es necesario lanza la ventana de actualización de password (debe tener contexto gráfico)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LanzarOpciones.PausaAntesDeActualizar">
+            <summary>
+            Indica una pausa antes de actualizar cualquier sistema
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.LanzarOpciones.#ctor">
+            <summary>
+            Construtor publico.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.OpcionesSeguridadArg">
+            <summary>
+            Argumentos que determinan como habilitar o deshabilitar un menu
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.OpcionesSeguridadArg.DesactivarMenus">
+            <summary>
+            Indica si se debe afectar la propiedad Enabled
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.OpcionesSeguridadArg.OcultarMenus">
+            <summary>
+            Indica si se debe afectar la propiedad Visible
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.IGestorOpcionesSeguridad">
+            <summary>
+            Representa a un control que provee opciones administrables por el módulo de seguridad
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.IGestorOpcionesSeguridad.ObtenerOpcionesSeguridad">
+            <summary>
+            Obtiene el listado de opciones que incluye el control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.IGestorOpcionesSeguridad.DeshabilitarOpcionesSeguridad(Bansi.UtilGlob.Seguridad.OpcionesSeguridadArg)">
+            <summary>
+            Deshabilita todos los controles correspondientes a las opciones
+            </summary>
+            <param name="argumentos">Argumentos que indican cómo deshabilitar</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.IGestorOpcionesSeguridad.HabilitarOpcionesSeguridad(Bansi.UtilGlob.Seguridad.Opcion[],Bansi.UtilGlob.Seguridad.OpcionesSeguridadArg)">
+            <summary>
+            Habilita los controles correspondientes a las opciones
+            </summary>
+            <param name="opciones">Listado de opciones a habilitar</param>
+            <param name="argumentos">Argumentos que indican cómo habilitar</param>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.IGestorOpcionesSeguridad.NombreContenedorPrincipalOpcionesSeguridad">
+            <summary>
+            Obtiene el objeto correspondiente al formulario padre
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.InformacionSucursal">
+            <summary>
+            Proporciona Informacion de la sucursal
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSucursal.Sucursal">
+            <summary>
+            Numero de la Sucursal
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSucursal.NombreSucursal">
+            <summary>
+            Nombre de la sucursal
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSucursal.Plaza">
+            <summary>
+            Identificador de la plaza a la  que pertenece el usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionSucursal.NombrePlaza">
+            <summary>
+            Nombre de la plaza a la que pertenece el usuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionSucursal.#ctor(System.String,System.String)">
+            <summary>
+            Constructor que recibe el número y el nombre de la sucursal
+            </summary>
+            <param name="sucursal">Sucursal</param>
+            <param name="nombreSucursal">Número Sucursal</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionSucursal.ToString">
+            <summary>
+            Devuelve el numero y nombre de la sucursal
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.PerfilPuesto">
+            <summary>
+            PerfilPuesto de un empleado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PerfilPuesto.Nombre">
+            <summary>
+            Nombre del PerfilPuesto.
+            </summary>
+            <value>
+            Nombre del PerfilPuesto.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PerfilPuesto.PerfilPuestoId">
+            <summary>
+            Identificador del perfil.
+            </summary>
+            <value>
+            Identificador del perfil.
+            </value>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.PerfilPuesto.#ctor">
+            <summary>
+            Constructor de la clase PerfilPuesto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.PerfilPuesto.#ctor(System.Int32,System.String)">
+            <summary>
+            Crea un nuevo perfil
+            </summary>
+            <param name="perfilPuestoId">Identificador del perfil</param>
+            <param name="nombre">Nombre del perfil</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.PerfilPuesto.ToString">
+            <summary>
+            Regresa una representación en cadena del objeto
+            </summary>
+            <returns>Regresa una representación en cadena del objeto</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDICent.ObtenerAuxiliares(System.String)">
+            <summary>
+            Obtiene los auxiliares del usuario
+            </summary>
+            <param name="usuario">Usuario</param>
+            <returns>Usuarios auxiliares</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDICent.ObtenerAuxiliados(System.String)">
+            <summary>
+            Obtiene los usuarios auxiliados de un usuario.
+            </summary>
+            <param name="auxiliar">Auxiliar.</param>
+            <returns>Auxiliados</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDICent.ObtenerFechaHoy">
+            <summary>
+            Obtiene fecha_Hoy de BdiCent
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity">
+            <summary>
+            BidAdmMsg
+            </summary>
+            <remarks>
+            19.07.2010, Author: JRoChA Created.
+            </remarks>
+            <summary>
+            BidAdmMsg
+            </summary>
+            <remarks>
+            19.07.2010, Author: JRoChA Created.
+            </remarks>
+            <summary>
+            BidAdmMsg
+            </summary>
+            <remarks>
+            19.07.2010, Author: JRoChA Created.
+            </remarks>
+            <summary>
+            BidAdmMsg
+            </summary>
+            <remarks>
+            19.07.2010, Author: JRoChA Created .
+            </remarks>
+            <summary>
+            BidAdmMsg
+            </summary>
+            <remarks>
+            19.07.2010, Author: JRoChA Created.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerPerfil(System.Int32)">
+            <summary>
+            Obtiene un perfil determinado
+            </summary>
+            <param name="idPerfil">id perfil</param>
+            <returns>Perfil</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerUsuarioDepartamento(System.Int32)">
+            <summary>
+            Obtiene un departamento determinado
+            </summary>
+            <param name="departamentoId">Departamento</param>
+            <returns>Usuarios de dichos departamentos</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerIdModulosRecientes(System.String)">
+            <summary>
+            Obtiene Menu recientes por usuario
+            </summary>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerIdModulosFrecuentes(System.String)">
+            <summary>
+            Obtiene Menu Frecuentes por usuario
+            </summary>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerIdModulosFavoritos(System.String)">
+            <summary>
+            Obtiene Menu Favoritos por usuario devuelve modulo y alias
+            </summary>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ExisteTokenSesionActivo(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Configuro un objetoInicioSesionOpciones en base a un token.
+            </summary>
+            <param name="objInicioSesionOpciones"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerSesionesAbiertas(System.String)">
+            <summary>
+            Obtiene el listado de sesiones de usuario
+            </summary>
+            <param name="nombreExe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerSesionAbierta(System.String,System.String)">
+            <summary>
+            Obtiene la sesión de un determinado módulo y Usuario
+            </summary>
+            <param name="nombreModulo"></param>
+            <param name="usuarioId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.GuardarMenuFavoritos(System.Int32,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Guarda un elemento del menú favoritos de un usuario
+            </summary>
+            <param name="moduloId">Código del módulo</param>
+            <param name="usuarioId">Código de usuario</param>
+            <param name="alias">Alias</param>
+            <param name="moduloNuevaPosicionId">Identifica la nueva posición del módulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.EliminarMenuFavoritos(System.Int32,System.String)">
+            <summary>
+            Elimina un elemento del menú favoritos
+            </summary>
+            <param name="usuarioId">Código de usuario</param>
+            <param name="moduloId">Código del módulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.RegistraEventoBitacora(Bansi.UtilGlob.Seguridad.EventoBitacora)">
+            <summary>
+            Registra un evento en la bitácora
+            </summary>
+            <param name="eventoBitacora">usuario, modulo , operacion, detalle, ip estación, estación cliente, ip estación cliente, usuario estación cliente y número cliente a guardar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.spInsertaOpcion(System.String,System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Se registra la opcion en security.
+            </summary>
+            <param name="nombreCtrl"></param>
+            <param name="idModulo"></param>
+            <param name="descripcion"></param>
+            <param name="forma"></param>
+            <param name="idPadre"></param>
+            <param name="tipo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.spEliminarOpcionEspecial(System.Int32)">
+            <summary>
+            Elimina la opción especial en security.
+            </summary>
+            <param name="idOpcion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerUsuariosModulo(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Obtiene una lista de usuarios que tienen acceso al módulo
+            </summary>
+            <param name="modulo">Módulo del que se obtendrá la lista de usuarios</param>
+            <returns>Devuelve una lista de InformacionUsuario de todos los usuarios que tienen acceso al módulo</returns>
+            <remarks>
+            16/08/2016, OHIDALGO: Creación..
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.BDISecurity.ObtenerUsuariosTodos(System.Boolean)">
+            <summary>
+            Obtiene una lista de todos los usuarios de bsisecurity
+            </summary>
+            <returns>Devuelve una lista de todos los usuarios de bsiSecurity</returns>
+            <param name="incluirUsuariosSistema"></param>
+            <remarks>
+            26/jun/2024, RCURIEL: Creación..
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.spregistrareventobitacoraResult">
+            <summary>
+            Resultado de sp_obten_vbparam.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.OFI.ObtenerUnidad">
+            <summary>
+            Devuelve la unidad, siempre es sin los dos puntos es decir X, en lugar de X:
+            </summary>
+            <returns>Unidad, sin los dos puntos o diagonal invertida, por ejemplo X, en lugar de X:\</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.OFI.ObtenerFechaHoy">
+            <summary>
+            Obtiene fecha_Hoy de OFI
+            </summary>
+            <returns></returns>
+            <remarks>
+            Creación: OMONT£S 03/DIC/2013.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.OFI.ObtenerSucursal">
+            <summary>
+            Obtiene la sucursal de OFI
+            </summary>
+            <returns></returns>
+            <remarks>
+            Creación: wcervantes 29/08/2013
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DatabaseHelper">
+            <summary>
+            Database Manager
+            </summary>
+            <remarks>
+            19.08.2010, Author: JRoChA Created
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.si_ejecutAdapter">
+            <summary>
+            Adapter
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.si_ejecutAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter">
+            <summary>
+            Adaptador para acceso a datos para los estados
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter.Instance">
+            <summary>
+            Instancia del adapter
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter"/> class.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter.Configure">
+            <summary>
+            Configura las características de este DataAdapter
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblparametroAdapter.ExecuteDataRowByKey(System.String)">
+            <summary>
+            Recupera llave de la tabla de parámetros
+            </summary>
+            <param name="desc_campo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.vwejecutivosAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            30 Agosto 2013, Autor: OMONT£S Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.vwejecutivosAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.vwusuarioactivedirectoryAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            03.08.2010, Autor: JRoChA Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.vwusuarioactivedirectoryAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.tblmoduloAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            30 Agosto 2013, Autor: OMONT£S Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblmoduloAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spObtenerMenuGraficoRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spObtenerMenuGraficoRow.CreateMenuGrafico">
+            <summary>
+            Hago la conversión entre spObtenerMenuGraficoRow a Menugrafico
+            </summary>
+            <returns></returns>
+            <remarks>
+            Creación: wcervantes 30/08/2013
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblperfilDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spObtenerMenuGraficoDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblmoduloDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblopcionDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblusuarioactivedirectoryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.vwusuarioactivedirectoryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spRegistrarEventoBitacoraDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblparametroDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblperfilRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblmoduloRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblopcionRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblusuarioactivedirectoryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.vwusuarioactivedirectoryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spRegistrarEventoBitacoraRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblparametroRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblperfilRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spObtenerMenuGraficoRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblmoduloRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblopcionRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblusuarioactivedirectoryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.vwusuarioactivedirectoryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.spRegistrarEventoBitacoraRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiSecurityDataSet.tblparametroRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.vwejecutivosDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.si_ejecutDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.vwejecutivosRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.si_ejecutRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.vwejecutivosRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.BdiCentDataSet.si_ejecutRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.OFIDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.OFIDataSet.susuariosDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.OFIDataSet.susuariosRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.DataSets.OFIDataSet.susuariosRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.tblsusuariosAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            03.08.2010, Autor: JRoChA Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblsusuariosAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.tblopcionAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            30 Agosto 2013, Autor: OMONT£S Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblopcionAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Persistence.tblperfilAdapter">
+            <summary>
+            Adapter
+            </summary>
+            <remarks>
+            03.08.2010, Autor: JRoChA Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Persistence.tblperfilAdapter.Configure">
+            <summary>
+            Configura las caracteristicas de este DataAdpater
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Configuration.Install.AssemblyBindingConfigInstaller">
+            <summary>
+            Proporciona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Configuration.Install.AssemblyBindingConfigInstaller.Install(System.Collections.IDictionary)">
+            <summary>
+            Install
+            </summary>
+            <param name="stateSaver"></param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Configuration.Install.AssemblyBindingConfigInstaller.Uninstall(System.Collections.IDictionary)">
+            <summary>
+            Uninstall
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Configuration.Install.Installer">
+            <summary>
+            Proporciona servicios para generar una clase instalador que se pueda incorporar en los proyectos
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Configuration.Install.Installer.#ctor">
+            <summary>
+            Costructor de la clase EventLogSourceInstaller
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Puesto">
+            <summary>
+            Puesto de un empleado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Puesto.Nombre">
+            <summary>
+            Nombre del Puesto.
+            </summary>
+            <value>
+            Nombre del Puesto.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Puesto.PuestoId">
+            <summary>
+            Identificador del Puesto.
+            </summary>
+            <value>
+            Identificador del Puesto.
+            </value>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Puesto.#ctor">
+            <summary>
+            Constructor de la clase Puesto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Puesto.#ctor(System.Int32,System.String)">
+            <summary>
+            Crea un nuevo perfil
+            </summary>
+            <param name="puestoId">Identificador del perfil</param>
+            <param name="nombre">Nombre del perfil</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Puesto.ToString">
+            <summary>
+            Regresa una representación en cadena del objeto
+            </summary>
+            <returns>Regresa una representación en cadena del objeto</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.TemaAplicacionOpciones">
+            <summary>
+            Indica las opciones para un tema de aplicación
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.TemaAplicacionOpciones.NombreTema">
+            <summary>
+            Nombre del tema del modulo
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.TemaAplicacionOpciones.SobrescribirTema">
+            <summary>
+            Si se sobrescribiera el tema del modulo
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.TemaAplicacionOpciones.ObtenerTema">
+            <summary>
+            Obtener tema del modulo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion">
+            <summary>
+            Opciones para retornar la expresion regular
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.LongitudMinima">
+            <summary>
+            Longitud mínima del password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.LongitudMaxima">
+            <summary>
+            Longitud máxima del password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ExpresionRegular">
+            <summary>
+            Regex de la expresión regular
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.MinimoMayusculas">
+            <summary>
+            Cantidad mínima de caracteres en mayúsculas que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.MinimoMinusculas">
+            <summary>
+            Cantidad mínima de caracteres en minúsculas que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.MinimoNumericos">
+            <summary>
+            Cantidad mínima de caracteres numéricos que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.MinimoEspeciales">
+            <summary>
+            Cantidad mínima de caracteres especiales que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.CaracteresValidos">
+            <summary>
+            Caracteres expresión regular
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.CaracteresValidosEspeciales">
+            <summary>
+            Validar caracteres especiales
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.CaracteresValidosLetras">
+            <summary>
+            Validar caracteres en mayúsculas y minúsculas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.CaracteresValidosNumeros">
+            <summary>
+            Validar caracteres numéricos
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.#ctor(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones,System.Text.RegularExpressions.Regex,System.Char[])">
+            <summary>
+            Constructor de la clase
+            </summary>
+            <param name="opciones">Objeto con los parámetros de búsqueda</param>
+            <param name="expresionRegular"> expresion regular obtenida</param>
+            <param name="caracteresValidos"> caracteres validos</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ObtenerCaracteresValidosEspeciales">
+            <summary>
+            Valida caracteres especiales
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ObtenerCaracteresValidosLetras">
+            <summary>
+            Valida letras mayúsculas y minúsculas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ObtenerCaracteresValidosNumeros">
+            <summary>
+            Valida caracteres numéricos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ObtenerCaracteresValidosExpresionRegular(System.String)">
+            <summary>
+            Validar expresión regular
+            </summary>
+            <param name="parametroregex"> </param>
+            <returns>Array caracteres validos</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordInformacion.ObtenerCaracteresValidosExpresionRegular(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Validar expresión regular
+            </summary>
+            <param name="regex"> </param>
+            <returns>Array caracteres validos</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.clsReglasPWD.ObtenerConfiguracionPassword(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Validación de los parámetros de Configuración de Password
+            </summary>
+            <param name="opciones">Clase ValidacionPasswordOpciones</param>
+            <returns>Objeto del tipo configuracionPassword</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.clsReglasPWD.ObtenerPatronExpresionRegular(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos el patrón de la expresión regular de la configuración
+            </summary>
+            <param name="opciones">clase de opciones para password</param>
+            <returns>string con el patron de la expresión regular</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.clsReglasPWD.ObtenerExpresionRegular(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos la expresión regular de la configuración
+            </summary>
+            <param name="opciones">clase de opciones para password</param>
+            <returns>Regex con la expresión regular</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.clsReglasPWD.ObtenerValidacionPasswordInformacion(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos la longitud mínima , máxima y la expresión regular
+            </summary>
+            <param name="opciones">Clase con las opciones para buscar la expresión regular</param>
+            <returns>Objeto con las información de la expresión regular</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.clsReglasPWD.ValidarExpresionRegular(System.String,Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones,Bansi.ReturnCodeInformationCollection)">
+            <summary>
+            Valida si el password proporcionado hace match con la expresion regular dada
+            </summary>
+            <param name="password"> password dado</param>
+            <param name="opciones"> clase de opciones para password</param>
+            <param name="errores"> Colección de errores</param>
+            <returns> true or false</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones">
+            <summary>
+            Opciones para validar la fortaleza de un password
+            </summary>
+            <remarks>
+            16/12/2013, Creación: OMONTES
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.IdentificadorUsuario">
+            <summary>
+            Identificador de usuario que va a requerir el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.OrigenValidacion">
+            <summary>
+            Sistema Origen que usara el password (no confundir con sistema de bsisecurity)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.ValidacionCompleta">
+            <summary>
+            Indica que debe validar todos las reglas y no deternerse en el primer error
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.LongitudMinima">
+            <summary>
+            Longitud minima del password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.LongitudMaxima">
+            <summary>
+            Longitud maxima del password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.MinimoMayusculas">
+            <summary>
+            Cantidad mínima de caracteres en mayusculas que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.MinimoMinusculas">
+            <summary>
+            Cantidad mínima de caracteres en minúsculas que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.MinimoNumericos">
+            <summary>
+            Cantidad mínima de caracteres numéricos que debe contener el password
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.MinimoEspeciales">
+            <summary>
+            Cantidad mínima de caracteres especiales que debe contener el password
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.Clone">
+            <summary>
+            Clona el objeto
+            </summary>
+            <returns>Objeto clonado</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones.System#ICloneable#Clone">
+            <summary>
+            Clona el objeto
+            </summary>
+            <returns>Objeto clonado</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidacionPasswordOrigenes">
+            <summary>
+            Colección de orígenes posibles de una validación de passwords
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOrigenes.PorDefecto">
+            <summary>
+            PorDefecto
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOrigenes.CajeroAutomatico">
+            <summary>
+            CajeroAutomatico
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOrigenes.BancaMovil">
+            <summary>
+            BancaMovil
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionPasswordOrigenes.BancaElectronica">
+            <summary>
+            BancaElectronica
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Lanzador">
+            <summary>
+            Clase lanzadora de aplicaciones
+            </summary>
+            <remarks >
+            29/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzador.Lanzar(Bansi.UtilGlob.Seguridad.LanzarOpciones)">
+            <summary>
+            Lanzar un ejecutable desde un sistema lanzador como OFIPEB
+            </summary>
+            <param name="lanzarOpcionesValor">Opciones para lanzar el ejecutable</param>
+            <returns> ReturnCodeInformation </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzador.Lanzar(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+             Lanzar un ejecutable desde un sistema lanzador como OFIPEB
+             </summary>
+             <param name="inicioSesionOpcionesValor">Opciones para lanzar el ejecutable</param>
+             <returns> ReturnCodeInformation </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Lanzador.Actualizar(Bansi.UtilGlob.Seguridad.LanzarOpciones)">
+            <summary>
+            Actualiza los ejecutables relacioandos al menuGrafico
+            </summary>
+            <param name="lanzarOpcionesValor">Opciones con respecto al lanzamiento.</param>
+            <returns>Si hubo existo</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones">
+            <summary>
+            Conjunto de parametros a tener a la hora de obtener un menu grafico
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.Usuario">
+            <summary>
+            Usuario al cual recuperarle un menu grafico.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.SucursalActual">
+            <summary>
+            Sucursal Actual
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.Modulo">
+            <summary>
+            Modulo sobre el cual obtener el menú.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.#ctor(System.String)">
+            <summary>
+            contructor ObtenerMenuGraficoOpciones
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.#ctor(System.String,System.String)">
+            <summary>
+            contructor ObtenerMenuGraficoOpciones
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerMenuGraficoOpciones.#ctor(System.String,System.String,System.String)">
+            <summary>
+            contructor ObtenerMenuGraficoOpciones
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.MenuGrafico">
+            <summary>
+            Representa un Menu Grafico, que puede ser representado por lanzadores, como por ejemplo el nuevo OFI PEB
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Descripcion">
+            <summary>
+            Descripción a mostrar por pantalla.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Imagen">
+            <summary>
+            Imagen a mostrar por pantalla
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.EsCarpeta">
+            <summary>
+            Indica si el menu es una carpeta.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.MenuGraficoPadre">
+            <summary>
+            Menu grafico padre del actual, en el primero vale nulo.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.MenusGraficos">
+            <summary>
+            Menus graficos hijos de este.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Alias">
+            <summary>
+            Alias elegido por el usuario para este menú
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Text">
+            <summary>
+            Texto que se despliega en el elemento del menú
+            Puede ser Alias o Descripción
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.IdMenuGrafico">
+            <summary>
+            Id correspondiente al menú
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.IdMenuGraficoPadre">
+            <summary>
+            Id correspondiente al padre
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Modulo">
+            <summary>
+            Modulo
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.Opcion">
+            <summary>
+            Esta propiedad esta obsoleta, y no es usada para ninguna opción, se conserva para afecto de compatibilidad
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.MenuGrafico.RutaCompletaEjecutable">
+            <summary>
+            Define la ruta completa de un ejecutable (sin nemotecnicos)
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.#ctor">
+            <summary>
+            Constructor por defecto de MenuGrafico
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.#ctor(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Constructor por defecto de MenuGrafico
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ConvertirEnArbol(Bansi.UtilGlob.Seguridad.MenuGrafico[])">
+            <summary>
+            Recorre las opciones y crea un arbol de como deben ser
+            </summary>
+            <param name="menusGraficos">Opciones a convertir</param>
+            <returns>Opciones en arbol</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ConvertirEnLista(Bansi.UtilGlob.Seguridad.MenuGrafico[])">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ConvertirEnLista(Bansi.UtilGlob.Seguridad.MenuGrafico[],System.Boolean)">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ObtenerImagenDefault(System.String)">
+            <summary>
+            Obtiene las imagenes por default
+            </summary>
+            <param name="parametro"></param>
+            <returns>
+            Creación: wcervantes 15/10/2013
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ConvertirEnLista">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ConvertirEnLista(System.Boolean)">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.AgregarMenuGrafico(Bansi.UtilGlob.Seguridad.MenuGrafico)">
+            <summary>
+            Agrega una opción hija a la lista de opciónes.
+            </summary>
+            <param name="menuGrafico">menu Grafico</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.BorrarMenuGrafico(Bansi.UtilGlob.Seguridad.MenuGrafico)">
+            <summary>
+            Agrega una opción hija a la lista de opciónes.
+            </summary>
+            <param name="menuGrafico">menu Grafico</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.CargarImagenes">
+            <summary>
+            Carga las imagenes de los hijos y la suya prpia
+            </summary>
+            <remarks>
+            03/10/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.EliminarDuplicadosYOrdenar">
+            <summary>
+            Elimina los elementos duplicados
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ContainsText(System.String,System.Boolean)">
+            <summary>
+            Contiene el texto indicado en el alias
+            </summary>
+            <param name="text"></param>
+            <param name="simplificarTextoBusqueda">Indica que se van a eliminar espacios y el ampersand para la búsqueda</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.MenuGrafico.ToString">
+            <summary>
+            Regresa una reprecentacion en cadena del objeto
+            </summary>
+            <returns>Regresa una reprecentacion en cadena del objeto</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones">
+            <summary>
+            Conjunto de parametros
+            </summary>
+            <remarks>
+            01/10/2013, gmendez: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.SistemaOrigen">
+            <remarks>
+            Sistema Origen debe ser SEC
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.SistemaDestino">
+            <remarks>
+            Sistema Origen debe ser OFI
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.Usuario">
+            <summary>
+            Usuario a validar, tiene que ser un usuario de bsisecurity (generalmente un usuario del AD)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.Modulo">
+            <summary>
+            Modulo que se tiene que validar,
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.Opcion">
+            <summary>
+            Opcion que se tiene que validar
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="modulo">modulo</param>
+            <param name="opcion">opcion</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(System.String,System.String)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="nombreModulo">Ejecutable o nombre del modulo</param>
+            <param name="NombreOpcion">Nombre de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="idModulo">Id del modulo</param>
+            <param name="idOpcion">Id de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="usuario">usuario</param>
+            <param name="modulo">modulo</param>
+            <param name="opcion">opcion</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion,System.String,System.String)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="usuario">usuario</param>
+            <param name="modulo">modulo</param>
+            <param name="opcion">opcion</param>
+            <param name="sistemaOrigen">Sistema origen</param>
+            <param name="sistemaDestino">Sistema destino</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ObtenerUsuariosClienteOpciones.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor de ObtenerUsuariosClienteOpciones
+            </summary>
+            <param name="usuario">usuario</param>
+            <param name="nombreModulo">nombreModulo</param>
+            <param name="nombreOpcion">nombreOpcion</param>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword">
+            <summary>
+            Reglas para validar la fortaleza de un password
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword.ValidarReglasPassword(System.String,Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Valida la formaleza el password
+            </summary>
+            <param name="password">Password a validar</param>
+            <param name="opciones">Opciones de la validación</param>
+            <returns>Colección de errores relativos a la fortaleza del password</returns>
+            <remarks>
+            16/12/2013, Creación: OMONTES
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword.ObtenerExpresionRegularPrevalidador(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos el regex de la expresion regular
+            </summary>
+            <param name="opciones">Clase con las opciones para buscar la expresión regular</param>
+            <returns>Regex con la expresion regular</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword.ObtenerPatronExpresionRegularPrevalidador(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos el patrón de la expresión regular
+            </summary>
+            <param name="opciones">Clase con las opciones para buscar la expresión regular</param>
+            <returns> Cadena con la expresión regular</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword.PrevalidarReglasPassword(System.String,Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Validamos el password que realice el match correcto contra la expresión regular
+            </summary>
+            <param name="password">password proporcionado</param>
+            <param name="opciones">clase con las opciones para validar el password</param>
+            <returns>colección de errores</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidadorReglasPassword.ObtenerValidacionPasswordInformacion(Bansi.UtilGlob.Seguridad.ValidacionPasswordOpciones)">
+            <summary>
+            Obtenemos la longitud mínima , máxima y la expresión regular
+            </summary>
+            <param name="opciones">Clase con las opciones para buscar la expresión regular</param>
+            <returns>Objeto con las información de la expresión regular</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.PermisosUsuario">
+            <summary>
+            PermisosUsuario
+            </summary>
+            <remarks>
+            --.--.2013, Autor: ??? Creación.
+            </remarks>
+            <remarks>permisos a usuarios</remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PermisosUsuario.Usuario">
+            <remarks>
+            Usuariosobre el que habla el permiso
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PermisosUsuario.Modulo">
+            <summary>
+            Modulo de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PermisosUsuario.Opcion">
+            <summary>
+            Opcion de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.PermisosUsuario.TienePermiso">
+            <summary>
+            Indica si tiene el permiso
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario">
+            <summary>
+            M-4227: creado. Clase que tiene la información de un módulo de security
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.SistemaOrigen">
+            <summary>
+            Sistema Origen
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.SistemaDestino">
+            <summary>
+            Sistema destino
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.UsuarioOrigen">
+            <summary>
+            UsuarioOrigen
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.UsuarioDestino">
+            <summary>
+            Usuario destino
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.ModuloDestino">
+            <summary>
+            Modulo destino a Convertir generalmente de security a OFI
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.OpcionDestino">
+            <summary>
+            Opcion destino a Convertir generalmente de security a OFI
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.EquivalenciaUsuario.#ctor">
+            <summary>
+            Constructor por defecto de EquivalenciaUsuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InternalProcessException.GetReturnCodeInformation">
+            <summary>
+            Trata de separar el numero de error de la despricion
+            </summary>
+            <returns>ReturCodeInformation</returns>
+            <remarks>
+            2011-02-09, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.InformacionUsuario">
+            <summary>
+            M-4227: creado. Proporciona la información de un usuario
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Password">
+            <summary>
+            Password del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.UsuarioId">
+            <summary>
+            Identificador del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Nombre">
+            <summary>
+            Nombre (largo del usuario).
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Nivel">
+            <summary>
+            Nivel de seguridad del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Email">
+            <summary>
+            Dirección de correo electrónico del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Activo">
+            <summary>
+            Estado del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.JefeInmediato">
+            <summary>
+            Usuario establecido como jefe inmediato
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.DependientesInmediatos">
+            <summary>
+            Arreglo de usuarios dependientes del usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Sucursal">
+            <summary>
+            Sucursal a la que pertenece el usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Departamento">
+            <summary>
+            Departamento a la que pertenece el usuario, ejemplo "Desarrollo de sistemas".
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Puesto">
+            <summary>
+            Puesto a la que pertenece el usuario, ejemplo "Coordinador A de proyecto de sistemas".
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.PerfilPuesto">
+            <summary>
+            PuestoPerfil a la que pertenece el usuario, ejemplo "Coordinador A".
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Vacante">
+            <summary>
+            El puesto esta vacante
+            </summary>
+            <value>
+              <c>true</c> Si  esta Vacante; si no, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Empleado">
+            <summary>
+            Indica que el usuario representa a un empleado y no a un proceso
+            </summary>
+            <value>
+              <c>true</c> Si es empleado; si no, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.JefeDepartamento">
+            <summary>
+            Indica que el usuario es jefe departamento.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Auxiliares">
+            <summary>
+            Obtiene los auxiliares que tiene este usuario
+            </summary>
+            <value>
+            The auxiliares.
+            </value>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InformacionUsuario.Auxiliados">
+            <summary>
+            Obtiene las personas a las que auxilia este usuario
+            </summary>
+            <value>
+            The auxiliar de.
+            </value>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.#ctor">
+            <summary>
+            Constructor por defecto de la clase Información usuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.#ctor(System.String,System.String)">
+            <summary>
+            Constructor de InformacionUsuario
+            </summary>
+            <param name="usuarioId">Identificador del usuario</param>
+            <param name="nombre">Nombre (Largo) del usuario</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.Dispose">
+             <summary>
+             Dispose
+             </summary>
+             <remarks>
+            Fecha de creación: ?, Autor: ?.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.Finalize">
+            <summary>
+            Destructor de la clase Información Usuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.EliminarInformacionPassword">
+            <summary>
+            Elimina la información relativa al password por motivos de segurida.
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.ConvertirDependientesEnLista">
+            <summary>
+            Convertir usuarios dependientes en lista en lista
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.Configurar">
+            <summary>
+            Configura toda la información disponible del usuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.ConfigurarUsuario">
+            <summary>
+            Configura toda la información del usuario
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.ConfigurarAuxiliares">
+            <summary>
+            Configura la información de los auxiliares (y auxilados)
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.ConfigurarOrganigrama">
+            <summary>
+            Configura la información Organigrama
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.EsPuesto(System.Int32)">
+            <summary>
+            Indica que un usuario tiene un puesto determinado
+            </summary>
+            <param name="puestoId">el identificador del perfil</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.EsPerfilPuesto(System.Int32)">
+            <summary>
+            Indica que un usuario tiene un puesto de perfil determinado.
+            </summary>
+            <param name="perfilPuestoId">el identificador del puesto del perfil.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.PerteneceDepartamento(System.Int32)">
+            <summary>
+            Indica que un usuario pertenece a un determinado departamento.
+            </summary>
+            <param name="departamentoId">el identificador del departamento</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.EsPerfil(System.Int32)">
+            <summary>
+            Indica si un usuario es un tipo de perfil determinado.
+            </summary>
+            <param name="perfilId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.ToString">
+            <summary>
+            Devuelve a manera de cadena el UsuarioID y el nombre del usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.CompareTo(Bansi.UtilGlob.Seguridad.InformacionUsuario)">
+            <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            A value that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other" /> parameter.Zero This object is equal to <paramref name="other" />. Greater than zero This object is greater than <paramref name="other" />.
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.Equals(Bansi.UtilGlob.Seguridad.InformacionUsuario)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InformacionUsuario.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+            </returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.InicioSesionOpciones">
+            <summary>
+            M-4227 creación: Clase que indica una relación de representación
+            </summary>
+            <creadoPor>Mario Alexandro Ramos Rodríguez</creadoPor>
+            <fechaCreación>2010/12/13</fechaCreación>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.LigaUsuarios">
+            <summary>
+            Liga de representación entre dos usuarios
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.Usuario">
+            <summary>
+            Usuario logeado en la aplicación (puede ser un usuario representante)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.ModuloSecurity">
+            <summary>
+            Modulo de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.ExisteLigaRepresentacion">
+            <summary>
+            Indica si existe una libra entre un usuario representante y otro representado
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.Estacion">
+            <summary>
+            Estación desde la que se logeo un usuario
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.Token">
+            <summary>
+            Token creado por un sistema lanzador, por ejemplo OFI PEB
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.Opcion">
+            <summary>
+            Opcion con la que se tiene que validar que se tenga acceso, ademas del modulo.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.ParametrosModulo">
+            <summary>
+            Parametros a pasar al modulo a ejecutar, cuando es ejecutado desde un lanzador, como OFI PEB
+            </summary>
+            <remarks>
+            09/09/2013, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.#ctor">
+            <summary>
+            Contructor de InicioSesionOpciones
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.EliminarInformacionPassword">
+            <summary>
+            Elimina la información relativa al password por motivos de segurida.
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.InicioSesionOpciones.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Modulo">
+            <summary>
+            M-4227: creado. Clase que tiene la información de un módulo de security
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.ModuloId">
+            <summary>
+            Id (primary key) del Modulo dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.Version">
+            <summary>
+            Versión del modulo dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.NombreExe">
+            <summary>
+            Nombre del ejecutable dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.Nombre">
+            <summary>
+            Nombre del modulo (descripción) dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.IdTipoLanzamiento">
+            <summary>
+            Representa el tipo de lanzamiento de la aplicacion
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.IdTipoArquitectura">
+            <summary>
+            Representa el tipo de arquitectura del modulo
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.RutaEjecutable">
+            <summary>
+            Representa la ruta donde se puede encontrar el ejecutable
+            </summary>
+            <remarks>
+            JBAUTISTA, 05-09-2013: Creación
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.RutaRepositorio">
+            <summary>
+            Representa la ruta donde se puede encontrar el ejecutable en el repositorio
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.ValidaVersion">
+            <summary>
+            Indica si este modulo valida versión al momento de actualizarse.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.Activo">
+            <summary>
+            Indica si este modulo valida versión al momento de actualizarse.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Modulo.TemaAplicacion">
+            <summary>
+            Opciones sobre el tema de la aplicación del modulo.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.#ctor">
+            <summary>
+            Contructor por defecto dentro del modulo
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.#ctor(System.String)">
+            <summary>
+            Constructor de Modulo
+            </summary>
+            <param name="nombreExe">Nombre del ejecutable o del modulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.#ctor(System.Int32)">
+            <summary>
+            Constructor de Modulo
+            </summary>
+            <param name="moduloId">id del modulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.Finalize">
+            <summary>
+            Destructor del modulo
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.IsEmpty">
+            <summary>
+            Determina que el modulo esta vacío (no configurado)
+            </summary>
+            <returns>
+            Devuelve true si el modulo esta vacío (no configurado)
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.IsNotEmpty">
+            <summary>
+            Determina que el modulo no esta vacío (no configurado)
+            </summary>
+            <returns>
+            Devuelve true si el modulo no esta vacío (no configurado)
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.IsNullOrEmpty(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Determina que el modulo esta vacío (no configurado) o es nulo
+            </summary>
+            <param name="modulo">Modulo</param>
+            <returns>Devuelve true si el modulo esta vacío (no configurado) o es nulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.IsNotNullOrEmpty(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Determina que el modulo esta vacío (no configurado) o es nulo
+            </summary>
+            <param name="modulo">Modulo</param>
+            <returns>Devuelve true si el modulo no esta vacío (no configurado) o no es nulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.ConfigurarVersionDelArchivoEnDisco">
+            <summary>
+            Valida la versión de un modulo
+            </summary>
+            <returns>Codigo de error</returns>
+            <remarks>
+            03/10/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.ConfigurarModulo">
+            <summary>
+            Obtiene el ID de un modulo
+            </summary>
+            <returns>Id del modulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.ConfigurarModulo(System.Boolean)">
+            <summary>
+            Obtiene el ID de un modulo
+            </summary>
+            <returns>Id del modulo</returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.ToString">
+            <summary>
+            Sobrecargado  de metodo ToString con Modulo y NombreExe
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Modulo.Clone">
+            <summary>
+            Clona un modulo
+            </summary>
+            <returns>Modulo clonado</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Opcion">
+            <summary>
+            Representa una Opcion dentro de security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.IdOpcion">
+            <summary>
+            id (Primary key) dentro de  security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Descripcion">
+            <summary>
+            Descripcion de la opcion
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Control">
+            <summary>
+            Nombre de la opcion (igual que Nombre)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Nombre">
+            <summary>
+            Nombre de la opcion (igual que Control)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Forma">
+            <summary>
+            Forma que contiene la opcion
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Tipo">
+            <summary>
+            Tipo de opción
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.OpcionPadre">
+            <summary>
+            Opción padre
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.IdOpcionPadre">
+            <summary>
+            Id (Primary Key) de la opcion padre
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Opciones">
+            <summary>
+            Colección de opciones hijas
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Opcion.Modulo">
+            <summary>
+            Modulo al que pertenece la opcion
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="modulo">Objeto modulo</param>
+            <remarks>
+            12/09/2013, OMONT£S: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(System.String)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="nombreOpcion">Nombre de la opcion</param>
+            <remarks>
+            18/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(System.String,System.String)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="nombreOpcion">Nombre de la opcion</param>
+            <param name="descripcion">Descripcion de la opcion</param>
+            <remarks>
+            18/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor">
+            <summary>
+            Contructor por defecto
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(System.Data.DataRow)">
+            <summary>
+            Contructor interno a traves de un DataRow
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(System.String,System.String,System.String,Bansi.UtilGlob.Seguridad.TipoOpcion)">
+            <summary>
+            Constructor de Opcion
+            </summary>
+            <param name="nombreOpcion">Nombre de la opción</param>
+            <param name="descripcion">Descripción de la opción</param>
+            <param name="forma">Nombre de la forma</param>
+            <param name="tipo">tipo de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.#ctor(System.Int32)">
+            <summary>
+            Id  de la Opcion
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.ConvertirEnArbol(Bansi.UtilGlob.Seguridad.Opcion[])">
+            <summary>
+            Recorre las opciones y crea un arbol de como deben ser
+            </summary>
+            <param name="opciones">Opciones a convertir</param>
+            <returns>Opciones en arbol</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.ConvertirEnLista(Bansi.UtilGlob.Seguridad.Opcion[])">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.AgregarOpcion(Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Agrega una opción hija a la lista de opciónes.
+            </summary>
+            <param name="opcion">opción a agregar</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.ConvertirEnLista">
+            <summary>
+            Convierte una secuencia de opciones en listas
+            </summary>
+            <returns>Las opciones hijas y ella misma en lista</returns>
+            <remarks>
+            19/01/2010, JBAUTISTA: Creación
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Opcion.ToString">
+            <summary>
+            Devuelve el nombre la opcion y su descripción
+            </summary>
+            <returns>devuelve Nombre de la opcion - Descripción</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.Perfil">
+            <summary>
+            M-6935: creado. Clase que tiene la información de un perfil de security
+            </summary>
+            <remarks>
+            28/10/2011, OMAGANA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Perfil.Nombre">
+            <summary>
+            Propiedad de Perfiles, nombre del perfil
+            </summary>
+            <remarks>
+            Fecha de Autor: 28/10/2011, Autor: OMAGANA.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.Perfil.PerfilId">
+            <summary>
+            Propiedad de Perfiles, identificador de perfil
+            </summary>
+            <remarks>
+            Fecha de Autor: 28/10/2011, Autor: OMAGANA.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.#ctor">
+            <summary>
+            Costructor de la clase Perfil
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.#ctor(System.Int32,System.String)">
+            <summary>
+            Crea un nuevo perfil
+            </summary>
+            <param name="perfilId">Identificador del perfil</param>
+            <param name="nombre">Nombre del perfil</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.Dispose">
+            Implement IDisposable.
+            Do not make this method virtual.
+            A derived class should not be able to override this method.
+            <summary>
+            Disponse
+            </summary>
+            <remarks>
+            Fecha de Autor: ?, Autor: ?.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing">Indica si el dipose es explicito</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.Finalize">
+            <summary>
+             Use C# destructor syntax for finalization code.
+            This destructor will run only if the Dispose method
+            does not get called.
+            It gives your base class the opportunity to finalize.
+            Do not provide destructors in types derived from this class.
+            </summary>
+            <remarks>
+            Fecha de Autor: ?, Autor: ?.
+            </remarks>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.Perfil.ToString">
+            <summary>
+            Regresa una reprecentacion en cadena del objeto
+            </summary>
+            <returns>Regresa una reprecentacion en cadena del objeto</returns>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.LigaUsuarioEnRepresentacion">
+            <summary>
+            Liga de dos usuarios en una relación de representación
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LigaUsuarioEnRepresentacion.UsuarioRepresentante">
+            <summary>
+            Usuario representante
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.LigaUsuarioEnRepresentacion.UsuarioRepresentado">
+            <summary>
+            Usuario representado
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.LigaUsuarioEnRepresentacion.#ctor">
+            <summary>
+            Costructor de la clase LigaUsuarioEnRepresentacion
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.LigaUsuarioEnRepresentacion.EliminarInformacionPassword">
+            <summary>
+            Elimina la información relativa al password por motivos de segurida.
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.TipoOpcion">
+            <summary>
+            enumeroador para tipos de opciones
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.TipoOpcion.Normal">
+            <summary>
+            Opcion Normal
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.TipoOpcion.Especial">
+            <summary>
+            Opcion Especial
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.Seguridad.TipoOpcion.Desconocida">
+            <summary>
+            Opcion Desconocida
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidacionRepresentacionOpciones">
+            <summary>
+            M-4227: creado. Obtiene si es que hay una relación de representación.
+            </summary>
+            <remarks>
+            06/01/2011, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionRepresentacionOpciones.LigaUsuarios">
+            <summary>
+            Representa Liga de usuarios
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionRepresentacionOpciones.ModuloSecurity">
+            <summary>
+            Modulo security
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidacionRepresentacionOpciones.ExisteLigaRepresentacion">
+            <summary>
+            Indica si existe una liga de representación
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidacionRepresentacionOpciones.#ctor">
+            <summary>
+            Costructor de ValidacionRepresentacionOpciones
+            </summary>
+        </member>
+        <member name="T:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones">
+            <summary>
+            Conjunto de parametros a tener en cuenta a la hora de validar permisos
+            </summary>
+            <remarks>
+            20/08/2013, JBAUTISTA: Creación.
+            </remarks>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.Usuario">
+            <summary>
+            Usuario a validar, tiene que ser un usuario de bsisecurity (generalmente un usuario del AD)
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.Modulo">
+            <summary>
+            Modulo que se tiene que validar.
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.Opcion">
+            <summary>
+            Opcion que se tiene que validar
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.NumeroCliente">
+            <summary>
+            Cliente a tener en cuenta en la validadion
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.UsarPermisosCliente">
+            <summary>
+            Indica que si se tiene que tomar en cuenta el cliente al momento de validar el permiso a una opción
+            </summary>
+        </member>
+        <member name="P:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.SucursalActual">
+            <summary>
+            Sucursal Actual
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="modulo">Modulo a validar</param>
+            <param name="opcion">Opcion</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="nombreOpcion">Nombre de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="nombreModulo">Nombre de Modulo</param>
+            <param name="nombreOpcion">Nombre de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="nombreModulo">Nombre de Modulo</param>
+            <param name="nombreOpcion">Nombre de la opción</param>
+            <param name="numeroCliente">Numero de Cliente</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="idModulo">id de Modulo</param>
+            <param name="idOpcion"> id de la opción</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion,System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="modulo">Modulo</param>
+            <param name="opcion">Opción</param>
+            <param name="numeroCliente">Numero de Cliente</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion,System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Uusario</param>
+            <param name="modulo">Modulo</param>
+            <param name="opcion">Opción</param>
+            <param name="numeroCliente">Número de cliente</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion,System.String,System.Boolean)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="modulo">Modulo</param>
+            <param name="opcion">Opción</param>
+            <param name="numeroCliente">Numero de Cliente</param>
+            <param name="usarPermisosCliente">Indica si se debe tener en cuenta el numero de cliente suministrado</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario"> usuario</param>
+            <param name="nombreModulo">Nombre del Modulo</param>
+            <param name="nombreOpcion">Nombre de la  Opcion</param>
+            <param name="numeroCliente">Numero de Cliente</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>numeroCliente
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="nombreModulo">Nombre del Modulo</param>
+            <param name="nombreOpcion">Nombre de la Opción</param>
+            <param name="cliente">Cliente</param>
+            <param name="usarPermisosCliente">Indica si se debn usar clientes</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Opcion)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="opcion">Opcion</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Opcion,System.Boolean)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="opcion">Opcion</param>
+            <param name="usarPermisosCliente">Indica si se deben usar clientes</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="modulo">Modulo</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,System.Boolean)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="modulo">Modulo</param>
+            <param name="usarPermisosCliente">Indica si se deben usar clientes</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="nombreModulo">Nombre del Modulo</param>
+            <param name="nombreOpcion">Nombre de la Opcion</param>
+            <param name="usarPermisosCliente">Indica si se deben usar clientes</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.#ctor(System.String,Bansi.UtilGlob.Seguridad.Modulo,Bansi.UtilGlob.Seguridad.Opcion,System.Boolean)">
+            <summary>
+            Constructor de ValidarPermisoOpciones
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="modulo">Modulo</param>
+            <param name="opcion">Opcion</param>
+            <param name="usarPermisosCliente">Indica si se deben usar clientes</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.ValidarPermisoOpciones.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.SecurityServiceReference.SecurityWebClient.LimpiarAsync(Bansi.UtilGlob.Seguridad.SecurityServiceReference.LimpiarCachePeticion)">
+            <returns>Success</returns>
+            <exception cref="T:Bansi.UtilGlob.Seguridad.SecurityServiceReference.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.SecurityServiceReference.SecurityWebClient.LimpiarAsync(Bansi.UtilGlob.Seguridad.SecurityServiceReference.LimpiarCachePeticion,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Success</returns>
+            <exception cref="T:Bansi.UtilGlob.Seguridad.SecurityServiceReference.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.SecurityServiceReference.SecurityWebClient.ValidacionClaveHashModulosAsync(Bansi.UtilGlob.Seguridad.SecurityServiceReference.ValidacionClaveHashModulosPeticion)">
+            <returns>Success</returns>
+            <exception cref="T:Bansi.UtilGlob.Seguridad.SecurityServiceReference.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:Bansi.UtilGlob.Seguridad.SecurityServiceReference.SecurityWebClient.ValidacionClaveHashModulosAsync(Bansi.UtilGlob.Seguridad.SecurityServiceReference.ValidacionClaveHashModulosPeticion,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Success</returns>
+            <exception cref="T:Bansi.UtilGlob.Seguridad.SecurityServiceReference.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="F:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.Formas.FrmActualizador.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.Formas.FrmActualizador.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.Formas.FrmActualizador.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.INTEG.FrmCambiarPasswordINTEG.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.INTEG.FrmCambiarPasswordINTEG.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.OFI.FrmCambiarPasswordOFI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bansi.UtilGlob.CompatibilidadVB6.Seguridad.OFI.FrmCambiarPasswordOFI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:Bansi.UtilGlobSeg.Security.AppConsts.SISTEMA_SEC">
+            <summary>
+            Sistema Security
+            </summary>
+        </member>
+        <member name="F:Bansi.UtilGlobSeg.Security.AppConsts.SISTEMA_OFI">
+            <summary>
+            Sistema OFI
+            </summary>
+        </member>
+        <member name="T:bsiSecurityDLL.clsSecurityDll">
+            <summary>
+            Clase interna compatible con la antigua clase de VB6, esta clase debe ir desapareciendo
+            </summary>
+            <summary>
+            Clase interna compatible con la antigua clase de VB6, esta clase debe ir desapareciendo
+            </summary>
+            <summary>
+            Clase interna compatible con la antigua clase de VB6, esta clase debe ir desapareciendo
+            </summary>
+            <summary>
+            Clase interna compatible con la antigua clase de VB6, esta clase debe ir desapareciendo
+            </summary>
+            <summary>
+            Clase interna compatible con la antigua clase de VB6, esta clase debe ir desapareciendo
+            </summary>
+        </member>
+        <member name="M:bsiSecurityDLL.clsSecurityDll.#ctor(Bansi.UtilGlob.Seguridad.AccesoSecurity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:bsiSecurityDLL.clsSecurityDll"/> class.
+            </summary>
+            <param name="owner">The owner.</param>
+        </member>
+        <member name="M:bsiSecurityDLL.clsSecurityDll.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:bsiSecurityDLL.clsSecurityDll"/> class.
+            </summary>
+        </member>
+        <member name="M:bsiSecurityDLL.clsSecurityDll.ObtenerInicioSesionToken(Bansi.UtilGlob.Seguridad.InicioSesionOpciones)">
+            <summary>
+            Configuro un objetoInicioSesionOpciones en base a un token.
+            </summary>
+            <param name="objInicioSesionOpciones"></param>
+            <returns></returns>
+        </member>
+        <member name="F:bsiSecurityDLL.Comunes.SISTEMA_OFI">
+            <summary>
+            Sistema OFI
+            </summary>
+        </member>
+        <member name="F:bsiSecurityDLL.Comunes.SISTEMA_INTEG">
+            <summary>
+            Sistema Integral
+            </summary>
+        </member>
+        <member name="F:bsiSecurityDLL.Comunes.SISTEMA_SEC">
+            <summary>
+            Sistema Security
+            </summary>
+        </member>
+        <member name="M:bsiSecurityDLL.Comunes.ObtieneNumeroDeSistemaSecurity">
+            <summary>
+            Obtiene el número del sistema
+            </summary>
+            <returns></returns>
+            <remarks>
+            Creación en Vb6: Bruno D. Alcalá 17/03/2011
+            Migración .Net: wcervantes 22/07/2013
+            </remarks>
+        </member>
+        <member name="M:bsiSecurityDLL.Comunes.GeneraCodigoRetorno(System.String)">
+            <summary>
+            Obtiene el número del sistema
+            </summary>
+            <param name="strNumeroError"></param>
+            <returns>
+            Codigo de error generado
+            </returns>
+            <remarks>
+            Creación en Vb6: JBAUTISTA 17/03/2011
+            Migración .Net: wcervantes 22/07/2013
+            </remarks>
+        </member>
+        <member name="M:bsiSecurityDLL.Comunes.GeneraCodigoRetorno(System.String,System.String[])">
+            <summary>
+            Obtiene el número del sistema
+            </summary>
+            <param name="strNumeroError"></param>
+            <param name="parametros"></param>
+            <returns>
+            Codigo de error generado
+            </returns>
+            <remarks>
+            Creación en Vb6: JBAUTISTA 17/03/2011
+            Migración .Net: wcervantes 22/07/2013
+            </remarks>
+        </member>
+        <member name="M:bsiSecurityDLL.modGruposAD.UserGroups(System.String)">
+            <summary>
+            Obtiene todos los usuarios de un grupo.
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

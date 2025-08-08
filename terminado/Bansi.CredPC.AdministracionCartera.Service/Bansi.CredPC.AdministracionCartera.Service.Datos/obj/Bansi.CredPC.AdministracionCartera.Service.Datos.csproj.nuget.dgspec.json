@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Datos\\Bansi.CredPC.AdministracionCartera.Service.Datos.csproj": {}
+  },
+  "projects": {
+    "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Datos\\Bansi.CredPC.AdministracionCartera.Service.Datos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Datos\\Bansi.CredPC.AdministracionCartera.Service.Datos.csproj",
+        "projectName": "Bansi.CredPC.AdministracionCartera.Service.Datos",
+        "projectPath": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Datos\\Bansi.CredPC.AdministracionCartera.Service.Datos.csproj",
+        "packagesPath": "C:\\Users\\V1013170619\\.nuget\\packages\\",
+        "outputPath": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Datos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\V1013170619\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://bsisas09des.bansi.local/NuGet/prod/nuget": {},
+          "https://bsisas09des.bansi.local/NuGet/vendor/nuget": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6-windows",
+            "projectReferences": {
+              "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\Bansi.CredPC.AdministracionCartera.Service.Modelo.csproj": {
+                "projectPath": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\Bansi.CredPC.AdministracionCartera.Service.Modelo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6-windows",
+          "dependencies": {
+            "Bansi.Data": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.EntityFrameworkCore.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.EntityFrameworkCore.FactoryProviders": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.Reflection.AssemblyBindings": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\Bansi.CredPC.AdministracionCartera.Service.Modelo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\Bansi.CredPC.AdministracionCartera.Service.Modelo.csproj",
+        "projectName": "Bansi.CredPC.AdministracionCartera.Service.Modelo",
+        "projectPath": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\Bansi.CredPC.AdministracionCartera.Service.Modelo.csproj",
+        "packagesPath": "C:\\Users\\V1013170619\\.nuget\\packages\\",
+        "outputPath": "C:\\EDM\\grpadministracioncartera\\Fuentes\\Bansi.CredPC.AdministracionCartera.Service\\Bansi.CredPC.AdministracionCartera.Service.Modelo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\V1013170619\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://bsisas09des.bansi.local/NuGet/prod/nuget": {},
+          "https://bsisas09des.bansi.local/NuGet/vendor/nuget": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6-windows",
+          "dependencies": {
+            "Bansi.Application.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.Application.Security": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.Application.Security.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.Application.UtilGlobSeg.Security": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Bansi.System": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
